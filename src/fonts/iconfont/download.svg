@@ -1,3 +1,39 @@
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.5 12.25H10.5M7 1.75L7 9.91667M7 9.91667L9.91667 7M7 9.91667L4.08333 7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="14"
+   height="14"
+   viewBox="0 0 14 14"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="download.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="83.357143"
+     inkscape:cx="7.0059983"
+     inkscape:cy="7"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="m 7,1.25 a 0.5,0.5 0 0 0 -0.5,0.5 v 6.9589844 l -2.0625,-2.0625 a 0.5,0.5 0 0 0 -0.7070312,0 0.5,0.5 0 0 0 0,0.7070312 L 6.6464844,10.269531 A 0.5,0.5 0 0 0 7,10.416016 0.5,0.5 0 0 0 7.3535156,10.269531 L 10.269531,7.3535156 a 0.5,0.5 0 0 0 0,-0.7070312 0.5,0.5 0 0 0 -0.707031,0 L 7.5,8.7089844 V 1.75 A 0.5,0.5 0 0 0 7,1.25 Z m -3.5,10.5 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 7 a 0.5,0.5 0 0 0 0.5,-0.5 0.5,0.5 0 0 0 -0.5,-0.5 z"
+     id="path1" />
 </svg>

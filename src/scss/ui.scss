@@ -1,22 +1,21 @@
 .title {
-	line-height: 100.9%;
 	font-size: 1.75rem;
-	letter-spacing: -0.0525rem;
+	font-weight: 600;
+	line-height: 110%;
+	letter-spacing: -0.0175rem;
 
 	@media (min-width:$md5) {
-		letter-spacing: -0.08625rem;
-		font-size: 2.875rem;
-
-	}
-
-	@media (min-width:$md3) {
-		letter-spacing: -0.105rem;
-		font-size: 3rem;
+		font-size: 2.25rem;
+		font-weight: 600;
+		line-height: 110%;
+		letter-spacing: -0.0225rem;
 	}
 
 	@media (min-width:$md2) {
-		font-size: 3.5rem;
-
+		font-size: 2.875rem;
+		font-weight: 500;
+		line-height: 108.696%;
+		letter-spacing: -0.02875rem;
 	}
 }
 

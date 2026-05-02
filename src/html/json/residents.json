@@ -1,0 +1,32 @@
+[
+    {
+        "logotypeUrl": "@img/companies/skat.svg",
+        "name": "СКАТ",
+        "desc": "Кабельная арматура 0,4-500 кВ"
+    },
+    {
+        "logotypeUrl": "@img/companies/promenegro.svg",
+        "name": "ПРОМЭНЕРГО",
+        "desc": "Интеллектуальные приборы учета"
+    },
+    {
+        "logotypeUrl": "@img/companies/electrooptima.svg",
+        "name": "ЭлектроОптима",
+        "desc": "Электрощитовое оборудование и трансформаторные подстанции"
+    },
+    {
+        "logotypeUrl": "@img/companies/e-prom.svg",
+        "name": "E-PROM",
+        "desc": "Зарядные станции для электротранспорта"
+    },
+    {
+        "logotypeUrl": "@img/companies/aruna.svg",
+        "name": "ARUNA",
+        "desc": "Светодиодное освещение"
+    },
+    {
+        "logotypeUrl": "@img/companies/energo-innovations.svg",
+        "name": "ЭнергоИнновации",
+        "desc": "Научно-исследовательские и опытно-конструкторские работы"
+    }
+]

@@ -1,5 +1,4 @@
 .footer {
-    background-image: url("@img/footer-decor.svg");
     background-color: #fff;
     color: #3E3E3E;
     background-size: cover;
@@ -7,11 +6,10 @@
     background-position: center;
     padding: 2.875rem 0 1.75rem;
     border-radius: 1.875rem 1.875rem 0 0;
-    margin-top: rem(-34);
 
     @media (min-width:$md5) {
 
-        margin-top: rem(-38);
+
         padding: 3.44rem 0 3.75rem;
         border-radius: 2.375rem 2.375rem 0 0;
 
@@ -19,7 +17,7 @@
 
     @media (min-width:$md3) {
         padding: 6rem 0 rem(68);
-        margin-top: rem(-52);
+
         border-radius: rem(52) rem(52) 0 0;
 
     }

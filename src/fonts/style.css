@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?izkcff');
-  src:  url('fonts/icons.eot?izkcff#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?izkcff') format('truetype'),
-    url('fonts/icons.woff?izkcff') format('woff'),
-    url('fonts/icons.svg?izkcff#icons') format('svg');
+  src:  url('fonts/icons.eot?bmobnx');
+  src:  url('fonts/icons.eot?bmobnx#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?bmobnx') format('truetype'),
+    url('fonts/icons.woff?bmobnx') format('woff'),
+    url('fonts/icons.svg?bmobnx#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,15 +28,27 @@
 .icon-arrow:before {
   content: "\e900";
 }
-.icon-arrow-long:before {
+.icon-chevron-down:before {
   content: "\e901";
 }
-.icon-envelope:before {
+.icon-download:before {
   content: "\e902";
 }
-.icon-next:before {
+.icon-envelope:before {
   content: "\e903";
 }
-.icon-prev:before {
+.icon-location:before {
   content: "\e904";
+}
+.icon-next:before {
+  content: "\e905";
+}
+.icon-phone:before {
+  content: "\e906";
+}
+.icon-prev:before {
+  content: "\e907";
+}
+.icon-share:before {
+  content: "\e908";
 }

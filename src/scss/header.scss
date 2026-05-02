@@ -1,5 +1,5 @@
 .header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -41,8 +41,8 @@
 	// .header__menu
 	&__menu {}
 
-	// .header__email
-	&__email {
+	// .header__phone
+	&__phone {
 		display: none;
 
 		@media (min-width:$md4) {
@@ -201,8 +201,8 @@
 		}
 	}
 
-	// .menu__email
-	&__email {
+	// .menu__phone
+	&__phone {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
