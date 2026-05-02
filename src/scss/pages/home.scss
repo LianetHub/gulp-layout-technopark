@@ -126,3 +126,97 @@
         }
     }
 }
+
+.training {
+    padding: 4.56rem 0 2.08rem;
+
+    // .training__container
+    &__container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    // .training__main
+    &__main {}
+
+    // .training__title
+    &__title {}
+
+    // .training__desc
+    &__desc {
+        margin-top: rem(35);
+        color: #313542;
+        font-size: 1.125rem;
+        line-height: 144.444%;
+        letter-spacing: -0.0195rem;
+    }
+
+    // .training__cards
+    &__cards {
+        flex: 0 0 rem(684);
+        display: flex;
+        flex-direction: column;
+        gap: rem(13);
+    }
+
+    // .training__card
+    &__card {
+        border-radius: 1.875rem;
+        background: #FFFEFE;
+        box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
+        padding: 1.69rem 1.75rem;
+        display: flex;
+        gap: rem(30);
+    }
+
+    // .training__card-image
+    &__card-image {
+        width: 7.625rem;
+        height: 7.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.875rem;
+        flex-shrink: 0;
+        background: url("@img/training-card-decor.png") 0 0 / cover no-repeat;
+    }
+
+    // .training__card-content
+    &__card-content {
+        flex: 1 1 auto;
+    }
+
+    // .training__card-caption
+    &__card-caption {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 133.333%;
+        letter-spacing: 0.00438rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+
+        &::before {
+            width: 2.75rem;
+            height: 2.75rem;
+            flex-shrink: 0;
+            background: #2342A7;
+            color: #fff;
+            order: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+    }
+
+    // .training__card-desc
+    &__card-desc {
+        margin-top: 1rem;
+        color: #4A5565;
+        font-size: 1rem;
+        line-height: 125%;
+        letter-spacing: -0.0195rem;
+    }
+}
