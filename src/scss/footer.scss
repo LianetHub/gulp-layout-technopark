@@ -1,0 +1,225 @@
+.footer {
+    background-image: url("@img/footer-decor.svg");
+    background-color: #fff;
+    color: #3E3E3E;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2.875rem 0 1.75rem;
+    border-radius: 1.875rem 1.875rem 0 0;
+    margin-top: rem(-34);
+
+    @media (min-width:$md5) {
+
+        margin-top: rem(-38);
+        padding: 3.44rem 0 3.75rem;
+        border-radius: 2.375rem 2.375rem 0 0;
+
+    }
+
+    @media (min-width:$md3) {
+        padding: 6rem 0 rem(68);
+        margin-top: rem(-52);
+        border-radius: rem(52) rem(52) 0 0;
+
+    }
+
+    // .footer__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+
+        @media (min-width:$md5) {
+            gap: 2rem;
+
+        }
+
+        @media (min-width:$md3) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    // .footer__contacts
+    &__contacts {}
+
+    // .footer__contacts-title
+    &__contacts-title {
+        line-height: 100.9%;
+
+        font-size: 2rem;
+        letter-spacing: -0.06rem;
+
+        @media (min-width:$md5) {
+            font-size: 3.125rem;
+            letter-spacing: -0.09375rem;
+
+        }
+
+        @media (min-width:$md3) {
+            font-size: 3.5rem;
+            letter-spacing: -0.135rem;
+
+        }
+
+        @media (min-width:$md2) {
+            font-size: 4.5rem;
+
+        }
+    }
+
+    // .footer__contacts-info
+    &__contacts-info {
+        margin-top: 0.65rem;
+        color: #2E3235;
+        letter-spacing: -0.02813rem;
+        font-size: 1rem;
+        line-height: 114.232%;
+
+        @media (min-width:$md5) {
+            margin-top: 0.75rem;
+            line-height: 140%;
+            font-size: 1.125rem;
+            letter-spacing: -0.02806rem;
+        }
+
+        @media (min-width:$md3) {
+            margin-top: rem(35);
+            font-size: 1.25rem;
+
+        }
+    }
+
+    // .footer__contacts-email
+    &__contacts-email {
+        margin-top: 0.375rem;
+        line-height: 120%;
+        letter-spacing: 0.03069rem;
+        display: inline-block;
+        transition: color 0.3s ease;
+        font-size: 1.25rem;
+
+        @media (min-width:$md5) {
+            margin-top: 0.25rem;
+            font-size: 1.625rem;
+        }
+
+        @media (min-width:$md2) {
+            font-size: 2.32888rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #194EA4;
+            }
+        }
+    }
+
+    // .footer__contacts-copyright
+    &__contacts-copyright {
+        color: #9B9DA2;
+        line-height: 120.871%;
+        margin-top: rem(16);
+        font-size: 0.75rem;
+
+        @media (min-width:$md3) {
+            font-size: 1rem;
+        }
+
+        @media (min-width:$md2) {
+            margin-top: rem(30);
+
+        }
+    }
+
+    // .footer__side
+    &__side {
+        max-width: 36rem;
+
+        @media (min-width:$md3) {
+            max-width: 27.5rem;
+        }
+    }
+
+    // .footer__menu
+    &__menu {
+        @media (min-width:$md3) {
+            padding-top: 1rem;
+        }
+    }
+
+    // .footer__menu-list
+    &__menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(23);
+        font-size: 0.875rem;
+        line-height: 150%;
+        letter-spacing: -0.0195rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+
+        }
+    }
+
+    // .footer__menu-item
+    &__menu-item {}
+
+    // .footer__menu-link
+    &__menu-link {
+        transition: color 0.3s ease;
+
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #194EA4;
+            }
+        }
+    }
+
+    // .footer__address
+    &__address {
+        color: #9B9DA2;
+        letter-spacing: -0.0195rem;
+        line-height: 130%;
+        font-size: 0.875rem;
+        margin-top: rem(40);
+
+
+        @media (min-width:$md5) {
+            margin-top: rem(32);
+            font-size: 1rem;
+            line-height: 162.5%;
+        }
+
+        @media (min-width:$md3) {
+            font-size: 1.125rem;
+            margin-top: rem(62);
+            line-height: 144.444%;
+
+        }
+    }
+
+    // .footer__policy
+    &__policy {
+        margin-top: rem(32);
+        color: #9B9DA2;
+        line-height: 120.871%;
+        display: inline-block;
+        transition: color 0.3s ease;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            margin-top: rem(36);
+            font-size: 1rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #194EA4;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    "title": "Главная страница"
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page" role="main" itemprop="mainContentOfPage">
+                <section class="hero">
+                    <div class="hero__wrapper">
+                        <div class="hero__container container">
+                            <h1 class="hero__title title">Полный цикл создания решений <span class="color-accent">для энергетики</span></h1>
+                            <p class="hero__subtitle">Технопарк «Искра-Волга» объединяет разработку, производство и испытания оборудования на одной территории — от идеи до готового решения.</p>
+                            <div class="hero__actions">
+                                <a href="" class="hero__btn btn btn-primary">О технопарке</a>
+                                <a href="" class="hero__btn btn btn-secondary">Оставить запрос</a>
+                            </div>
+                        </div>
+                    </div>
+                    <video class="hero__video" playsinline autoplay loop muted preload="metadata" poster="@img/hero-poster.jpg">
+                        <source src="files/hero.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="files/hero.webm" type='video/webm; codecs="vp9, vorbis"'>
+                    </video>
+                </section>
+                <div class="stats">
+                    <ul class="stats__container container">
+                        <li class="stats__block" data-animate="bottom">
+                            <div class="stats__block-value"><span data-counter>45000</span> м²</div>
+                            <div class="stats__block-subtitle">Площадь производственных корпусов</div>
+                        </li>
+                        <li class="stats__block" data-animate="bottom">
+                            <div class="stats__block-value"><span data-counter>930</span></div>
+                            <div class="stats__block-subtitle">Сотрудников в штате </div>
+                        </li>
+                        <li class="stats__block" data-animate="bottom">
+                            <div class="stats__block-value"><span data-counter>7</span> га</div>
+                            <div class="stats__block-subtitle">Площадь земельного участка</div>
+                        </li>
+                    </ul>
+                </div>
+                <section class="testing-lab">
+                    <div class="testing-lab__container container">
+                        <h2 class="testing-lab__title title" data-animate="bottom">Испытательная лаборатория</h2>
+                        <div class="testing-lab__slider swiper">
+                            <ul class="swiper-wrapper">
+                                @@loop('./html/templates/_testing-lab-slide.html', './html/json/testing-lab.json')
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="services" class="measurements" itemscope itemtype="http://schema.org/Service">
+                    <div class="measurements__container container">
+                        <h2 class="measurements__title title" data-animate="bottom" itemprop="name">Испытания и измерения</h2>
+                        <ul class="measurements__list">
+                            @@loop('./html/templates/_measurements-item.html', './html/json/measurements.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="electrical-engineering-lab">
+                    <div class="electrical-engineering-lab__container container">
+                        <div class="electrical-engineering-lab__main">
+                            <h2 class="electrical-engineering-lab__title title" data-animate="bottom">Электротехническая лаборатория</h2>
+                            <ul class="electrical-engineering-lab__list">
+                                <li data-animate="bottom">Диагностика и испытания силовых трансформаторов</li>
+                                <li data-animate="bottom">Проверка состояния заземляющих устройств (ЗУ)</li>
+                                <li data-animate="bottom">Испытания сборных и соединительных шин</li>
+                                <li data-animate="bottom">Испытания и измерения вентильных разрядников и ОПН</li>
+                                <li data-animate="bottom">Испытания и измерения элегазовых, вакуумных, масляных выключателей и&nbsp;выключателей нагрузки</li>
+                                <li data-animate="bottom">Испытания кабельных линий</li>
+                            </ul>
+                        </div>
+                        <ul class="electrical-engineering-lab__benefits">
+                            <li class="electrical-engineering-lab__benefit" data-animate="bottom">
+                                <div class="electrical-engineering-lab__benefit-icon">
+                                    <img src="@img/electrical-engineering-lab/01.svg" alt="Иконка">
+                                </div>
+                                <p class="electrical-engineering-lab__benefit-text">Измерения и испытания электрооборудования на&nbsp;действующих объектах до 1000 В и выше.</p>
+                            </li>
+                            <li class="electrical-engineering-lab__benefit" data-animate="bottom">
+                                <div class="electrical-engineering-lab__benefit-icon">
+                                    <img src="@img/electrical-engineering-lab/02.svg" alt="Иконка">
+                                </div>
+                                <p class="electrical-engineering-lab__benefit-text">Наличие официально подтверждённой&nbsp;аттестации в&nbsp;Ростехнадзоре</p>
+                            </li>
+                            <li class="electrical-engineering-lab__benefit" data-animate="bottom">
+                                <div class="electrical-engineering-lab__benefit-icon">
+                                    <img src="@img/electrical-engineering-lab/03.svg" alt="Иконка">
+                                </div>
+                                <p class="electrical-engineering-lab__benefit-text">Широкий спектр услуг по диагностике и&nbsp;испытанию электрооборудования.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                    <div class="gallery__container container">
+                        <div class="gallery__header" data-animate="bottom">
+                            <h2 class="gallery__title title" itemprop="name">Галерея центра</h2>
+                            <div class="gallery__controls">
+                                <button type="button" class="gallery__prev swiper-button-prev icon-prev"></button>
+                                <button type="button" class="gallery__next swiper-button-next icon-next"></button>
+                            </div>
+                        </div>
+                        <div class="gallery__slider swiper" data-animate="bottom">
+                            <div class="swiper-wrapper">
+                                @@loop('./html/templates/_gallery-item.html', './html/json/gallery.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

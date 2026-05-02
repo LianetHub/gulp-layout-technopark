@@ -1,0 +1,24 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    transform: scale(200);
+
+    &__logo-fly {
+        width: 50vw;
+        position: relative;
+        z-index: 1001;
+
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

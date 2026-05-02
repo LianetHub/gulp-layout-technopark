@@ -1,0 +1,171 @@
+.policy {
+    padding: 0rem em(0) 1.87rem em(0);
+
+    @media (min-width: $md5) {
+        padding: 1rem em(0) 3.75rem em(0);
+    }
+
+    @media (min-width: $md2) {
+        padding: em(0) em(0) 5rem em(0);
+    }
+
+    // .policy__container
+    &__container {}
+
+    // .policy__title
+    &__title {}
+
+    // .policy__content
+    &__content {
+        margin-top: 3rem;
+        max-width: 52.79869rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @media (min-width: $md2) {
+            max-width: 46.8125rem;
+        }
+
+        & a {
+            text-decoration: underline;
+
+            // color: $accent;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        & h2 {
+            &::before {
+                content: counter(section) ". ";
+                margin-right: 0.5rem;
+                white-space: nowrap;
+            }
+
+            &:not(:first-child) {
+                margin-top: 3.75rem;
+
+                @media (min-width: $md2) {
+                    margin-top: 5rem;
+                }
+            }
+
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+            line-height: 120%;
+            font-size: 1.125rem;
+
+            @media (min-width: $md5) {
+                font-size: 1.25rem;
+            }
+
+            &+p {
+                &:not(:first-child) {
+                    margin-top: 1rem;
+
+                    @media (min-width: $md5) {
+                        margin-top: 1.5rem;
+                    }
+
+                    @media (min-width: $md2) {
+                        margin-top: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        & p {
+            &:not(:first-child) {
+                margin-top: 1.2rem;
+
+                @media (min-width: $md5) {
+                    margin-top: 1.1rem;
+                }
+
+                @media (min-width: $md2) {
+                    margin-top: 1.2rem;
+                }
+            }
+
+            font-size: 0.875rem;
+            line-height: 160%;
+
+            @media (min-width: $md5) {
+                line-height: 120%;
+                font-size: 1rem;
+            }
+        }
+
+        & ul {
+            & li {
+                position: relative;
+                line-height: 120%;
+                font-size: 0.875rem;
+                padding-left: 1em;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.15rem;
+                }
+
+                @media (min-width: $md5) {
+                    font-size: 1rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "-";
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        & ol {
+            margin-top: 0.25rem;
+            counter-reset: item;
+
+            &>li {
+                position: relative;
+                counter-increment: item;
+                line-height: 120%;
+                font-size: 0.875rem;
+                padding-left: 2.25em;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.15rem;
+                }
+
+                @media (min-width: $md5) {
+                    font-size: 1rem;
+                }
+
+                & ol {
+                    &>li {
+                        padding-left: 3.25em;
+
+                        & ol {
+                            &>li {
+                                padding-left: 3.75em;
+                            }
+                        }
+                    }
+                }
+
+                &::before {
+                    content: counter(section) "." counters(item, ".") ".";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__section {
+        counter-increment: section;
+    }
+}

@@ -1,0 +1,228 @@
+.title {
+	line-height: 100.9%;
+	font-size: 1.75rem;
+	letter-spacing: -0.0525rem;
+
+	@media (min-width:$md5) {
+		letter-spacing: -0.08625rem;
+		font-size: 2.875rem;
+
+	}
+
+	@media (min-width:$md3) {
+		letter-spacing: -0.105rem;
+		font-size: 3rem;
+	}
+
+	@media (min-width:$md2) {
+		font-size: 3.5rem;
+
+	}
+}
+
+.title-sm {
+	line-height: 100.9%;
+	letter-spacing: -0.0375rem;
+	font-size: 1.25rem;
+
+	@media (min-width:$md5) {
+		font-size: 2rem;
+		letter-spacing: -0.07731rem;
+
+	}
+
+	@media (min-width:$md2) {
+		font-size: 2.57619rem;
+
+	}
+}
+
+.color-accent {
+	color: $accent;
+}
+
+.text-nowrap {
+	white-space: nowrap;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	position: static;
+	z-index: 1;
+	transform: none;
+	margin-top: 0 !important;
+
+
+	border-radius: 50%;
+	background: #fff;
+	color: #194EA4;
+	transition: all 0.3s ease;
+	width: 2.75rem;
+	height: 2.75rem;
+	font-size: rem(24);
+
+	@media (min-width:$md5) {
+		font-size: rem(34);
+		width: 4rem;
+		height: 4rem;
+	}
+
+	@media (min-width:$md2) {
+		width: 4.60225rem;
+		height: 4.60225rem;
+		font-size: rem(40);
+	}
+
+	// &::before {
+	// 	color: #194EA4;
+	// }
+
+	& svg {
+		display: none;
+	}
+
+	&.swiper-button-disabled {
+		background: rgba(255, 255, 255, 0.10);
+		color: rgba($color: #fff, $alpha: .20);
+		opacity: 1;
+	}
+
+	&:not(.swiper-button-disabled) {
+		@media (any-hover: hover) {
+			&:hover {
+				background: #D8E7FF;
+			}
+		}
+	}
+}
+
+// .swiper-pagination {
+// 	&.swiper-pagination-lock {
+// 		display: none !important;
+// 	}
+
+// 	&.swiper-pagination-bullets {
+// 		position: static;
+// 		bottom: auto;
+// 		left: auto;
+// 		transform: none;
+// 		width: 100%;
+// 		display: flex;
+// 		justify-content: center;
+// 		--swiper-pagination-bullet-horizontal-gap: #{rem(10)};
+// 		--swiper-pagination-bullet-size: #{rem(10)};
+// 		--swiper-pagination-bullet-inactive-opacity: 0.4;
+
+// 		&.swiper-pagination-bullets-dynamic {
+// 			transform: none;
+// 			margin-inline: auto;
+// 			display: block;
+// 			width: 100%;
+// 		}
+
+// 		.swiper-pagination-bullet {
+// 			background: currentColor;
+// 			position: relative;
+
+// 			&::before {
+// 				content: "";
+// 				position: absolute;
+// 				width: rem(24);
+// 				height: rem(24);
+// 				top: 50%;
+// 				left: 50%;
+// 				transform: translate(-50%, -50%);
+// 			}
+
+// 			&.swiper-pagination-bullet-active {
+// 				opacity: 1;
+// 			}
+// 		}
+// 	}
+
+// 	&.swiper-pagination-fraction {
+// 		position: static;
+// 		width: auto;
+// 		font-size: 1.25rem;
+// 		line-height: 150%;
+// 	}
+// }
+
+// .swiper-scrollbar {
+// 	margin-top: 1rem;
+// 	position: static !important;
+// 	--swiper-scrollbar-bg-color: #{ red};
+// 	--swiper-scrollbar-drag-bg-color: #{$bg-white}
+// }
+
+
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $dark;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+$scrollbarColor: $accent;
+
+::-webkit-scrollbar {
+	width: rem(8);
+}
+
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $scrollbarColor;
+	border-radius: rem(8);
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: darken($color: $scrollbarColor, $amount: 10);
+		}
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
