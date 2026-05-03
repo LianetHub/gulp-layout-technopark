@@ -4,17 +4,8 @@
 	left: 0;
 	width: 100%;
 	z-index: $ui-index-6;
-	padding: rem(10) 0;
 	background: #fff;
 
-	@media (min-width:$md4) {
-		padding: rem(20) 0;
-	}
-
-	@media (min-width:$md2) {
-		padding: rem(34) 0;
-
-	}
 
 	&.open-menu {}
 
@@ -24,18 +15,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: rem(86);
 	}
 
 	// .header__logo
 	&__logo {
-		margin-right: auto;
-		max-width: rem(230);
+		max-width: rem(153);
 		display: flex;
 		align-items: center;
-
-		@media (min-width:$md2) {
-			max-width: rem(322);
-		}
 	}
 
 	// .header__menu
@@ -48,37 +35,28 @@
 		@media (min-width:$md4) {
 			display: flex;
 			align-items: center;
-			gap: 0.5rem;
+			gap: 0.75rem;
 			font-size: 1rem;
 			font-weight: 500;
 			line-height: 150%;
-			letter-spacing: -0.01em;
 			transition: color 0.3s ease;
 
 			&::before {
-				width: 1.62131rem;
-				height: 1.62131rem;
-				font-size: 0.86344rem;
+				width: 1.875rem;
+				height: 1.8125rem;
+				border-radius: 50%;
+				background: #ECEFF7;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				flex-shrink: 0;
-				border-radius: 70.57463rem;
-				background: rgba(255, 255, 255, 0.17);
-				backdrop-filter: blur(rem(2.25));
-				-webkit-backdrop-filter: blur(rem(2.25));
 			}
 
 		}
 
-		@media (min-width:$md2) {
-			margin-left: rem(47);
-		}
 
 		@media (any-hover: hover) {
-			&:hover {
-				color: #B7CCED;
-			}
+			&:hover {}
 		}
 
 
@@ -94,6 +72,8 @@
 }
 
 .menu {
+	flex: 1 1 auto;
+
 	@media (max-width:$md3) {
 		position: fixed;
 		top: rem(-20);
@@ -188,15 +168,40 @@
 	}
 
 	// .menu__item
-	&__item {}
+	&__item {
+		position: relative;
+		padding: rem(10) 0;
+
+		@media (min-width:$md4) {
+			padding: rem(20) 0;
+		}
+
+		@media (min-width:$md2) {
+			padding: rem(32) 0;
+		}
+	}
 
 	// .menu__link
 	&__link {
-		transition: color 0.3s ease;
+		transition: opacity 0.3s ease;
+		opacity: 0.6;
+
+		&.active {
+			opacity: 1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 0.1875rem;
+				background: #2442A7;
+			}
+		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: #B7CCED;
+				opacity: 1;
 			}
 		}
 	}
@@ -224,9 +229,7 @@
 		}
 
 		@media (any-hover: hover) {
-			&:hover {
-				color: #B7CCED;
-			}
+			&:hover {}
 		}
 
 		&::before {

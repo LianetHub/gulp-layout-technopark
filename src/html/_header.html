@@ -8,22 +8,22 @@
                 <nav aria-label="Меню в шапке" class="menu__navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="/" class="menu__link" itemprop="url">
+                            <a href="/" class="menu__link@@if(typeof active !== 'undefined' && active === 1){ active}" itemprop="url">
                                 <span itemprop="name">Главная</span>
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="/about.html" class="menu__link" itemprop="url">
+                            <a href="/about.html" class="menu__link@@if(typeof active !== 'undefined' && active === 2){ active}" itemprop="url">
                                 <span itemprop="name">О технопарке</span>
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="/education.html" class="menu__link" itemprop="url">
+                            <a href="/education.html" class="menu__link@@if(typeof active !== 'undefined' && active === 3){ active}" itemprop="url">
                                 <span itemprop="name">Обучение</span>
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="/contacts.html" class="menu__link" itemprop="url">
+                            <a href="/contacts.html" class="menu__link@@if(typeof active !== 'undefined' && active === 4){ active}" itemprop="url">
                                 <span itemprop="name">Контакты</span>
                             </a>
                         </li>

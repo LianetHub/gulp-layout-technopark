@@ -5,7 +5,9 @@
     })
     <body itemscope itemtype="https://schema.org/WebPage">
         <div class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {
+            'active': 1
+            })
             <main class="page" itemprop="mainContentOfPage">
                 <section class="hero">
                     <div class="hero__wrapper">
