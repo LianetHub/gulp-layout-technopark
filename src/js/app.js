@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // sliders
-    if (document.querySelector('.about__slider')) {
-        new Swiper('.about__slider', {
+    document.querySelectorAll('.banner__slider')?.forEach(slider => {
+        new Swiper(slider, {
             slidesPerView: 1,
             speed: 1000,
             effect: "fade",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 crossFade: true
             }
         })
-    }
+    })
 
 
     if (document.querySelector('.gallery__slider')) {
