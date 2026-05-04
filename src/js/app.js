@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     //  Fancybox
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
@@ -33,18 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // sliders
-    if (document.querySelector('.testing-lab__slider')) {
-        new Swiper('.testing-lab__slider', {
-            slidesPerView: "auto",
-            spaceBetween: 14,
-            breakpoints: {
-                1199.98: {
-                    slidesPerView: 3,
-                    spaceBetween: 35,
-                }
+    if (document.querySelector('.about__slider')) {
+        new Swiper('.about__slider', {
+            slidesPerView: 1,
+            speed: 1000,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false
+            },
+            fadeEffect: {
+                crossFade: true
             }
         })
     }
+
 
     if (document.querySelector('.gallery__slider')) {
         new Swiper('.gallery__slider', {
