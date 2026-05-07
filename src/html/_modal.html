@@ -1,0 +1,38 @@
+<dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
+    <h2 id="callback-modal-title" class="popup__title title-sm">Оставьте ваши данные, мы свяжемся</h2>
+    <form action="/send.php" method="post" class="popup__form form">
+        <div class="form__field">
+            <input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
+            <span class="form__error">Введите ваше имя</span>
+        </div>
+        <div class="form__field">
+            <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+            <span class="form__error">Введите корректный email</span>
+        </div>
+        <div class="form__field">
+            <textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
+        </div>
+        <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+        <label class="form__checkbox checkbox">
+            <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+            <span class="checkbox__content">Нажимая на кнопку, Вы даете согласие на <a href="/policy.html">обработку персональных данных</a></span>
+            <span class="form__error">Необходимо согласие</span>
+        </label>
+    </form>
+</dialog>
+
+<dialog id="success" class="popup" aria-labelledby="success-modal-title">
+    <div class="popup__icon">
+        <img src="@img/icons/success.svg" alt="Иконка">
+    </div>
+    <h2 id="success-modal-title" class="popup__title title-sm">Успешно!</h2>
+    <p class="popup__subtitle">Наш специалист свяжется с Вами</p>
+</dialog>
+
+<dialog id="error" class="popup" aria-labelledby="error-modal-title">
+    <div class="popup__icon">
+        <img src="@img/icons/error.svg" alt="Иконка">
+    </div>
+    <h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
+    <p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
+</dialog>

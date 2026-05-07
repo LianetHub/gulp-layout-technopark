@@ -1,8 +1,9 @@
 "use strict";
 
-
+import * as devFunctions from './modules/functions.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+
     //  Fancybox
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
         Fancybox.bind("[data-fancybox]", {
@@ -10,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
             closeExisting: true
         });
     }
+
+    devFunctions.isWebp();
+    devFunctions.OS();
+    devFunctions.formSubmit();
+
+    // clickHandler
 
     document.addEventListener('click', function (e) {
         const target = e.target;

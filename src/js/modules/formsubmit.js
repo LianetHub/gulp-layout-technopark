@@ -1,97 +1,142 @@
 export const formSubmit = () => {
 	const forms = document.querySelectorAll("form");
+
 	forms.forEach((form) => {
+		if (form.classList.contains('configurator') || form.classList.contains('search')) return;
+
 		form.addEventListener("submit", formSend);
 
 		if (!form.querySelector('[name="captcha"]')) {
 			form.insertAdjacentHTML("beforeend", `<input type="hidden" name="captcha" value="${navigator.userAgent}"/>`);
 		}
-	});
 
-	document.addEventListener("input", handleFormInput);
+		const inputs = form.querySelectorAll('[data-required]');
+		inputs.forEach(input => {
+			input.addEventListener('blur', () => {
+				validateField(input);
+				toggleButtonState(form);
+			});
+
+			input.addEventListener('input', () => {
+				if (input.classList.contains('_error')) {
+					validateField(input);
+				}
+				toggleButtonState(form);
+			});
+
+			if (input.type === 'checkbox') {
+				input.addEventListener('change', () => {
+					validateField(input);
+					toggleButtonState(form);
+				});
+			}
+		});
+	});
 
 	async function formSend(e) {
 		e.preventDefault();
 		const form = e.target;
+		const submitBtn = form.querySelector('.form__submit');
 		const currentUrl = form.getAttribute("action");
-		const error = formValidate(form);
+		const isFormValid = validateForm(form);
 
-		if (error === 0) {
+		if (isFormValid) {
 			try {
-
 				form.classList.add("_sending");
+				if (submitBtn) submitBtn.classList.add("_loading");
+
+				const formData = new FormData(form);
 
 				const response = await fetch(currentUrl, {
 					method: "POST",
-					body: new FormData(form),
+					body: formData,
 				});
 
-				if (!response.ok) throw new Error("Укажите URL, куда будет запрос в атрибуте action у формы");
-
-				form.reset();
-				closeAndShowSuccessModal();
-
+				if (response.ok) {
+					form.reset();
+					toggleButtonState(form);
+					showModal("#success");
+				} else {
+					throw new Error("Ошибка сервера");
+				}
 			} catch (error) {
-
-				alert(error.message);
-				closeAndShowSuccessModal();
-
+				showModal("#error");
 			} finally {
 				form.classList.remove("_sending");
+				form.reset();
+				if (submitBtn) {
+					submitBtn.setAttribute('disabled', 'disabled');
+					submitBtn.classList.remove("_loading");
+				};
 			}
 		}
 	}
 
-	function handleFormInput(e) {
-		const { target } = e;
-		if (target.classList.contains('_error')) {
-			formRemoveError(target);
+	function validateField(input) {
+		let isFieldValid = true;
+
+		if (input.matches("[name='email']")) {
+			isFieldValid = emailTest(input.value);
+		} else if (input.matches("[type='checkbox']")) {
+			isFieldValid = input.checked;
+		} else if (input.matches("[type='tel']")) {
+			isFieldValid = phoneTest(input.value);
+		} else {
+			isFieldValid = input.value.trim() !== "";
 		}
+
+		if (!isFieldValid) {
+			formAddError(input);
+		} else {
+			formRemoveError(input);
+		}
+
+		return isFieldValid;
 	}
 
-	function formValidate(form) {
-		let error = 0;
-		const formReq = form.querySelectorAll("[data-required]");
+	function validateForm(form) {
+		let errorCount = 0;
+		const inputs = form.querySelectorAll("[data-required]");
+		inputs.forEach(input => {
+			if (!validateField(input)) {
+				errorCount++;
+			}
+		});
+		return errorCount === 0;
+	}
 
-		formReq.forEach(input => {
-			formRemoveError(input);
+	function toggleButtonState(form) {
+		const submitBtn = form.querySelector('.form__submit');
+		if (!submitBtn) return;
 
-			if (input.matches("[name='email']") && !emailTest(input.value)) {
-				formAddError(input);
-				error++;
-			} else if (input.matches("[type='checkbox']") && !input.checked) {
-				formAddError(input);
-				error++;
-			} else if (input.value.trim() === "" || (input.matches("[name='message']") && input.value.trim().length < 1)) {
-				formAddError(input);
-				error++;
-			} else if (input.matches("[type='tel']") && !phoneTest(input.value)) {
-				formAddError(input);
-				error++;
+		let isInvalid = false;
+		const inputs = form.querySelectorAll("[data-required]");
+
+		inputs.forEach(input => {
+			if (input.matches("[name='email']")) {
+				if (!emailTest(input.value)) isInvalid = true;
+			} else if (input.matches("[type='checkbox']")) {
+				if (!input.checked) isInvalid = true;
+			} else if (input.value.trim() === "") {
+				isInvalid = true;
 			}
 		});
 
-		return error;
+		submitBtn.disabled = isInvalid;
 	}
 
 	function formAddError(input) {
 		input.classList.add("_error");
 		input.parentElement.classList.add("_error");
-		// input.closest('.form')?.querySelector('.form__error-message')?.classList.add('visible');
 	}
 
 	function formRemoveError(input) {
 		input.classList.remove("_error");
 		input.parentElement.classList.remove("_error");
-		// const form = input.closest('.form');
-		// if (form && !form.querySelector('._error')) {
-		// 	form.querySelector('.form__error-message')?.classList.remove('visible');
-		// }
 	}
 
 	function emailTest(email) {
-		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(String(email).toLowerCase());
+		return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(email).toLowerCase());
 	}
 
 	function phoneTest(phone) {
@@ -99,14 +144,13 @@ export const formSubmit = () => {
 		return cleaned.length >= 10 && /^[1-9]\d{9,14}$/.test(cleaned);
 	}
 
-
-	function closeAndShowSuccessModal() {
-		if (Fancybox.getInstance()) {
+	function showModal(id) {
+		if (typeof Fancybox !== "undefined") {
 			Fancybox.close(true);
+			Fancybox.show([{ src: id, type: "inline" }], {
+				dragToClose: false,
+				mainClass: "custom-modal",
+			});
 		}
-		Fancybox.show([{ src: "#success", type: "inline" }], {
-			dragToClose: false,
-			closeButton: false,
-		});
 	}
 };

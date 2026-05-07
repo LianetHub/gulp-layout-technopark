@@ -18,11 +18,8 @@
 }
 
 
-
 .fancybox__backdrop {
-	background: rgba($color: #272a2d, $alpha: 0.8);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
+	background: rgba($color: #020A1F, $alpha: 0.5);
 }
 
 .fancybox__content {
@@ -47,12 +44,12 @@
 	right: rem(4);
 
 	@media (min-width: $md5) {
-		top: rem(18);
-		right: rem(26);
-		--f-close-button-width: #{rem(52)};
-		--f-close-button-height: #{rem(52)};
-		--f-close-button-svg-width: #{rem(32)};
-		--f-close-button-svg-height: #{rem(32)};
+		top: rem(14);
+		right: rem(14);
+		--f-close-button-width: #{rem(32)};
+		--f-close-button-height: #{rem(32)};
+		--f-close-button-svg-width: #{rem(24)};
+		--f-close-button-svg-height: #{rem(24)};
 	}
 }
 
@@ -63,32 +60,34 @@
 .popup {
 	display: none;
 	flex-direction: column;
-	border-radius: 0.5rem;
-	background-color: #e6e4dc;
+	justify-content: center;
+	border-radius: 1rem;
+	background-color: #FFF;
 	color: #272a2d;
 	padding: 2.5rem 1rem;
 	max-width: 100%;
+	width: 100%;
+	min-height: 14.875rem;
 
 	@media (min-width: $md4) {
-		padding: 4rem;
-		max-width: rem(624);
+		padding: 2rem;
+		max-width: rem(416);
 	}
 
-	@media (min-width: $md3) {
-		max-width: 50rem;
-		padding: 5rem;
+	&__icon {
+		align-self: center;
+		margin-bottom: 1rem;
+		max-width: 3rem;
 	}
 
-	// .popup__btn
-	&__btn {
-		margin-top: 1.5rem;
+	// .popup__title
+	&__title {
+		text-align: center;
 
-		@media (min-width: $md5) {
-			margin-top: 2.62rem;
-		}
-
-		&[data-fancybox-close] {
-			align-self: center;
+		&.title-sm {
+			@media (min-width:$md5) {
+				font-size: 2rem;
+			}
 		}
 	}
 
@@ -97,51 +96,22 @@
 
 	// .popup__subtitle
 	&__subtitle {
-		line-height: 130%;
+		margin-top: 0.75rem;
+		color: #313542;
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 140%;
+		text-align: center;
+
+	}
+
+	// .popup__form
+	&__form {
 		margin-top: 1.5rem;
-		font-size: 0.875rem;
-
-		@media (min-width: $md5) {
-			font-weight: 600;
-			font-size: 1rem;
-		}
-
-		@media (min-width: $md3) {
-			margin-top: 1.75rem;
-			font-size: 1.25rem;
-			line-height: 150%;
-		}
 	}
 
-	// .popup__contacts
-	&__contacts {
-		margin-top: 2.5rem;
-		display: flex;
-		align-items: center;
-		gap: 4rem;
-		row-gap: 1rem;
-		flex-wrap: wrap;
-	}
 
-	// .popup__phone
-	&__phone {
-		transition: color 0.3s ease;
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
-		}
-	}
 
-	// .popup__socials
-	&__socials {}
 
-	&__btn {
-		max-width: 25.5rem;
-	}
-
-	&__article {
-		margin-top: 2rem;
-	}
 }

@@ -8,8 +8,23 @@
 		display: block;
 
 		&+.form__field {
-			margin-top: 1rem;
+			margin-top: .5rem;
 		}
+
+		&._error {
+			.form__error {
+				display: block;
+			}
+
+		}
+	}
+
+	// .form__error
+	&__error {
+		color: $red;
+		font-size: rem(12);
+		display: none;
+		margin-top: 0.5rem;
 	}
 
 	// .form__control
@@ -17,102 +32,115 @@
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease, color 0.3s ease;
 		width: 100%;
-
 		font-size: 1rem;
-		line-height: 120%;
-		border-radius: 2rem;
-		border: rem(1) solid red;
-		background: #000;
-		color: #fff;
-		caret-color: #fff;
-		padding: 1rem 1.5rem;
-
-		&._input {
-			padding: 1.25rem 1.5rem 0.75rem;
-
-			&+.form__field-placeholder {
-				font-size: rem(12);
-				top: rem(-4);
-				padding: 0 0.5rem;
-				color: red;
-				background: #000;
-				transition: top 0.3s ease, font-size 0.3s ease;
-			}
-		}
-
-		&:-webkit-autofill,
-		&:not(:placeholder-shown) {
-
-			&+.form__field-placeholder {
-				font-size: rem(12);
-				top: rem(-4);
-				padding: 0 0.5rem;
-				color: red;
-				background: #000;
-
-			}
-		}
+		line-height: 160%;
+		border-radius: 0.5rem;
+		border: rem(1) solid #F6F8FA;
+		background: #F6F8FA;
+		color: #313542;
+		caret-color: $accent;
+		padding: 0.8rem 0.75rem;
+		min-height: rem(56);
 
 		&::placeholder {
-			opacity: 0;
+			color: #A1A5A7;
+			opacity: 1;
 		}
 
-		&._error {
-			border-color: $accent;
+		&:focus {
+			border: rem(1) solid $accent;
+		}
 
-			&+.form__field-placeholder {
-				color: $accent;
-			}
+
+		&._error {
+			border-color: $red;
+
 		}
 
 		&:is(textarea) {
-			height: 7.5rem;
+			height: 6.5rem;
 			resize: none;
 		}
 	}
 
-	// .form__field-placeholder
-	&__field-placeholder {
-		position: absolute;
-		top: 1.1rem;
-		left: 0.5rem;
-		padding: 0 1rem;
-
-		font-size: 1rem;
-		line-height: 120%;
-		display: block;
-		transition: top 0.3s ease, font-size 0.3s ease;
-		font-size: 1rem;
-		pointer-events: none;
-	}
 
 	// .form__submit
 	&__submit {
 		width: 100%;
-		margin-top: 2rem;
+		margin-top: 1.5rem;
+	}
 
-		&.btn.btn-primary {
+	// .form__checkbox
+	&__checkbox {
+		margin-top: 1rem;
+	}
 
-			&:hover,
-			&:active {
+	// .form__checkbox-input
+	&__checkbox-input {}
 
+	// .form__checkbox-text
+	&__checkbox-text {}
 
+}
 
+.checkbox {
+	display: block;
+
+	// .checkbox__input
+	&__input {
+		&:checked {
+			&+.checkbox__content {
 				&::before {
-					color: $accent;
+					@extend %ic, .icon-check;
+					background: $accent;
+				}
+			}
+		}
+
+		&._error {
+			&+.checkbox__content {
+				&::before {
+					border: 1px solid $red;
+					background: #fff1ed;
 				}
 			}
 		}
 	}
 
-	// .form__policy
-	&__policy {
-		margin-top: 0.5rem;
+	// .checkbox__content
+	&__content {
+		position: relative;
+		display: block;
 		color: #313542;
+		padding-left: 1.88rem;
+		font-size: 0.75rem;
+		line-height: 120%;
+
+
+		cursor: pointer;
+		user-select: none;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #fff;
+			color: #fff;
+			border: rem(1) solid #2343A7;
+			border-radius: rem(4);
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 0.4rem;
+
+		}
 
 		& a {
 			text-decoration: underline;
-			color: $accent;
 
 			@media (any-hover: hover) {
 				&:hover {
@@ -121,7 +149,6 @@
 			}
 		}
 	}
-
 }
 
 .btn {
@@ -151,8 +178,9 @@
 	}
 
 	&.btn-primary {
+		--btn-text-color: #fff;
+		color: var(--btn-text-color, #fff);
 		background: $accent;
-		color: #fff;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -173,8 +201,9 @@
 	}
 
 	&.btn-secondary {
+		--btn-text-color: #313542;
+		color: var(--btn-text-color, #313542);
 		background: #FFF;
-		color: #313542;
 		box-shadow: 0 rem(4) rem(20.7) 0 #B9BCC7;
 
 		@media (any-hover: hover) {
@@ -223,4 +252,37 @@
 		cursor: default;
 		pointer-events: none;
 	}
+
+	&._loading {
+		color: transparent !important;
+		pointer-events: none;
+		transition: none;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: rem(20);
+			height: rem(20);
+			border: rem(3) solid var(--btn-text-color, #000);
+			border-bottom-color: transparent;
+			border-radius: 50%;
+			transform-origin: center;
+			animation: rotation 1s linear infinite;
+			z-index: 3;
+		}
+
+		@keyframes rotation {
+			0% {
+				transform: translate(-50%, -50%) rotate(0deg);
+			}
+
+			100% {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	}
+
 }
