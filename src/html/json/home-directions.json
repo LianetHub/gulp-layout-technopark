@@ -1,0 +1,37 @@
+[
+    {
+        "color": "grey",
+        "size": "large",
+        "imageURL": "@img/icons/development.svg",
+        "caption": "Разработка",
+        "desc": "Исследования и создание новых технологических решений"
+    },
+    {
+        "color": "grey",
+        "size": "large",
+        "imageURL": "@img/icons/production.svg",
+        "caption": "Производство",
+        "desc": "Выпуск оборудования на собственных мощностях"
+    },
+    {
+        "color": "grey",
+        "size": "default",
+        "imageURL": "@img/icons/tests.svg",
+        "caption": "Испытания",
+        "desc": "Тестирование и контроль качества продукции"
+    },
+    {
+        "color": "grey",
+        "size": "default",
+        "imageURL": "@img/icons/implementation.svg",
+        "caption": "Внедрение",
+        "desc": "Запуск решений и сопровождение проектов"
+    },
+    {
+        "color": "grey",
+        "size": "default",
+        "imageURL": "@img/icons/education.svg",
+        "caption": "Обучение",
+        "desc": "Подготовка специалистов для отрасли"
+    }
+]

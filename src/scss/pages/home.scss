@@ -170,15 +170,136 @@
 }
 
 .directions {
-    padding: 5.875rem 0 rem(58);
+    padding: 5.875rem 0 rem(0);
 
     // .directions__title
     &__title {}
+
+    // .directions__list
+    &__list {
+        margin-top: rem(44);
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
 }
+
+.direction-card {
+    border-radius: 1.5rem;
+    padding: 2.625rem 0.5rem 2.625rem 2.25rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &.direction-card--grey {
+        background: #F4F7F9;
+    }
+
+    &.direction-card--white {}
+
+    &.direction-card--large {
+        grid-column: span 6;
+    }
+
+    &.direction-card--default {
+        min-height: rem(201);
+    }
+
+    grid-column: span 4;
+    min-height: rem(180);
+
+    // .direction-card__icon
+    &__icon {
+        width: 6rem;
+        height: 6rem;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        border-radius: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            background: url("@img/glass-substrat.png") 0 0 / cover no-repeat;
+            z-index: -1;
+        }
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(11);
+            right: rem(10);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            z-index: -2;
+            background: #2342A7;
+            filter: blur(23.950000762939453px)
+        }
+    }
+
+    // .direction-card__content
+    &__content {
+        flex: 1 1 auto;
+    }
+
+    // .direction-card__caption
+    &__caption {
+        color: #313542;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 116.667%;
+        letter-spacing: -0.02806rem;
+    }
+
+    // .direction-card__desc
+    &__desc {
+        margin-top: 1rem;
+        color: #4A5565;
+        font-size: 1.125rem;
+        line-height: 126.389%;
+        letter-spacing: -0.00938rem;
+        max-width: 26.5rem;
+    }
+}
+
 
 .residents {
     background: #F6F8FA;
-    padding: rem(75) 0 rem(71);
+    padding: rem(131) 0 rem(136);
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 100%;
+        height: rem(58);
+        left: 0;
+        background: #fff;
+
+        position: absolute;
+
+    }
+
+    &::before {
+        top: 0;
+        border-radius: 0 0 rem(58) rem(58);
+    }
+
+    &::after {
+        bottom: 0;
+        border-radius: rem(58) rem(58) 0 0;
+    }
 
     // .residents__title
     &__title {}
@@ -196,7 +317,7 @@
         border-radius: 1.5rem;
         background: #FFF;
         box-shadow: 0 rem(13) rem(28) 0 #ECF1F5;
-        padding: 1.5rem;
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
         display: flex;
         flex-direction: column;
         transition: box-shadow 0.3s ease;
@@ -213,7 +334,7 @@
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     // .residents__card-logotype
@@ -236,6 +357,7 @@
 
     // .residents__card-desc
     &__card-desc {
+        margin-top: 1rem;
         color: #4A5565;
         font-size: 1.125rem;
         line-height: 126.389%;
@@ -268,19 +390,27 @@
 }
 
 .about-center {
-    padding: rem(54) 0;
-    border-radius: rem(30) rem(30) 0 0;
+    padding: rem(0) 0 rem(54);
+    position: relative;
+    z-index: 2;
+    background: #fff;
 
     // .about-center__container
     &__container {}
 
     // .about-center__banner
     &__banner {
-        .description-block {
-            padding-right: 4rem;
-            max-width: 36rem;
+        &.banner {
+            min-height: rem(657);
 
+            .description-block {
+                padding-right: 4rem;
+                padding-left: 4rem;
+                max-width: 36.7rem;
+
+            }
         }
+
     }
 }
 
@@ -367,7 +497,7 @@
     color: #313542;
     z-index: 6;
     max-width: 30rem;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
 
     &::before,
     &::after {
