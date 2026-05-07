@@ -1,28 +1,41 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer__container container" itemscope itemtype="http://schema.org/Organization">
         <div class="footer__main">
-            <a href="" class="footer__logo">
-                <img src="@img/logo-white.svg" alt="Логотип">
+            <a href="/" class="footer__logo" itemprop="url">
+                <img src="@img/logo-white.svg" alt="Логотип" itemprop="logo">
             </a>
+            <meta itemprop="name" content="Технопарк «Искра-Волга»">
             <p class="footer__copyright">© 2026 Технопарк «Искра-Волга»</p>
         </div>
         <div class="footer__contacts">
-            <a href="tel:+78432150332" class="footer__contacts-link">8 (843) 215-03-32</a>
-            <a href="mailto:t-center@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">t-center@iskra-volga.ru</a>
+            <a href="tel:+78432150332" class="footer__contacts-link" itemprop="telephone">8 (843) 215-03-32</a>
+            <a href="mailto:info@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">info@iskra-volga.ru</a>
             <address class="footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <meta itemprop="addressCountry" content="RU">
                 <span itemprop="postalCode">422527</span>,
                 <span itemprop="addressRegion">Республика Татарстан</span>,
+                Зеленодольский район, город
                 <span itemprop="addressLocality">Зеленодольск</span>,
-                <span itemprop="streetAddress"><span class="text-nowrap">п/р</span>&nbsp;Промышленная Площадка Зеленодольск</span>
+                <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
             </address>
         </div>
         <div class="footer__side">
             <nav aria-label="Меню в подвале" class="footer__menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <ul class="footer__menu-list">
-                    <li class="footer__menu-item"><a href="/" class="footer__menu-link" itemprop="url"><span>Главная</span></a></li>
-                    <li class="footer__menu-item"><a href="/about" class="footer__menu-link" itemprop="url"><span itemprop="name">О технопарке</span></a></li>
-                    <li class="footer__menu-item"><a href="/education" class="footer__menu-link" itemprop="url"><span itemprop="name">Обучение</span></a></li>
+                    <li class="footer__menu-item">
+                        <a href="/" class="footer__menu-link" itemprop="url">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="/about" class="footer__menu-link" itemprop="url">
+                            <span itemprop="name">О технопарке</span>
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="/education" class="footer__menu-link" itemprop="url">
+                            <span itemprop="name">Обучение</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <a href="/policy.html" rel="nofollow" class="footer__policy">Политика конфиденциальности</a>

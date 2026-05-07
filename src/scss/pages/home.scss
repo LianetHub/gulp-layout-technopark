@@ -273,7 +273,6 @@
     }
 }
 
-
 .residents {
     background: #F6F8FA;
     padding: rem(131) 0 rem(136);
@@ -286,7 +285,6 @@
         height: rem(58);
         left: 0;
         background: #fff;
-
         position: absolute;
 
     }
@@ -557,7 +555,7 @@
     // .training__container
     &__container {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     // .training__main
@@ -577,10 +575,11 @@
 
     // .training__cards
     &__cards {
-        flex: 0 0 rem(684);
+        flex: 0 0 rem(700);
         display: flex;
         flex-direction: column;
-        gap: rem(13);
+        gap: rem(15);
+        padding-right: 1rem;
     }
 
     // .training__card
@@ -588,7 +587,7 @@
         border-radius: 1.875rem;
         background: #FFFEFE;
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
-        padding: 1.69rem 1.75rem;
+        padding: 1.5rem 1.75rem;
         display: flex;
         gap: rem(30);
     }
@@ -602,7 +601,35 @@
         align-items: center;
         border-radius: 1.875rem;
         flex-shrink: 0;
-        background: url("@img/training-card-decor.png") 0 0 / cover no-repeat;
+        position: relative;
+        z-index: 1;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 2.25rem;
+            bottom: 2.5rem;
+            width: 1.83rem;
+            height: 1.83rem;
+            background: #2342A7;
+            filter: blur(29.2189998626709px);
+            opacity: 0.5;
+            z-index: -2;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("@img/glass-substrat-training.png") 0 0 / cover no-repeat;
+            z-index: -1;
+        }
+
     }
 
     // .training__card-content
@@ -632,28 +659,31 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            margin-top: rem(-16);
+            margin-right: rem(-8);
         }
     }
 
     // .training__card-desc
     &__card-desc {
-        margin-top: 1rem;
+        margin-top: 0.75rem;
         color: #4A5565;
         font-size: 1rem;
         line-height: 125%;
         letter-spacing: -0.0195rem;
+        padding-right: 3.5rem;
     }
 }
 
 .solutions {
-    padding: 3.69rem 0 3.44rem;
+    padding: 3.25rem 0 1.75rem;
 
     // .solutions__title
     &__title {}
 
     // .solutions__list
     &__list {
-        margin-top: 2.25rem;
+        margin-top: 1.875rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0.75rem;
@@ -663,7 +693,7 @@
     &__card {
         border-radius: 1.5rem;
         background: #F6F8FA;
-        padding: 1.35rem;
+        padding: 1.35rem rem(32) 2rem;
 
         &:nth-child(3n + 2) {
             background: #F6FAF8;
@@ -699,6 +729,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: rem(-8);
 
         &::before {
             content: '';
@@ -732,7 +763,7 @@
 }
 
 .order {
-    padding: rem(50) 0 rem(120);
+    padding: rem(50) 0 rem(10);
 
     // .order__container
     &__container {}
@@ -750,11 +781,18 @@
     }
 
     // .order__title
-    &__title {}
+    &__title {
+        &.title {
+            @media (min-width:$md2) {
+                font-size: 2.625rem;
+
+            }
+        }
+    }
 
     // .order__banner-subtitle
     &__banner-subtitle {
-        margin: 1.5rem;
+        margin-top: 1.25rem;
         font-size: 1.125rem;
         line-height: 161.111%;
         max-width: 42rem;
