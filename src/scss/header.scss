@@ -175,7 +175,14 @@
 	&__item {
 		position: relative;
 		padding: rem(10) 0;
+		transition: color 0.3s ease;
 		color: rgba($color: #313542, $alpha: 0.6);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #313542;
+			}
+		}
 
 		&.menu__item--parent {
 			display: flex;
@@ -202,7 +209,7 @@
 
 	// .menu__link
 	&__link {
-		transition: color 0.3s ease;
+
 
 
 		&.active {

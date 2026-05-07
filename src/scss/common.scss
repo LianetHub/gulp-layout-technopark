@@ -42,6 +42,9 @@ body {
 .page {
 	flex: 1 1 auto;
 	overflow-x: clip;
+	display: flex;
+	flex-direction: column;
+
 }
 
 // ================== ОБОЛОЧКА ===============================
