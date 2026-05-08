@@ -764,10 +764,16 @@
 
 .order {
     margin-top: auto;
-    padding: rem(50) 0 rem(68);
     background: #fff;
     border-radius: 0 0 rem(58) rem(58);
     margin-bottom: rem(-58);
+
+    padding: rem(50) 0 rem(38);
+
+    @media (min-width:$md3) {
+        padding: rem(50) 0 rem(68);
+
+    }
 
     &.order--grey {
         background: #F6F8FA;
@@ -781,34 +787,53 @@
         background: url("@img/order-decor.svg") 0 0 / cover no-repeat, linear-gradient(rgba($color: #2342A7, $alpha: 0.64), rgba($color: #2342A7, $alpha: 0.64)), url("@img/hero-poster.jpg") 0 0 / cover no-repeat;
         border-radius: 1.5rem;
         color: #fff;
-        padding: 3.75rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 2.5rem;
+
+        @media (min-width:$md3) {
+            padding: 3.75rem;
+
+        }
     }
 
     // .order__title
     &__title {
         &.title {
+            font-size: 2.125rem;
+            line-height: 117.647%;
+
             @media (min-width:$md2) {
                 font-size: 2.625rem;
-
             }
         }
     }
 
     // .order__banner-subtitle
     &__banner-subtitle {
-        margin-top: 1.25rem;
-        font-size: 1.125rem;
-        line-height: 161.111%;
-        max-width: 42rem;
+        font-size: 1rem;
+        line-height: 130%;
+        max-width: 30.1875rem;
+        margin-top: 1.5rem;
+
+        @media (min-width:$md3) {
+            max-width: 42rem;
+            margin-top: 1.25rem;
+            font-size: 1.125rem;
+            line-height: 161.111%;
+
+        }
     }
 
     // .order__banner-btn
     &__banner-btn {
         margin-top: 1.5rem;
-        min-width: 9.6875rem;
+
+        @media (min-width:$md3) {
+            min-width: 9.6875rem;
+
+        }
     }
 }

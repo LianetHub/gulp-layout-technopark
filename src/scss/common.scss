@@ -58,6 +58,11 @@ body {
 	box-sizing: content-box;
 	max-width: $maxWidthContainer;
 	padding: 0 1rem;
+
+	@media (min-width:$md5) {
+		padding: 0 2rem;
+
+	}
 }
 
 //=============== LAYOUT ===============================
