@@ -40,6 +40,8 @@ body {
 }
 
 .page {
+	position: relative;
+	z-index: 2;
 	flex: 1 1 auto;
 	overflow-x: clip;
 	display: flex;

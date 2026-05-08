@@ -1,9 +1,18 @@
-<section class="order">
+<section class="order@@if(typeof color !== 'undefined'){ order--@@color}">
     <div class="order__container container">
         <div class="order__banner">
-            <h2 class="order__title title">Станьте резидентом технопарка</h2>
-            <div class="order__banner-subtitle">Приглашаем компании, специалистов и партнеров к взаимодействию. Совместно мы создаем будущее российской электроэнергетики.</div>
-            <a href="#callback" data-fancybox class="order__banner-btn btn btn-secondary">Оставить запрос</a>
+            <h2 class="order__title title">
+                @@if(typeof title !== 'undefined'){@@title}
+                @@if(typeof title == 'undefined'){Станьте резидентом технопарка}
+            </h2>
+            <div class="order__banner-subtitle">
+                @@if(typeof desc !== 'undefined'){@@desc}
+                @@if(typeof desc == 'undefined'){Приглашаем компании, специалистов и партнеров к взаимодействию. Совместно мы создаем будущее российской электроэнергетики.}
+            </div>
+            <a href="#callback" data-fancybox class="order__banner-btn btn btn-secondary">
+                @@if(typeof btnText !== 'undefined'){@@btnText}
+                @@if(typeof btnText == 'undefined'){Оставить запрос}
+            </a>
         </div>
     </div>
 </section>

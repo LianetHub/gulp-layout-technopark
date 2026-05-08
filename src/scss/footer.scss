@@ -1,20 +1,7 @@
 .footer {
     background-color: #313542;
     color: #fff;
-    padding: rem(115) 0 3.81rem;
-    position: relative;
-
-    &::before {
-        content: '';
-        width: 100%;
-        height: rem(58);
-        top: 0;
-        border-radius: 0 0 rem(58) rem(58);
-        left: 0;
-        background: #fff;
-        position: absolute;
-
-    }
+    padding: rem(118) 0 3.81rem;
 
 
     // .footer__container

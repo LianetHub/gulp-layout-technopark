@@ -764,7 +764,14 @@
 
 .order {
     margin-top: auto;
-    padding: rem(50) 0 rem(10);
+    padding: rem(50) 0 rem(68);
+    background: #fff;
+    border-radius: 0 0 rem(58) rem(58);
+    margin-bottom: rem(-58);
+
+    &.order--grey {
+        background: #F6F8FA;
+    }
 
     // .order__container
     &__container {}
@@ -802,5 +809,6 @@
     // .order__banner-btn
     &__banner-btn {
         margin-top: 1.5rem;
+        min-width: 9.6875rem;
     }
 }

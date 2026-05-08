@@ -37,7 +37,12 @@
                         <div class="contacts__map" id="map" data-coords="55.8528135688981,48.842075499999964" data-zoom="16" data-icon="@img/placemark.svg" data-icon-size="104, 116"></div>
                     </div>
                 </section>
-                @@include('./html/_order.html')
+                @@include('./html/_order.html', {
+                "color": "grey",
+                "title": 'Открыты к взаимодействию',
+                "desc": 'Свяжитесь с нами для получения дополнительной информации или обсуждения сотрудничества',
+                "btnText": 'Связаться'
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})
