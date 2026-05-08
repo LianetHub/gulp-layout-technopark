@@ -5,8 +5,11 @@
 	width: 100%;
 	z-index: $ui-index-6;
 	background: #fff;
+	padding: rem(10) 0;
 
-	padding: rem(14) 0;
+	@media (min-width:$md5) {
+		padding: rem(14) 0;
+	}
 
 	@media (min-width:$md3) {
 		padding: 0;
@@ -20,7 +23,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 2rem;
+		gap: 1rem;
+
+		@media (min-width:$md4) {
+			gap: 2rem;
+
+
+		}
 
 		@media (min-width:$md3) {
 			gap: rem(16);
@@ -38,7 +47,12 @@
 		display: flex;
 		align-items: center;
 		margin-right: auto;
-		max-width: 9rem;
+		max-width: rem(98);
+
+		@media (min-width:$md5) {
+			max-width: 9rem;
+
+		}
 
 		@media (min-width:$md3) {
 			max-width: rem(153);
@@ -51,30 +65,37 @@
 
 	// .header__phone
 	&__phone {
-		display: none;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: rem(12);
+		font-weight: 500;
+		line-height: 120%;
+		transition: color 0.3s ease;
+
+		&::before {
+			width: rem(20);
+			height: rem(20);
+			border-radius: 50%;
+			background: #ECEFF7;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+
+			@media (min-width:$md5) {
+				width: 1.875rem;
+				height: 1.8125rem;
+			}
+		}
+
 		white-space: nowrap;
 		transition: color 0.3s ease;
 
-		@media (min-width:$md4) {
-			display: flex;
-			align-items: center;
+		@media (min-width:$md5) {
 			gap: 0.75rem;
-			font-size: rem(14);
-			font-weight: 500;
 			line-height: 150%;
-			transition: color 0.3s ease;
-
-			&::before {
-				width: 1.875rem;
-				height: 1.8125rem;
-				border-radius: 50%;
-				background: #ECEFF7;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-shrink: 0;
-			}
-
+			font-size: rem(14);
 		}
 
 		@media (min-width:$md3) {
@@ -120,10 +141,7 @@
 		}
 	}
 
-	@media (max-width:$md5) {
-		top: rem(-10);
-		right: rem(-10);
-	}
+
 
 	// .menu__content
 	&__content {
@@ -148,7 +166,7 @@
 		}
 
 		@media (max-width:$md5) {
-			width: min(rem(277), 100%);
+			width: min(rem(320), 100%);
 			border-radius: 1.5rem 0 0 1.5rem;
 			padding: rem(50) rem(20) rem(46) rem(34);
 		}
@@ -202,8 +220,6 @@
 
 	// .menu__item
 	&__item {
-
-
 		transition: color 0.3s ease;
 		color: rgba($color: #313542, $alpha: 0.6);
 
@@ -334,8 +350,8 @@
 	background: transparent;
 	z-index: 11;
 	transition: all 0.3s ease;
-	width: rem(40);
-	height: rem(40);
+	width: rem(30);
+	height: rem(16);
 
 	@media (min-width:$md5) {
 		width: rem(40);
@@ -355,14 +371,13 @@
 		will-change: transform;
 		padding: rem(3) 0;
 
-
 		&:first-child {
-			width: 85%;
+			width: 84%;
 			margin-left: auto;
 		}
 
 		&:last-child {
-			width: 75%;
+			width: 74%;
 			margin-left: auto;
 		}
 

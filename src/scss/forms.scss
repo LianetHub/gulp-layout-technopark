@@ -165,8 +165,13 @@
 	padding: 1rem 1.5rem;
 	font-weight: 500;
 	line-height: 150%;
-	font-size: 1rem;
 	letter-spacing: -0.0195rem;
+	font-size: 0.875rem;
+
+	@media (min-width:$md5) {
+		font-size: 1rem;
+
+	}
 
 	&::before {
 		order: 1;

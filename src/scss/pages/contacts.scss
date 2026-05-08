@@ -9,13 +9,24 @@
     }
 
     &:not(:last-child) {
-        border-radius: 0 0 rem(58) rem(58);
-        margin-bottom: rem(-58);
+
         position: relative;
         z-index: 2;
+        border-radius: 0 0 rem(30) rem(30);
+        margin-bottom: rem(-30);
+
+        @media (min-width:$md4) {
+            border-radius: 0 0 rem(58) rem(58);
+            margin-bottom: rem(-58);
+        }
 
         &+* {
-            padding-top: rem(100);
+            padding-top: rem(72);
+
+            @media (min-width:$md5) {
+                padding-top: rem(100);
+
+            }
 
             @media (min-width:$md2) {
                 padding-top: rem(110);
@@ -35,9 +46,14 @@
     // .contacts__list
     &__list {
         display: grid;
-        gap: 2.5rem;
-        margin-top: rem(24);
-        grid-template-columns: 1.5fr 1fr;
+        gap: rem(14);
+        margin-top: rem(30);
+
+        @media (min-width:$md4) {
+            margin-top: rem(24);
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2.5rem;
+        }
 
         @media (min-width:$md3) {
             grid-template-columns: repeat(2, 1fr);
@@ -53,7 +69,11 @@
     // .contacts__item
     &__item {
         position: relative;
-        padding-left: 1.75rem;
+        padding-left: 2rem;
+
+        @media (min-width:$md5) {
+            padding-left: 1.75rem;
+        }
 
         @media (min-width:$md2) {
             padding-left: rem(38);
@@ -144,10 +164,11 @@
 
     // .contacts__map
     &__map {
-        margin-top: 3.25rem;
+        margin-top: 1.75rem;
         border-radius: 1.5rem;
         overflow: hidden;
-        height: 16.375rem;
+        height: 18.125rem;
+
         background: linear-gradient(90deg,
                 rgba($color: $accent, $alpha: 0.1) 25%,
                 rgba($color: $accent, $alpha: 0.2) 50%,
@@ -172,6 +193,13 @@
             100% {
                 background-position: 200% 0;
             }
+        }
+
+
+
+        @media (min-width:$md5) {
+            height: 16.375rem;
+            margin-top: 3.25rem;
         }
 
         @media (min-width:$md3) {

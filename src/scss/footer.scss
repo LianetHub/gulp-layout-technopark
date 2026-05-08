@@ -1,7 +1,12 @@
 .footer {
     background-color: #313542;
     color: #fff;
-    padding: rem(90) 0 rem(28);
+    padding: rem(55) 0 rem(30);
+
+    @media (min-width:$md5) {
+        padding: rem(90) 0 rem(28);
+
+    }
 
     @media (min-width:$md3) {
         padding: rem(118) 0 3.81rem;
@@ -11,8 +16,14 @@
     // .footer__container
     &__container {
         display: grid;
-        grid-template-columns: 1fr rem(223);
-        gap: rem(40);
+        gap: 1.125rem;
+
+        @media (min-width:$md5) {
+            grid-template-columns: 1fr rem(223);
+            gap: rem(40);
+
+
+        }
 
         @media (min-width:$md3) {
             display: flex;
@@ -24,7 +35,9 @@
 
     // .footer__main
     &__main {
-        display: contents;
+        @media (min-width:$md5) {
+            display: contents;
+        }
 
         @media (min-width:$md3) {
             display: block;
@@ -35,7 +48,13 @@
     // .footer__logo
     &__logo {
         order: -1;
-        max-width: 11.25rem;
+        max-width: 10.375rem;
+        display: block;
+
+        @media (min-width:$md5) {
+            max-width: 11.25rem;
+
+        }
 
         @media (min-width:$md3) {
             max-width: 14.6875rem;
@@ -47,6 +66,11 @@
         line-height: 155.556%;
         letter-spacing: -0.02744rem;
         font-size: 0.875rem;
+        margin-top: 0.5rem;
+
+        @media (min-width:$md5) {
+            margin-top: 0;
+        }
 
         @media (min-width:$md3) {
             margin-top: 1rem;
@@ -60,7 +84,15 @@
 
     // .footer__contacts
     &__contacts {
-        display: contents;
+        display: flex;
+        flex-direction: column-reverse;
+
+        gap: 1.125rem;
+
+        @media (min-width:$md5) {
+            margin-top: 0;
+            display: contents;
+        }
 
         @media (min-width:$md3) {
             display: flex;
@@ -74,13 +106,16 @@
 
     // .footer__contacts-links
     &__contacts-links {
-        order: -1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
         font-size: 0.875rem;
         letter-spacing: -0.0195rem;
+
+        @media (min-width:$md5) {
+            order: -1;
+        }
 
         @media (min-width:$md3) {
             font-size: 1rem;
@@ -102,12 +137,16 @@
 
     // .footer__address
     &__address {
-        line-height: 150%;
         letter-spacing: -0.0195rem;
-        order: 1;
         font-size: 0.875rem;
         max-width: 20rem;
-        margin-top: -1rem;
+        line-height: 130%;
+
+        @media (min-width:$md5) {
+            line-height: 150%;
+            order: 1;
+            margin-top: -1rem;
+        }
 
         @media (min-width:$md3) {
             margin-top: 0;
@@ -118,8 +157,11 @@
 
     // .footer__side
     &__side {
-        grid-column: 2/3;
-        grid-row: span 2;
+        @media (min-width:$md5) {
+            grid-column: 2/3;
+            grid-row: span 2;
+
+        }
 
         @media (min-width:$md3) {
             flex: 0 0 rem(250);
