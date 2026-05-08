@@ -18,13 +18,20 @@
                             </a>
                         </li>
                         <li class="menu__item menu__item--parent">
-                            <a href="/university.html" class="menu__link@@if(typeof active !== 'undefined' && active === 3){ active}" itemprop="url">
+                            <a href="/university.html" class="menu__link@@if(typeof active !== 'undefined' && active === 3){ active}@@if(typeof active !== 'undefined' && active === 4){ active}" itemprop="url">
                                 <span itemprop="name">Корпоративный университет</span>
                             </a>
-                            <button type="button" class="menu__arrow icon-chevron-down"></button>
+                            <button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="/interaction.html" class="submenu__link@@if(typeof active !== 'undefined' && active === 4){ active}" itemprop="url">
+                                        <span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="menu__item">
-                            <a href="/contacts.html" class="menu__link@@if(typeof active !== 'undefined' && active === 4){ active}" itemprop="url">
+                            <a href="/contacts.html" class="menu__link@@if(typeof active !== 'undefined' && active === 5){ active}" itemprop="url">
                                 <span itemprop="name">Контакты</span>
                             </a>
                         </li>

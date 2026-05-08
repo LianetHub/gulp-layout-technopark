@@ -33,7 +33,15 @@
                 </section>
                 @@include('./html/_residents.html')
 
-                @@include('./html/_order.html')
+                @@include('./html/_contacts.html', {
+                "title": "Месторасположение Технопарка"
+                })
+                @@include('./html/_order.html', {
+                "color": "grey",
+                "title": 'Открыты к&nbsp;взаимодействию',
+                "desc": 'Свяжитесь с нами для получения дополнительной информации или обсуждения сотрудничества',
+                "btnText": 'Связаться'
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

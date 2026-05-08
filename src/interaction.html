@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    "title": "О технопарке"
+    })
+    <body itemscope itemtype="https://schema.org/WebPage">
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            'active': 4
+            })
+            <main class="page" itemprop="mainContentOfPage">
+                <section class="about">
+                    <div class="about__container container">
+                        <div class="about__banner banner">
+                            <div class="banner__info">
+                                <h1 class="banner__title title">О технопарке <br> «Искра-Волга»</h1>
+                            </div>
+                            <div class="banner__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="banner__slide swiper-slide">
+                                        <img src="@img/about/01.jpg" class="cover-image" alt="Фото технопарка">
+                                    </div>
+                                    <div class="banner__slide swiper-slide">
+                                        <img src="@img/about/02.jpg" class="cover-image" alt="Фото технопарка">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner__description description-block description-block--left">
+                                Технопарк «ИСКРА-ВОЛГА» — это промышленно-технологический центр, объединяющий ведущие российские компании энергетической и электроэнергетической отраслей в&nbsp;единую&nbsp;экосистему полного цикла.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="career-guidance">
+                    <div class="career-guidance__container container">
+                        <div class="career-guidance__header">
+                            <h2 class="career-guidance__title title">Профориентационная работа со школьниками</h2>
+                            <div class="career-guidance__controls">
+                                <button type="button" class="career-guidance__prev icon-prev swiper-button-prev"></button>
+                                <button type="button" class="career-guidance__next icon-next swiper-button-next"></button>
+                            </div>
+                        </div>
+                        <div class="career-guidance__body">
+                            <div class="career-guidance__info">
+                                <div class="career-guidance__stat">800+</div>
+                                <div class="career-guidance__caption">Участников за 2025 год</div>
+                                <p class="career-guidance__desc">Экскурсионные маршруты по компаниям-резидентам, выездные мастер-классы, инженерные хакатоны с привлечением экспертов технопарка</p>
+                            </div>
+                            <div class="career-guidance__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="@img/career-guidance/01.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <img src="@img/career-guidance/01.jpg" class="cover-image" alt="Фото работы со школьниками">
+                                    </a>
+                                    <a href="@img/career-guidance/02.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <img src="@img/career-guidance/02.jpg" class="cover-image" alt="Фото работы со школьниками">
+                                    </a>
+                                    <a href="@img/career-guidance/03.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <img src="@img/career-guidance/03.jpg" class="cover-image" alt="Фото работы со школьниками">
+                                    </a>
+                                    <a href="@img/career-guidance/04.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <img src="@img/career-guidance/04.jpg" class="cover-image" alt="Фото работы со школьниками">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="results">
+                    <div class="results__container container">
+                        <h2 class="results__title title">Результаты взаимодействия</h2>
+                        <ul class="results__list">
+                            <li class="results__card">
+                                <div class="results__card-image">
+                                    <img src="@img/icons/test-pipe.svg" alt="Иконка">
+                                </div>
+                                <div class="results__card-content">
+                                    <div class="results__card-name">Практический опыт студентов</div>
+                                    <div class="results__card-desc">Реальная работа на производстве</div>
+                                </div>
+                            </li>
+                            <li class="results__card">
+                                <div class="results__card-image">
+                                    <img src="@img/icons/bulb.svg" alt="Иконка">
+                                </div>
+                                <div class="results__card-content">
+                                    <div class="results__card-name">Популяризация инженерной среды</div>
+                                    <div class="results__card-desc">Укрепление интереса к профильным специальностям</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                @@include('./html/_order.html', {
+                "color": "grey",
+                "title": 'Открыты к&nbsp;взаимодействию',
+                "desc": 'Свяжитесь с нами для получения дополнительной информации или обсуждения сотрудничества',
+                "btnText": 'Связаться'
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

@@ -1,0 +1,203 @@
+.career-guidance {
+    background: #F6F8FA;
+    padding: 4.34rem 0;
+
+    // .career-guidance__container
+    &__container {}
+
+    // .career-guidance__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .career-guidance__title
+    &__title {
+        max-width: 37.375rem;
+    }
+
+    // .career-guidance__controls
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    // .career-guidance__prev
+    &__prev {}
+
+    // .career-guidance__next
+    &__next {}
+
+    // .career-guidance__body
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // .career-guidance__info
+    &__info {
+        max-width: 29rem;
+    }
+
+    // .career-guidance__stat
+    &__stat {
+        color: #2342A7;
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 78.33%;
+        letter-spacing: -0.01938rem;
+    }
+
+    // .career-guidance__caption
+    &__caption {
+        margin-top: 1rem;
+        color: #4A5565;
+        font-size: 1.875rem;
+        line-height: 130%;
+        letter-spacing: -0.01938rem;
+    }
+
+    // .career-guidance__desc
+    &__desc {
+        margin-top: 2rem;
+        color: #313542;
+        font-size: 1.125rem;
+        line-height: 144.444%;
+        letter-spacing: -0.0195rem;
+    }
+
+    // .career-guidance__slider
+    &__slider {
+        min-width: 0;
+    }
+
+    // .career-guidance__slide
+    &__slide {
+        border-radius: 2rem;
+        overflow: hidden;
+        height: auto;
+    }
+}
+
+
+
+.results {
+    padding: rem(120) 0;
+    background: #fff;
+
+    &:not(:last-child) {
+
+        position: relative;
+        z-index: 2;
+        border-radius: 0 0 rem(30) rem(30);
+        margin-bottom: rem(-30);
+
+        @media (min-width:$md4) {
+            border-radius: 0 0 rem(58) rem(58);
+            margin-bottom: rem(-58);
+        }
+
+        &+* {
+            padding-top: rem(72);
+
+            @media (min-width:$md5) {
+                padding-top: rem(100);
+
+            }
+
+            @media (min-width:$md2) {
+                padding-top: rem(110);
+
+            }
+        }
+    }
+
+    // .results__container
+    &__container {}
+
+    // .results__title
+    &__title {}
+
+    // .results__list
+    &__list {
+        margin-top: rem(42);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    // .results__card
+    &__card {
+        display: flex;
+        align-items: center;
+        gap: rem(31);
+        border-radius: 1.5rem;
+        background: #FFF;
+        padding: 2.625rem 2rem;
+        box-shadow: 0 rem(13) rem(28) 0 #ECF1F5;
+    }
+
+    // .results__card-image
+    &__card-image {
+        width: 6rem;
+        height: 6rem;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        border-radius: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            background: url("@img/glass-substrat-training.png") 0 0 / cover no-repeat;
+            z-index: -1;
+        }
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(11);
+            right: rem(10);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            z-index: -2;
+            background: #2342A7;
+            filter: blur(23.950000762939453px)
+        }
+    }
+
+    // .results__card-content
+    &__card-content {
+        flex: 1 1 auto;
+    }
+
+    // .results__card-name
+    &__card-name {
+        color: #313542;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 116.667%;
+        letter-spacing: -0.02806rem;
+    }
+
+    // .results__card-desc
+    &__card-desc {
+        margin-top: 1rem;
+        color: #4A5565;
+        font-size: 1.125rem;
+        line-height: 130%;
+        letter-spacing: -0.00938rem;
+    }
+}

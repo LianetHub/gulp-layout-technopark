@@ -1,0 +1,33 @@
+<section class="contacts" itemscope itemtype="http://schema.org/Organization">
+    <link itemprop="logo" href="@img/logo.svg">
+    <meta itemprop="name" content="Технопарк Искра-Волга">
+    <meta itemprop="url" content="https://iskra-volga.ru/">
+
+    <div class="contacts__container container">
+        @@if(typeof title == 'undefined'){
+        <h1 class="contacts__title title">Контакты</h1>
+        }
+        @@if(typeof title !== 'undefined'){
+        <h2 class="contacts__title title">@@title</h2>
+        }
+
+        <ul class="contacts__list">
+            <li class="contacts__item icon-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <div class="contacts__item-caption">Адрес</div>
+                <address class="contacts__item-address">
+                    <span itemprop="postalCode">422527</span>,
+                    <span itemprop="addressRegion">Республика Татарстан</span>,
+                    Зеленодольский район, город
+                    <span itemprop="addressLocality">Зеленодольск</span>,
+                    <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
+                </address>
+            </li>
+
+            <li class="contacts__item icon-envelope">
+                <div class="contacts__item-caption">Email</div>
+                <a href="mailto:info@iskra-volga.ru" class="contacts__item-link" itemprop="email">info@iskra-volga.ru</a>
+            </li>
+        </ul>
+        <div class="contacts__map" id="map" data-coords="55.8528135688981,48.842075499999964" data-zoom="16" data-icon="@img/placemark.svg"></div>
+    </div>
+</section>

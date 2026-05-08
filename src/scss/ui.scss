@@ -76,7 +76,7 @@
 	transform: none;
 	margin-top: 0 !important;
 
-
+	box-shadow: 0 rem(5) rem(14.874) 0 rgba(0, 0, 0, 0.10);
 	border-radius: 50%;
 	background: #fff;
 	color: #194EA4;
@@ -92,14 +92,10 @@
 	}
 
 	@media (min-width:$md2) {
-		width: 4.60225rem;
-		height: 4.60225rem;
-		font-size: rem(40);
+		width: 4.375rem;
+		height: 4.375rem;
+		font-size: rem(32);
 	}
-
-	// &::before {
-	// 	color: #194EA4;
-	// }
 
 	& svg {
 		display: none;

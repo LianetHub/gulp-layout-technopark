@@ -75,6 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    if (document.querySelector('.career-guidance__slider')) {
+        new Swiper('.career-guidance__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            navigation: {
+                nextEl: ".career-guidance__next",
+                prevEl: ".career-guidance__prev"
+            },
+            breakpoints: {
+                575.98: {
+                    spaceBetween: 16,
+                }
+            }
+        })
+    }
+
     // initAnimation();
 
 
