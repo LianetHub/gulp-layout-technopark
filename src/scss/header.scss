@@ -276,6 +276,10 @@
 		&.active {
 			color: #313542;
 
+			&+.menu__arrow {
+				color: #313542;
+			}
+
 			@media (min-width:$md3) {
 
 				&::before {

@@ -57,6 +57,64 @@
 }
 
 
+.education {
+    padding: 0.5rem 0 rem(58);
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 0 rem(30) rem(30);
+    margin-bottom: rem(-30);
+
+    @media (min-width:$md4) {
+        border-radius: 0 0 rem(58) rem(58);
+        margin-bottom: rem(-58);
+    }
+
+    &+* {
+        padding-top: rem(72);
+
+        @media (min-width:$md5) {
+            padding-top: rem(100);
+
+        }
+
+        @media (min-width:$md2) {
+            padding-top: rem(110);
+
+        }
+    }
+
+    // .education__container
+    &__container {}
+
+    // .education__banner
+    &__banner {
+        min-height: 41.0625rem;
+
+        .banner__description {
+            max-width: 39.1rem;
+            padding-top: 4rem;
+            padding-bottom: 1.5rem;
+
+            .banner__title {
+                font-size: rem(53);
+                letter-spacing: -0.0625rem;
+                line-height: 101.887%;
+                font-weight: 500;
+            }
+
+            .banner__text {
+                font-size: 1.15rem;
+                line-height: 140%;
+                max-width: 35.1875rem
+            }
+
+            .banner__btn {}
+        }
+    }
+}
+
+
 .career-guidance {
     background: #F6F8FA;
     padding: 4.34rem 0;

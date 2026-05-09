@@ -492,6 +492,17 @@
         }
     }
 
+    // .banner__btns
+    &__btns {
+        margin-top: 2.375rem;
+        gap: 1rem;
+        display: flex;
+
+        .banner__btn {
+            margin-top: 0;
+        }
+    }
+
     // .banner__btn
     &__btn {
         margin-top: 2rem;
