@@ -1,0 +1,19 @@
+<article class="tech-card">
+    <div class="tech-card__header">
+        <div class="tech-card__icon">
+            <img src="@@iconUrl" alt="@@title">
+        </div>
+        <h3 class="tech-card__title">@@title</h3>
+    </div>
+    <div class="tech-card__content">
+        <ul class="tech-card__list">
+            @@for (var i = 0; i < list.length; i++) { <li class="tech-card__list-item">`+list[i]+`</li>
+                }
+        </ul>
+        @@if(button) {
+        <a href="@@button.url" class="tech-card__btn btn btn-primary icon-arrow">
+            @@button.text
+        </a>
+        }
+    </div>
+</article>

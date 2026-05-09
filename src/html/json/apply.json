@@ -1,0 +1,12 @@
+[
+    {
+        "iconUrl": "@img/icons/file-edit.svg",
+        "title": "Заявка на повышение квалификации",
+        "url": "#"
+    },
+    {
+        "iconUrl": "@img/icons/helmet.svg",
+        "title": "Заявка по охране труда",
+        "url": "#"
+    }
+]

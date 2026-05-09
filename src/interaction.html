@@ -26,6 +26,22 @@
                         </div>
                     </div>
                 </section>
+                <section class="advantage-grid">
+                    <div class="container">
+                        <h2 class="advantage-grid__title title">Основные направления сотрудничества</h2>
+                        <ul class="advantage-grid__list">
+                            @@loop('./html/templates/_advantage-card.html', './html/json/cooperation.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="partners">
+                    <div class="container">
+                        <h2 class="partners__title title">Ключевые образовательные партнеры</h2>
+                        <div class="partners__list">
+                            @@loop('./html/templates/_partner-card.html', './html/json/partners.json')
+                        </div>
+                    </div>
+                </section>
                 <section class="career-guidance">
                     <div class="career-guidance__container container">
                         <div class="career-guidance__header">

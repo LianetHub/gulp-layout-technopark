@@ -31,8 +31,42 @@
                         </div>
                     </div>
                 </section>
-                @@include('./html/_residents.html')
 
+                <section class="ecosystem">
+                    <div class="container">
+                        <h2 class="ecosystem__title title">Единая экосистема для создания энергетических решений</h2>
+                        <ul class="ecosystem__list">
+                            @@loop('./html/templates/_ecosystem-card.html', './html/json/ecosystem.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="gallery">
+                    <div class="gallery__container container">
+                        <h2 class="gallery__title title">Территория технопарка <br> составляет 9 га</h2>
+                        <div class="gallery__slider swiper">
+                            <div class="swiper-wrapper">
+                                @@loop('./html/templates/_gallery-slide.html', './html/json/gallery.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions directions--grey">
+                    <div class="container">
+                        <h2 class="directions__title title">Структура и направления</h2>
+                        <ul class="directions__list">
+                            @@loop('./html/templates/_direction-block.html', './html/json/structure-directions.json')
+                        </ul>
+                    </div>
+                </section>
+                @@include('./html/_residents.html')
+                <section class="infrastructure">
+                    <div class="container">
+                        <h2 class="infrastructure__title title">Инфраструктура для работы и жизни</h2>
+                        <div class="infrastructure__grid">
+                            @@loop('./html/templates/_infrastructure-card.html', './html/json/infrastructure.json')
+                        </div>
+                    </div>
+                </section>
                 @@include('./html/_contacts.html', {
                 "title": "Месторасположение Технопарка"
                 })

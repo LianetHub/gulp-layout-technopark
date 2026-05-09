@@ -1,0 +1,16 @@
+[
+    {
+        "iconUrl": "@img/icons/license.svg",
+        "title": "Лицензия",
+        "numberText": "Регистрационный номер",
+        "number": "Л035-01234-16/00123456",
+        "link": "#"
+    },
+    {
+        "iconUrl": "@img/icons/award.svg",
+        "title": "Аккредитация",
+        "numberText": "Номер",
+        "number": "А123-456-789",
+        "link": "#"
+    }
+]

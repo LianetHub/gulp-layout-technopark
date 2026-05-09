@@ -172,6 +172,11 @@
 .directions {
     padding: 5.875rem 0 rem(0);
 
+    &--grey {
+        background: #F6F8FA;
+        padding: 5.875rem 0
+    }
+
     // .directions__title
     &__title {}
 
@@ -196,10 +201,20 @@
         background: #F4F7F9;
     }
 
-    &.direction-card--white {}
+    &.direction-card--white {
+        background: #fff;
+    }
 
     &.direction-card--large {
         grid-column: span 6;
+    }
+
+    &.direction-card--extralarge {
+        grid-column: span 7;
+    }
+
+    &.direction-card--medium {
+        grid-column: span 5;
     }
 
     &.direction-card--default {
@@ -278,26 +293,26 @@
     padding: rem(131) 0 rem(136);
     position: relative;
 
-    &::before,
-    &::after {
-        content: '';
-        width: 100%;
-        height: rem(58);
-        left: 0;
-        background: #fff;
-        position: absolute;
+    // &::before,
+    // &::after {
+    //     content: '';
+    //     width: 100%;
+    //     height: rem(58);
+    //     left: 0;
+    //     background: #fff;
+    //     position: absolute;
 
-    }
+    // }
 
-    &::before {
-        top: 0;
-        border-radius: 0 0 rem(58) rem(58);
-    }
+    // &::before {
+    //     top: 0;
+    //     border-radius: 0 0 rem(58) rem(58);
+    // }
 
-    &::after {
-        bottom: 0;
-        border-radius: rem(58) rem(58) 0 0;
-    }
+    // &::after {
+    //     bottom: 0;
+    //     border-radius: rem(58) rem(58) 0 0;
+    // }
 
     // .residents__title
     &__title {}

@@ -26,8 +26,83 @@
                         </div>
                     </div>
                 </section>
-                @@include('./html/_residents.html')
-
+                <section class="advantage-grid">
+                    <div class="container">
+                        <h2 class="advantage-grid__title title">Форматы обучения</h2>
+                        <ul class="advantage-grid__list">
+                            @@loop('./html/templates/_advantage-card.html', './html/json/study-formats.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="tech-base">
+                    <div class="container">
+                        <h2 class="tech-base__title title">Учебная и техническая база</h2>
+                        <div class="tech-base__grid">
+                            @@loop('./html/templates/_tech-card.html', './html/json/tech-base.json')
+                        </div>
+                    </div>
+                </section>
+                <section class="study-conditions">
+                    <div class="container">
+                        <h2 class="study-conditions__title title">Условия обучения</h2>
+                        <ul class="study-conditions__list">
+                            @@loop('./html/templates/_condition-card.html', './html/json/study-conditions.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="org-info">
+                    <div class="container">
+                        <h2 class="org-info__title title">Сведения об образовательной организации</h2>
+                        <div class="org-info__grid">
+                            @@loop('./html/templates/_info-card.html', './html/json/org-info.json')
+                        </div>
+                    </div>
+                </section>
+                <section class="accreditation">
+                    <div class="container">
+                        <h2 class="accreditation__title title">Лицензия и аккредитация</h2>
+                        <div class="accreditation__grid">
+                            @@loop('./html/templates/_accreditation-card.html', './html/json/accreditation.json')
+                        </div>
+                    </div>
+                </section>
+                <section class="management">
+                    <div class="container">
+                        <div class="management__inner">
+                            <h2 class="management__title title">Руководство</h2>
+                            <div class="management__list">
+                                @@loop('./html/templates/_management-person.html', './html/json/management.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="documents">
+                    <div class="container">
+                        <h2 class="documents__title title">Документы</h2>
+                        <ul class="documents__list">
+                            @@loop('./html/templates/_document-item.html', './html/json/documents.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="study-plan">
+                    <div class="container">
+                        <h2 class="study-plan__title title">План обучения и стоимость</h2>
+                        <div class="study-plan__grid">
+                            @@loop('./html/templates/_plan-card.html', './html/json/study-plan.json')
+                        </div>
+                    </div>
+                </section>
+                <section class="apply">
+                    <div class="container">
+                        <h2 class="apply__title title">Подать заявку на обучение</h2>
+                        <div class="apply__grid">
+                            @@loop('./html/templates/_apply-card.html', './html/json/apply.json')
+                        </div>
+                        <p class="apply__footer">
+                            Заявки принимаются по электронной почте: <a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a>
+                        </p>
+                    </div>
+                </section>
                 @@include('./html/_order.html', {
                 "color": "grey",
                 "title": 'Получить консультацию по обучению',
