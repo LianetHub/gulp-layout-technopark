@@ -1,9 +1,33 @@
 <li class="residents__card">
-    <a href="" class="residents__card-link">
+    <a href="#resident-popup-@@id" data-fancybox class="residents__card-link">
         <div class="residents__card-logotype">
             <img src="@@logotypeUrl" alt="Логотип компании '@@name'">
         </div>
-        <p class="residents__card-desc">@@desc</p>
+        <p class="residents__card-desc">@@shortDesc</p>
         <div class="residents__card-more icon-arrow">Подробнее</div>
     </a>
+    <dialog id="resident-popup-@@id" class="popup popup--large" aria-labelledby="title-@@id">
+
+        <div class="popup__resident-header">
+            <div class="popup__resident-logo">
+                <img src="@@logotypeUrl" alt="@@name">
+            </div>
+            <h2 class="popup__resident-title" id="title-@@id">@@titleModal</h2>
+        </div>
+
+        <div class="popup__content typography-block">
+            <h3>О компании @@name</h3>
+            <p>@@about</p>
+            <h4>Ассортимент продукции</h4>
+            <p>@@products</p>
+            <h4>Особенности производства</h4>
+            <p>@@features</p>
+            <h4>Реализованные проекты</h4>
+            <p>@@projects</p>
+        </div>
+
+        <a href="@@siteUrl" class="popup__link icon-globe" target="_blank" rel="noopener">
+            <span>Перейти на официальный сайт</span>
+        </a>
+    </dialog>
 </li>

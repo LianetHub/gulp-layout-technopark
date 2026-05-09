@@ -3,7 +3,7 @@
 	padding: 0 !important;
 
 	@media (min-width:$md5) {
-		--f-caption-font: 2rem #{$fontfamily},
+		--f-caption-font: 1.5rem #{$fontfamily},
 		sans-serif;
 
 	}
@@ -60,18 +60,44 @@
 .popup {
 	display: none;
 	flex-direction: column;
-	justify-content: center;
 	border-radius: 1rem;
 	background-color: #FFF;
 	color: #272a2d;
 	padding: 2.5rem 1rem;
 	max-width: 100%;
 	width: 100%;
-	min-height: 14.875rem;
 
 	@media (min-width: $md4) {
 		padding: 2rem;
 		max-width: rem(416);
+		justify-content: center;
+		min-height: 14.875rem;
+
+		@media (min-height: 600px) {
+			justify-content: normal;
+			min-height: auto;
+		}
+	}
+
+	&.popup--large {
+		@media (min-width:$md5) {
+			max-width: 49.875rem;
+			padding: 2.5rem;
+			border-radius: 2rem;
+
+		}
+
+		.f-button.is-close-button {
+			@media (min-width:$md5) {
+				top: rem(16);
+				right: rem(24);
+				--f-close-button-width: #{rem(32)};
+				--f-close-button-height: #{rem(32)};
+				--f-close-button-svg-width: #{rem(28)};
+				--f-close-button-svg-height: #{rem(28)};
+			}
+		}
+
 	}
 
 	&__icon {
@@ -110,8 +136,62 @@
 		margin-top: 1.5rem;
 	}
 
+	// .popup__link
+	&__link {
+		margin-top: rem(30);
+		align-self: flex-start;
+		display: inline-flex;
+		align-content: center;
+		align-items: center;
+		color: #313542;
+		font-size: 1rem;
+		line-height: 120%;
+		letter-spacing: -0.01188rem;
+		gap: 0.625rem;
 
+		&::before {
+			width: 1.5rem;
+			height: 1.5rem;
+			font-size: 1.5rem;
+			color: #2342A7;
+		}
 
+		& span {
+			text-decoration: underline;
+		}
 
+		@media (any-hover: hover) {
+			&:hover {
+				& span {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 
+	// .popup__resident-header
+	&__resident-header {
+		padding-bottom: 1.5rem;
+		border-bottom: rem(1) solid rgba(165, 172, 195, 0.31);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	// .popup__resident-logo
+	&__resident-logo {}
+
+	// .popup__resident-title
+	&__resident-title {
+		color: #4A5565;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 130%;
+		letter-spacing: -0.00938rem;
+	}
+
+	&__content {
+		margin-top: 1.5rem;
+	}
 }
