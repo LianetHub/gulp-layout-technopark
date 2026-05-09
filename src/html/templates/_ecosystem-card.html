@@ -1,11 +1,9 @@
-<li class="ecosystem__item">
-    <article class="ecosystem-card">
-        <div class="ecosystem-card__header">
-            <div class="ecosystem-card__icon">
-                <img src="@@iconUrl" alt="@@title">
-            </div>
-            <h3 class="ecosystem-card__title">@@title</h3>
+<li class="ecosystem__card">
+    <div class="ecosystem__card-header">
+        <div class="ecosystem__card-icon">
+            <img src="@@iconUrl" alt="Иконка">
         </div>
-        <p class="ecosystem-card__text">@@text</p>
-    </article>
+        <h3 class="ecosystem__card-title@@if(typeof titleSize !=='undefined'){ ecosystem__card-title--size-@@titleSize}">@@title</h3>
+    </div>
+    <p class="ecosystem__card-text">@@text</p>
 </li>

@@ -232,9 +232,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 2rem;
         position: relative;
         z-index: 1;
-        border-radius: 2rem;
 
         &::before {
             content: '';
@@ -244,7 +244,7 @@
             width: 100%;
             height: 100%;
             border-radius: 2rem;
-            background: url("@img/glass-substrat-direction.png") 0 0 / cover no-repeat;
+            background: url("@img/decor/glass-substrat-direction.png") 0 0 / cover no-repeat;
             z-index: -1;
         }
 
@@ -662,7 +662,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("@img/glass-substrat-direction-training.png") 0 0 / cover no-repeat;
+            background: url("@img/decor/glass-substrat-direction-training.png") 0 0 / cover no-repeat;
             z-index: -1;
         }
 
