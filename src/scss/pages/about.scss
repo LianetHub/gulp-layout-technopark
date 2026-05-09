@@ -181,30 +181,171 @@
 }
 
 .infrastructure {
-    padding: rem(80) 0;
+    padding: rem(80) 0 rem(150);
+    background: #F6F8FA;
 
-    &__title {
-        margin-bottom: rem(40);
+    &+.contacts {
+        border-radius: rem(58);
+        margin-top: rem(-58);
+        background: #fff;
+        padding-top: rem(55);
     }
 
+    // .infrastructure__title
+    &__title {
+        font-weight: 600;
+    }
+
+    // .infrastructure__grid
     &__grid {
+        margin-top: rem(50);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: rem(24);
+        gap: rem(32);
     }
-}
 
-.infrastructure-card {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: rem(24);
-    overflow: hidden;
-    position: relative;
-
-    &__image {
+    // .infrastructure__card
+    &__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: rem(22);
+        overflow: hidden;
         position: relative;
-        height: rem(340);
+        color: #fff;
+
+        &:nth-child(6n + 1),
+        &:nth-child(6n + 5) {
+            .infrastructure__card-title {
+                top: 0;
+                left: 0;
+            }
+
+            .infrastructure__card-body {
+                bottom: 0;
+                left: 0;
+                border-radius: 0 rem(22) 0 0;
+
+                &::before,
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M0 0C0 12.1503 9.84974 22 22 22H0L0 0Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
+                }
+
+                &::before {
+                    bottom: 100%;
+                    left: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                    left: 100%;
+                }
+            }
+        }
+
+        &:nth-child(6n + 2) {
+            .infrastructure__card-title {
+                bottom: 0;
+                left: 0;
+            }
+
+            .infrastructure__card-body {
+                top: 0;
+                right: 0;
+                border-radius: 0 0 0 rem(22);
+
+                &::before,
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M22 22C22 9.84974 12.1503 0 0 0L22 0L22 22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
+                }
+
+                &::before {
+                    top: 0;
+                    right: 100%;
+                }
+
+                &::after {
+                    right: 0;
+                    top: 100%;
+                }
+            }
+        }
+
+        &:nth-child(6n + 3),
+        &:nth-child(6n + 6) {
+            .infrastructure__card-title {
+                top: 0;
+                left: 0;
+            }
+
+            .infrastructure__card-body {
+                bottom: 0;
+                right: 0;
+                border-radius: rem(22) 0 0 0;
+
+                &::before,
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M0 22C12.1503 22 22 12.1503 22 0L22 22L0 22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
+
+                }
+
+                &::before {
+                    bottom: 100%;
+                    right: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                    right: 100%;
+                }
+            }
+        }
+
+        &:nth-child(6n + 4) {
+            .infrastructure__card-title {
+                bottom: 0;
+                left: 0;
+            }
+
+            .infrastructure__card-body {
+                top: 0;
+                left: 0;
+                border-radius: 0 0 rem(22) 0;
+
+                &::before,
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M22 0C9.84974 0 0 9.84974 0 22V0H22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
+                }
+
+                &::before {
+                    top: 0;
+                    left: 100%;
+                }
+
+                &::after {
+                    top: 100%;
+                    left: 0;
+                }
+            }
+        }
+
+
+    }
+
+    // .infrastructure__card-title
+    &__card-title {
+        position: absolute;
+        padding: rem(42) rem(30);
+        width: 100%;
+        z-index: 2;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    // .infrastructure__card-image
+    &__card-image {
+        position: relative;
+        height: 31.25rem;
         width: 100%;
 
         img {
@@ -218,29 +359,39 @@
         }
     }
 
-    &__title {
+    // .infrastructure__card-body
+    &__card-body {
         position: absolute;
-        top: rem(32);
-        left: rem(32);
-        z-index: 2;
-        color: #fff;
-        font-size: rem(24);
-        font-weight: 600;
-        line-height: 120%;
-        max-width: rem(300);
-    }
-
-    &__body {
-        padding: rem(24) 0;
-        background: #fff;
-    }
-
-    &__text {
-        font-size: rem(14);
-        line-height: 140%;
+        background: #F6F8FA;
         color: #4A5565;
-        max-width: rem(340);
+        align-content: center;
+        font-size: 1.125rem;
+        line-height: 130%;
+        letter-spacing: -0.0195rem;
+        max-width: rem(390);
+        padding: rem(14) rem(30);
+        min-height: rem(125);
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem(22);
+            height: rem(22);
+        }
+
     }
+
+    // .infrastructure__card-text
+    &__card-text {}
+}
+
+
+
+
+.infrastructure-card {
+
+
 
     &:nth-child(even) {
         flex-direction: column-reverse;

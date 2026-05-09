@@ -65,9 +65,9 @@
                 <section class="infrastructure">
                     <div class="container">
                         <h2 class="infrastructure__title title">Инфраструктура для работы и жизни</h2>
-                        <div class="infrastructure__grid">
+                        <ul class="infrastructure__grid">
                             @@loop('./html/templates/_infrastructure-card.html', './html/json/infrastructure.json')
-                        </div>
+                        </ul>
                     </div>
                 </section>
                 @@include('./html/_contacts.html', {

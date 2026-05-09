@@ -12,11 +12,14 @@
 
         position: relative;
         z-index: 2;
-        border-radius: 0 0 rem(30) rem(30);
         margin-bottom: rem(-30);
+        border-bottom-left-radius: rem(30);
+        border-bottom-right-radius: rem(30);
 
         @media (min-width:$md4) {
-            border-radius: 0 0 rem(58) rem(58);
+
+            border-bottom-left-radius: rem(58);
+            border-bottom-right-radius: rem(58);
             margin-bottom: rem(-58);
         }
 
