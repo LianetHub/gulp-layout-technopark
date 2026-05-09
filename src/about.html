@@ -39,12 +39,16 @@
                         </ul>
                     </div>
                 </section>
-                <section class="gallery">
+                <section class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="gallery__container container">
-                        <h2 class="gallery__title title">Территория технопарка <br> составляет 9 га</h2>
-                        <div class="gallery__slider swiper">
+                        <h2 class="gallery__title title" itemprop="name">Территория технопарка составляет 9 га</h2>
+                        <div class="gallery__slider swiper" itemprop="about" description="Фотогалерея технопарка">
                             <div class="swiper-wrapper">
                                 @@loop('./html/templates/_gallery-slide.html', './html/json/gallery.json')
+                            </div>
+                            <div class="gallery__slider-controls">
+                                <button type="button" class="gallery__slider-prev swiper-button-prev icon-prev"></button>
+                                <button type="button" class="gallery__slider-next swiper-button-next icon-next"></button>
                             </div>
                         </div>
                     </div>

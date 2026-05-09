@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
             slidesPerView: "auto",
             spaceBetween: 8,
             navigation: {
-                nextEl: ".gallery__next",
-                prevEl: ".gallery__prev"
+                nextEl: ".gallery__slider-next",
+                prevEl: ".gallery__slider-prev"
             },
             breakpoints: {
                 575.98: {

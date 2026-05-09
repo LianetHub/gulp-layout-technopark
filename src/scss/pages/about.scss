@@ -21,7 +21,7 @@
 }
 
 .ecosystem {
-    padding: rem(80) 0;
+    padding: rem(80) 0 rem(40);
 
     // .ecosystem__title
     &__title {
@@ -135,6 +135,54 @@
         letter-spacing: -0.01875rem;
     }
 }
+
+.gallery {
+    padding: rem(35) 0;
+
+    // .gallery__container
+    &__container {}
+
+    // .gallery__title
+    &__title {
+        max-width: rem(650);
+        font-weight: 600;
+    }
+
+    // .gallery__slider
+    &__slider {
+        margin-top: 2rem;
+        overflow: visible;
+    }
+
+    // .gallery__slide
+    &__slide {
+        width: rem(457);
+        height: rem(341);
+        display: block;
+        overflow: hidden;
+        border-radius: 1.5rem;
+    }
+
+    // .gallery__image
+    &__image {}
+
+    // .gallery__slider-controls
+    &__slider-controls {
+        margin-top: 2rem;
+        display: flex;
+        gap: rem(14);
+    }
+
+    // .gallery__slider-prev
+    &__slider-prev {}
+
+    // .gallery__slider-next
+    &__slider-next {}
+}
+
+
+
+
 
 
 .infrastructure {
