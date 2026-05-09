@@ -815,7 +815,7 @@
 
     // .order__banner
     &__banner {
-        background: url("@img/order-decor.svg") 0 0 / cover no-repeat, linear-gradient(rgba($color: #2342A7, $alpha: 0.64), rgba($color: #2342A7, $alpha: 0.64)), url("@img/hero-poster.jpg") 0 0 / cover no-repeat;
+        background: url("@img/order-decor.svg") center / cover no-repeat, linear-gradient(rgba($color: #001865, $alpha: 0.64), rgba($color: #001865, $alpha: 0.64)), url("@img/hero-poster.jpg") center / cover no-repeat;
         border-radius: 1.5rem;
         color: #fff;
         text-align: center;

@@ -13,7 +13,7 @@
                     <div class="education__container container">
                         <div class="education__banner banner">
                             <div class="banner__image">
-                                <img src="@img/university.jpg" class="cover-image" alt="Фото компании">
+                                <img src="@img/university.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
                             </div>
                             <div class="banner__description description-block description-block--left">
                                 <h2 class="banner__title title">Обучение и&nbsp;подготовка персонала</h2>
@@ -28,7 +28,12 @@
                 </section>
                 @@include('./html/_residents.html')
 
-                @@include('./html/_order.html')
+                @@include('./html/_order.html', {
+                "color": "grey",
+                "title": 'Получить консультацию по обучению',
+                "desc": 'Свяжитесь с нами для получения дополнительной информации или&nbsp;обсуждения сотрудничества',
+                "btnText": 'Связаться'
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})
