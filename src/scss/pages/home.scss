@@ -170,11 +170,47 @@
 }
 
 .directions {
-    padding: 5.875rem 0 rem(0);
+    padding: 5.875rem 0 5.25rem;
+    background: #fff;
+
+    &:not(:last-child) {
+
+        position: relative;
+        z-index: 3;
+        border-radius: 0 0 rem(30) rem(30);
+        margin-bottom: rem(-30);
+
+        @media (min-width:$md4) {
+            border-radius: 0 0 rem(58) rem(58);
+            margin-bottom: rem(-58);
+        }
+
+        &+* {
+            padding-top: rem(72);
+
+            @media (min-width:$md5) {
+                padding-top: rem(100);
+
+            }
+
+            @media (min-width:$md2) {
+                padding-top: rem(110);
+
+            }
+        }
+    }
 
     &--grey {
         background: #F6F8FA;
-        padding: 5.875rem 0
+        padding: rem(68) 0 5.25rem;
+
+        .directions__title {
+            font-weight: 600;
+        }
+
+        .directions__list {
+            filter: drop-shadow(0 13px 28.2px #ECF1F5);
+        }
     }
 
     // .directions__title
@@ -184,7 +220,7 @@
     &__list {
         margin-top: rem(44);
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(24, 1fr);
         gap: 1rem;
     }
 }
@@ -192,10 +228,32 @@
 .direction-card {
     border-radius: 1.5rem;
     padding: 2.625rem 0.5rem 2.625rem 2.25rem;
-
+    background: #fff;
     display: flex;
     align-items: center;
+    position: relative;
     gap: 2rem;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 100%;
+        width: rem(19);
+        height: rem(44);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='44' viewBox='0 0 19 44' fill='none'%3E%3Cpath d='M16.4389 3.85518L19 0L19 44L16.1042 40.3116C13.0825 36.463 7.34448 36.2045 3.98906 39.766L-1.59525e-08 44L1.90735e-06 -8.30516e-07L3.51983 4.41522C6.90193 8.65768 13.4366 8.3744 16.4389 3.85518Z' fill='%23F4F7F9'/%3E%3C/svg%3E");
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        height: rem(19);
+        width: rem(44);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='19' viewBox='0 0 44 19' fill='none'%3E%3Cpath d='M3.85518 2.56113L0 0L44 0L40.3116 2.89582C36.463 5.9175 36.2045 11.6555 39.766 15.0109L44 19L0 19L4.41522 15.4802C8.65768 12.0981 8.3744 5.56341 3.85518 2.56113Z' fill='%23F4F7F9'/%3E%3C/svg%3E");
+        display: none;
+    }
 
     &.direction-card--grey {
         background: #F4F7F9;
@@ -203,25 +261,62 @@
 
     &.direction-card--white {
         background: #fff;
+
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='44' viewBox='0 0 19 44' fill='none'%3E%3Cpath d='M16.4389 3.85518L19 0L19 44L16.1042 40.3116C13.0825 36.463 7.34448 36.2045 3.98906 39.766L-1.59525e-08 44L1.90735e-06 -8.30516e-07L3.51983 4.41522C6.90193 8.65768 13.4366 8.3744 16.4389 3.85518Z' fill='white'/%3E%3C/svg%3E");
+        }
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='19' viewBox='0 0 44 19' fill='none'%3E%3Cpath d='M3.85518 2.56113L0 0L44 0L40.3116 2.89582C36.463 5.9175 36.2045 11.6555 39.766 15.0109L44 19L0 19L4.41522 15.4802C8.65768 12.0981 8.3744 5.56341 3.85518 2.56113Z' fill='white'/%3E%3C/svg%3E");
+        }
+
+        .direction-card__icon {
+            &::before {
+                background: url("@img/decor/glass-substrat-direction-white.png") 0 0 / cover no-repeat;
+            }
+        }
     }
 
     &.direction-card--large {
-        grid-column: span 6;
+        grid-column: span 12;
     }
 
     &.direction-card--extralarge {
-        grid-column: span 7;
+        grid-column: span 13;
     }
 
     &.direction-card--medium {
-        grid-column: span 5;
+        grid-column: span 11;
+
+        &::before {
+            top: 50%;
+        }
+
+        &::after {
+            left: 42%;
+        }
     }
 
     &.direction-card--default {
         min-height: rem(201);
     }
 
-    grid-column: span 4;
+    &--connection {
+        &-right-desktop {
+
+            &::before {
+                display: block;
+            }
+        }
+
+        &-bottom-desktop {
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    grid-column: span 8;
     min-height: rem(180);
 
     // .direction-card__icon

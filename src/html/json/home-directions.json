@@ -4,21 +4,25 @@
         "size": "large",
         "imageURL": "@img/icons/development.svg",
         "caption": "Разработка",
-        "desc": "Исследования и создание новых технологических решений"
+        "desc": "Исследования и создание новых технологических решений",
+        "connectionRightDesktop": true,
+        "connectionBottomDesktop": true
     },
     {
         "color": "grey",
         "size": "large",
         "imageURL": "@img/icons/production.svg",
         "caption": "Производство",
-        "desc": "Выпуск оборудования на собственных мощностях"
+        "desc": "Выпуск оборудования на собственных мощностях",
+        "connectionBottomDesktop": true
     },
     {
         "color": "grey",
         "size": "default",
         "imageURL": "@img/icons/tests.svg",
         "caption": "Испытания",
-        "desc": "Тестирование и контроль качества продукции"
+        "desc": "Тестирование и контроль качества продукции",
+        "connectionRightDesktop": true
     },
     {
         "color": "grey",

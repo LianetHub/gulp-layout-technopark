@@ -1,4 +1,9 @@
-<li class="direction-card direction-card--@@color direction-card--@@size">
+<li class="direction-card 
+ direction-card--@@color
+ direction-card--@@size 
+ @@if(typeof connectionRightDesktop !== 'undefined' && connectionRightDesktop === true){ direction-card--connection-right-desktop}
+ @@if(typeof connectionBottomDesktop !== 'undefined' && connectionBottomDesktop === true){ direction-card--connection-bottom-desktop}
+ ">
     <div class="direction-card__icon">
         <img src="@@imageURL" alt="Иконка">
     </div>

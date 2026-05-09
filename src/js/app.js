@@ -67,9 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 nextEl: ".gallery__slider-next",
                 prevEl: ".gallery__slider-prev"
             },
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Предыдущий слайд',
+                nextSlideMessage: 'Следующий слайд',
+            },
             breakpoints: {
                 575.98: {
-                    spaceBetween: 16,
+                    spaceBetween: 13,
                 }
             }
         })

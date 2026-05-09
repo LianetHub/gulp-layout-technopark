@@ -26,6 +26,14 @@
                         </div>
                     </div>
                 </section>
+                <section class="directions">
+                    <div class="container">
+                        <h2 class="directions__title title">Ключевые направления</h2>
+                        <ul class="directions__list">
+                            @@loop('./html/templates/_direction-block.html', './html/json/university-directions.json')
+                        </ul>
+                    </div>
+                </section>
                 <section class="advantage-grid">
                     <div class="container">
                         <h2 class="advantage-grid__title title">Форматы обучения</h2>

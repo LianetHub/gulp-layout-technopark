@@ -137,7 +137,7 @@
 }
 
 .gallery {
-    padding: rem(35) 0;
+    padding: rem(35) 0 rem(54);
 
     // .gallery__container
     &__container {}
@@ -179,11 +179,6 @@
     // .gallery__slider-next
     &__slider-next {}
 }
-
-
-
-
-
 
 .infrastructure {
     padding: rem(80) 0;

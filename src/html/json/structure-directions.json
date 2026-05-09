@@ -2,9 +2,11 @@
     {
         "color": "white",
         "size": "medium",
-        "imageURL": "@img/icons/building.svg",
+        "imageURL": "@img/icons/calc.svg",
         "caption": "Компании-резиденты",
-        "desc": "Ведущие производители электротехнического оборудования"
+        "desc": "Ведущие производители электротехнического оборудования",
+        "connectionRightDesktop": true,
+        "connectionBottomDesktop": true
     },
     {
         "color": "white",
@@ -18,7 +20,8 @@
         "size": "extralarge",
         "imageURL": "@img/icons/lab.svg",
         "caption": "Научно-Исследовательский Испытательный Центр",
-        "desc": "Лаборатории и оборудование для тестирования"
+        "desc": "Лаборатории и оборудование для тестирования",
+        "connectionRightDesktop": true
     },
     {
         "color": "white",

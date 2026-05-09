@@ -1,0 +1,33 @@
+[
+    {
+        "color": "grey",
+        "size": "medium",
+        "imageURL": "@img/icons/qualification.svg",
+        "caption": "Повышение квалификации",
+        "desc": "Программы профессионального развития для специалистов отрасли",
+        "connectionRightDesktop": true,
+        "connectionBottomDesktop": true
+    },
+    {
+        "color": "grey",
+        "size": "extralarge",
+        "imageURL": "@img/icons/building.svg",
+        "caption": "Корпоративное обучение",
+        "desc": "Обучение под конкретные задачи"
+    },
+    {
+        "color": "grey",
+        "size": "extralarge",
+        "imageURL": "@img/icons/briefcase.svg",
+        "caption": "Сотрудничество с отраслью",
+        "desc": "Интеграция с предприятиями электроэнергетической отрасли",
+        "connectionRightDesktop": true
+    },
+    {
+        "color": "grey",
+        "size": "medium",
+        "imageURL": "@img/icons/helmet.svg",
+        "caption": "Охрана труда",
+        "desc": "Безопасность и предотвращение рисков в электроэнергетике"
+    }
+]
