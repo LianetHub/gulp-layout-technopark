@@ -85,9 +85,9 @@
 	font-size: rem(24);
 
 	@media (min-width:$md5) {
-		font-size: rem(34);
-		width: 4rem;
-		height: 4rem;
+		font-size: rem(30);
+		width: rem(54);
+		height: rem(54);
 	}
 
 	@media (min-width:$md2) {

@@ -1,6 +1,7 @@
 [
     {
         "id": "skat",
+        "imageName": "skat",
         "logotypeUrl": "@img/companies/skat.svg",
         "name": "СКАТ",
         "shortDesc": "Кабельная арматура 0,4-500 кВ",
@@ -13,6 +14,7 @@
     },
     {
         "id": "promenergo",
+        "imageName": "promenegro",
         "logotypeUrl": "@img/companies/promenegro.svg",
         "name": "ПРОМЭНЕРГО",
         "shortDesc": "Интеллектуальные приборы учета",
@@ -25,6 +27,7 @@
     },
     {
         "id": "electrooptima",
+        "imageName": "electrooptima",
         "logotypeUrl": "@img/companies/electrooptima.svg",
         "name": "ЭлектроОптима",
         "shortDesc": "Электрощитовое оборудование и&nbsp;трансформаторные подстанции",
@@ -37,6 +40,7 @@
     },
     {
         "id": "e-prom",
+        "imageName": "e-prom",
         "logotypeUrl": "@img/companies/e-prom.svg",
         "name": "E-PROM",
         "shortDesc": "Зарядные станции для электротранспорта",
@@ -49,6 +53,7 @@
     },
     {
         "id": "aruna",
+        "imageName": "aruna",
         "logotypeUrl": "@img/companies/aruna.svg",
         "name": "ARUNA",
         "shortDesc": "Светодиодное освещение",
@@ -61,6 +66,7 @@
     },
     {
         "id": "energo-innovations",
+        "imageName": "energo-innovations",
         "logotypeUrl": "@img/companies/energo-innovations.svg",
         "name": "ЭнергоИнновации",
         "shortDesc": "Электрощитовое оборудование, реклоузеры и ретрофит, CMS-корпуса",

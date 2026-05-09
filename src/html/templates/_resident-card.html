@@ -1,8 +1,9 @@
 <li class="residents__card">
     <a href="#resident-popup-@@id" data-fancybox class="residents__card-link">
-        <div class="residents__card-logotype">
-            <img src="@@logotypeUrl" alt="Логотип компании '@@name'">
-        </div>
+        <picture class="residents__card-logotype">
+            <source media="(min-width: 960px)" srcset="@img/companies/@@imageName.svg">
+            <img src="@img/companies/@@imageName-tablet.svg" alt="Логотип компании '@@name'">
+        </picture>
         <p class="residents__card-desc">@@shortDesc</p>
         <div class="residents__card-more icon-arrow">Подробнее</div>
     </a>

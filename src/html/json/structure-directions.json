@@ -1,7 +1,7 @@
 [
     {
         "color": "white",
-        "size": "medium",
+        "size": "medium-desktop",
         "imageURL": "@img/icons/calc.svg",
         "caption": "Компании-резиденты",
         "desc": "Ведущие производители электротехнического оборудования",
@@ -10,7 +10,7 @@
     },
     {
         "color": "white",
-        "size": "extralarge",
+        "size": "extralarge-desktop",
         "imageURL": "@img/icons/production.svg",
         "caption": "Производственная инфраструктура",
         "desc": "Современные производственно-складские помещения"
