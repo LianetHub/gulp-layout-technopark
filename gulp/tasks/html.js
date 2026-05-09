@@ -34,7 +34,7 @@ export const html = () => {
             context: {}
         }))
         .pipe(app.plugins.replace(/@img\//g, "img/"))
-        // .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
+        .pipe(webpHtmlNosvg())
         .pipe(
             app.plugins.if(
                 app.isBuild,
