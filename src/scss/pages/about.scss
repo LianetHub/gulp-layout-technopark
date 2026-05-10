@@ -1,15 +1,28 @@
 .about-park {
+    @media (max-width:$md5) {
+        padding: 0.55rem 0 0;
+    }
+
     @media (min-width:$md3) {
         padding: 0.25rem 0 0.875rem;
 
     }
 
     // .about-park__container
-    &__container {}
+    &__container {
+        @media (max-width:$md5) {
+            padding: 0;
+        }
+    }
 
     // .about-park__banner
     &__banner {
-        min-height: 24.375rem;
+        min-height: 17.9375rem;
+
+        @media (min-width:$md5) {
+            min-height: 24.375rem;
+
+        }
 
         @media (min-width:$md3) {
             min-height: 30.125rem;
@@ -21,14 +34,16 @@
 
         .banner__description {
 
-            padding-top: 1rem;
+            padding-top: 0.5rem;
             line-height: 130%;
-            padding-left: 1rem;
-            max-width: 60%;
+            padding-left: 0.75rem;
+            max-width: 72.3%;
             font-size: 0.875rem;
             letter-spacing: -0.03125rem;
+            padding-right: 0.75rem;
 
             @media (min-width:$md4) {
+                padding-right: 2rem;
                 padding-top: 1.55rem;
                 padding-left: 1.5rem;
                 max-width: 22.2rem;
@@ -50,11 +65,14 @@
 }
 
 .ecosystem {
-    padding: rem(50) 0 rem(70);
+    padding: rem(50) 0 rem(45);
+
+    @media (min-width:$md5) {
+        padding: rem(50) 0 rem(70);
+    }
 
     @media (min-width:$md3) {
         padding: rem(80) 0 rem(40);
-
     }
 
     // .ecosystem__title
@@ -67,9 +85,10 @@
     &__list {
         margin-top: 2rem;
         display: grid;
-        gap: rem(16);
+        gap: 0.75rem;
 
         @media (min-width:$md4) {
+            gap: rem(16);
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -83,13 +102,20 @@
     &__card {
         height: 100%;
         background: #fff;
-        box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
         display: flex;
         flex-direction: column;
-        gap: rem(16);
-        border-radius: 1.5rem;
+        box-shadow: 0 rem(7) rem(16) 0 #ECF1F5;
         transition: all 0.3s ease;
-        padding: 1.125rem;
+        border-radius: 1rem;
+        gap: rem(12);
+        padding: 1rem;
+
+        @media (min-width:$md5) {
+            box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
+            padding: 1.125rem;
+            gap: rem(16);
+            border-radius: 1.5rem;
+        }
 
         @media (min-width:$md3) {
             gap: rem(24);
@@ -109,7 +135,11 @@
     &__card-header {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
+
+        @media (min-width:$md5) {
+            gap: 1rem;
+        }
 
         @media (min-width:$md3) {
             gap: 1.5rem;
@@ -124,10 +154,16 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        width: 4.125rem;
-        height: 4.125rem;
-        border-radius: 1rem;
+        width: 3.81325rem;
+        height: 3.81325rem;
         padding: 0.875rem;
+        border-radius: 1.22025rem;
+
+        @media (min-width:$md5) {
+            width: 4.125rem;
+            height: 4.125rem;
+            border-radius: 1rem;
+        }
 
         @media (min-width:$md3) {
             border-radius: 1.81819rem;
@@ -143,8 +179,12 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            border-radius: 1rem;
             background: url("@img/decor/glass-substrat-ecosystem-tablet.png") 0 0 / cover no-repeat;
+            border-radius: 1.22025rem;
+
+            @media (min-width:$md5) {
+                border-radius: 1rem;
+            }
 
             @media (min-width:$md3) {
                 background: url("@img/decor/glass-substrat-ecosystem.png") 0 0 / cover no-repeat;
@@ -176,9 +216,14 @@
     // .ecosystem__card-title
     &__card-title {
         font-weight: 500;
-        line-height: 120%;
+        line-height: 110%;
         letter-spacing: -0.02806rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
+
+        @media (min-width:$md5) {
+            line-height: 120%;
+            font-size: 1.125rem;
+        }
 
         @media (min-width:$md3) {
             font-size: 1.375rem;
@@ -198,9 +243,13 @@
     // .ecosystem__card-text
     &__card-text {
         color: #4A5565;
-        line-height: 140%;
         letter-spacing: -0.01875rem;
         font-size: 0.875rem;
+        line-height: 130%;
+
+        @media (min-width:$md5) {
+            line-height: 140%;
+        }
 
         @media (min-width:$md3) {
             font-size: 1rem;
@@ -210,7 +259,7 @@
 }
 
 .gallery {
-    padding: rem(35) 0 rem(48);
+    padding: rem(35) 0 rem(40);
 
     @media (min-width:$md3) {
         padding: rem(35) 0 rem(54);
@@ -235,6 +284,18 @@
     &__slider {
         margin-top: 2rem;
         overflow: visible;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+
+        @media (min-width:$md5) {
+            flex-direction: column;
+            gap: 1.675rem;
+        }
+
+        @media (min-width:$md3) {
+            gap: 2rem;
+        }
     }
 
     // .gallery__slide
@@ -242,8 +303,13 @@
         display: block;
         overflow: hidden;
         border-radius: 1rem;
-        width: rem(368);
-        height: rem(275);
+        width: rem(325);
+        height: rem(265);
+
+        @media (min-width:$md5) {
+            width: rem(368);
+            height: rem(275);
+        }
 
         @media (min-width:$md3) {
             border-radius: 1.5rem;
@@ -259,12 +325,6 @@
     &__slider-controls {
         display: flex;
         gap: rem(14);
-        margin-top: 1.675rem;
-
-        @media (min-width:$md3) {
-            margin-top: 2rem;
-
-        }
     }
 
     // .gallery__slider-prev
@@ -276,7 +336,11 @@
 
 .infrastructure {
     background: #F6F8FA;
-    padding: rem(60) 0 rem(100);
+    padding: rem(50) 0 rem(70);
+
+    @media (min-width:$md5) {
+        padding: rem(60) 0 rem(100);
+    }
 
     @media (min-width:$md3) {
         padding: rem(80) 0 rem(150);
@@ -284,10 +348,17 @@
     }
 
     &+.contacts {
-        border-radius: rem(58);
-        margin-top: rem(-58);
         background: #fff;
         padding-top: rem(40);
+
+        border-radius: rem(30);
+        margin-top: rem(-30);
+
+        @media (min-width:$md5) {
+            border-radius: rem(58);
+            margin-top: rem(-58);
+
+        }
 
         @media (min-width:$md3) {
             padding-top: rem(55);
@@ -309,11 +380,11 @@
     &__grid {
         margin-top: rem(30);
         display: grid;
-        gap: rem(14);
+        gap: rem(28);
 
         @media (min-width:$md4) {
             grid-template-columns: repeat(2, 1fr);
-
+            gap: rem(14);
         }
 
         @media (min-width:$md3) {
@@ -332,7 +403,6 @@
     &__card {
         display: flex;
         flex-direction: column;
-
         border-radius: rem(12);
         position: relative;
         color: #fff;
@@ -348,8 +418,9 @@
                     bottom: 0;
                     right: 0;
                     border-radius: rem(12) 0 0 0;
-
-
+                    padding-right: 0;
+                    padding-top: rem(12);
+                    padding-bottom: rem(4);
 
                     &::before,
                     &::after {
@@ -378,6 +449,9 @@
                     top: 0;
                     left: 0;
                     border-radius: 0 0 rem(12) 0;
+                    padding-left: 0;
+                    padding-top: rem(4);
+                    padding-bottom: rem(12);
 
 
                     &::before,
@@ -421,12 +495,7 @@
                 &::before,
                 &::after {
                     @media (min-width:$md4) {
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M0 0C0 6.62742 5.37258 12 12 12H0L0 0Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-                    }
-
-                    @media (min-width:$md3) {
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M0 0C0 12.1503 9.84974 22 22 22H0L0 0Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-
                     }
                 }
 
@@ -467,12 +536,7 @@
                 &::before,
                 &::after {
                     @media (min-width:$md4) {
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M12 12C12 5.37258 6.62742 0 0 0L12 0L12 12Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-                    }
-
-                    @media (min-width:$md3) {
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M22 22C22 9.84974 12.1503 0 0 0L22 0L22 22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-
                     }
                 }
 
@@ -515,13 +579,7 @@
                 &::before,
                 &::after {
                     @media (min-width:$md4) {
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M0 12C6.62742 12 12 6.62742 12 0L12 12L0 12Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-
-                    }
-
-                    @media (min-width:$md3) {
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M0 22C12.1503 22 22 12.1503 22 0L22 22L0 22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-
                     }
                 }
 
@@ -563,12 +621,7 @@
                 &::before,
                 &::after {
                     @media (min-width:$md4) {
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M12 0C5.37258 0 0 5.37258 0 12V0H12Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-                    }
-
-                    @media (min-width:$md3) {
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M22 0C9.84974 0 0 9.84974 0 22V0H22Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-
                     }
                 }
 
@@ -587,8 +640,6 @@
             }
         }
 
-
-
         @media (min-width:$md3) {
             border-radius: rem(22);
         }
@@ -602,8 +653,21 @@
         z-index: 2;
         font-weight: 500;
         line-height: 1;
-        font-size: 1.25rem;
-        padding: 1.25rem 0.875rem;
+        padding: 1rem 0.875rem;
+        font-size: 1.125rem;
+
+
+        @media (max-width:$md5) {
+            br {
+                display: none;
+            }
+        }
+
+        @media (min-width:$md5) {
+            padding: 1.25rem 0.875rem;
+            font-size: 1.25rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.75rem;
@@ -621,8 +685,7 @@
     &__card-image {
         position: relative;
         width: 100%;
-        height: 17.25rem;
-
+        height: rem(242);
 
         &::before {
             content: '';
@@ -636,6 +699,10 @@
                 border-radius: rem(22);
 
             }
+        }
+
+        @media (min-width:$md5) {
+            height: 17.25rem;
         }
 
         @media (min-width:$md3) {
@@ -671,16 +738,20 @@
         align-content: center;
         line-height: 130%;
         letter-spacing: -0.0195rem;
-        max-width: min(rem(390), 65%);
-
-        padding: rem(8) rem(16);
+        max-width: min(rem(390), 55.8%);
         font-size: rem(14);
-        min-height: rem(110);
+        padding: rem(12) rem(16) rem(4);
+        min-height: rem(90);
+
+        @media (min-width:$md5) {
+            padding: rem(8) rem(16);
+            min-height: rem(110);
+            max-width: min(rem(390), 65%);
+        }
 
         @media (min-width:$md3) {
             padding: rem(14) rem(24);
             font-size: 1rem;
-
         }
 
         @media (min-width:$md2) {
@@ -696,6 +767,8 @@
             position: absolute;
             width: rem(12);
             height: rem(12);
+            background-size: contain;
+            background-repeat: no-repeat;
 
             @media (min-width:$md3) {
                 width: rem(22);

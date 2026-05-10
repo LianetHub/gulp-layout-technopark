@@ -250,11 +250,17 @@
     display: flex;
     align-items: center;
     position: relative;
-    gap: rem(14);
     padding: 1rem 0.5rem 1rem 1rem;
     grid-column: span 4;
-    min-height: rem(116);
+    min-height: rem(92);
     border-radius: 1.125rem;
+    gap: 0.75rem;
+
+    @media (min-width:$md5) {
+        min-height: rem(116);
+        gap: rem(14);
+
+    }
 
     @media (min-width:$md3) {
         grid-column: span 8;
@@ -434,7 +440,6 @@
 
     // .direction-card__icon
     &__icon {
-
         flex-shrink: 0;
         align-self: flex-start;
         display: flex;
@@ -442,10 +447,26 @@
         align-items: center;
         position: relative;
         z-index: 1;
-        padding: 0.75rem;
-        width: 3.125rem;
-        height: 3.125rem;
-        border-radius: 1rem;
+        width: 3.81325rem;
+        height: 3.81325rem;
+        border-radius: 1.22025rem;
+        padding: 1rem;
+
+        & img {
+            max-height: rem(24);
+
+            @media (min-width:$md3) {
+                max-height: rem(50);
+            }
+        }
+
+        @media (min-width:$md5) {
+            padding: 0.75rem;
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 1rem;
+
+        }
 
         @media (min-width:$md3) {
             width: 4.5rem;
@@ -516,7 +537,12 @@
         font-weight: 500;
         line-height: 110%;
         letter-spacing: -0.02806rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             line-height: 116.667%;
@@ -531,13 +557,16 @@
 
     // .direction-card__desc
     &__desc {
-
         color: #4A5565;
         line-height: 126.389%;
         letter-spacing: -0.00938rem;
         max-width: 26.5rem;
-        margin-top: 0.625rem;
+        margin-top: 0.5rem;
         font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            margin-top: 0.625rem;
+        }
 
         @media (min-width:$md3) {
             font-size: 1rem;
@@ -574,7 +603,7 @@
         }
 
         &+* {
-            padding-top: rem(72);
+            padding-top: rem(62);
 
             @media (min-width:$md5) {
                 padding-top: rem(85);
@@ -593,15 +622,20 @@
         @media (max-width:$md3) {
             font-weight: 500;
         }
+
+        @media (max-width:$md5) {
+            font-size: rem(28);
+        }
     }
 
     // .residents__list
     &__list {
         display: grid;
         gap: 0.5rem;
-        margin-top: 1.875rem;
+        margin-top: 1.75rem;
 
         @media (min-width:$md5) {
+            margin-top: 1.875rem;
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -652,8 +686,13 @@
         border-bottom: rem(1) solid rgba(165, 172, 195, 0.31);
         display: flex;
         align-items: center;
-        height: 3.5rem;
-        padding-bottom: 0.5rem;
+        height: 3.25rem;
+
+        @media (min-width:$md5) {
+            height: 3.5rem;
+            padding-bottom: 0.5rem;
+
+        }
 
         @media (min-width:$md3) {
             padding-bottom: 0;
@@ -675,10 +714,16 @@
     &__card-desc {
         margin-top: 0.25rem;
         color: #4A5565;
-        line-height: 105.152%;
+        line-height: 120%;
         letter-spacing: -0.00519rem;
         text-align: left;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 0.75rem;
+            line-height: 105.152%;
+
+        }
 
         @media (min-width:$md3) {
             line-height: 126.389%;
@@ -708,10 +753,11 @@
         letter-spacing: -0.00938rem;
         display: flex;
         align-items: center;
-        gap: 0.06rem;
+        gap: 0.25rem;
         font-size: 0.75rem;
 
         @media (min-width:$md3) {
+            gap: 0.06rem;
             font-size: 0.875rem;
         }
 
@@ -719,8 +765,13 @@
             flex-shrink: 0;
             width: 1rem;
             height: 1rem;
+            font-size: 0.875rem;
             order: 1;
             color: #2342A7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
         }
     }
 }
@@ -747,197 +798,6 @@
             }
         }
 
-    }
-}
-
-.banner {
-    position: relative;
-    color: #fff;
-    background: $accent;
-    min-height: rem(613);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: rem(18);
-
-    @media (min-width:$md3) {
-        border-radius: rem(30);
-    }
-
-    // .banner__info
-    &__info {
-        position: relative;
-        z-index: 2;
-        max-width: 40rem;
-        padding: 1.5rem 1.5rem;
-
-        @media (min-width:$md3) {
-            padding: 2.75rem 2.5rem;
-
-        }
-    }
-
-    // .banner__title
-    &__title {}
-
-    // .banner__subtitle
-    &__subtitle {
-        margin-top: 1rem;
-        font-size: 1.125rem;
-        line-height: 144.444%;
-        letter-spacing: -0.0195rem;
-    }
-
-    // .banner__slider
-    &__slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        border-radius: rem(30);
-        background: $accent;
-        pointer-events: none;
-    }
-
-    // .banner__image
-    &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        border-radius: rem(30);
-        background: $accent;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    // .banner__description
-    &__description {}
-
-    // .banner__title
-    &__title {}
-
-    // .banner__text
-    &__text {
-        margin-top: 1.5rem;
-        font-size: 1rem;
-        line-height: 162.5%;
-        letter-spacing: -0.0195rem;
-
-        & p {
-            &:not(:last-child) {
-                margin-bottom: rem(10);
-
-                @media (min-width:$md2) {
-                    margin-bottom: 1rem;
-                }
-            }
-        }
-    }
-
-    // .banner__btns
-    &__btns {
-        margin-top: 2.375rem;
-        gap: 1rem;
-        display: flex;
-
-        .banner__btn {
-            margin-top: 0;
-        }
-    }
-
-    // .banner__btn
-    &__btn {
-        margin-top: 2rem;
-    }
-}
-
-.description-block {
-    margin-top: auto;
-    position: relative;
-    background: #fff;
-    color: #313542;
-    z-index: 6;
-    max-width: 30rem;
-    padding-top: 2.5rem;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: rem(18);
-        height: rem(18);
-
-        @media (min-width:$md3) {
-            width: rem(30);
-            height: rem(30);
-
-        }
-
-    }
-
-    &.description-block--left {
-
-        padding-right: 2rem;
-        border-top-right-radius: rem(18);
-
-        @media (min-width:$md3) {
-            border-top-right-radius: rem(30);
-        }
-
-        &::before,
-        &::after {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M0 0C0 9.94113 8.05887 18 18 18H0V0Z' fill='white'/%3E%3C/svg%3E");
-
-            @media (min-width:$md3) {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M0 0C0 16.5685 13.4315 30 30 30H0V0Z' fill='white'/%3E%3C/svg%3E");
-
-            }
-        }
-
-        &::before {
-            bottom: 100%;
-            left: 0;
-        }
-
-        &::after {
-            bottom: 0;
-            left: 100%;
-        }
-    }
-
-    &.description-block--right {
-        margin-left: auto;
-        padding-left: 2rem;
-        border-top-left-radius: rem(18);
-
-        @media (min-width:$md3) {
-            border-top-left-radius: rem(30);
-        }
-
-        &::before,
-        &::after {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M18 0C18 9.94112 9.94113 18 0 18H18V0Z' fill='white'/%3E%3C/svg%3E");
-
-            @media (min-width:$md3) {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M30 0C30 16.5685 16.5685 30 0 30H30V0Z' fill='white'/%3E%3C/svg%3E");
-
-            }
-        }
-
-        &::before {
-            bottom: 100%;
-            right: 0;
-        }
-
-        &::after {
-            bottom: 0;
-            right: 100%;
-        }
     }
 }
 

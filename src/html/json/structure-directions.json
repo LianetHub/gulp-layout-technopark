@@ -20,7 +20,7 @@
         "size": "extralarge",
         "imageURL": "@img/icons/lab.svg",
         "caption": "Научно-Исследовательский Испытательный Центр",
-        "desc": "Лаборатории и оборудование для тестирования",
+        "desc": "Лаборатории и оборудование для&nbsp;тестирования",
         "connectionRightDesktop": true
     },
     {

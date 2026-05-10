@@ -2,7 +2,8 @@
     <a href="#resident-popup-@@id" data-fancybox class="residents__card-link">
         <picture class="residents__card-logotype">
             <source media="(min-width: 960px)" srcset="@img/companies/@@imageName.svg">
-            <img src="@img/companies/@@imageName-tablet.svg" alt="Логотип компании '@@name'">
+            <source media="(min-width: 576px)" srcset="@img/companies/@@imageName-tablet.svg">
+            <img src="@img/companies/@@imageName-mobile.svg" alt="Логотип компании '@@name'">
         </picture>
         <p class="residents__card-desc">@@shortDesc</p>
         <div class="residents__card-more icon-arrow">Подробнее</div>

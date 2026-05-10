@@ -284,3 +284,251 @@ body {
 	}
 
 }
+
+.banner {
+	position: relative;
+	color: #fff;
+	background: $accent;
+	min-height: rem(410);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: rem(12);
+
+	@media (min-width:$md5) {
+		min-height: rem(460);
+		border-radius: rem(18);
+
+	}
+
+	@media (min-width:$md3) {
+		min-height: rem(613);
+		border-radius: rem(30);
+	}
+
+	// .banner__info
+	&__info {
+		position: relative;
+		z-index: 2;
+		max-width: 40rem;
+
+		padding: 1rem;
+
+		@media (min-width:$md5) {
+			padding: 1.5rem;
+
+		}
+
+		@media (min-width:$md3) {
+			padding: 2.75rem 2.5rem;
+
+		}
+	}
+
+	// .banner__title
+	&__title {
+		@media (max-width:$md5) {
+			font-size: 1.5rem;
+		}
+	}
+
+	// .banner__subtitle
+	&__subtitle {
+		margin-top: 1rem;
+		font-size: 1.125rem;
+		line-height: 144.444%;
+		letter-spacing: -0.0195rem;
+	}
+
+	// .banner__slider
+	&__slider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background: $accent;
+		pointer-events: none;
+		border-radius: rem(12);
+
+		@media (min-width:$md5) {
+			border-radius: rem(18);
+		}
+
+		@media (min-width:$md3) {
+			border-radius: rem(30);
+		}
+	}
+
+	&__slide {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+
+		& picture {
+			flex: 1 1 auto;
+			display: block;
+		}
+	}
+
+	// .banner__image
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background: $accent;
+		overflow: hidden;
+		pointer-events: none;
+		border-radius: rem(12);
+		display: flex;
+		flex-direction: column;
+
+		& picture {
+			flex: 1 1 auto;
+			display: block;
+		}
+
+		@media (min-width:$md5) {
+			border-radius: rem(18);
+		}
+
+		@media (min-width:$md3) {
+			border-radius: rem(30);
+		}
+	}
+
+	// .banner__description
+	&__description {}
+
+	// .banner__title
+	&__title {}
+
+	// .banner__text
+	&__text {
+		margin-top: 1.5rem;
+		font-size: 1rem;
+		line-height: 162.5%;
+		letter-spacing: -0.0195rem;
+
+		& p {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+
+				@media (min-width:$md2) {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	// .banner__btns
+	&__btns {
+		margin-top: 2.375rem;
+		gap: 1rem;
+		display: flex;
+
+		.banner__btn {
+			margin-top: 0;
+		}
+	}
+
+	// .banner__btn
+	&__btn {
+		margin-top: 2rem;
+	}
+}
+
+.description-block {
+	margin-top: auto;
+	position: relative;
+	background: #fff;
+	color: #313542;
+	z-index: 6;
+	max-width: 30rem;
+	padding-top: 2.5rem;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: rem(12);
+		height: rem(12);
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		@media (min-width:$md5) {
+			width: rem(18);
+			height: rem(18);
+		}
+
+		@media (min-width:$md3) {
+			width: rem(30);
+			height: rem(30);
+
+		}
+
+	}
+
+	&.description-block--left {
+
+		padding-right: 2rem;
+		border-top-right-radius: rem(12);
+
+		@media (min-width:$md5) {
+			border-top-right-radius: rem(18);
+		}
+
+		@media (min-width:$md3) {
+			border-top-right-radius: rem(30);
+		}
+
+		&::before,
+		&::after {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M0 0C0 16.5685 13.4315 30 30 30H0V0Z' fill='white'/%3E%3C/svg%3E");
+		}
+
+		&::before {
+			bottom: 100%;
+			left: 0;
+		}
+
+		&::after {
+			bottom: 0;
+			left: 100%;
+		}
+	}
+
+	&.description-block--right {
+		margin-left: auto;
+		padding-left: 2rem;
+		border-top-left-radius: rem(12);
+
+		@media (min-width:$md5) {
+			border-top-left-radius: rem(18);
+		}
+
+		@media (min-width:$md3) {
+			border-top-left-radius: rem(30);
+		}
+
+		&::before,
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M30 0C30 16.5685 16.5685 30 0 30H30V0Z' fill='white'/%3E%3C/svg%3E");
+		}
+
+		&::before {
+			bottom: 100%;
+			right: 0;
+		}
+
+		&::after {
+			bottom: 0;
+			right: 100%;
+		}
+	}
+}
