@@ -60,7 +60,7 @@
 }
 
 .advantages {
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 3.75rem;
     background: #F6F8FA;
 
     // .advantages__title
@@ -171,6 +171,79 @@
         letter-spacing: -0.01875rem;
     }
 }
+
+.partners {
+    padding: rem(64) 0 6.72rem;
+
+    // .partners__title
+    &__title {
+
+        font-weight: 600;
+    }
+
+    // .partners__list
+    &__list {
+        margin-top: rem(40);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    // .partners__card
+    &__card {
+        display: flex;
+        align-items: center;
+        gap: rem(35);
+
+        &:not(:last-child) {
+            padding-bottom: rem(40);
+            border-bottom: rem(1) solid #E9E9E9;
+        }
+
+
+    }
+
+    // .partners__card-image
+    &__card-image {
+        flex-shrink: 0;
+        width: rem(371);
+        height: rem(228);
+        border-radius: rem(24);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    }
+
+    // .partners__card-content
+    &__card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    // .partners__card-name
+    &__card-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 120%;
+
+    }
+
+    // .partners__card-text
+    &__card-text {
+        font-size: 1.125rem;
+        line-height: 140%;
+        max-width: rem(716);
+    }
+}
+
 
 .career-guidance {
     background: #F6F8FA;
@@ -371,75 +444,5 @@
         font-size: 1.125rem;
         line-height: 130%;
         letter-spacing: -0.00938rem;
-    }
-}
-
-.partners {
-    padding: rem(80) 0;
-
-    &__title {
-        margin-bottom: rem(48);
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.partner-card {
-    display: flex;
-    align-items: center;
-    gap: rem(40);
-    padding: rem(32) 0;
-    border-top: 1px solid #E5E9F0;
-
-    &:last-child {
-        border-bottom: 1px solid #E5E9F0;
-    }
-
-    &__image {
-        flex-shrink: 0;
-        width: rem(290);
-        height: rem(180);
-        border-radius: rem(16);
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__content {
-        flex: 1;
-    }
-
-    &__name {
-        color: #313542;
-        font-size: rem(22);
-        font-weight: 500;
-        line-height: 120%;
-        margin-bottom: rem(12);
-    }
-
-    &__text {
-        color: #4A5565;
-        font-size: rem(16);
-        line-height: 140%;
-        max-width: rem(600);
-    }
-
-    @media (max-width: $md2) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: rem(20);
-
-        &__image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-        }
     }
 }
