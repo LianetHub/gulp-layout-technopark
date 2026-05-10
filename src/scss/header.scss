@@ -127,9 +127,11 @@
 		position: fixed;
 		top: 0;
 		right: 0;
+		left: 0;
+		bottom: 0;
 		background: rgba($color: #000E25, $alpha: 0.7);
 		width: 100vw;
-		height: 100dvh;
+		height: 100svh;
 		z-index: 6;
 		opacity: 0;
 		visibility: hidden;
@@ -168,7 +170,7 @@
 		@media (max-width:$md5) {
 			width: min(rem(320), 100%);
 			border-radius: 1.5rem 0 0 1.5rem;
-			padding: rem(50) rem(20) rem(46) rem(34);
+			padding: rem(50) rem(20) rem(46) rem(20);
 		}
 	}
 
@@ -243,6 +245,14 @@
 			align-items: center;
 			gap: rem(5);
 
+			@media (max-width:$md3) {
+				flex-wrap: wrap;
+
+				.menu__link {
+					flex: 0 0 calc(100% - 1.5rem);
+				}
+			}
+
 			@media (any-hover: hover) {
 				&:hover {
 					.menu__arrow {
@@ -256,6 +266,32 @@
 					.submenu {
 						opacity: 1;
 						visibility: visible;
+					}
+				}
+			}
+
+			&.open-submenu {
+
+				body._touch & {
+					.menu__arrow {
+						transform: rotate(180deg);
+						opacity: 1;
+					}
+
+					.menu__link {
+						opacity: 1;
+					}
+
+					.submenu {
+						@media (max-width:$md3) {
+							display: block;
+						}
+
+						@media (min-width:$md3) {
+							opacity: 1;
+							visibility: visible;
+						}
+
 					}
 				}
 			}
@@ -358,18 +394,28 @@
 }
 
 .submenu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background: #fff;
-	border-radius: 1rem;
-	background: #FFF;
-	box-shadow: 0 rem(4) rem(10.3) 0 rgba(0, 0, 0, 0.11);
-	padding: 1.5rem;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s ease;
-	min-width: rem(320);
+	@media (max-width:$md3) {
+		display: none;
+		padding-left: 1em;
+		margin-top: 0.5rem;
+		font-size: 0.875em;
+	}
+
+	@media (min-width:$md3) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: #fff;
+		border-radius: 1rem;
+		background: #FFF;
+		box-shadow: 0 rem(4) rem(10.3) 0 rgba(0, 0, 0, 0.11);
+		padding: 1.5rem;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		min-width: rem(320);
+
+	}
 
 	// .submenu__item
 	&__item {}

@@ -39,6 +39,26 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.remove('open-mobile-menu');
         }
 
+        if (document.body.classList.contains('_touch')) {
+            if (target.closest('.menu__arrow')) {
+                const parentItem = target.closest('.menu__item--parent');
+                const arrow = target.closest('.menu__arrow');
+
+                if (parentItem) {
+                    parentItem.classList.toggle('open-submenu');
+                    const isExpanded = parentItem.classList.contains('open-submenu');
+                    arrow.setAttribute('aria-expanded', isExpanded);
+                }
+            } else if (!target.closest('.menu__item--parent')) {
+                const activeParent = document.querySelector('.menu__item--parent.open-submenu');
+                if (activeParent) {
+                    activeParent.classList.remove('open-submenu');
+                    const activeArrow = activeParent.querySelector('.menu__arrow');
+                    if (activeArrow) activeArrow.setAttribute('aria-expanded', 'false');
+                }
+            }
+        }
+
     })
 
     // sliders
