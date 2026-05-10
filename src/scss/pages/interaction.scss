@@ -1,14 +1,19 @@
 .interaction {
-    padding: 0.25rem 0 rem(64);
+
     background: #fff;
     position: relative;
     z-index: 2;
     border-radius: 0 0 rem(30) rem(30);
     margin-bottom: rem(-30);
+    padding: 0 0 rem(48);
 
     @media (min-width:$md4) {
         border-radius: 0 0 rem(58) rem(58);
         margin-bottom: rem(-58);
+    }
+
+    @media (min-width:$md3) {
+        padding: 0.25rem 0 rem(64);
     }
 
     &:not(:last-child) {
@@ -33,35 +38,89 @@
 
     // .interaction__banner
     &__banner {
-        min-height: 41.0625rem;
+        min-height: 31.25rem;
+
+        @media (min-width:$md3) {
+            min-height: 36.15625rem;
+
+        }
+
+        @media (min-width:$md2) {
+            min-height: 41.0625rem;
+
+        }
 
         .banner__description {
-            max-width: 39.1rem;
+            max-width: 24.3rem;
+            padding-top: rem(14);
+
+            @media (min-width:$md3) {
+                padding-top: rem(40);
+                max-width: 30rem;
+            }
+
+            @media (min-width:$md2) {
+                max-width: 39.1rem;
+
+            }
 
             .banner__title {
-                font-size: rem(47);
-                letter-spacing: -0.125rem;
-                line-height: 114.894%;
+                font-size: 1.9375rem;
                 font-weight: 500;
+                line-height: 100%;
+                letter-spacing: -0.09544rem;
+                margin-right: -1rem;
+
+                @media (min-width:$md2) {
+                    font-size: rem(47);
+                    letter-spacing: -0.125rem;
+                    line-height: 114.894%;
+
+
+                }
             }
 
             .banner__text {
-                font-size: 1.15rem;
-                line-height: 140%;
-                max-width: 36.1875rem;
+                font-size: 0.875rem;
+                line-height: 130%;
+
+                margin-top: rem(10);
+
+                @media (min-width:$md2) {
+                    margin-top: 1.5rem;
+                    font-size: 1.15rem;
+                    line-height: 140%;
+                    max-width: 36.1875rem;
+
+                }
             }
 
             .banner__btn {
-                min-width: 13rem;
-                margin-top: 2.5rem;
+                margin-top: 1.125rem;
+                min-width: 10.8125rem;
+
+                @media (max-width:$md3) {
+                    font-size: 0.875rem;
+                }
+
+                @media (min-width:$md2) {
+                    margin-top: 2.5rem;
+                    min-width: 13rem;
+
+                }
             }
         }
     }
 }
 
 .advantages {
-    padding: 2.5rem 0 3.75rem;
     background: #F6F8FA;
+    padding: 2.5rem 0 2.5rem;
+
+    @media (min-width:$md3) {
+        padding: 2.5rem 0 3.75rem;
+
+    }
 
     // .advantages__title
     &__title {
@@ -71,15 +130,20 @@
 
     // .advantages__list
     &__list {
-        margin-top: 2.75rem;
+        margin-top: rem(30);
         display: grid;
-        gap: rem(24);
+        gap: 1rem;
 
         @media (min-width:$md4) {
             grid-template-columns: repeat(2, 1fr);
         }
 
+        @media (min-width:$md3) {
+            gap: rem(24);
+        }
+
         @media (min-width:$md2) {
+            margin-top: 2.75rem;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
@@ -87,14 +151,22 @@
 
     // .advantages__card
     &__card {
-        padding: 1.5rem;
+
         display: flex;
         flex-direction: column;
-        border-radius: 1.5rem;
         background: #FFF;
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
         transition: all 0.3s ease;
-        gap: 1.62rem;
+        gap: 0.5rem;
+        border-radius: 1.125rem;
+        padding: 1rem 0.5rem 1rem 1rem;
+
+        @media (min-width:$md3) {
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            gap: 1rem;
+
+        }
 
         @media (any-hover: hover) {
             &:hover {
@@ -106,17 +178,22 @@
 
     // .advantages__card-icon
     &__card-icon {
-        width: 5rem;
-        height: 5rem;
+        width: 3.125rem;
+        height: 3.125rem;
         flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        border-radius: 1.81819rem;
         position: relative;
         z-index: 1;
-        border-radius: 2rem;
+        border-radius: 1rem;
+        padding: 0.5rem;
+
+        @media (min-width:$md3) {
+            border-radius: 1.81819rem;
+
+        }
 
         &::before {
             content: '';
@@ -125,9 +202,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 2rem;
-            background: url("@img/decor/glass-substrat-advantages.png") 0 0 / cover no-repeat;
+            border-radius: 1rem;
             z-index: -1;
+            background: url("@img/decor/glass-substrat-advantages-tablet.png") 0 0 / cover no-repeat;
+
+            @media (min-width:$md3) {
+                background: url("@img/decor/glass-substrat-advantages.png") 0 0 / cover no-repeat;
+                border-radius: 1.81819rem;
+            }
         }
 
 
@@ -136,68 +218,132 @@
             position: absolute;
             bottom: rem(3);
             right: rem(3);
-            width: rem(20);
-            height: rem(20);
+            width: rem(13);
+            height: rem(13);
             border-radius: 50%;
             z-index: -2;
             background: #2342A7;
-            filter: blur(21.950000762939453px)
+            filter: blur(13px);
+
+            @media (min-width:$md3) {
+                width: rem(20);
+                height: rem(20);
+                filter: blur(21.950000762939453px);
+            }
+        }
+
+        & img {
+            max-width: 1.79688rem;
+
+            @media (min-width:$md3) {
+                max-width: rem(46);
+            }
+        }
+
+        @media (min-width:$md3) {
+            width: 5rem;
+            height: 5rem;
         }
     }
 
-    // .advantages__card-content
-    &__card-content {
+    // .advantages__card-header
+    &__card-header {
         display: flex;
-        flex-direction: column;
-        flex: 1;
+        align-items: center;
+        gap: 0.75rem;
+        flex-direction: row;
+
+        @media (min-width:$md3) {
+            gap: 1.62rem;
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
     }
 
     // .advantages__card-title
     &__card-title {
-        margin-bottom: 1rem;
-        font-size: 1.375rem;
         font-weight: 500;
-        line-height: 120%;
-        letter-spacing: -0.02806rem;
+        line-height: 110%;
+        letter-spacing: -0.0375rem;
+        font-size: 1.125rem;
+
+
+        @media (min-width:$md3) {
+            font-size: 1.375rem;
+            letter-spacing: -0.02806rem;
+            line-height: 120%;
+
+        }
     }
 
     // .advantages__card-text
     &__card-text {
-        margin-top: auto;
 
         color: #4A5565;
-        font-size: 1rem;
         line-height: 140%;
         letter-spacing: -0.01875rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md3) {
+            margin-top: auto;
+            font-size: 1rem;
+
+        }
     }
 }
 
 .partners {
-    padding: rem(64) 0 6.72rem;
+    padding: rem(42) 0 3.25rem;
+
+    @media (min-width:$md3) {
+        padding: rem(64) 0 6.72rem;
+
+    }
 
     // .partners__title
     &__title {
+        max-width: 80%;
 
-        font-weight: 600;
+        @media (min-width:$md3) {
+            max-width: 100%;
+            font-weight: 600;
+        }
     }
 
     // .partners__list
     &__list {
-        margin-top: rem(40);
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-top: rem(54);
+
+        @media (min-width:$md3) {
+            margin-top: rem(40);
+            gap: 1.5rem;
+
+        }
     }
 
     // .partners__card
     &__card {
         display: flex;
         align-items: center;
-        gap: rem(35);
+        gap: rem(16);
+
+        @media (min-width:$md3) {
+            gap: rem(35);
+
+        }
 
         &:not(:last-child) {
-            padding-bottom: rem(40);
             border-bottom: rem(1) solid #E9E9E9;
+            padding-bottom: rem(22);
+
+            @media (min-width:$md3) {
+                padding-bottom: rem(40);
+
+            }
         }
 
 
@@ -206,18 +352,22 @@
     // .partners__card-image
     &__card-image {
         flex-shrink: 0;
-        width: rem(371);
-        height: rem(228);
-        border-radius: rem(24);
+        width: 16.375rem;
+        height: 10.1075rem;
+        border-radius: 1rem;
         overflow: hidden;
 
-        img {
+        & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-
+        @media (min-width:$md3) {
+            width: rem(371);
+            height: rem(228);
+            border-radius: rem(24);
+        }
     }
 
     // .partners__card-content
@@ -230,10 +380,9 @@
 
     // .partners__card-name
     &__card-name {
-        font-size: 1.5rem;
         font-weight: 500;
         line-height: 120%;
-
+        font-size: 1.5rem;
     }
 
     // .partners__card-text
@@ -246,7 +395,12 @@
 
 .career-guidance {
     background: #F6F8FA;
-    padding: 4.34rem 0 8.5rem;
+    padding: 2.5rem 0 6rem;
+
+    @media (min-width:$md3) {
+        padding: 4.34rem 0 8.5rem;
+
+    }
 
     &+.results {
         margin-top: rem(-30);
@@ -257,7 +411,12 @@
             border-top-right-radius: rem(58);
             border-top-left-radius: rem(58);
             margin-top: rem(-58);
+            padding-top: rem(42);
+        }
+
+        @media (min-width:$md3) {
             padding-top: rem(74);
+
         }
     }
 
@@ -273,7 +432,11 @@
 
     // .career-guidance__title
     &__title {
-        max-width: 37.375rem;
+        max-width: 26.9375rem;
+
+        @media (min-width:$md3) {
+            max-width: 37.375rem;
+        }
     }
 
     // .career-guidance__controls
@@ -285,25 +448,36 @@
 
     // .career-guidance__prev
     &__prev {
-        width: 4.375rem;
-        height: 4.375rem;
-        font-size: 2.25rem;
+        @media (min-width:$md2) {
+            width: 4.375rem;
+            height: 4.375rem;
+            font-size: 2.25rem;
+        }
     }
 
     // .career-guidance__next
     &__next {
-        width: 4.375rem;
-        height: 4.375rem;
-        font-size: 2.25rem;
+        @media (min-width:$md2) {
+            width: 4.375rem;
+            height: 4.375rem;
+            font-size: 2.25rem;
+
+        }
     }
 
     // .career-guidance__body
     &__body {
-        margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1.125fr;
         gap: 1.5rem;
         align-items: end;
+        margin-top: 1.75rem;
+
+        @media (min-width:$md3) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 2rem;
+
+        }
     }
 
     // .career-guidance__info
@@ -314,28 +488,44 @@
     // .career-guidance__stat
     &__stat {
         color: #2342A7;
-        font-size: 5rem;
         font-weight: 500;
         line-height: 78.33%;
         letter-spacing: -0.01938rem;
+        font-size: 4rem;
+
+        @media (min-width:$md3) {
+            font-size: 5rem;
+
+        }
     }
 
     // .career-guidance__caption
     &__caption {
-        margin-top: 1rem;
         color: #4A5565;
-        font-size: 1.875rem;
         line-height: 130%;
         letter-spacing: -0.01938rem;
+        font-size: 1.25rem;
+        margin-top: 0.25rem;
+
+        @media (min-width:$md3) {
+            margin-top: 1rem;
+            font-size: 1.875rem;
+
+        }
     }
 
     // .career-guidance__desc
     &__desc {
-        margin-top: 2rem;
         color: #313542;
-        font-size: 1.125rem;
         line-height: 144.444%;
         letter-spacing: -0.0195rem;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+
+        @media (min-width:$md3) {
+            margin-top: 2rem;
+            font-size: 1.125rem;
+        }
     }
 
     // .career-guidance__slider
@@ -345,14 +535,26 @@
 
     // .career-guidance__slide
     &__slide {
-        border-radius: 2rem;
         overflow: hidden;
-        height: 20.5rem;
+        height: 15.625rem;
+        border-radius: 1.25rem;
+
+        @media (min-width:$md3) {
+            border-radius: 2rem;
+            height: 20.5rem;
+
+        }
     }
 }
 
 .results {
-    padding: rem(74) 0;
+    padding: rem(40) 0;
+
+    @media (min-width:$md3) {
+        padding: rem(74) 0;
+
+    }
+
     background: #fff;
 
     &:not(:last-child) {
@@ -388,39 +590,58 @@
 
     // .results__title
     &__title {
-        font-weight: 600;
+        @media (min-width:$md3) {
+            font-weight: 600;
+
+        }
     }
 
     // .results__list
     &__list {
-        margin-top: rem(42);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        margin-top: rem(42);
     }
 
     // .results__card
     &__card {
-        display: flex;
-        align-items: center;
-        gap: rem(31);
+        display: grid;
+        grid-auto-rows: min-content;
+        column-gap: 1rem;
         border-radius: 1.5rem;
         background: #FFF;
-        padding: 2.625rem 2rem;
         box-shadow: 0 rem(13) rem(28) 0 #ECF1F5;
+        padding: 1rem;
+        grid-template-columns: 3.125rem 1fr;
+        row-gap: 0.875rem;
+
+        @media (min-width:$md3) {
+            grid-template-columns: 6rem 1fr;
+            align-items: center;
+            padding: 2.625rem 2rem;
+            column-gap: rem(31);
+            row-gap: 1rem;
+        }
     }
 
     // .results__card-image
     &__card-image {
-        width: 6rem;
-        height: 6rem;
+        width: 3.125rem;
+        height: 3.125rem;
         flex-shrink: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         z-index: 1;
-        border-radius: 2rem;
+        border-radius: 1rem;
+        align-self: center;
+
+        @media (min-width:$md3) {
+            grid-row: span 2;
+
+        }
 
         &::before {
             content: '';
@@ -429,46 +650,85 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 2rem;
-            background: url("@img/decor/glass-substrat-training.png") 0 0 / cover no-repeat;
             z-index: -1;
+            border-radius: 1rem;
+
+            background: url("@img/decor/glass-substrat-training-tablet.png") 0 0 / cover no-repeat;
+
+            @media (min-width:$md3) {
+                background: url("@img/decor/glass-substrat-training.png") 0 0 / cover no-repeat;
+                border-radius: 2rem;
+
+            }
         }
 
 
         &::after {
             content: '';
             position: absolute;
-            bottom: rem(11);
-            right: rem(10);
-            width: 1.5rem;
-            height: 1.5rem;
+
+            bottom: rem(3);
+            right: rem(3);
             border-radius: 50%;
             z-index: -2;
             background: #2342A7;
-            filter: blur(23.950000762939453px)
+
+            width: 0.81675rem;
+            height: 0.81675rem;
+            filter: blur(13px);
+
+            @media (min-width:$md3) {
+                width: 1.5rem;
+                height: 1.5rem;
+                bottom: rem(11);
+                right: rem(10);
+                filter: blur(23.950000762939453px);
+            }
+        }
+
+        & img {
+            max-width: 1.62763rem;
+
+            @media (min-width:$md3) {
+                max-width: 3.125rem;
+            }
+        }
+
+        @media (min-width:$md3) {
+            border-radius: 2rem;
+            width: 6rem;
+            height: 6rem;
         }
     }
 
-    // .results__card-content
-    &__card-content {
-        flex: 1 1 auto;
-    }
 
     // .results__card-name
     &__card-name {
         color: #313542;
-        font-size: 1.5rem;
         font-weight: 500;
         line-height: 116.667%;
         letter-spacing: -0.02806rem;
+        font-size: 1.125rem;
+        align-self: center;
+
+        @media (min-width:$md3) {
+            font-size: 1.5rem;
+        }
     }
 
     // .results__card-desc
     &__card-desc {
-        margin-top: 1rem;
         color: #4A5565;
-        font-size: 1.125rem;
-        line-height: 130%;
         letter-spacing: -0.00938rem;
+        font-size: 0.875rem;
+        line-height: 120%;
+        grid-column: span 2;
+        align-self: start;
+
+        @media (min-width:$md3) {
+            line-height: 130%;
+            font-size: 1.125rem;
+            grid-column: auto;
+        }
     }
 }

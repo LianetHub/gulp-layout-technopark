@@ -573,7 +573,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: rem(320);
+
 		padding: 2rem 1.5rem;
 
 		@media (min-width:$md5) {
@@ -582,6 +582,7 @@ body {
 		}
 
 		@media (min-width:$md3) {
+			min-height: rem(320);
 			padding: 3.75rem;
 
 		}
