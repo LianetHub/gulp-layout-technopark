@@ -231,7 +231,10 @@
         display: grid;
         margin-top: rem(30);
         gap: 0.5rem;
-        grid-template-columns: repeat(12, 1fr);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(12, 1fr);
+        }
 
         @media (min-width:$md3) {
             grid-template-columns: repeat(24, 1fr);
@@ -332,11 +335,16 @@
     }
 
     &.direction-card--large {
-        grid-column: span 12;
+        @media (min-width:$md4) {
+            grid-column: span 12;
+
+        }
     }
 
     &.direction-card--extralarge {
-        grid-column: span 7;
+        @media (min-width:$md4) {
+            grid-column: span 7;
+        }
 
         @media (min-width:$md3) {
             grid-column: span 13;
@@ -345,7 +353,10 @@
     }
 
     &.direction-card--extralarge-desktop {
-        grid-column: span 6;
+        @media (min-width:$md4) {
+            grid-column: span 6;
+
+        }
 
         @media (min-width:$md3) {
             grid-column: span 13;
@@ -354,7 +365,9 @@
     }
 
     &.direction-card--medium {
-        grid-column: span 5;
+        @media (min-width:$md4) {
+            grid-column: span 5;
+        }
 
         @media (min-width:$md3) {
             grid-column: span 11;
@@ -372,7 +385,9 @@
 
     &.direction-card--medium-desktop {
 
-        grid-column: span 6;
+        @media (min-width:$md4) {
+            grid-column: span 6;
+        }
 
         @media (min-width:$md3) {
             grid-column: span 11;
@@ -380,7 +395,9 @@
         }
 
         &::before {
-            top: 35%;
+            @media (min-width:$md4) {
+                top: 35%;
+            }
 
             @media (min-width:$md3) {
                 top: 50%;
@@ -399,14 +416,18 @@
     &--connection {
         &-right-desktop {
 
-            &::before {
-                display: block;
+            @media (min-width:$md4) {
+                &::before {
+                    display: block;
+                }
             }
         }
 
         &-bottom-desktop {
-            &::after {
-                display: block;
+            @media (min-width:$md4) {
+                &::after {
+                    display: block;
+                }
             }
         }
     }
@@ -577,9 +598,17 @@
     // .residents__list
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
         margin-top: 1.875rem;
+
+        @media (min-width:$md5) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
 
         @media (min-width:$md2) {
             margin-top: 2.97rem;
