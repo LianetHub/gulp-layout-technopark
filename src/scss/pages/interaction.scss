@@ -244,10 +244,22 @@
     }
 }
 
-
 .career-guidance {
     background: #F6F8FA;
-    padding: 4.34rem 0;
+    padding: 4.34rem 0 8.5rem;
+
+    &+.results {
+        margin-top: rem(-30);
+        border-top-right-radius: rem(30);
+        border-top-left-radius: rem(30);
+
+        @media (min-width:$md4) {
+            border-top-right-radius: rem(58);
+            border-top-left-radius: rem(58);
+            margin-top: rem(-58);
+            padding-top: rem(74);
+        }
+    }
 
     // .career-guidance__container
     &__container {}
@@ -272,15 +284,26 @@
     }
 
     // .career-guidance__prev
-    &__prev {}
+    &__prev {
+        width: 4.375rem;
+        height: 4.375rem;
+        font-size: 2.25rem;
+    }
 
     // .career-guidance__next
-    &__next {}
+    &__next {
+        width: 4.375rem;
+        height: 4.375rem;
+        font-size: 2.25rem;
+    }
 
     // .career-guidance__body
     &__body {
+        margin-top: 2rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        align-items: end;
     }
 
     // .career-guidance__info
@@ -324,23 +347,24 @@
     &__slide {
         border-radius: 2rem;
         overflow: hidden;
-        height: auto;
+        height: 20.5rem;
     }
 }
 
 .results {
-    padding: rem(120) 0;
+    padding: rem(74) 0;
     background: #fff;
 
     &:not(:last-child) {
-
         position: relative;
         z-index: 2;
-        border-radius: 0 0 rem(30) rem(30);
         margin-bottom: rem(-30);
+        border-bottom-right-radius: rem(30);
+        border-bottom-left-radius: rem(30);
 
         @media (min-width:$md4) {
-            border-radius: 0 0 rem(58) rem(58);
+            border-bottom-right-radius: rem(58);
+            border-bottom-left-radius: rem(58);
             margin-bottom: rem(-58);
         }
 
@@ -363,7 +387,9 @@
     &__container {}
 
     // .results__title
-    &__title {}
+    &__title {
+        font-weight: 600;
+    }
 
     // .results__list
     &__list {
