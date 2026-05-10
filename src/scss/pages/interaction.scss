@@ -1,5 +1,5 @@
 .interaction {
-    padding: 0.25rem 0 rem(58);
+    padding: 0.25rem 0 rem(64);
     background: #fff;
     position: relative;
     z-index: 2;
@@ -11,17 +11,20 @@
         margin-bottom: rem(-58);
     }
 
-    &+* {
-        padding-top: rem(72);
+    &:not(:last-child) {
 
-        @media (min-width:$md5) {
-            padding-top: rem(100);
+        &+* {
+            padding-top: rem(72);
 
-        }
+            @media (min-width:$md5) {
+                padding-top: rem(100);
 
-        @media (min-width:$md2) {
-            padding-top: rem(110);
+            }
 
+            @media (min-width:$md2) {
+                padding-top: rem(124);
+
+            }
         }
     }
 
@@ -53,6 +56,119 @@
                 margin-top: 2.5rem;
             }
         }
+    }
+}
+
+.advantages {
+    padding: 2.5rem 0;
+    background: #F6F8FA;
+
+    // .advantages__title
+    &__title {
+
+        font-weight: 600;
+    }
+
+    // .advantages__list
+    &__list {
+        margin-top: 2.75rem;
+        display: grid;
+        gap: rem(24);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width:$md2) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    // .advantages__card
+    &__card {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        background: #FFF;
+        box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
+        transition: all 0.3s ease;
+        gap: 1.62rem;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translateY(rem(-8));
+                box-shadow: 0 rem(15) rem(40) rgba(0, 0, 0, 0.11);
+            }
+        }
+    }
+
+    // .advantages__card-icon
+    &__card-icon {
+        width: 5rem;
+        height: 5rem;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 1.81819rem;
+        position: relative;
+        z-index: 1;
+        border-radius: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            background: url("@img/decor/glass-substrat-advantages.png") 0 0 / cover no-repeat;
+            z-index: -1;
+        }
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(3);
+            right: rem(3);
+            width: rem(20);
+            height: rem(20);
+            border-radius: 50%;
+            z-index: -2;
+            background: #2342A7;
+            filter: blur(21.950000762939453px)
+        }
+    }
+
+    // .advantages__card-content
+    &__card-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    // .advantages__card-title
+    &__card-title {
+        margin-bottom: 1rem;
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.02806rem;
+    }
+
+    // .advantages__card-text
+    &__card-text {
+        margin-top: auto;
+
+        color: #4A5565;
+        font-size: 1rem;
+        line-height: 140%;
+        letter-spacing: -0.01875rem;
     }
 }
 
