@@ -24,12 +24,10 @@
             position: absolute;
             top: 0;
             right: 0;
-
             height: 100%;
             background: linear-gradient(156deg, rgba(255, 255, 255, 0.00) 27.43%, #FFF 84.59%);
             clip-path: polygon(0% 61%, 100% 0%, 100% 100%, 0% 100%);
             z-index: -1;
-
             width: calc(100% + 1rem);
 
             @media (min-width:$md1) {
@@ -43,10 +41,9 @@
             position: absolute;
             top: 0;
             right: 0;
-
             height: 100%;
             z-index: -1;
-            background: url("@img/hero-offer-bg.svg") 100% 0 / auto 100% repeat-x;
+            background: url("@img/hero-offer-bg.svg") 100% 0 / auto 100% no-repeat;
             width: calc(100% + 1rem);
 
             @media (min-width:$md1) {
@@ -83,9 +80,18 @@
         flex: 0 0 rem(761);
         height: rem(488);
         align-self: stretch;
-        overflow: hidden;
         border-radius: rem(30);
         position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(100% + rem(20));
+            width: 100%;
+            height: 100%;
+            background: url("@img/hero-offer-bg-side.svg") 0 0 / auto 100% no-repeat;
+        }
 
         &::before {
             content: '';
@@ -94,12 +100,14 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border-radius: rem(30);
             background: url("@img/hero-mask.svg") 0 0 / cover no-repeat;
         }
     }
 
     // .hero__video-block
     &__video-block {
+        border-radius: rem(30);
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -586,36 +594,10 @@
     padding: rem(131) 0 rem(50);
 
     @media (min-width:$md3) {
-        padding: rem(131) 0 rem(115);
+        padding: rem(131) 0 rem(130);
 
     }
 
-    &:not(:last-child) {
-
-        position: relative;
-        z-index: 3;
-        border-radius: 0 0 rem(30) rem(30);
-        margin-bottom: rem(-30);
-
-        @media (min-width:$md4) {
-            border-radius: 0 0 rem(58) rem(58);
-            margin-bottom: rem(-58);
-        }
-
-        &+* {
-            padding-top: rem(62);
-
-            @media (min-width:$md5) {
-                padding-top: rem(85);
-
-            }
-
-            @media (min-width:$md2) {
-                padding-top: rem(110);
-
-            }
-        }
-    }
 
     // .residents__title
     &__title {
@@ -777,10 +759,13 @@
 }
 
 .about-center {
-    padding: rem(0) 0 rem(54);
+    padding: rem(58) 0 rem(54);
     position: relative;
-    z-index: 2;
+    z-index: 3;
     background: #fff;
+    margin-top: rem(0);
+    border-radius: rem(58) rem(58) 0 0;
+    margin-top: rem(-58);
 
     // .about-center__container
     &__container {}
