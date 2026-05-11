@@ -93,27 +93,54 @@
                 <section class="org-info">
                     <div class="container">
                         <h2 class="org-info__title title">Сведения об образовательной организации</h2>
-                        <div class="org-info__grid">
-                            @@loop('./html/templates/_info-card.html', './html/json/org-info.json')
-                        </div>
+                        <ul class="org-info__grid">
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">Организация</div>
+                                <div class="org-info__card-value">ООО «ЭНЕРГОИННОВАЦИИ»</div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">Дата создания</div>
+                                <div class="org-info__card-value">15.12.2020</div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">График работы</div>
+                                <div class="org-info__card-value">Пн-Пт: 08:00–17:00</div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">Email</div>
+                                <div class="org-info__card-value"><a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a></div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">Телефон</div>
+                                <div class="org-info__card-value"><a href="tel:+78435620757">8 (843) 562-07-57 (доб. 564)</a></div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">ИНН</div>
+                                <div class="org-info__card-value">1648053156</div>
+                            </li>
+                            <li class="org-info__card">
+                                <div class="org-info__card-label">Адрес</div>
+                                <div class="org-info__card-value">
+                                    <address>422527, Республика Татарстан, Зеленодольский район, город Зеленодольск, п/р Промышленная Площадка Зеленодольск</address>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
                 <section class="accreditation">
                     <div class="container">
                         <h2 class="accreditation__title title">Лицензия и аккредитация</h2>
-                        <div class="accreditation__grid">
+                        <ul class="accreditation__grid">
                             @@loop('./html/templates/_accreditation-card.html', './html/json/accreditation.json')
-                        </div>
+                        </ul>
                     </div>
                 </section>
                 <section class="management">
-                    <div class="container">
-                        <div class="management__inner">
-                            <h2 class="management__title title">Руководство</h2>
-                            <div class="management__list">
-                                @@loop('./html/templates/_management-person.html', './html/json/management.json')
-                            </div>
-                        </div>
+                    <div class="management__container container">
+                        <h2 class="management__title title">Руководство</h2>
+                        <ul class="management__list">
+                            @@loop('./html/templates/_management-person.html', './html/json/management.json')
+                        </ul>
                     </div>
                 </section>
                 <section class="documents">

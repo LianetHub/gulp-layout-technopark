@@ -1,12 +1,14 @@
-<article class="accreditation-card">
-    <div class="accreditation-card__icon">
-        <img src="@@iconUrl" alt="@@title">
+<li class="accreditation__card">
+    <div class="accreditation__card-header">
+        <div class="accreditation__card-icon">
+            <img src="@@iconUrl" alt="@@title">
+        </div>
+        <div class="accreditation__card-info">
+            <h3 class="accreditation__card-title">@@title</h3>
+            <p class="accreditation__card-number">@@numberText: <span>@@number</span></p>
+        </div>
     </div>
-    <div class="accreditation-card__info">
-        <h3 class="accreditation-card__title">@@title</h3>
-        <p class="accreditation-card__number">@@numberText: <span>@@number</span></p>
-        <a href="@@link" class="accreditation-card__link icon-next">
-            Проверить документ
-        </a>
-    </div>
-</article>
+    <a href="@@link" class="accreditation__card-link icon-right">
+        <span>Проверить документ</span>
+    </a>
+</li>
