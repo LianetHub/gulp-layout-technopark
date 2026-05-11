@@ -154,17 +154,17 @@
                 <section class="study-plan">
                     <div class="container">
                         <h2 class="study-plan__title title">План обучения и стоимость</h2>
-                        <div class="study-plan__grid">
+                        <ul class="study-plan__grid">
                             @@loop('./html/templates/_plan-card.html', './html/json/study-plan.json')
-                        </div>
+                        </ul>
                     </div>
                 </section>
                 <section class="apply">
                     <div class="container">
                         <h2 class="apply__title title">Подать заявку на обучение</h2>
-                        <div class="apply__grid">
+                        <ul class="apply__grid">
                             @@loop('./html/templates/_apply-card.html', './html/json/apply.json')
-                        </div>
+                        </ul>
                         <p class="apply__footer">
                             Заявки принимаются по электронной почте: <a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a>
                         </p>
