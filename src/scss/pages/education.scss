@@ -979,7 +979,7 @@
             }
 
             @media (min-width:$md2) {
-                padding-top: rem(124);
+                padding-top: rem(114);
 
             }
         }
@@ -1064,47 +1064,54 @@
     }
 }
 
+
 .documents {
     padding: rem(80) 0;
     background: #F6F8FA;
 
-    &__title {
-        margin-bottom: rem(48);
-    }
+    // .documents__container
+    &__container {}
 
+    // .documents__title
+    &__title {}
+
+    // .documents__list
     &__list {
+        margin-top: rem(40);
         display: flex;
         flex-direction: column;
-        gap: rem(8);
+        gap: rem(14);
     }
-}
 
-.document-row {
-    background: #fff;
-    border-radius: rem(12);
-    padding: rem(16) rem(24);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: rem(20);
-    transition: background-color 0.3s ease;
+    // .documents__item
+    &__item {
+        background: #fff;
+        border-radius: rem(12);
+        padding: rem(17.75) rem(24);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+        transition: box-shadow 0.3s ease;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #F6F8FA;
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
+            }
         }
     }
 
-    &__info {
+    // .documents__item-info
+    &__item-info {
         display: flex;
         align-items: center;
         gap: rem(16);
     }
 
-    &__icon {
+    // .documents__item-icon
+    &__item-icon {
         flex-shrink: 0;
-        width: rem(32);
-        height: rem(32);
+        width: 1.875rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1116,36 +1123,30 @@
         }
     }
 
-    &__name {
-        color: #313542;
-        font-size: rem(16);
-        line-height: 140%;
+    // .documents__item-name
+    &__item-name {
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.02806rem;
     }
 
-    &__btn {
-        flex-shrink: 0;
-        display: inline-flex;
-        align-items: center;
-        gap: rem(8);
-        background: #2342A7;
-        color: #fff;
-        padding: rem(10) rem(20);
+    // .documents__item-btn
+    &__item-btn {
+        font-size: 0.875rem;
+        line-height: 110%;
+        gap: 0.5rem;
+        padding: rem(9.5) rem(7);
         border-radius: rem(8);
-        font-size: rem(14);
-        font-weight: 500;
-        transition: background-color 0.3s ease;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: darken(#2342A7, 10%);
-            }
-        }
-
-        i {
-            font-size: rem(16);
+        &::before {
+            order: -1;
         }
     }
 }
+
+
+
 
 .study-plan {
     padding: rem(80) 0;
