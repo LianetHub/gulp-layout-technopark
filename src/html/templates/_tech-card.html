@@ -1,19 +1,20 @@
-<article class="tech-card">
-    <div class="tech-card__header">
-        <div class="tech-card__icon">
+<li class="tech-base__card">
+    <div class="tech-base__card-header">
+        <div class="tech-base__card-icon">
             <img src="@@iconUrl" alt="@@title">
         </div>
-        <h3 class="tech-card__title">@@title</h3>
+        <h3 class="tech-base__card-title">@@title</h3>
     </div>
-    <div class="tech-card__content">
-        <ul class="tech-card__list">
-            @@for (var i = 0; i < list.length; i++) { <li class="tech-card__list-item">`+list[i]+`</li>
-                }
-        </ul>
-        @@if(button) {
-        <a href="@@button.url" class="tech-card__btn btn btn-primary icon-arrow">
-            @@button.text
-        </a>
-        }
-    </div>
-</article>
+    <div class="tech-base__card-content">
+        <ul class="tech-base__card-list">
+            @@for (var i = 0; i < list.length; i++) { <li class="tech-base__card-list-item">`+list[i]+`
+</li>
+}
+</ul>
+@@if(button) {
+<a href="@@button.url" class="tech-base__card-btn btn btn-primary icon-right">
+    @@button.text
+</a>
+}
+</div>
+</li>

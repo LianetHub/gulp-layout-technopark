@@ -9,18 +9,34 @@
             'active': 3
             })
             <main class="page" itemprop="mainContentOfPage">
-                <section class="education">
-                    <div class="education__container container">
-                        <div class="education__banner banner">
+                <section class="university">
+                    <div class="university__container container">
+                        <div class="university__banner banner">
                             <div class="banner__image">
                                 <img src="@img/university/promo.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
                             </div>
                             <div class="banner__description description-block description-block--left">
-                                <h2 class="banner__title title">Обучение и&nbsp;подготовка персонала</h2>
+                                <h1 class="banner__title title">Обучение и&nbsp;подготовка персонала</h1>
                                 <div class="banner__text">Система подготовки и развития специалистов в электроэнергетике на базе реальной производственной инфраструктуры</div>
                                 <div class="banner__btns">
                                     <a href="#callback" data-fancybox class="banner__btn btn btn-primary">Оставить заявку</a>
                                     <a href="" class="banner__btn btn btn-secondary">Посмотреть программы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="education">
+                    <div class="education__container container">
+                        <div class="education__banner banner">
+                            <div class="banner__image">
+                                <img src="@img/university/education.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
+                            </div>
+                            <div class="banner__description description-block description-block--right">
+                                <h2 class="banner__title title-sm">Образование как часть промышленной экосистемы</h2>
+                                <div class="banner__text">
+                                    <p>Обучение и подготовка персонала на базе корпоративного университета «Искра-Волга» — это система развития компетенций, объединяющая образовательные, производственные и отраслевые направления.</p>
+                                    <p>Обучение строится на практике компаний-резидентов и&nbsp;ориентировано на реальные задачи электроэнергетики.</p>
                                 </div>
                             </div>
                         </div>
@@ -34,20 +50,36 @@
                         </ul>
                     </div>
                 </section>
-                <section class="advantage-grid">
+                <section class="advantages">
                     <div class="container">
-                        <h2 class="advantage-grid__title title">Форматы обучения</h2>
-                        <ul class="advantage-grid__list">
+                        <h2 class="advantages__title title">Форматы обучения</h2>
+                        <ul class="advantages__list">
                             @@loop('./html/templates/_advantage-card.html', './html/json/study-formats.json')
                         </ul>
                     </div>
                 </section>
-                <section class="tech-base">
-                    <div class="container">
-                        <h2 class="tech-base__title title">Учебная и техническая база</h2>
-                        <div class="tech-base__grid">
-                            @@loop('./html/templates/_tech-card.html', './html/json/tech-base.json')
+                <section class="education-business">
+                    <div class="education-business__container container">
+                        <div class="education-business__banner banner">
+                            <div class="banner__image">
+                                <img src="@img/university/professional-engineer-workers.jpg" class="cover-image" alt="Фото компании">
+                            </div>
+                            <div class="banner__description description-block description-block--right">
+                                <h2 class="banner__title title-sm">Обучение под задачи бизнеса</h2>
+                                <div class="banner__text">
+                                    <p>Учебный центр «ЭНЕРГОИННОВАЦИИ» разрабатывает программы обучения под требования конкретных организаций.</p>
+                                    <p>В качестве преподавателей привлекаются ведущие специалисты и эксперты в области энергетики и радиоэлектроники</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="tech-base">
+                    <div class="tech-base__container container">
+                        <h2 class="tech-base__title title">Учебная и техническая база</h2>
+                        <ul class="tech-base__grid">
+                            @@loop('./html/templates/_tech-card.html', './html/json/tech-base.json')
+                        </ul>
                     </div>
                 </section>
                 <section class="study-conditions">
