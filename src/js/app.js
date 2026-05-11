@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    // initAnimation();
+    initAnimation();
 
 
 });
