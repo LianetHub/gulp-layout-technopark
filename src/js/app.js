@@ -143,10 +143,15 @@ function initAnimation() {
         function startCounter(el) {
             const originalText = el.textContent.trim();
             const targetNumber = parseInt(originalText.replace(/\D/g, ''), 10);
-            const suffix = originalText.replace(/[0-9\s]/g, '');
+            const suffix = originalText.replace(/[0-9\s\u00A0\u202F]/g, '');
 
             const startNumber = Math.floor(targetNumber * 0.8);
             const startTime = performance.now();
+            const animationDuration = 2000;
+
+            const formatNumber = (num) => {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+            };
 
             const updateCounter = (currentTime) => {
                 const elapsedTime = currentTime - startTime;
@@ -154,12 +159,12 @@ function initAnimation() {
 
                 const currentCount = Math.floor(startNumber + (progress * (targetNumber - startNumber)));
 
-                el.textContent = currentCount + (suffix ? suffix : '');
+                el.textContent = formatNumber(currentCount) + (suffix ? ' ' + suffix : '');
 
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
-                    el.textContent = targetNumber + (suffix ? suffix : '');
+                    el.textContent = formatNumber(targetNumber) + (suffix ? ' ' + suffix : '');
                 }
             };
 
