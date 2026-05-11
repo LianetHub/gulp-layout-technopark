@@ -381,12 +381,14 @@
 
         @media (min-width:$md5) {
             max-width: 100%;
+            width: min-content;
         }
 
         @media (min-width:$md3) {
             font-size: 1.375rem;
             letter-spacing: -0.02806rem;
             line-height: 120%;
+            width: auto;
 
         }
     }

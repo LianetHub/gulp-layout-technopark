@@ -45,7 +45,7 @@
 
     // .university__banner
     &__banner {
-        min-height: 31.25rem;
+        min-height: 26.5rem;
 
         @media (min-width:$md3) {
             min-height: 36.15625rem;
@@ -90,19 +90,23 @@
         .banner__description {
 
             @media (min-width:$md5) {
-                padding-top: rem(14);
+                padding-top: rem(20);
                 max-width: 18rem;
 
             }
 
             @media (min-width:$md4) {
                 max-width: 24.3rem;
+                padding-bottom: 0.25rem;
+                padding-right: 1.5rem;
 
             }
 
             @media (min-width:$md3) {
                 padding-top: rem(40);
                 max-width: 30rem;
+                padding-bottom: 0;
+                padding-right: 2rem;
             }
 
             @media (min-width:$md2) {
@@ -119,7 +123,7 @@
                 line-height: 110%;
 
                 @media (min-width:$md4) {
-                    font-size: 1.9375rem;
+                    font-size: 2rem;
                     line-height: 100%;
                     letter-spacing: -0.09544rem;
                     margin-right: -1rem;
@@ -154,40 +158,52 @@
                 }
             }
 
-            // .banner__btn {
-            //     width: 100%;
-            //     margin-top: 1.5rem;
+            .banner__btns {
+                margin-top: 1rem;
 
-            //     @media (min-width:$md5) {
-            //         margin-top: 1.125rem;
-            //         min-width: 10.8125rem;
-            //         width: auto;
+                @media (min-width:$md3) {
+                    margin-top: 2.375rem;
+                }
+            }
 
-            //     }
+            .banner__btn {
 
-            //     @media (max-width:$md3) {
-            //         font-size: 0.875rem;
-            //     }
+                @media (max-width:$md3) {
+                    width: 100%;
 
-            //     @media (min-width:$md2) {
-            //         margin-top: 2.5rem;
-            //         min-width: 13rem;
+                    @media (min-width:$md5) {
+                        width: auto;
+                        flex: 1 1 auto;
+                        min-width: 9.8rem;
+                    }
 
-            //     }
-            // }
+                    font-size: 0.875rem;
+                    padding-inline: 0.5rem;
+                }
+
+
+            }
         }
     }
 }
 
 .education {
-    padding: 4.28rem 0 rem(64);
     background: #F6F8FA;
+
+    padding: 4.28rem 0 rem(90);
+    position: relative;
+    z-index: 2;
+
+    @media (min-width:$md3) {
+        padding: 4.28rem 0 rem(64);
+
+    }
 
     &:not(:last-child) {
         border-radius: 0 0 rem(30) rem(30);
         margin-bottom: rem(-30);
         position: relative;
-        z-index: 2;
+        z-index: 3;
 
         @media (min-width:$md4) {
             border-radius: 0 0 rem(58) rem(58);
@@ -198,7 +214,7 @@
             padding-top: rem(72);
 
             @media (min-width:$md5) {
-                padding-top: rem(100);
+                padding-top: rem(40);
 
             }
 
@@ -214,17 +230,38 @@
 
     // .education__banner
     &__banner {
-        min-height: 41.0625rem;
+        min-height: 29.875rem;
+
+        @media (min-width:$md3) {
+            min-height: 34rem;
+        }
+
+        @media (min-width:$md2) {
+            min-height: 41.0625rem;
+
+        }
 
         .banner__description {
-            max-width: 36.6rem;
-            padding-top: 3.5rem;
+            max-width: 21rem;
+            padding-top: 1rem;
             padding-bottom: 1.5rem;
-            padding-bottom: 4rem;
+            padding-bottom: 2rem;
             margin-top: 0;
-            padding-left: 3.3rem;
-            border-radius: 0 0 0 rem(30);
+            padding-left: 1rem;
+            border-radius: 0 0 0 rem(18);
             background: #F6F8FA;
+
+            @media (min-width:$md3) {
+                padding-top: 3.5rem;
+                padding-left: 3.3rem;
+                max-width: 32rem;
+                padding-bottom: 4rem;
+                border-radius: 0 0 0 rem(30);
+            }
+
+            @media (min-width:$md2) {
+                max-width: 36.6rem;
+            }
 
             &::after,
             &::before {
@@ -242,28 +279,48 @@
             }
 
             .banner__title {
-                font-size: 2.25rem;
 
-                line-height: 101.887%;
+
                 font-weight: 500;
+                line-height: 120%;
+                font-size: 1.5rem;
+
+                @media (min-width:$md3) {
+                    line-height: 101.887%;
+                    font-size: 2.25rem;
+
+                }
             }
 
             .banner__text {
-                margin-top: 1.65rem;
-                font-size: 1rem;
-                line-height: 162.5%;
+
+
                 letter-spacing: -0.0195rem;
                 max-width: 30rem;
+                line-height: 130%;
+                margin-top: 1rem;
+                font-size: 0.875rem;
+
+                @media (min-width:$md3) {
+                    font-size: 1rem;
+                    line-height: 162.5%;
+                    margin-top: 1.65rem;
+
+                }
             }
 
-            .banner__btn {}
         }
     }
 }
 
 .education-business {
-    padding: rem(60) 0 rem(114);
     background: #F6F8FA;
+    padding: rem(40) 0 rem(100);
+
+    @media (min-width:$md3) {
+        padding: rem(60) 0 rem(114);
+
+    }
 
     &:not(:last-child) {
         position: relative;
@@ -283,7 +340,7 @@
             }
 
             @media (min-width:$md5) {
-                padding-top: rem(100);
+                padding-top: rem(40);
 
             }
 
@@ -354,7 +411,8 @@
 
                 @media (min-width:$md4) {
                     padding-left: 1.5rem;
-                    max-width: 22rem;
+                    max-width: 20.5rem;
+                    padding-bottom: 1rem;
 
                 }
 
@@ -362,6 +420,7 @@
                     padding-top: rem(36);
                     padding-right: 3rem;
                     padding-left: 3rem;
+                    padding-bottom: 0;
                     max-width: 28rem;
                 }
 
@@ -385,6 +444,7 @@
 
                 @media (min-width:$md4) {
                     font-size: rem(24);
+                    line-height: 120%;
                 }
 
                 @media (min-width:$md2) {
@@ -399,7 +459,7 @@
                 margin-top: 0.875rem;
 
                 @media (min-width:$md4) {
-                    margin-top: 1.5rem;
+                    margin-top: 1rem;
                     font-size: rem(14);
                 }
 
@@ -423,8 +483,13 @@
 }
 
 .tech-base {
-    padding: rem(60) 0 rem(30);
     background: #fff;
+    padding: rem(60) 0 rem(40);
+
+    @media (min-width:$md3) {
+        padding: rem(60) 0 rem(30);
+
+    }
 
     // .tech-base__container
     &__container {}
@@ -434,20 +499,33 @@
 
     // .tech-base__grid
     &__grid {
-        margin-top: rem(48);
+        margin-top: rem(20);
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: rem(16);
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width:$md3) {
+            margin-top: rem(48);
+            grid-template-columns: repeat(3, 1fr);
+
+        }
     }
 
     // .tech-base__card
     &__card {
         height: 100%;
-        border-radius: 1.5rem;
         background: #F4F7F9;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
+        padding: 1.125rem 1.125rem 1.125rem 1.5rem;
+        min-height: 14.125rem;
+        border-radius: 1.125rem;
+
+        @media (min-width:$md3) {
+            border-radius: 1.5rem;
+
+        }
 
         &:has(.tech-base__card-btn) {
             .tech-base__card-header {
@@ -461,7 +539,12 @@
     &__card-header {
         display: flex;
         align-items: center;
-        gap: 1.63rem;
+        gap: 1rem;
+
+        @media (min-width:$md3) {
+            gap: 1.63rem;
+
+        }
     }
 
     // .tech-base__card-icon
@@ -479,7 +562,15 @@
         padding: 1rem;
 
         & img {
-            max-width: 2.875rem;
+            max-width: 1.44rem;
+
+            @media (min-width:$md3) {
+                max-width: 2rem;
+            }
+
+            @media (min-width:$md2) {
+                max-width: 2.875rem;
+            }
         }
 
         @media (min-width:$md5) {
@@ -551,10 +642,19 @@
 
     // .tech-base__card-title
     &__card-title {
-        font-size: 1.5rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1.125rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.375rem;
+        }
+
+        @media (min-width:$md2) {
+            font-size: 1.5rem;
+
+        }
     }
 
     // .tech-base__card-content
@@ -566,10 +666,20 @@
 
     // .tech-base__card-list
     &__card-list {
-        margin-top: 1.5rem;
-        font-size: 1.125rem;
-        line-height: 133.333%;
+        line-height: 120%;
         letter-spacing: -0.0195rem;
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md3) {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 133.333%;
+        }
+
+        @media (min-width:$md2) {
+            font-size: 1.125rem;
+        }
     }
 
     // .tech-base__card-list-item
@@ -582,7 +692,12 @@
         }
 
         &:not(:last-child) {
-            margin-bottom: rem(8);
+            margin-bottom: rem(6);
+
+            @media (min-width:$md3) {
+                margin-bottom: rem(8);
+
+            }
         }
     }
 
@@ -590,17 +705,34 @@
     &__card-btn {
         margin-top: auto;
         align-self: flex-start;
-        gap: 0.625rem;
-        padding: 0.875rem 1.125rem;
+        gap: 0.25rem;
+        font-size: 0.875rem;
+        padding: 0.675rem 1rem;
+
+        @media (min-width:$md3) {
+            gap: 0.625rem;
+            padding: 0.875rem 1.125rem;
+            font-size: 1rem;
+        }
 
         &::before {
-            font-size: 0.9375rem;
+            font-size: 0.75rem;
+
+            @media (min-width:$md3) {
+                font-size: 0.9375rem;
+
+            }
         }
     }
 }
 
 .study-conditions {
-    padding: rem(30) 0 rem(55) 0;
+    padding: rem(40) 0 rem(35) 0;
+
+    @media (min-width:$md3) {
+        padding: rem(30) 0 rem(55) 0;
+
+    }
 
     &:not(:last-child) {
         background: #fff;
@@ -635,22 +767,28 @@
 
     // .study-conditions__list
     &__list {
-        margin-top: rem(48);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: rem(15);
+        gap: rem(8);
+        margin-top: rem(32);
+
+        @media (min-width:$md3) {
+            gap: rem(15);
+            margin-top: rem(48);
+
+        }
     }
 
     // .study-conditions__card
     &__card {
         height: 100%;
-        border-radius: 1.89844rem;
+        border-radius: 1.125rem;
         background: #FFF;
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
-        padding: 2.0625rem 2rem 2.73438rem 2.53125rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        gap: rem(20);
+        gap: rem(12);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         @media (any-hover: hover) {
@@ -659,20 +797,33 @@
                 box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.11);
             }
         }
+
+        @media (min-width:$md3) {
+            gap: rem(20);
+            padding: 1.5rem;
+        }
+
+        @media (min-width:$md2) {
+            border-radius: 1.89844rem;
+            padding: 2.0625rem 2rem 2.73438rem 2.53125rem;
+        }
     }
 
     // .study-conditions__card-header
     &__card-header {
         display: flex;
         align-items: center;
-        gap: rem(20);
+        gap: rem(15);
+
+        @media (min-width:$md3) {
+            gap: rem(20);
+
+        }
     }
 
     // .study-conditions__card-icon
     &__card-icon {
         flex-shrink: 0;
-        width: 5rem;
-        height: 5rem;
         background: #F6F8FA;
         border-radius: 1.81819rem;
         display: flex;
@@ -687,8 +838,13 @@
         padding: 1rem;
 
         & img {
+            max-width: 1.44rem;
 
             @media (min-width:$md3) {
+                max-width: 2rem;
+            }
+
+            @media (min-width:$md2) {
                 max-width: 2.875rem;
             }
         }
@@ -760,18 +916,39 @@
 
     // .study-conditions__card-title
     &__card-title {
-        font-size: 1.5rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1.125rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.375rem;
+
+        }
+
+        @media (min-width:$md2) {
+            font-size: 1.5rem;
+
+        }
     }
 
     // .study-conditions__card-text
     &__card-text {
         color: #4A5565;
-        font-size: 1.26563rem;
         line-height: 137.5%;
         letter-spacing: -0.02475rem;
+        font-size: 0.875rem;
+        line-height: 120%;
+
+        @media (min-width:$md3) {
+            line-height: normal;
+            font-size: 1rem;
+        }
+
+        @media (min-width:$md2) {
+            font-size: 1.26563rem;
+
+        }
     }
 }
 
@@ -786,13 +963,18 @@
 
     // .org-info__grid
     &__grid {
-        margin-top: rem(40);
+        margin-top: rem(32);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: rem(16);
+        gap: rem(12);
 
         &> :last-child {
             grid-column: span 2;
+        }
+
+        @media (min-width:$md3) {
+            margin-top: rem(40);
+            gap: rem(16);
         }
     }
 
@@ -800,35 +982,56 @@
     &__card {
         height: 100%;
         background: #fff;
-        border-radius: rem(24);
-        padding: 1.125rem 1.5rem;
+        border-radius: 0.75rem;
         display: flex;
         flex-direction: column;
-        gap: rem(12);
+        gap: rem(6);
         box-shadow: 0 rem(4) rem(40) 0 rgba(0, 0, 0, 0.02);
+        padding: 1rem 1.125rem;
+
+        @media (min-width:$md3) {
+            border-radius: rem(24);
+            gap: rem(12);
+            padding: 1.125rem 1.5rem;
+
+        }
     }
 
     // .org-info__card-label
     &__card-label {
         color: #9B9DA2;
-        font-size: 1.125rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.125rem;
+        }
     }
 
     // .org-info__card-value
     &__card-value {
         color: #2E3235;
-        font-size: 1.26563rem;
         line-height: 137.5%;
         letter-spacing: -0.02475rem;
+        font-size: 1.125rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.26563rem;
+
+        }
     }
 }
 
 .accreditation {
-    padding: rem(40) 0 rem(120);
     background: #F6F8FA;
+    padding: rem(40) 0 rem(100);
+
+    @media (min-width:$md3) {
+        padding: rem(40) 0 rem(120);
+
+    }
 
     &:not(:last-child) {
         position: relative;
@@ -837,18 +1040,21 @@
 
         &+* {
             padding-top: rem(72);
-            border-radius: rem(30) rem(30) 0 0;
+            border-top-left-radius: rem(30);
+            border-top-right-radius: rem(30);
             margin-top: rem(-30);
             position: relative;
             z-index: 2;
 
             @media (min-width:$md4) {
-                border-radius: rem(58) rem(58) 0 0;
+                border-top-left-radius: rem(58);
+                border-top-right-radius: rem(58);
+
                 margin-top: rem(-58);
             }
 
             @media (min-width:$md5) {
-                padding-top: rem(100);
+                padding-top: rem(40);
 
             }
 
@@ -864,10 +1070,15 @@
 
     // .accreditation__grid
     &__grid {
-        margin-top: rem(40);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: rem(20);
+        gap: rem(12);
+        margin-top: rem(28);
+
+        @media (min-width:$md3) {
+            margin-top: rem(40);
+            gap: rem(20);
+        }
     }
 
     // .accreditation__card
@@ -875,7 +1086,16 @@
         border-radius: 1.25rem;
         background: #FFF;
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
-        padding: 1.75rem 2rem 2rem 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1.25rem 2rem 1.25rem 1rem;
+
+        @media (min-width:$md3) {
+            padding: 1.75rem 2rem 2rem 2rem;
+        }
 
     }
 
@@ -892,11 +1112,10 @@
         display: inline-flex;
         align-items: center;
         color: #2342A7;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 500;
         line-height: 150%;
         gap: rem(10);
-
 
         &::before {
             order: 1;
@@ -920,16 +1139,25 @@
                 }
             }
         }
+
+        @media (min-width:$md3) {
+            font-size: 1rem;
+        }
     }
 
     // .accreditation__card-icon
     &__card-icon {
         flex-shrink: 0;
-        width: 3rem;
-        height: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 2.375rem;
+        height: 2.375rem;
+
+        @media (min-width:$md3) {
+            width: 3rem;
+            height: 3rem;
+        }
     }
 
     // .accreditation__card-info
@@ -941,32 +1169,52 @@
     // .accreditation__card-title
     &__card-title {
         color: #313542;
-        font-size: rem(22);
         font-weight: 500;
         line-height: 120%;
-        margin-bottom: rem(8);
+        font-size: 1.125rem;
+        margin-bottom: rem(4);
+
+        @media (min-width:$md3) {
+            margin-bottom: rem(8);
+            font-size: rem(22);
+
+        }
     }
 
     // .accreditation__card-number
     &__card-number {
         color: #9B9DA2;
-        font-size: 1.125rem;
-        line-height: 126.389%;
+        line-height: 142.188%;
         letter-spacing: -0.00938rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.125rem;
+            line-height: 126.389%;
+
+        }
     }
 
 }
 
 .management {
-    padding: rem(80) 0 rem(62);
     background: #fff;
+    padding: rem(60) 0 rem(36);
+
+    @media (min-width:$md3) {
+        padding: rem(80) 0 rem(62);
+
+    }
 
     &:not(:last-child) {
-        border-radius: 0 0 rem(30) rem(30);
+
+        border-bottom-left-radius: rem(30);
+        border-bottom-right-radius: rem(30);
         margin-bottom: rem(-30);
 
         @media (min-width:$md4) {
-            border-radius: 0 0 rem(58) rem(58);
+            border-bottom-left-radius: rem(58);
+            border-bottom-right-radius: rem(58);
             margin-bottom: rem(-58);
         }
 
@@ -988,7 +1236,17 @@
     // .management__container
     &__container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        gap: rem(30);
+
+        @media (min-width:$md3) {
+            grid-template-columns: rem(320) 1fr;
+
+        }
+
+        @media (min-width:$md2) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
 
     }
 
@@ -999,8 +1257,13 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: rem(30);
-        padding-top: 0.5rem;
+
+        gap: rem(24);
+
+        @media (min-width:$md3) {
+            gap: rem(30);
+            padding-top: 0.5rem;
+        }
     }
 
     // .management__person
@@ -1013,37 +1276,54 @@
     // .management__person-name
     &__person-name {
         color: #2342A7;
-        font-size: 1.5rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1.25rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.5rem;
+        }
     }
 
     // .management__person-position
     &__person-position {
         color: #4A5565;
-        font-size: 1.125rem;
         line-height: 130%;
         letter-spacing: -0.02475rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.125rem;
+
+        }
     }
 
     // .management__person-contacts
     &__person-contacts {
-        margin-top: 0.5rem;
         display: flex;
+        margin-top: 0.25rem;
         gap: 2rem;
+
+        @media (min-width:$md3) {
+            margin-top: 0.5rem;
+        }
     }
 
     // .management__person-link
     &__person-link {
         color: #4A5565;
-        font-size: 1rem;
+        font-size: 0.875rem;
         line-height: 140%;
         letter-spacing: -0.00938rem;
         display: flex;
         align-items: center;
         gap: rem(10);
         transition: color 0.3s ease;
+
+        @media (min-width:$md3) {
+            font-size: 1rem;
+        }
 
         @media (any-hover: hover) {
             &:hover {
@@ -1053,20 +1333,31 @@
 
         &::before {
             color: #2342A7;
-            width: 1.375rem;
-            height: 1.375rem;
             flex-shrink: 0;
-            font-size: 1.375rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 1.125rem;
+            height: 1.125rem;
+            font-size: 1.125rem;
+
+            @media (min-width:$md3) {
+                width: 1.375rem;
+                height: 1.375rem;
+                font-size: 1.375rem;
+            }
         }
     }
 }
 
-
 .documents {
-    padding: rem(80) 0 rem(120);
+    padding: rem(80) 0 rem(100);
+
+    @media (min-width:$md3) {
+        padding: rem(80) 0 rem(120);
+
+    }
+
     background: #F6F8FA;
 
     &:not(:last-child) {
@@ -1083,7 +1374,7 @@
             padding-top: rem(72);
 
             @media (min-width:$md5) {
-                padding-top: rem(100);
+                padding-top: rem(50);
 
             }
 
@@ -1102,22 +1393,32 @@
 
     // .documents__list
     &__list {
-        margin-top: rem(40);
         display: flex;
         flex-direction: column;
         gap: rem(14);
+        margin-top: rem(30);
+
+        @media (min-width:$md3) {
+            margin-top: rem(40);
+
+        }
     }
 
     // .documents__item
     &__item {
         background: #fff;
         border-radius: rem(12);
-        padding: rem(17.75) rem(24);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: rem(20);
+        gap: rem(24);
         transition: box-shadow 0.3s ease;
+        padding: 0.675rem 1rem;
+
+        @media (min-width:$md3) {
+            gap: rem(20);
+            padding: rem(17.75) rem(24);
+        }
 
         @media (any-hover: hover) {
             &:hover {
@@ -1130,16 +1431,25 @@
     &__item-info {
         display: flex;
         align-items: center;
-        gap: rem(16);
+        gap: rem(26);
+
+        @media (min-width:$md3) {
+            gap: rem(16);
+        }
     }
 
     // .documents__item-icon
     &__item-icon {
         flex-shrink: 0;
-        width: 1.875rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 1.05063rem;
+
+        @media (min-width:$md3) {
+            width: 1.875rem;
+
+        }
 
         img {
             width: 100%;
@@ -1150,19 +1460,31 @@
 
     // .documents__item-name
     &__item-name {
-        font-size: 1.375rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.375rem;
+
+        }
     }
 
     // .documents__item-btn
     &__item-btn {
-        font-size: 0.875rem;
         line-height: 110%;
         gap: 0.5rem;
-        padding: rem(9.5) rem(7);
+        padding: rem(7) rem(7);
+
         border-radius: rem(8);
+        font-size: 0.625rem;
+
+        @media (min-width:$md3) {
+            padding: rem(9.5) rem(7);
+            font-size: 0.875rem;
+
+        }
 
         &::before {
             order: -1;
@@ -1171,18 +1493,29 @@
 }
 
 .study-plan {
-    padding: rem(80) 0 rem(58);
     background: #fff;
+    padding: rem(40) 0 rem(38);
+
+    @media (min-width:$md3) {
+        padding: rem(80) 0 rem(58);
+
+    }
 
     // .study-plan__title
     &__title {}
 
     // .study-plan__grid
     &__grid {
-        margin-top: rem(40);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: rem(24);
+        gap: 0.75rem;
+        margin-top: rem(24);
+
+        @media (min-width:$md3) {
+            margin-top: rem(40);
+            gap: rem(24);
+
+        }
     }
 
     // .study-plan__card
@@ -1190,12 +1523,18 @@
 
     // .study-plan__card-link
     &__card-link {
+        height: 100%;
         border-radius: 1.25rem;
         background: #FFF;
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
-        padding: 1.15669rem 1rem 1.78081rem 1.5rem;
         transition: box-shadow 0.3s ease;
         display: block;
+        padding: 1.125rem 1rem 1rem 1rem;
+
+        @media (min-width:$md3) {
+            padding: 1.15669rem 1rem 1.78081rem 1.5rem;
+
+        }
 
         @media (any-hover: hover) {
             &:hover {
@@ -1214,11 +1553,16 @@
     // .study-plan__card-icon
     &__card-icon {
         flex-shrink: 0;
-        width: 3rem;
-        height: 3rem;
+        width: 2.375rem;
+        height: 2.375rem;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (min-width:$md3) {
+            width: 3rem;
+            height: 3rem;
+        }
 
         img {
             width: 100%;
@@ -1236,31 +1580,49 @@
     // .study-plan__card-title
     &__card-title {
         color: #313542;
-        font-size: 1.375rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
+        font-size: 1.125rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.375rem;
+
+        }
     }
 
     // .study-plan__card-desc
     &__card-desc {
         color: #9B9DA2;
-        font-size: 1.125rem;
         line-height: 126.389%;
         letter-spacing: -0.00938rem;
+        font-size: 1rem;
+        margin-top: 0.25rem;
+
+        @media (min-width:$md3) {
+            margin-top: 0;
+            font-size: 1.125rem;
+
+        }
     }
 
     // .study-plan__card-download
     &__card-download {
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
         display: inline-flex;
         align-items: center;
         color: #2342A7;
-        font-size: 1rem;
         font-weight: 500;
         line-height: 150%;
-        gap: rem(10);
+        font-size: 0.875rem;
+        gap: 0.25rem;
 
+        @media (min-width:$md3) {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            gap: rem(10);
+
+        }
 
         &::before {
             width: 1.125rem;
@@ -1285,27 +1647,40 @@
     }
 }
 
-
 .apply {
-    padding: rem(58) 0;
+    padding: rem(42) 0;
+
+    @media (min-width:$md3) {
+        padding: rem(58) 0;
+
+    }
 
     // .apply__title
     &__title {}
 
     // .apply__grid
     &__grid {
-        margin-top: rem(40);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(16);
-        margin-bottom: rem(32);
+        margin-bottom: rem(16);
+        margin-top: rem(30);
+
+        @media (min-width:$md3) {
+            margin-bottom: rem(32);
+            margin-top: rem(40);
+
+        }
     }
 
     // .apply__footer
     &__footer {
         color: #A5ACC3;
         line-height: 140%;
-        font-size: 1.125rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.125rem;
+        }
 
         a {
             color: inherit;
@@ -1328,14 +1703,16 @@
         position: relative;
         background: #fff;
         border-radius: rem(24);
-        padding: rem(32) 1.5rem 1.75rem;
+        height: 100%;
         display: flex;
         align-items: center;
-        gap: rem(20);
+
         border-radius: 1.25rem;
         background: #FFF;
         box-shadow: 0 4px 10.351px 0 rgba(0, 0, 0, 0.11);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 1.12rem 1rem 2.12rem;
+        gap: 1rem;
 
         @media (any-hover: hover) {
             &:hover {
@@ -1343,12 +1720,15 @@
                 box-shadow: 0 rem(10) rem(40) 0 rgba(0, 0, 0, 0.06);
             }
         }
+
+        @media (min-width:$md3) {
+            gap: rem(20);
+            padding: rem(32) 4.5rem 1.75rem 1.5rem;
+        }
     }
 
     // .apply__card-icon
     &__card-icon {
-        width: 6.6875rem;
-        height: 6.6875rem;
         flex-shrink: 0;
         border-radius: 2.14rem;
         display: flex;
@@ -1437,26 +1817,44 @@
     // .apply__card-title
     &__card-title {
         color: #313542;
-        font-size: 1.75rem;
         font-weight: 500;
         line-height: 120%;
         letter-spacing: 0.00556rem;
         max-width: 20rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width:$md2) {
+            font-size: 1.75rem;
+
+        }
     }
 
     // .apply__card-external-icon
     &__card-external-icon {
         position: absolute;
-        top: rem(16);
-        right: rem(16);
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.5rem;
+        top: rem(14);
+        right: rem(14);
+
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         background: #2342A7;
         color: #fff;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+
+        @media (min-width:$md3) {
+            top: rem(16);
+            right: rem(16);
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+        }
     }
 }

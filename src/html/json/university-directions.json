@@ -1,7 +1,7 @@
 [
     {
         "color": "grey",
-        "size": "medium",
+        "size": "medium-desktop",
         "imageURL": "@img/icons/qualification.svg",
         "caption": "Повышение квалификации",
         "desc": "Программы профессионального развития для специалистов отрасли",
@@ -10,7 +10,7 @@
     },
     {
         "color": "grey",
-        "size": "extralarge",
+        "size": "extralarge-desktop",
         "imageURL": "@img/icons/building.svg",
         "caption": "Корпоративное обучение",
         "desc": "Обучение под конкретные задачи"
