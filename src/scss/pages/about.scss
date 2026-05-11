@@ -110,6 +110,24 @@
         gap: rem(12);
         padding: 1rem;
 
+        @media (max-width:$md2) {
+            @media (min-width:$md4) {
+                @for $i from 1 through 2 {
+                    &:nth-child(2n + #{$i}) {
+                        transition-delay: #{$i * 0.25}s;
+                    }
+                }
+            }
+        }
+
+        @media (min-width:$md2) {
+            @for $i from 1 through 3 {
+                &:nth-child(3n + #{$i}) {
+                    transition-delay: #{$i * 0.25}s;
+                }
+            }
+        }
+
         @media (min-width:$md5) {
             box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
             padding: 1.125rem;
@@ -406,6 +424,14 @@
         border-radius: rem(12);
         position: relative;
         color: #fff;
+
+        @media (min-width:$md4) {
+            @for $i from 1 through 2 {
+                &:nth-child(2n + #{$i}) {
+                    transition-delay: #{$i * 0.25}s;
+                }
+            }
+        }
 
         @media (max-width:$md4) {
             &:nth-child(odd) {

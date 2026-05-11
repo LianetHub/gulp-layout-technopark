@@ -263,7 +263,7 @@
 
         @media (min-width:$md4) {
             @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
+                &:nth-child(3n + #{$i}) {
                     transition-delay: #{$i * 0.25}s;
                 }
             }
@@ -1000,7 +1000,7 @@
         @media (max-width:$md4) {
             @media (min-width:$md5) {
                 @for $i from 1 through 2 {
-                    &:nth-child(#{$i}) {
+                    &:nth-child(2n + #{$i}) {
                         transition-delay: #{$i * 0.25}s;
                     }
                 }
@@ -1009,7 +1009,7 @@
 
         @media (min-width:$md4) {
             @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
+                &:nth-child(3n + #{$i}) {
                     transition-delay: #{$i * 0.25}s;
                 }
             }
@@ -1611,7 +1611,7 @@
             @media (min-width:$md4) {
 
                 @for $i from 1 through 3 {
-                    &:nth-child(#{$i}) {
+                    &:nth-child(3n + #{$i}) {
                         transition-delay: #{$i * 0.25}s;
 
                         .diagram-line {

@@ -33,7 +33,7 @@
                 </section>
                 <section class="ecosystem">
                     <div class="container">
-                        <h2 class="ecosystem__title title">Единая экосистема для создания энергетических решений</h2>
+                        <h2 class="ecosystem__title title" data-animate="bottom">Единая экосистема для создания энергетических решений</h2>
                         <ul class="ecosystem__list">
                             @@loop('./html/templates/_ecosystem-card.html', './html/json/ecosystem.json')
                         </ul>
@@ -41,12 +41,12 @@
                 </section>
                 <section class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="gallery__container container">
-                        <h2 class="gallery__title title" itemprop="name">Территория технопарка составляет 9 га</h2>
-                        <div class="gallery__slider swiper" itemprop="about" description="Фотогалерея технопарка">
+                        <h2 class="gallery__title title" data-animate="bottom" itemprop="name">Территория технопарка составляет 9 га</h2>
+                        <div class="gallery__slider swiper" data-animate="bottom" itemprop="about" description="Фотогалерея технопарка">
                             <div class="swiper-wrapper">
                                 @@loop('./html/templates/_gallery-slide.html', './html/json/gallery.json')
                             </div>
-                            <div class="gallery__slider-controls">
+                            <div class="gallery__slider-controls" data-animate="bottom">
                                 <button type="button" class="gallery__slider-prev swiper-button-prev icon-prev"></button>
                                 <button type="button" class="gallery__slider-next swiper-button-next icon-next"></button>
                             </div>
@@ -55,7 +55,7 @@
                 </section>
                 <section class="directions directions--grey">
                     <div class="container">
-                        <h2 class="directions__title title">Структура и направления</h2>
+                        <h2 class="directions__title title" data-animate="bottom">Структура и направления</h2>
                         <ul class="directions__list">
                             @@loop('./html/templates/_direction-block.html', './html/json/structure-directions.json')
                         </ul>
@@ -64,7 +64,7 @@
                 @@include('./html/_residents.html')
                 <section class="infrastructure">
                     <div class="container">
-                        <h2 class="infrastructure__title title">Инфраструктура для&nbsp;работы и жизни</h2>
+                        <h2 class="infrastructure__title title" data-animate="bottom">Инфраструктура для&nbsp;работы и жизни</h2>
                         <ul class="infrastructure__grid">
                             @@loop('./html/templates/_infrastructure-card.html', './html/json/infrastructure.json')
                         </ul>

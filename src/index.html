@@ -69,7 +69,7 @@
                 </section>
                 <section class="directions">
                     <div class="container">
-                        <h2 class="directions__title title">Направления, <br> формирующие экосистему</h2>
+                        <h2 class="directions__title title" data-animate="bottom">Направления, <br> формирующие экосистему</h2>
                         <ul class="directions__list">
                             @@loop('./html/templates/_direction-block.html', './html/json/home-directions.json')
                         </ul>
@@ -93,8 +93,8 @@
                 <section class="training">
                     <div class="training__container container">
                         <div class="training__main">
-                            <h2 class="training__title title">Подготовка специалистов для&nbsp;отрасли</h2>
-                            <p class="training__desc">Технопарк активно участвует в образовательных программах для формирования кадрового резерва электроэнергетической отрасли.</p>
+                            <h2 class="training__title title" data-animate="bottom">Подготовка специалистов для&nbsp;отрасли</h2>
+                            <p class="training__desc" data-animate="bottom">Технопарк активно участвует в образовательных программах для формирования кадрового резерва электроэнергетической отрасли.</p>
                         </div>
                         <ul class="training__cards">
                             @@loop('./html/templates/_training-card.html', './html/json/training.json')
@@ -103,7 +103,7 @@
                 </section>
                 <section class="solutions">
                     <div class="container">
-                        <h2 class="solutions__title title">Решения для разных задач</h2>
+                        <h2 class="solutions__title title" data-animate="bottom">Решения для разных задач</h2>
                         <ul class="solutions__list">
                             <li class="solutions__card" data-animate="bottom">
                                 <div class="solutions__card-header">

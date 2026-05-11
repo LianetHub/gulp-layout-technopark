@@ -28,7 +28,7 @@
                 </section>
                 <section class="advantages">
                     <div class="container">
-                        <h2 class="advantages__title title">Основные направления сотрудничества</h2>
+                        <h2 class="advantages__title title" data-animate="bottom">Основные направления сотрудничества</h2>
                         <ul class="advantages__list">
                             @@loop('./html/templates/_advantage-card.html', './html/json/cooperation.json')
                         </ul>
@@ -36,7 +36,7 @@
                 </section>
                 <section class="partners">
                     <div class="container">
-                        <h2 class="partners__title title">Ключевые образовательные партнеры</h2>
+                        <h2 class="partners__title title" data-animate="bottom">Ключевые образовательные партнеры</h2>
                         <ul class="partners__list">
                             @@loop('./html/templates/_partner-card.html', './html/json/partners.json')
                         </ul>
@@ -45,19 +45,19 @@
                 <section class="career-guidance">
                     <div class="career-guidance__container container">
                         <div class="career-guidance__header">
-                            <h2 class="career-guidance__title title">Профориентационная работа со школьниками</h2>
-                            <div class="career-guidance__controls">
+                            <h2 class="career-guidance__title title" data-animate="bottom">Профориентационная работа со школьниками</h2>
+                            <div class="career-guidance__controls" data-animate="bottom">
                                 <button type="button" class="career-guidance__prev icon-prev swiper-button-prev"></button>
                                 <button type="button" class="career-guidance__next icon-next swiper-button-next"></button>
                             </div>
                         </div>
                         <div class="career-guidance__body">
                             <div class="career-guidance__info">
-                                <div class="career-guidance__stat">800+</div>
-                                <div class="career-guidance__caption">Участников за 2025 год</div>
-                                <p class="career-guidance__desc">Экскурсионные маршруты по компаниям-резидентам, выездные мастер-классы, инженерные хакатоны с&nbsp;привлечением экспертов технопарка</p>
+                                <div class="career-guidance__stat" data-animate="bottom"><span data-counter>800</span>+</div>
+                                <div class="career-guidance__caption" data-animate="bottom">Участников за 2025 год</div>
+                                <p class="career-guidance__desc" data-animate="bottom">Экскурсионные маршруты по компаниям-резидентам, выездные мастер-классы, инженерные хакатоны с&nbsp;привлечением экспертов технопарка</p>
                             </div>
-                            <div class="career-guidance__slider swiper">
+                            <div class="career-guidance__slider swiper" data-animate="bottom">
                                 <div class="swiper-wrapper">
                                     <a href="@img/career-guidance/01.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
                                         <img src="@img/career-guidance/01.jpg" class="cover-image" alt="Фото работы со школьниками">
@@ -78,16 +78,16 @@
                 </section>
                 <section class="results">
                     <div class="results__container container">
-                        <h2 class="results__title title">Результаты взаимодействия</h2>
+                        <h2 class="results__title title" data-animate="bottom">Результаты взаимодействия</h2>
                         <ul class="results__list">
-                            <li class="results__card">
+                            <li class="results__card" data-animate="bottom">
                                 <div class="results__card-image">
                                     <img src="@img/icons/test-pipe.svg" alt="Иконка">
                                 </div>
                                 <div class="results__card-name">Практический опыт <br> студентов</div>
                                 <div class="results__card-desc">Реальная работа на производстве</div>
                             </li>
-                            <li class="results__card">
+                            <li class="results__card" data-animate="bottom">
                                 <div class="results__card-image">
                                     <img src="@img/icons/bulb.svg" alt="Иконка">
                                 </div>
