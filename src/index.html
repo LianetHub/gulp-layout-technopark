@@ -97,28 +97,7 @@
                             <p class="training__desc">Технопарк активно участвует в образовательных программах для формирования кадрового резерва электроэнергетической отрасли.</p>
                         </div>
                         <ul class="training__cards">
-                            <li class="training__card">
-                                <a href="/interaction.html" class="training__card-link icon-share">
-                                    <div class="training__card-image">
-                                        <img src="@img/icons/university.svg" alt="Иконка">
-                                    </div>
-                                    <div class="training__card-content">
-                                        <div class="training__card-caption ">Взаимодействие с вузами</div>
-                                        <p class="training__card-desc">Партнерство с ведущими техническими университетами для организации практики студентов и&nbsp;совместных исследовательских проектов.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="training__card">
-                                <a href="/university.html" class="training__card-link icon-share">
-                                    <div class="training__card-image">
-                                        <img src="@img/icons/corporation.svg" alt="Иконка">
-                                    </div>
-                                    <div class="training__card-content">
-                                        <div class="training__card-caption">Корпоративное обучение</div>
-                                        <p class="training__card-desc">Программы повышения квалификации и&nbsp;профессиональной переподготовки для сотрудников компаний-резидентов и&nbsp;партнеров.</p>
-                                    </div>
-                                </a>
-                            </li>
+                            @@loop('./html/templates/_training-card.html', './html/json/training.json')
                         </ul>
                     </div>
                 </section>
@@ -129,17 +108,17 @@
                             <li class="solutions__card">
                                 <div class="solutions__card-num">01</div>
                                 <div class="solutions__card-caption">Для бизнеса</div>
-                                <p class="solutions__card-desc">Доступ к инфраструктуре, технологиям и&nbsp;экспертизе для реализации проектов в&nbsp;электроэнергетике. Возможности кооперации и масштабирования.</p>
+                                <p class="solutions__card-desc">Доступ к инфраструктуре, технологиям и&nbsp;экспертизе для реализации проектов в&nbsp;электроэнергетике. Возможности кооперации и&nbsp;масштабирования.</p>
                             </li>
                             <li class="solutions__card">
                                 <div class="solutions__card-num">02</div>
                                 <div class="solutions__card-caption">Для государства</div>
-                                <p class="solutions__card-desc">Комплексные решения для энергетической безопасности и модернизации отрасли. Импортозамещение и технологический суверенитет.</p>
+                                <p class="solutions__card-desc">Комплексные решения для&nbsp;энергетической безопасности и модернизации отрасли. Импортозамещение и&nbsp;технологический суверенитет.</p>
                             </li>
                             <li class="solutions__card">
                                 <div class="solutions__card-num">03</div>
                                 <div class="solutions__card-caption">Для специалистов</div>
-                                <p class="solutions__card-desc">Современная среда для <br> профессионального развития, доступ к&nbsp;передовым технологиям и работа над&nbsp;значимыми проектами.</p>
+                                <p class="solutions__card-desc">Современная среда для&nbsp;профессионального развития, доступ к&nbsp;передовым технологиям и&nbsp;работа над&nbsp;значимыми проектами.</p>
                             </li>
                         </ul>
                     </div>

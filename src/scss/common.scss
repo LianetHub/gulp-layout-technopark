@@ -1,10 +1,5 @@
 * {
 	scroll-margin-top: $header;
-
-	@media (min-width:$md5) {
-		scroll-margin-top: calc($header + 1rem);
-
-	}
 }
 
 
@@ -335,9 +330,16 @@ body {
 	// .banner__subtitle
 	&__subtitle {
 		margin-top: 1rem;
-		font-size: 1.125rem;
-		line-height: 144.444%;
+		line-height: 130%;
 		letter-spacing: -0.0195rem;
+		max-width: 21.0625rem;
+
+
+		@media (min-width:$md3) {
+			font-size: 1.125rem;
+			line-height: 144.444%;
+			max-width: 100%;
+		}
 	}
 
 	// .banner__slider
@@ -462,8 +464,13 @@ body {
 	background: #fff;
 	color: #313542;
 	z-index: 6;
-	max-width: 30rem;
 	padding-top: 2.5rem;
+	max-width: 22rem;
+
+	@media (min-width:$md3) {
+		max-width: 30rem;
+
+	}
 
 	&::before,
 	&::after {
@@ -556,7 +563,7 @@ body {
 	padding: rem(30) 0 rem(40);
 
 	@media (min-width:$md5) {
-		padding: rem(50) 0 rem(38);
+		padding: rem(30) 0 rem(52);
 		border-radius: 0 0 rem(58) rem(58);
 		margin-bottom: rem(-58);
 	}
@@ -629,6 +636,7 @@ body {
 		@media (min-width:$md5) {
 			margin-top: 1.5rem;
 			font-size: 1rem;
+			max-width: 34.5625rem;
 		}
 
 		@media (min-width:$md3) {
