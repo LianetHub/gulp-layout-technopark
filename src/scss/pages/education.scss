@@ -1,7 +1,7 @@
 .university {
     background: #fff;
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
 
     padding: 0.5rem 0 rem(38);
@@ -89,9 +89,10 @@
 
         .banner__description {
 
+
             @media (min-width:$md5) {
                 padding-top: rem(20);
-                max-width: 18rem;
+                max-width: 24rem;
 
             }
 
@@ -159,7 +160,11 @@
             }
 
             .banner__btns {
-                margin-top: 1rem;
+                margin-top: 1.5rem;
+
+                @media (min-width:$md5) {
+                    margin-top: 1rem;
+                }
 
                 @media (min-width:$md3) {
                     margin-top: 2.375rem;
@@ -169,7 +174,10 @@
             .banner__btn {
 
                 @media (max-width:$md3) {
-                    width: 100%;
+                    font-size: 0.875rem;
+                    flex: 1 1 auto;
+                    padding-inline: 0.25rem;
+                    min-width: rem(157);
 
                     @media (min-width:$md5) {
                         width: auto;
@@ -177,8 +185,7 @@
                         min-width: 9.8rem;
                     }
 
-                    font-size: 0.875rem;
-                    padding-inline: 0.5rem;
+
                 }
 
 
@@ -190,9 +197,14 @@
 .education {
     background: #F6F8FA;
 
-    padding: 4.28rem 0 rem(90);
     position: relative;
     z-index: 2;
+    padding: 4.28rem 0 rem(70);
+
+    @media (min-width:$md5) {
+        padding: 4.28rem 0 rem(90);
+
+    }
 
     @media (min-width:$md3) {
         padding: 4.28rem 0 rem(64);
@@ -211,7 +223,7 @@
         }
 
         &+* {
-            padding-top: rem(72);
+            padding-top: rem(40);
 
             @media (min-width:$md5) {
                 padding-top: rem(40);
@@ -241,15 +253,61 @@
 
         }
 
+        @media (max-width:$md5) {
+            border-radius: rem(30);
+        }
+
+        .banner__image {
+            @media (max-width:$md5) {
+                position: static;
+                border-radius: rem(30) rem(30) 0 0;
+
+                & img {
+                    min-height: rem(262);
+                }
+            }
+        }
+
         .banner__description {
-            max-width: 21rem;
-            padding-top: 1rem;
-            padding-bottom: 1.5rem;
-            padding-bottom: 2rem;
-            margin-top: 0;
-            padding-left: 1rem;
-            border-radius: 0 0 0 rem(18);
-            background: #F6F8FA;
+            @media (max-width:$md5) {
+                width: 100%;
+                max-width: 100%;
+                padding: 1.56rem 1rem;
+                border-radius: 1.875rem;
+                margin-top: rem(-30);
+
+                &::after,
+                &::before {
+                    display: none;
+                }
+            }
+
+            @media (min-width:$md5) {
+                max-width: 21rem;
+                padding-top: 1rem;
+                padding-bottom: 1.5rem;
+                padding-bottom: 2rem;
+                margin-top: 0;
+                padding-left: 1rem;
+                border-radius: 0 0 0 rem(18);
+                background: #F6F8FA;
+
+                &::after,
+                &::before {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M30 30C30 13.4315 16.5685 0 0 0H30V30Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
+                }
+
+                &::after {
+                    top: 0;
+                    right: 100%;
+                }
+
+                &::before {
+                    top: 100%;
+                    right: 0;
+                }
+
+            }
 
             @media (min-width:$md3) {
                 padding-top: 3.5rem;
@@ -263,27 +321,16 @@
                 max-width: 36.6rem;
             }
 
-            &::after,
-            &::before {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M30 30C30 13.4315 16.5685 0 0 0H30V30Z' fill='%23F6F8FA'/%3E%3C/svg%3E");
-            }
-
-            &::after {
-                top: 0;
-                right: 100%;
-            }
-
-            &::before {
-                top: 100%;
-                right: 0;
-            }
-
             .banner__title {
 
-
                 font-weight: 500;
-                line-height: 120%;
-                font-size: 1.5rem;
+                line-height: 110%;
+                font-size: rem(22);
+
+                @media (min-width:$md5) {
+                    font-size: 1.5rem;
+                    line-height: 120%;
+                }
 
                 @media (min-width:$md3) {
                     line-height: 101.887%;
@@ -315,7 +362,12 @@
 
 .education-business {
     background: #F6F8FA;
-    padding: rem(40) 0 rem(100);
+    padding: rem(40) 0 rem(65);
+
+    @media (min-width:$md4) {
+        padding: rem(40) 0 rem(100);
+
+    }
 
     @media (min-width:$md3) {
         padding: rem(60) 0 rem(114);
@@ -328,7 +380,7 @@
 
 
         &+* {
-            padding-top: rem(72);
+            padding-top: rem(42);
             border-radius: rem(30) rem(30) 0 0;
             margin-top: rem(-30);
             position: relative;
@@ -358,11 +410,17 @@
     &__banner {
         &.banner {
             @media (max-width:$md5) {
-                border-radius: rem(20);
+                border-radius: rem(30);
                 min-height: auto;
 
                 .banner__image {
                     position: relative;
+                    border-radius: rem(30) rem(30) 0 0;
+
+                    & img {
+                        min-height: rem(252);
+                        object-position: 10% center;
+                    }
                 }
             }
 
@@ -392,7 +450,7 @@
                     max-width: 100%;
                     position: static;
                     padding: 1.5rem 1rem;
-                    border-radius: rem(20);
+                    border-radius: rem(30);
                     margin-top: rem(-20);
 
                     &::before,
@@ -495,14 +553,23 @@
     &__container {}
 
     // .tech-base__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .tech-base__grid
     &__grid {
-        margin-top: rem(20);
+        margin-top: rem(28);
         display: grid;
         gap: rem(16);
-        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width:$md5) {
+            margin-top: rem(20);
+            grid-template-columns: repeat(2, 1fr);
+
+        }
 
         @media (min-width:$md3) {
             margin-top: rem(48);
@@ -518,9 +585,15 @@
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        padding: 1.125rem 1.125rem 1.125rem 1.5rem;
-        min-height: 14.125rem;
+        min-height: rem(176);
         border-radius: 1.125rem;
+        padding: 1rem;
+
+        @media (min-width:$md5) {
+            min-height: 14.125rem;
+            padding: 1.125rem 1.125rem 1.125rem 1.5rem;
+
+        }
 
         @media (min-width:$md3) {
             border-radius: 1.5rem;
@@ -556,8 +629,8 @@
 
         position: relative;
         z-index: 1;
-        width: 3.81325rem;
-        height: 3.81325rem;
+        width: 3.125rem;
+        height: 3.125rem;
         border-radius: 1.22025rem;
         padding: 1rem;
 
@@ -645,7 +718,12 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.375rem;
@@ -703,11 +781,17 @@
 
     // .tech-base__card-btn
     &__card-btn {
-        margin-top: auto;
-        align-self: flex-start;
-        gap: 0.25rem;
-        font-size: 0.875rem;
-        padding: 0.675rem 1rem;
+
+        margin-top: 1rem;
+
+        @media (min-width:$md5) {
+            margin-top: auto;
+            align-self: flex-start;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+            padding: 0.675rem 1rem;
+
+        }
 
         @media (min-width:$md3) {
             gap: 0.625rem;
@@ -763,14 +847,21 @@
 
 
     // .study-conditions__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .study-conditions__list
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: rem(8);
         margin-top: rem(32);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         @media (min-width:$md3) {
             gap: rem(15);
@@ -832,8 +923,8 @@
 
         position: relative;
         z-index: 1;
-        width: 3.81325rem;
-        height: 3.81325rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 1.22025rem;
         padding: 1rem;
 
@@ -959,17 +1050,26 @@
 
 
     // .org-info__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .org-info__grid
     &__grid {
         margin-top: rem(32);
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: rem(12);
+        gap: rem(8);
 
-        &> :last-child {
-            grid-column: span 2;
+
+        @media (min-width:$md5) {
+            gap: rem(12);
+            grid-template-columns: repeat(2, 1fr);
+
+            &> :last-child {
+                grid-column: span 2;
+            }
         }
 
         @media (min-width:$md3) {
@@ -987,7 +1087,12 @@
         flex-direction: column;
         gap: rem(6);
         box-shadow: 0 rem(4) rem(40) 0 rgba(0, 0, 0, 0.02);
-        padding: 1rem 1.125rem;
+        padding: 1rem 1.125rem 0.75rem;
+
+        @media (min-width:$md5) {
+            padding: 1rem 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             border-radius: rem(24);
@@ -1003,7 +1108,11 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+        }
 
         @media (min-width:$md3) {
             font-size: 1.125rem;
@@ -1015,7 +1124,12 @@
         color: #2E3235;
         line-height: 137.5%;
         letter-spacing: -0.02475rem;
-        font-size: 1.125rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.26563rem;
@@ -1026,7 +1140,12 @@
 
 .accreditation {
     background: #F6F8FA;
-    padding: rem(40) 0 rem(100);
+    padding: rem(40) 0 rem(66);
+
+    @media (min-width:$md5) {
+        padding: rem(40) 0 rem(100);
+
+    }
 
     @media (min-width:$md3) {
         padding: rem(40) 0 rem(120);
@@ -1039,7 +1158,7 @@
 
 
         &+* {
-            padding-top: rem(72);
+            padding-top: rem(44);
             border-top-left-radius: rem(30);
             border-top-right-radius: rem(30);
             margin-top: rem(-30);
@@ -1066,14 +1185,21 @@
     }
 
     // .accreditation__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .accreditation__grid
     &__grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: rem(12);
         margin-top: rem(28);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @media (min-width:$md3) {
             margin-top: rem(40);
@@ -1108,7 +1234,7 @@
 
     // .accreditation__card-link
     &__card-link {
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
         display: inline-flex;
         align-items: center;
         color: #2342A7;
@@ -1138,6 +1264,10 @@
                     transform: translateX(0.5rem);
                 }
             }
+        }
+
+        @media (min-width:$md5) {
+            margin-top: 1.5rem;
         }
 
         @media (min-width:$md3) {
@@ -1171,8 +1301,13 @@
         color: #313542;
         font-weight: 500;
         line-height: 120%;
-        font-size: 1.125rem;
         margin-bottom: rem(4);
+        font-size: 1rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             margin-bottom: rem(8);
@@ -1184,9 +1319,14 @@
     // .accreditation__card-number
     &__card-number {
         color: #9B9DA2;
-        line-height: 142.188%;
+        line-height: 110%;
         letter-spacing: -0.00938rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+            line-height: 142.188%;
+        }
 
         @media (min-width:$md3) {
             font-size: 1.125rem;
@@ -1199,7 +1339,7 @@
 
 .management {
     background: #fff;
-    padding: rem(60) 0 rem(36);
+    padding: rem(60) 0 rem(40);
 
     @media (min-width:$md3) {
         padding: rem(80) 0 rem(62);
@@ -1251,7 +1391,11 @@
     }
 
     // .management__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .management__list
     &__list {
@@ -1270,7 +1414,12 @@
     &__person {
         display: flex;
         flex-direction: column;
-        gap: rem(10);
+        gap: rem(6);
+
+        @media (min-width:$md5) {
+            gap: rem(10);
+
+        }
     }
 
     // .management__person-name
@@ -1279,7 +1428,11 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.25rem;
+        }
 
         @media (min-width:$md3) {
             font-size: 1.5rem;
@@ -1291,7 +1444,12 @@
         color: #4A5565;
         line-height: 130%;
         letter-spacing: -0.02475rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.125rem;
@@ -1302,8 +1460,16 @@
     // .management__person-contacts
     &__person-contacts {
         display: flex;
-        margin-top: 0.25rem;
+        margin-top: 0.5rem;
         gap: 2rem;
+        row-gap: 0.5rem;
+        flex-direction: column;
+
+        @media (min-width:$md5) {
+            margin-top: 0.25rem;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
 
         @media (min-width:$md3) {
             margin-top: 0.5rem;
@@ -1351,27 +1517,32 @@
 }
 
 .documents {
-    padding: rem(80) 0 rem(100);
+    background: #F6F8FA;
+    padding: rem(80) 0 rem(70);
+
+    @media (min-width:$md5) {
+        padding: rem(80) 0 rem(100);
+
+    }
 
     @media (min-width:$md3) {
         padding: rem(80) 0 rem(120);
 
     }
 
-    background: #F6F8FA;
+
 
     &:not(:last-child) {
 
         &+* {
             border-radius: rem(30) rem(30) 0 0;
             margin-top: rem(-30);
+            padding-top: rem(40);
 
             @media (min-width:$md4) {
                 border-radius: rem(58) rem(58) 0 0;
                 margin-top: rem(-58);
             }
-
-            padding-top: rem(72);
 
             @media (min-width:$md5) {
                 padding-top: rem(50);
@@ -1389,14 +1560,23 @@
     &__container {}
 
     // .documents__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .documents__list
     &__list {
         display: flex;
         flex-direction: column;
-        gap: rem(14);
         margin-top: rem(30);
+        gap: 0.375rem;
+
+        @media (min-width:$md5) {
+            gap: rem(14);
+
+        }
 
         @media (min-width:$md3) {
             margin-top: rem(40);
@@ -1411,9 +1591,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: rem(24);
+
         transition: box-shadow 0.3s ease;
-        padding: 0.675rem 1rem;
+        padding: 0.7125rem 0.675rem 0.725rem 1rem;
+        gap: 1rem;
+
+        @media (min-width:$md5) {
+            padding: 0.675rem 1rem;
+            gap: rem(24);
+        }
 
         @media (min-width:$md3) {
             gap: rem(20);
@@ -1431,7 +1617,11 @@
     &__item-info {
         display: flex;
         align-items: center;
-        gap: rem(26);
+        gap: rem(16);
+
+        @media (min-width:$md5) {
+            gap: rem(26);
+        }
 
         @media (min-width:$md3) {
             gap: rem(16);
@@ -1444,7 +1634,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 1.05063rem;
+        width: 0.88844rem;
+
+        @media (min-width:$md5) {
+            width: 1.05063rem;
+
+        }
 
         @media (min-width:$md3) {
             width: 1.875rem;
@@ -1463,7 +1658,12 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
-        font-size: 1rem;
+        font-size: 0.75rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.375rem;
@@ -1474,13 +1674,18 @@
     // .documents__item-btn
     &__item-btn {
         line-height: 110%;
-        gap: 0.5rem;
-        padding: rem(7) rem(7);
-
-        border-radius: rem(8);
+        padding: rem(7) 0.56rem;
+        border-radius: rem(4);
+        font-size: 0.5rem;
         font-size: 0.625rem;
+        gap: 0.25rem;
+
+        @media (min-width:$md5) {
+            gap: 0.5rem;
+        }
 
         @media (min-width:$md3) {
+            border-radius: rem(8);
             padding: rem(9.5) rem(7);
             font-size: 0.875rem;
 
@@ -1502,14 +1707,22 @@
     }
 
     // .study-plan__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .study-plan__grid
     &__grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
-        margin-top: rem(24);
+        margin-top: rem(30);
+
+        @media (min-width:$md4) {
+            margin-top: rem(24);
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @media (min-width:$md3) {
             margin-top: rem(40);
@@ -1529,7 +1742,7 @@
         box-shadow: 0 rem(4) rem(10) 0 rgba(0, 0, 0, 0.11);
         transition: box-shadow 0.3s ease;
         display: block;
-        padding: 1.125rem 1rem 1rem 1rem;
+        padding: 1.125rem 1rem 0.875rem 1rem;
 
         @media (min-width:$md3) {
             padding: 1.15669rem 1rem 1.78081rem 1.5rem;
@@ -1583,7 +1796,12 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.02806rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
+
+        @media (min-width:$md5) {
+            font-size: 1.125rem;
+
+        }
 
         @media (min-width:$md3) {
             font-size: 1.375rem;
@@ -1594,10 +1812,15 @@
     // .study-plan__card-desc
     &__card-desc {
         color: #9B9DA2;
-        line-height: 126.389%;
+        line-height: 110%;
         letter-spacing: -0.00938rem;
-        font-size: 1rem;
         margin-top: 0.25rem;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+            line-height: 126.389%;
+        }
 
         @media (min-width:$md3) {
             margin-top: 0;
@@ -1608,14 +1831,20 @@
 
     // .study-plan__card-download
     &__card-download {
-        margin-top: 1.25rem;
         display: inline-flex;
         align-items: center;
         color: #2342A7;
         font-weight: 500;
         line-height: 150%;
         font-size: 0.875rem;
-        gap: 0.25rem;
+        gap: 0.125rem;
+        margin-top: 0.75rem;
+
+        @media (min-width:$md5) {
+            gap: 0.25rem;
+            margin-top: 1.25rem;
+
+        }
 
         @media (min-width:$md3) {
             margin-top: 1.5rem;
@@ -1649,22 +1878,60 @@
 
 .apply {
     padding: rem(42) 0;
+    background: #fff;
 
     @media (min-width:$md3) {
         padding: rem(58) 0;
 
     }
 
+    &:not(:last-child) {
+
+        position: relative;
+        z-index: 2;
+        margin-bottom: rem(-30);
+        border-bottom-left-radius: rem(30);
+        border-bottom-right-radius: rem(30);
+
+        @media (min-width:$md4) {
+
+            border-bottom-left-radius: rem(58);
+            border-bottom-right-radius: rem(58);
+            margin-bottom: rem(-58);
+        }
+
+        &+* {
+            padding-top: rem(72);
+
+            @media (min-width:$md5) {
+                padding-top: rem(100);
+
+            }
+
+            @media (min-width:$md2) {
+                padding-top: rem(110);
+
+            }
+        }
+    }
+
     // .apply__title
-    &__title {}
+    &__title {
+        @media (max-width:$md5) {
+            font-size: 1.75rem;
+        }
+    }
 
     // .apply__grid
     &__grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: rem(16);
         margin-bottom: rem(16);
         margin-top: rem(30);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @media (min-width:$md3) {
             margin-bottom: rem(32);
@@ -1677,6 +1944,11 @@
     &__footer {
         color: #A5ACC3;
         line-height: 140%;
+        font-size: 0.875rem;
+
+        @media (min-width:$md5) {
+            font-size: 1rem;
+        }
 
         @media (min-width:$md3) {
             font-size: 1.125rem;
@@ -1702,16 +1974,14 @@
     &__card-link {
         position: relative;
         background: #fff;
-        border-radius: rem(24);
         height: 100%;
         display: flex;
         align-items: center;
 
-        border-radius: 1.25rem;
-        background: #FFF;
-        box-shadow: 0 4px 10.351px 0 rgba(0, 0, 0, 0.11);
+        border-radius: 1rem;
+        box-shadow: 0 rem(4) rem(10.3) 0 rgba(0, 0, 0, 0.11);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 1.12rem 1rem 2.12rem;
+        padding: 1rem;
         gap: 1rem;
 
         @media (any-hover: hover) {
@@ -1719,6 +1989,11 @@
                 transform: translateY(rem(-4));
                 box-shadow: 0 rem(10) rem(40) 0 rgba(0, 0, 0, 0.06);
             }
+        }
+
+        @media (min-width:$md5) {
+            border-radius: 1.25rem;
+            padding: 1.12rem 1rem 2.12rem;
         }
 
         @media (min-width:$md3) {
@@ -1737,10 +2012,10 @@
 
         position: relative;
         z-index: 1;
-        width: 3.81325rem;
-        height: 3.81325rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 1.22025rem;
-        padding: 1rem;
+        padding: 0.65rem;
 
         & img {
 
@@ -1836,8 +2111,7 @@
     // .apply__card-external-icon
     &__card-external-icon {
         position: absolute;
-        top: rem(14);
-        right: rem(14);
+
 
         border-radius: 50%;
         display: flex;
@@ -1848,6 +2122,13 @@
         width: 2rem;
         height: 2rem;
         font-size: 1rem;
+        top: rem(10);
+        right: rem(10);
+
+        @media (min-width:$md5) {
+            top: rem(14);
+            right: rem(14);
+        }
 
         @media (min-width:$md3) {
             top: rem(16);

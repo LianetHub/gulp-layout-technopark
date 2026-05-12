@@ -492,10 +492,12 @@
     // .directions__list
     &__list {
         display: grid;
-        margin-top: rem(30);
         gap: 0.5rem;
 
+        margin-top: rem(20);
+
         @media (min-width:$md4) {
+            margin-top: rem(30);
             grid-template-columns: repeat(12, 1fr);
         }
 
