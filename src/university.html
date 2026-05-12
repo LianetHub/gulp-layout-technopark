@@ -33,10 +33,10 @@
                                 <img src="@img/university/education.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
                             </div>
                             <div class="banner__description description-block description-block--right">
-                                <h2 class="banner__title title-sm">Образование как часть промышленной экосистемы</h2>
+                                <h2 class="banner__title title-sm" data-animate="bottom">Образование как часть промышленной экосистемы</h2>
                                 <div class="banner__text">
-                                    <p>Обучение и подготовка персонала на базе корпоративного университета «Искра-Волга» — это система развития компетенций, объединяющая образовательные, производственные и отраслевые направления.</p>
-                                    <p>Обучение строится на практике компаний-резидентов и&nbsp;ориентировано на реальные задачи электроэнергетики.</p>
+                                    <p data-animate="bottom">Обучение и подготовка персонала на базе корпоративного университета «Искра-Волга» — это система развития компетенций, объединяющая образовательные, производственные и отраслевые направления.</p>
+                                    <p data-animate="bottom">Обучение строится на практике компаний-резидентов и&nbsp;ориентировано на реальные задачи электроэнергетики.</p>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                 </section>
                 <section class="directions">
                     <div class="container">
-                        <h2 class="directions__title title">Ключевые направления</h2>
+                        <h2 class="directions__title title" data-animate="bottom">Ключевые направления</h2>
                         <ul class="directions__list">
                             @@loop('./html/templates/_direction-block.html', './html/json/university-directions.json')
                         </ul>
@@ -52,7 +52,7 @@
                 </section>
                 <section class="advantages">
                     <div class="container">
-                        <h2 class="advantages__title title">Форматы обучения</h2>
+                        <h2 class="advantages__title title" data-animate="bottom">Форматы обучения</h2>
                         <ul class="advantages__list">
                             @@loop('./html/templates/_advantage-card.html', './html/json/study-formats.json')
                         </ul>
@@ -65,10 +65,10 @@
                                 <img src="@img/university/professional-engineer-workers.jpg" class="cover-image" alt="Фото компании">
                             </div>
                             <div class="banner__description description-block description-block--right">
-                                <h2 class="banner__title title-sm">Обучение под задачи бизнеса</h2>
+                                <h2 class="banner__title title-sm" data-animate="bottom">Обучение под задачи бизнеса</h2>
                                 <div class="banner__text">
-                                    <p>Учебный центр «ЭНЕРГОИННОВАЦИИ» разрабатывает программы обучения под требования конкретных организаций.</p>
-                                    <p>В качестве преподавателей привлекаются ведущие специалисты и эксперты в области энергетики и радиоэлектроники</p>
+                                    <p data-animate="bottom">Учебный центр «ЭНЕРГОИННОВАЦИИ» разрабатывает программы обучения под требования конкретных организаций.</p>
+                                    <p data-animate="bottom">В качестве преподавателей привлекаются ведущие специалисты и эксперты в области энергетики и радиоэлектроники</p>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                 </section>
                 <section class="tech-base">
                     <div class="tech-base__container container">
-                        <h2 class="tech-base__title title">Учебная и техническая база</h2>
+                        <h2 class="tech-base__title title" data-animate="bottom">Учебная и техническая база</h2>
                         <ul class="tech-base__grid">
                             @@loop('./html/templates/_tech-card.html', './html/json/tech-base.json')
                         </ul>
@@ -84,7 +84,7 @@
                 </section>
                 <section class="study-conditions">
                     <div class="container">
-                        <h2 class="study-conditions__title title">Условия обучения</h2>
+                        <h2 class="study-conditions__title title" data-animate="bottom">Условия обучения</h2>
                         <ul class="study-conditions__list">
                             @@loop('./html/templates/_condition-card.html', './html/json/study-conditions.json')
                         </ul>
@@ -92,33 +92,33 @@
                 </section>
                 <section class="org-info">
                     <div class="container">
-                        <h2 class="org-info__title title">Сведения об образовательной организации</h2>
+                        <h2 class="org-info__title title" data-animate="bottom">Сведения об образовательной организации</h2>
                         <ul class="org-info__grid">
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Организация</div>
                                 <div class="org-info__card-value">ООО «ЭНЕРГОИННОВАЦИИ»</div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Дата создания</div>
                                 <div class="org-info__card-value">15.12.2020</div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">График работы</div>
                                 <div class="org-info__card-value">Пн-Пт: 08:00–17:00</div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Email</div>
                                 <div class="org-info__card-value"><a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a></div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Телефон</div>
                                 <div class="org-info__card-value"><a href="tel:+78435620757">8 (843) 562-07-57 (доб. 564)</a></div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">ИНН</div>
                                 <div class="org-info__card-value">1648053156</div>
                             </li>
-                            <li class="org-info__card">
+                            <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Адрес</div>
                                 <div class="org-info__card-value">
                                     <address>422527, Республика Татарстан, Зеленодольский район, город Зеленодольск, п/р Промышленная Площадка Зеленодольск</address>
@@ -129,7 +129,7 @@
                 </section>
                 <section class="accreditation">
                     <div class="container">
-                        <h2 class="accreditation__title title">Лицензия и аккредитация</h2>
+                        <h2 class="accreditation__title title" data-animate="bottom">Лицензия и аккредитация</h2>
                         <ul class="accreditation__grid">
                             @@loop('./html/templates/_accreditation-card.html', './html/json/accreditation.json')
                         </ul>
@@ -137,7 +137,7 @@
                 </section>
                 <section class="management">
                     <div class="management__container container">
-                        <h2 class="management__title title">Руководство</h2>
+                        <h2 class="management__title title" data-animate="bottom">Руководство</h2>
                         <ul class="management__list">
                             @@loop('./html/templates/_management-person.html', './html/json/management.json')
                         </ul>
@@ -145,7 +145,7 @@
                 </section>
                 <section class="documents">
                     <div class="documents__container container">
-                        <h2 class="documents__title title">Документы</h2>
+                        <h2 class="documents__title title" data-animate="bottom">Документы</h2>
                         <ul class="documents__list">
                             @@loop('./html/templates/_document-item.html', './html/json/documents.json')
                         </ul>
@@ -153,7 +153,7 @@
                 </section>
                 <section class="study-plan">
                     <div class="container">
-                        <h2 class="study-plan__title title">План обучения и&nbsp;стоимость</h2>
+                        <h2 class="study-plan__title title" data-animate="bottom">План обучения и&nbsp;стоимость</h2>
                         <ul class="study-plan__grid">
                             @@loop('./html/templates/_plan-card.html', './html/json/study-plan.json')
                         </ul>
@@ -161,11 +161,11 @@
                 </section>
                 <section class="apply">
                     <div class="container">
-                        <h2 class="apply__title title">Подать заявку на&nbsp;обучение</h2>
+                        <h2 class="apply__title title" data-animate="bottom">Подать заявку на&nbsp;обучение</h2>
                         <ul class="apply__grid">
                             @@loop('./html/templates/_apply-card.html', './html/json/apply.json')
                         </ul>
-                        <p class="apply__footer">
+                        <p class="apply__footer" data-animate="bottom">
                             Заявки принимаются по электронной почте: <a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a>
                         </p>
                     </div>
