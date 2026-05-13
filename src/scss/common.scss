@@ -359,7 +359,7 @@ body {
 		z-index: 1;
 		background: $accent;
 		pointer-events: none;
-		border-radius: rem(20);
+		border-radius: rem(12);
 
 		&::before {
 			content: '';
@@ -606,7 +606,8 @@ body {
 
 	// .order__banner
 	&__banner {
-		background: url("@img/order-decor.svg") center / cover no-repeat, linear-gradient(rgba($color: #001865, $alpha: 0.64), rgba($color: #001865, $alpha: 0.64)), url("@img/hero-poster.jpg") center / cover no-repeat;
+		position: relative;
+		z-index: 1;
 		border-radius: 1.5rem;
 		color: #fff;
 		text-align: center;
@@ -614,6 +615,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 
 		padding: 2rem 1rem;
 
@@ -627,6 +629,34 @@ body {
 			padding: 3.75rem;
 
 		}
+	}
+
+	// .order__video
+	&__video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		border-radius: 1.5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("@img/order-decor.svg") center / cover no-repeat, linear-gradient(rgba($color: #001865, $alpha: 0.64), rgba($color: #001865, $alpha: 0.64));
+		}
+	}
+
+	// .order__video-block
+	&__video-block {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	// .order__title

@@ -72,9 +72,11 @@
             .banner__description {
 
                 position: static;
-                max-width: 100%;
+                max-width: calc(100% + 2px);
                 border-radius: 0;
                 padding: 1.25rem 0 0;
+                margin-bottom: -1px;
+                margin-inline: -1px;
 
                 &::before,
                 &::after {
@@ -203,6 +205,19 @@
         margin-top: rem(30);
         display: grid;
         gap: rem(12);
+
+        &.advantages__list--row-header-mobile {
+            .advantages__card-header {
+                @media (max-width:$md4) {
+                    flex-direction: row;
+                    align-items: center;
+
+                    .advantages__card-title {
+                        width: min-content;
+                    }
+                }
+            }
+        }
 
         @media (min-width:$md4) {
             gap: 1rem;

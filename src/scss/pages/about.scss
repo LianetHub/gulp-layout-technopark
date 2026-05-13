@@ -354,14 +354,14 @@
 
 .infrastructure {
     background: #F6F8FA;
-    padding: rem(50) 0 rem(70);
+    padding: rem(40) 0 rem(70);
 
     @media (min-width:$md5) {
-        padding: rem(60) 0 rem(100);
+        padding: rem(10) 0 rem(100);
     }
 
     @media (min-width:$md3) {
-        padding: rem(80) 0 rem(150);
+        padding: rem(30) 0 rem(150);
 
     }
 
