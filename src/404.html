@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    "title": "Страница не найдена"
+    })
+    <body itemscope itemtype="https://schema.org/WebPage">
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page" itemprop="mainContentOfPage">
+                <section class="not-found">
+                    <div class="not-found__container container">
+                        <div class="not-found__illustration">
+                            <img src="@img/404.svg" width="435" height="245" class="not-found__img" alt="404" decoding="async">
+                        </div>
+                        <h1 class="not-found__title title">Страница не найдена</h1>
+                        <p class="not-found__lead">Попробуйте начать с&nbsp;<a href="/" class="not-found__link">главной страницы</a></p>
+                    </div>
+                </section>
+                @@include('./html/_order.html', {
+                "color": "grey",
+                "title": 'Открыты к&nbsp;взаимодействию',
+                "desc": 'Свяжитесь с нами для получения дополнительной информации или обсуждения сотрудничества',
+                "btnText": 'Связаться'
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
