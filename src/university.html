@@ -90,38 +90,54 @@
                         </ul>
                     </div>
                 </section>
-                <section class="org-info">
+                <section class="org-info" itemscope itemtype="http://schema.org/EducationalOrganization">
+                    <link itemprop="parentOrganization" href="#main-org">
                     <div class="container">
-                        <h2 class="org-info__title title" data-animate="bottom">Сведения об образовательной организации</h2>
+                        <h2 class="org-info__title title" data-animate="bottom" itemprop="name">Сведения об образовательной организации</h2>
                         <ul class="org-info__grid">
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Организация</div>
-                                <div class="org-info__card-value">ООО «ЭНЕРГОИННОВАЦИИ»</div>
+                                <div class="org-info__card-value" itemprop="legalName">ООО «ЭНЕРГОИННОВАЦИИ»</div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Дата создания</div>
-                                <div class="org-info__card-value">15.12.2020</div>
+                                <div class="org-info__card-value">
+                                    <time itemprop="foundingDate" datetime="2020-12-15">15.12.2020</time>
+                                </div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">График работы</div>
-                                <div class="org-info__card-value">Пн-Пт: 08:00–17:00</div>
+                                <div class="org-info__card-value">
+                                    <meta itemprop="openingHours" content="Mo-Fr 08:00-17:00">
+                                    Пн-Пт: 08:00–17:00
+                                </div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Email</div>
-                                <div class="org-info__card-value"><a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a></div>
+                                <div class="org-info__card-value">
+                                    <a href="mailto:tiv@iskra-volga.ru" itemprop="email">tiv@iskra-volga.ru</a>
+                                </div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Телефон</div>
-                                <div class="org-info__card-value"><a href="tel:+78435620757">8 (843) 562-07-57 (доб. 564)</a></div>
+                                <div class="org-info__card-value">
+                                    <a href="tel:+78435620757" itemprop="telephone">8 (843) 562-07-57 (доб. 564)</a>
+                                </div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">ИНН</div>
-                                <div class="org-info__card-value">1648053156</div>
+                                <div class="org-info__card-value" itemprop="taxID">1648053156</div>
                             </li>
                             <li class="org-info__card" data-animate="bottom">
                                 <div class="org-info__card-label">Адрес</div>
                                 <div class="org-info__card-value">
-                                    <address>422527, Республика Татарстан, Зеленодольский район, город Зеленодольск, п/р Промышленная Площадка Зеленодольск</address>
+                                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                        <span itemprop="postalCode">422527</span>,
+                                        <span itemprop="addressRegion">Республика Татарстан</span>,
+                                        Зеленодольский район, город
+                                        <span itemprop="addressLocality">Зеленодольск</span>,
+                                        <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск</span>
+                                    </address>
                                 </div>
                             </li>
                         </ul>

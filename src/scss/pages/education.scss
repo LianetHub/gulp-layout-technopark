@@ -419,11 +419,16 @@
                 border-radius: rem(30);
                 min-height: auto;
 
+                background: transparent;
+
                 .banner__image {
                     position: relative;
                     border-radius: rem(30) rem(30) 0 0;
 
+                    background: transparent;
+
                     & img {
+
                         min-height: rem(252);
                         object-position: 10% center;
                     }
@@ -784,7 +789,7 @@
 
         &::before {
             content: '•';
-            margin-right: 0.15rem;
+            margin-right: 0.45rem;
         }
 
         &:not(:last-child) {

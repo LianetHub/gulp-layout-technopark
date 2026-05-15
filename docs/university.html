@@ -29,17 +29,17 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<!-- Open Graph  -->
 	<!-- plugins -->
-	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260515143146" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260515211208" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260515143146">
+		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260515211208">
 	</noscript>
-	<link rel="preload" href="css/libs/fancybox.css?_v=20260515143146" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/libs/fancybox.css?_v=20260515211208" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260515143146">
+		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260515211208">
 	</noscript>
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260515143146">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260515143146">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260515211208">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260515211208">
 	<noscript>
 		<style>
 			[data-animate] {
@@ -80,6 +80,11 @@
 									</a>
 									<button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
 									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="/university.html" class="submenu__link active" itemprop="url">
+												<span itemprop="name">Обучение и подготовка кадров</span>
+											</a>
+										</li>
 										<li class="submenu__item">
 											<a href="/interaction.html" class="submenu__link" itemprop="url">
 												<span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
@@ -331,38 +336,49 @@
 					</ul>
 				</div>
 			</section>
-			<section class="org-info">
+			<section class="org-info" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<link itemprop="parentOrganization" href="#main-org">
 				<div class="container">
-					<h2 class="org-info__title title" data-animate="bottom">Сведения об образовательной организации</h2>
+					<h2 class="org-info__title title" data-animate="bottom" itemprop="name">Сведения об образовательной организации</h2>
 					<ul class="org-info__grid">
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">Организация</div>
-							<div class="org-info__card-value">ООО «ЭНЕРГОИННОВАЦИИ»</div>
+							<div class="org-info__card-value" itemprop="legalName">ООО «ЭНЕРГОИННОВАЦИИ»</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">Дата создания</div>
-							<div class="org-info__card-value">15.12.2020</div>
+							<div class="org-info__card-value">
+								<time itemprop="foundingDate" datetime="2020-12-15">15.12.2020</time>
+							</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">График работы</div>
-							<div class="org-info__card-value">Пн-Пт: 08:00–17:00</div>
+							<div class="org-info__card-value">
+								<meta itemprop="openingHours" content="Mo-Fr 08:00-17:00"> Пн-Пт: 08:00–17:00
+							</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">Email</div>
-							<div class="org-info__card-value"><a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a></div>
+							<div class="org-info__card-value">
+								<a href="mailto:tiv@iskra-volga.ru" itemprop="email">tiv@iskra-volga.ru</a>
+							</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">Телефон</div>
-							<div class="org-info__card-value"><a href="tel:+78435620757">8 (843) 562-07-57 (доб. 564)</a></div>
+							<div class="org-info__card-value">
+								<a href="tel:+78435620757" itemprop="telephone">8 (843) 562-07-57 (доб. 564)</a>
+							</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">ИНН</div>
-							<div class="org-info__card-value">1648053156</div>
+							<div class="org-info__card-value" itemprop="taxID">1648053156</div>
 						</li>
 						<li class="org-info__card" data-animate="bottom">
 							<div class="org-info__card-label">Адрес</div>
 							<div class="org-info__card-value">
-								<address>422527, Республика Татарстан, Зеленодольский район, город Зеленодольск, п/р Промышленная Площадка Зеленодольск</address>
+								<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+									<span itemprop="postalCode">422527</span>, <span itemprop="addressRegion">Республика Татарстан</span>, Зеленодольский район, город <span itemprop="addressLocality">Зеленодольск</span>, <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск</span>
+								</address>
 							</div>
 						</li>
 					</ul>
@@ -666,7 +682,7 @@
 			</section>
 		</main>
 		<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-			<div class="footer__container container" itemscope itemtype="http://schema.org/Organization">
+			<div class="footer__container container" itemscope itemtype="http://schema.org/Organization" itemid="#main-org">
 				<meta itemprop="name" content="Технопарк «Искра-Волга»">
 				<div class="footer__main">
 					<a href="/" class="footer__logo" itemprop="url">
@@ -745,10 +761,10 @@
 			<h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
 			<p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
 		</dialog> <!-- plugins -->
-		<script defer src="js/libs/swiper-bundle.min.js?_v=20260515143146"></script>
-		<script defer src="js/libs/fancybox.umd.js?_v=20260515143146"></script>
+		<script defer src="js/libs/swiper-bundle.min.js?_v=20260515211208"></script>
+		<script defer src="js/libs/fancybox.umd.js?_v=20260515211208"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20260515143146"></script>
+		<script src="js/app.min.js?_v=20260515211208"></script>
 	</div>
 </body>
 

@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 .checkbox__input:checked + .checkbox__content::before,
@@ -1368,6 +1368,10 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
   width: 1.62131rem;
   height: 1.62131rem;
   font-size: 0.875rem;
+}
+
+.submenu__item:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 .submenu__link {
@@ -2954,7 +2958,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
 
 .tech-base__card-list-item::before {
   content: "•";
-  margin-right: 0.15rem;
+  margin-right: 0.45rem;
 }
 
 .tech-base__card-list-item:not(:last-child) {
@@ -6132,6 +6136,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
   }
 
   .header__phone {
+    margin-bottom: 0.25rem;
     font-size: 1rem;
   }
 
@@ -8317,11 +8322,13 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
   .education-business__banner.banner {
     border-radius: 1.875rem;
     min-height: auto;
+    background: transparent;
   }
 
   .education-business__banner.banner .banner__image {
     position: relative;
     border-radius: 1.875rem 1.875rem 0 0;
+    background: transparent;
   }
 
   .education-business__banner.banner .banner__image img {
