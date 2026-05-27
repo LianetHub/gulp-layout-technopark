@@ -23,6 +23,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const target = e.target;
         const header = document.querySelector('.header');
 
+        // form-title (hidden) for callback form
+        const callbackTrigger = target.closest('[data-fancybox][href="#callback"], [data-fancybox][data-src="#callback"]');
+        if (callbackTrigger) {
+            const modal = document.getElementById('callback');
+            const form = modal?.querySelector('form');
+            const title =
+                callbackTrigger.getAttribute('data-form-title') ||
+                callbackTrigger.dataset.formTitle ||
+                callbackTrigger.textContent?.trim();
+
+            if (form && title) {
+                let hidden = form.querySelector('input[type="hidden"][name="form-title"]');
+                if (!hidden) {
+                    hidden = document.createElement('input');
+                    hidden.type = 'hidden';
+                    hidden.name = 'form-title';
+                    form.appendChild(hidden);
+                }
+                hidden.value = title;
+            }
+        }
+
         // menu
         if (target.closest('.header__menu-toggler')) {
             header.classList.toggle('open-menu');
