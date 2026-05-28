@@ -1060,6 +1060,8 @@ body {
 
 .description-block {
   margin-top: auto;
+  margin-bottom: -1px;
+  margin-inline: -1px;
   position: relative;
   background: #fff;
   color: #313542;
@@ -8195,8 +8197,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     padding: 1.5rem 1rem;
     border-radius: 1.25rem;
     margin-top: -1.25rem;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .about__banner .description-block::before,
@@ -8231,8 +8231,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     padding: 1.5rem 1rem;
     border-radius: 1.25rem;
     margin-top: -1.25rem;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .about-center__banner.banner .description-block::before,
@@ -8283,8 +8281,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     max-width: calc(100% + 2px);
     border-radius: 0;
     padding: 1.25rem 0 0;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .university__banner .banner__description::before,
@@ -8310,8 +8306,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     padding: 1.56rem 1rem;
     border-radius: 1.875rem;
     margin-top: -1.875rem;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .education__banner .banner__description::after,
@@ -8343,8 +8337,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     padding: 1.5rem 1rem;
     border-radius: 1.875rem;
     margin-top: -1.25rem;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .education-business__banner.banner .description-block::before,
@@ -8417,8 +8409,6 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     max-width: calc(100% + 2px);
     border-radius: 0;
     padding: 1.25rem 0 0;
-    margin-bottom: -1px;
-    margin-inline: -1px;
   }
 
   .interaction__banner .banner__description::before,
