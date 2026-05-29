@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	devFunctions.OS();
 	devFunctions.formSubmit();
 	devFunctions.initYandexMap();
+	devFunctions.initMailtoLinks();
 
 	// clickHandler
 
