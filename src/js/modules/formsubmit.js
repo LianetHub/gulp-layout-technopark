@@ -1,3 +1,5 @@
+import { isSmartCaptchaReady, requestSmartCaptchaToken, resetSmartCaptcha } from './smartcaptcha.js';
+
 export const formSubmit = () => {
 	const forms = document.querySelectorAll("form");
 
@@ -42,6 +44,20 @@ export const formSubmit = () => {
 
 		if (isFormValid) {
 			try {
+				if (form.hasAttribute('data-ya-captcha-form')) {
+					if (!isSmartCaptchaReady()) {
+						alert('Подождите, загружается защита формы');
+						return;
+					}
+
+					const token = await requestSmartCaptchaToken();
+					const tokenInput = form.querySelector('[name="smart-token"]');
+
+					if (tokenInput) {
+						tokenInput.value = token;
+					}
+				}
+
 				form.classList.add("_sending");
 				if (submitBtn) submitBtn.classList.add("_loading");
 
@@ -60,14 +76,22 @@ export const formSubmit = () => {
 					throw new Error("Ошибка сервера");
 				}
 			} catch (error) {
-				showModal("#error");
+				if (form.hasAttribute('data-ya-captcha-form') && error?.message) {
+					alert(error.message);
+				} else {
+					showModal("#error");
+				}
 			} finally {
 				form.classList.remove("_sending");
 				form.reset();
 				if (submitBtn) {
 					submitBtn.setAttribute('disabled', 'disabled');
 					submitBtn.classList.remove("_loading");
-				};
+				}
+
+				if (form.hasAttribute('data-ya-captcha-form')) {
+					resetSmartCaptcha();
+				}
 			}
 		}
 	}

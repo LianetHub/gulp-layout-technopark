@@ -1,6 +1,6 @@
 <dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
     <h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
-    <form action="/send.php" method="post" class="popup__form form">
+    <form action="/send.php" method="post" class="popup__form form" data-ya-captcha-form>
         <div class="form__field">
             <input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
             <span class="form__error">Введите ваше имя</span>
@@ -12,6 +12,7 @@
         <div class="form__field">
             <textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
         </div>
+        <input type="hidden" name="smart-token" value="">
         <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
         <label class="form__checkbox checkbox">
             <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>

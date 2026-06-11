@@ -29,17 +29,17 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<!-- Open Graph  -->
 	<!-- plugins -->
-	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260529100727" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260611140032" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260529100727">
+		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260611140032">
 	</noscript>
-	<link rel="preload" href="css/libs/fancybox.css?_v=20260529100727" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/libs/fancybox.css?_v=20260611140032" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260529100727">
+		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260611140032">
 	</noscript>
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260529100727">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260529100727">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260611140032">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260611140032">
 	<noscript>
 		<style>
 			[data-animate] {
@@ -727,7 +727,7 @@
 		</footer>
 		<dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
 			<h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
-			<form action="/send.php" method="post" class="popup__form form">
+			<form action="/send.php" method="post" class="popup__form form" data-ya-captcha-form>
 				<div class="form__field">
 					<input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
 					<span class="form__error">Введите ваше имя</span>
@@ -739,6 +739,7 @@
 				<div class="form__field">
 					<textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
 				</div>
+				<input type="hidden" name="smart-token" value="">
 				<button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
 				<label class="form__checkbox checkbox">
 					<input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
@@ -761,10 +762,20 @@
 			<h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
 			<p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
 		</dialog> <!-- plugins -->
-		<script defer src="js/libs/swiper-bundle.min.js?_v=20260529100727"></script>
-		<script defer src="js/libs/fancybox.umd.js?_v=20260529100727"></script>
+		<script defer src="js/libs/swiper-bundle.min.js?_v=20260611140032"></script>
+		<script defer src="js/libs/fancybox.umd.js?_v=20260611140032"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20260529100727"></script>
+		<script src="js/app.min.js?_v=20260611140032"></script>
+		<div id="captcha-container" style="display:none" aria-hidden="true"></div>
+		<script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad&_v=20260611140032" defer></script>
+		<script>
+			function onSmartCaptchaLoad() {
+				if (typeof window.initSmartCaptcha === 'function') {
+					window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
+				}
+			}
+
+		</script>
 	</div>
 </body>
 

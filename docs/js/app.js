@@ -1,6 +1,9 @@
 "use strict";
 
 import * as devFunctions from "./modules/functions.js";
+import { initSmartCaptcha } from "./modules/smartcaptcha.js";
+
+window.initSmartCaptcha = initSmartCaptcha;
 
 document.addEventListener("DOMContentLoaded", function () {
 	//  Fancybox

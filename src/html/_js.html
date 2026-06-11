@@ -4,3 +4,13 @@
 <!-- plugins -->
 
 <script src="js/app.min.js"></script>
+
+<div id="captcha-container" style="display:none" aria-hidden="true"></div>
+<script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad" defer></script>
+<script>
+function onSmartCaptchaLoad() {
+    if (typeof window.initSmartCaptcha === 'function') {
+        window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
+    }
+}
+</script>
