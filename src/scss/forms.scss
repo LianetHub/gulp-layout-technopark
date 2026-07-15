@@ -355,7 +355,8 @@
 			cursor: default;
 		}
 
-		.file-attach[data-state="ready"] & {
+		.file-attach[data-state="ready"] &,
+		.file-attach[data-state="loading"] & {
 			cursor: default;
 		}
 	}
@@ -373,6 +374,30 @@
 		width: rem(24);
 		height: rem(24);
 		object-fit: contain;
+	}
+
+	// .file-attach__progress — кольцо прогресса (состояние «Загрузка»)
+	&__progress {
+		flex-shrink: 0;
+		width: rem(24);
+		height: rem(24);
+	}
+
+	&__progress-svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		transform: rotate(-90deg);
+	}
+
+	&__progress-track {
+		stroke: rgba($accent, 0.2);
+	}
+
+	&__progress-value {
+		stroke: $accent;
+		stroke-linecap: round;
+		transition: stroke-dashoffset 0.15s linear;
 	}
 
 	// .file-attach__hint

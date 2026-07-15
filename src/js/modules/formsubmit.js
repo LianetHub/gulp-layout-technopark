@@ -106,7 +106,18 @@ export const formSubmit = () => {
 		} else if (input.matches("[type='tel']")) {
 			isFieldValid = phoneTest(input.value);
 		} else if (input.matches("[type='file']")) {
-			isFieldValid = input.files && input.files.length > 0;
+			const attach = input.closest("[data-file-attach]");
+			const state = attach?.dataset.state;
+			const fileId = attach?.querySelector("[data-file-attach-id]")?.value;
+			const hasUploadUrl = Boolean(attach?.dataset.uploadUrl);
+
+			if (state === "loading" || state === "error") {
+				isFieldValid = false;
+			} else if (hasUploadUrl) {
+				isFieldValid = state === "ready" && Boolean(fileId);
+			} else {
+				isFieldValid = Boolean(input.files && input.files.length > 0) || (state === "ready" && Boolean(fileId));
+			}
 		} else {
 			isFieldValid = input.value.trim() !== "";
 		}
@@ -146,7 +157,17 @@ export const formSubmit = () => {
 			} else if (input.matches("[type='tel']")) {
 				if (!phoneTest(input.value)) isInvalid = true;
 			} else if (input.matches("[type='file']")) {
-				if (!input.files || input.files.length === 0) isInvalid = true;
+				const attach = input.closest("[data-file-attach]");
+				const state = attach?.dataset.state;
+				const fileId = attach?.querySelector("[data-file-attach-id]")?.value;
+				const hasUploadUrl = Boolean(attach?.dataset.uploadUrl);
+				const ok = hasUploadUrl
+					? state === "ready" && Boolean(fileId)
+					: Boolean(input.files && input.files.length > 0) || (state === "ready" && Boolean(fileId));
+
+				if (!ok || state === "loading" || state === "error") {
+					isInvalid = true;
+				}
 			} else if (input.value.trim() === "") {
 				isInvalid = true;
 			}
