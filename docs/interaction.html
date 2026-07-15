@@ -1,402 +1,465 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <head>
 
-<head>
-	<title>Технопарк "Искра-Волга" | Взаимодействие с образовательной средой</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<!-- favicon -->
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<meta name="apple-mobile-web-app-title" content="Искра Волга">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- favicon -->
-	<!-- Open Graph  -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="">
-	<meta property="og:description" content="">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="/OG.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
-	<meta property="og:site_name" content="Искра-Волга">
-	<meta property="og:locale" content="ru_RU">
-	<meta name="twitter:card" content="summary_large_image">
-	<!-- Open Graph  -->
-	<!-- plugins -->
-	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260611140032" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260611140032">
-	</noscript>
-	<link rel="preload" href="css/libs/fancybox.css?_v=20260611140032" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260611140032">
-	</noscript>
-	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260611140032">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260611140032">
-	<noscript>
-		<style>
-			[data-animate] {
-				opacity: 1;
-				visibility: visible;
-				transform: none;
-				transition: none;
-			}
 
-		</style>
-	</noscript>
-</head>
+      <title>Технопарк "Искра-Волга" | Взаимодействие с образовательной средой</title>
 
-<body itemscope itemtype="https://schema.org/WebPage">
-	<div class="wrapper">
-		<header class="header" itemscope itemtype="http://schema.org/WPHeader">
-			<div class="header__container container">
-				<a href="/" class="header__logo" itemprop="url">
-					<img src="img/logo.svg" alt="Логотип Искра-Волга" itemprop="image">
-				</a>
-				<div class="header__menu menu">
-					<div class="menu__content">
-						<nav aria-label="Меню в шапке" class="menu__navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<ul class="menu__list">
-								<li class="menu__item">
-									<a href="/" class="menu__link" itemprop="url">
-										<span itemprop="name">Главная</span>
-									</a>
-								</li>
-								<li class="menu__item">
-									<a href="/about.html" class="menu__link" itemprop="url">
-										<span itemprop="name">О технопарке</span>
-									</a>
-								</li>
-								<li class="menu__item menu__item--parent">
-									<a href="/university.html" class="menu__link active" itemprop="url">
-										<span itemprop="name">Корпоративный университет</span>
-									</a>
-									<button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
-									<ul class="submenu">
-										<li class="submenu__item">
-											<a href="/university.html" class="submenu__link" itemprop="url">
-												<span itemprop="name">Обучение и подготовка кадров</span>
-											</a>
-										</li>
-										<li class="submenu__item">
-											<a href="/interaction.html" class="submenu__link active" itemprop="url">
-												<span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu__item">
-									<a href="/contacts.html" class="menu__link" itemprop="url">
-										<span itemprop="name">Контакты</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-						<a href="tel:88432150332" class="menu__phone icon-phone">8 (843) 215-03-32</a>
-					</div>
-				</div>
-				<a href="tel:88432150332" class="header__phone icon-phone">8 (843) 215-03-32</a>
-				<button type="button" aria-label="Открыть мобильное меню" class="header__menu-toggler icon-menu">
-					<span></span><span></span><span></span>
-				</button>
-			</div>
-		</header>
-		<main class="page" itemprop="mainContentOfPage">
-			<section class="interaction">
-				<div class="interaction__container container">
-					<div class="interaction__banner banner">
-						<div class="banner__image">
-							<picture>
-								<source srcset="img/interaction.webp" type="image/webp"><img src="img/interaction.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
-							</picture>
-						</div>
-						<div class="banner__description description-block description-block--left">
-							<h1 class="banner__title title">Взаимодействие с&nbsp;образовательной средой</h1>
-							<div class="banner__text">
-								<p>Технопарк «Искра-Волга» активно сотрудничает с федеральными вузами в рамках образовательных и научных программ.</p>
-								<p>Взаимодействие направлено на подготовку специалистов, развитие практических навыков у студентов и реализацию совместных исследовательских проектов.</p>
-							</div>
-							<a href="#callback" data-fancybox data-form-title="Оставить заявку" class="banner__btn btn btn-primary">Оставить заявку</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="advantages">
-				<div class="container">
-					<h2 class="advantages__title title" data-animate="bottom">Основные направления сотрудничества</h2>
-					<ul class="advantages__list">
-						<li class="advantages__card" data-animate="bottom">
-							<div class="advantages__card-header">
-								<div class="advantages__card-icon">
-									<img src="img/icons/users-group.svg" alt="Практическая подготовка студентов">
-								</div>
-								<h3 class="advantages__card-title">Практическая подготовка студентов</h3>
-							</div>
-							<p class="advantages__card-text">Стажировки и практика на базе компаний-резидентов</p>
-						</li>
-						<li class="advantages__card" data-animate="bottom">
-							<div class="advantages__card-header">
-								<div class="advantages__card-icon">
-									<img src="img/icons/book-open.svg" alt="Совместные образовательные программы">
-								</div>
-								<h3 class="advantages__card-title">Совместные образовательные программы</h3>
-							</div>
-							<p class="advantages__card-text">Разработка и реализация профильных направлений</p>
-						</li>
-						<li class="advantages__card" data-animate="bottom">
-							<div class="advantages__card-header">
-								<div class="advantages__card-icon">
-									<img src="img/icons/cup.svg" alt="Конкурсы и инженерные хакатоны">
-								</div>
-								<h3 class="advantages__card-title">Конкурсы и инженерные хакатоны</h3>
-							</div>
-							<p class="advantages__card-text">Организация с привлечением экспертов от компаний-резидентов</p>
-						</li>
-						<li class="advantages__card" data-animate="bottom">
-							<div class="advantages__card-header">
-								<div class="advantages__card-icon">
-									<img src="img/icons/backpack.svg" alt="Профориентационная работа">
-								</div>
-								<h3 class="advantages__card-title">Профориентационная работа</h3>
-							</div>
-							<p class="advantages__card-text">Экскурсии и мастер-классы для школьников</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="partners">
-				<div class="container">
-					<h2 class="partners__title title" data-animate="bottom">Ключевые образовательные партнеры</h2>
-					<ul class="partners__list">
-						<li class="partners__card" data-animate="bottom">
-							<div class="partners__card-image">
-								<picture>
-									<source srcset="img/partners/kgeu.webp" type="image/webp"><img src="img/partners/kgeu.jpg" class="cover-image" alt="Казанский государственный энергетический университет">
-								</picture>
-							</div>
-							<div class="partners__card-content">
-								<h3 class="partners__card-name">Казанский государственный энергетический университет</h3>
-								<p class="partners__card-text">Базовая кафедра, подготовка специалистов по направлениям электромобильного транспорта и инфраструктуры</p>
-							</div>
-						</li>
-						<li class="partners__card" data-animate="bottom">
-							<div class="partners__card-image">
-								<picture>
-									<source srcset="img/partners/knitu-kai.webp" type="image/webp"><img src="img/partners/knitu-kai.jpg" class="cover-image" alt="КНИТУ-КАИ им. А.Н. Туполева">
-								</picture>
-							</div>
-							<div class="partners__card-content">
-								<h3 class="partners__card-name">КНИТУ-КАИ им. А.Н. Туполева</h3>
-								<p class="partners__card-text">Участие в фестивалях, сотрудничество с&nbsp;институтами, образовательные инициативы и проекты</p>
-							</div>
-						</li>
-						<li class="partners__card" data-animate="bottom">
-							<div class="partners__card-image">
-								<picture>
-									<source srcset="img/partners/mpei.webp" type="image/webp"><img src="img/partners/mpei.jpg" class="cover-image" alt="НИУ «МЭИ»">
-								</picture>
-							</div>
-							<div class="partners__card-content">
-								<h3 class="partners__card-name">НИУ «МЭИ»</h3>
-								<p class="partners__card-text">Совместные проекты, практика студентов, повышение квалификации сотрудников</p>
-							</div>
-						</li>
-						<li class="partners__card" data-animate="bottom">
-							<div class="partners__card-image">
-								<picture>
-									<source srcset="img/partners/gymnasium.webp" type="image/webp"><img src="img/partners/gymnasium.jpg" class="cover-image" alt="Гимназия №2 им. Ш. Марджани">
-								</picture>
-							</div>
-							<div class="partners__card-content">
-								<h3 class="partners__card-name">Гимназия №2 им. Ш. Марджани</h3>
-								<p class="partners__card-text">Организация "Инженерного класса" при&nbsp;содействии Института радиоэлектроники, фотоники и цифровых технологий КНИТУ-КАИ</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="career-guidance">
-				<div class="career-guidance__container container">
-					<div class="career-guidance__header">
-						<h2 class="career-guidance__title title" data-animate="bottom">Профориентационная работа со школьниками</h2>
-						<div class="career-guidance__controls" data-animate="bottom">
-							<button type="button" class="career-guidance__prev icon-prev swiper-button-prev"></button>
-							<button type="button" class="career-guidance__next icon-next swiper-button-next"></button>
-						</div>
-					</div>
-					<div class="career-guidance__body">
-						<div class="career-guidance__info">
-							<div class="career-guidance__stat" data-animate="bottom"><span data-counter>800</span>+</div>
-							<div class="career-guidance__caption" data-animate="bottom">Участников за 2025 год</div>
-							<p class="career-guidance__desc" data-animate="bottom">Экскурсионные маршруты по компаниям-резидентам, выездные мастер-классы, инженерные хакатоны с&nbsp;привлечением экспертов технопарка</p>
-						</div>
-						<div class="career-guidance__slider swiper" data-animate="bottom">
-							<div class="swiper-wrapper">
-								<a href="img/career-guidance/01.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
-									<picture>
-										<source srcset="img/career-guidance/01.webp" type="image/webp"><img src="img/career-guidance/01.jpg" class="cover-image" alt="Фото работы со школьниками">
-									</picture>
-								</a>
-								<a href="img/career-guidance/02.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
-									<picture>
-										<source srcset="img/career-guidance/02.webp" type="image/webp"><img src="img/career-guidance/02.jpg" class="cover-image" alt="Фото работы со школьниками">
-									</picture>
-								</a>
-								<a href="img/career-guidance/03.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
-									<picture>
-										<source srcset="img/career-guidance/03.webp" type="image/webp"><img src="img/career-guidance/03.jpg" class="cover-image" alt="Фото работы со школьниками">
-									</picture>
-								</a>
-								<a href="img/career-guidance/04.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
-									<picture>
-										<source srcset="img/career-guidance/04.webp" type="image/webp"><img src="img/career-guidance/04.jpg" class="cover-image" alt="Фото работы со школьниками">
-									</picture>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="results">
-				<div class="results__container container">
-					<h2 class="results__title title" data-animate="bottom">Результаты взаимодействия</h2>
-					<ul class="results__list">
-						<li class="results__card" data-animate="bottom">
-							<div class="results__card-image">
-								<img src="img/icons/test-pipe.svg" alt="Иконка">
-							</div>
-							<div class="results__card-name">Практический опыт <br> студентов</div>
-							<div class="results__card-desc">Реальная работа на производстве</div>
-						</li>
-						<li class="results__card" data-animate="bottom">
-							<div class="results__card-image">
-								<img src="img/icons/bulb.svg" alt="Иконка">
-							</div>
-							<div class="results__card-name">Популяризация инженерной среды</div>
-							<div class="results__card-desc">Укрепление интереса к профильным специальностям</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="order order--grey">
-				<div class="order__container container">
-					<div class="order__banner" data-animate="bottom">
-						<h2 class="order__title title"> Открыты к&nbsp;сотрудничеству </h2>
-						<div class="order__banner-subtitle"> Готовы развивать партнерство с образовательными организациями </div>
-						<a href="#callback" data-fancybox data-form-title="Связаться" class="order__banner-btn btn btn-secondary"> Связаться </a>
-						<div class="order__video">
-							<video class="order__video-block" playsinline autoplay loop muted preload="none" poster="img/order-poster.jpg">
-								<source src="files/promo.webm" type='video/webm; codecs="vp9, vorbis"'>
-								<source src="files/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-							</video>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-			<div class="footer__container container" itemscope itemtype="http://schema.org/Organization" itemid="#main-org">
-				<meta itemprop="name" content="Технопарк «Искра-Волга»">
-				<div class="footer__main">
-					<a href="/" class="footer__logo" itemprop="url">
-						<img src="img/logo-white.svg" alt="Логотип" itemprop="logo">
-					</a>
-					<p class="footer__copyright">© 2026 Технопарк «Искра-Волга»</p>
-					<a href="https://proudly.ru/" class="footer__prod" target="_blank" rel="noopener noreferrer nofollow"> Разработка сайта <img src="img/prod-logo.svg" width="59" height="15" alt="Разработка сайта Proudly" loading="lazy">
-					</a>
-				</div>
-				<div class="footer__contacts">
-					<div class="footer__contacts-links">
-						<a href="tel:+78432150332" class="footer__contacts-link" itemprop="telephone">8 (843) 215-03-32</a>
-						<a href="mailto:info@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">info@iskra-volga.ru</a>
-					</div>
-					<address class="footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<span itemprop="postalCode">422527</span>, <span itemprop="addressRegion">Республика Татарстан</span>, Зеленодольский район, город <span itemprop="addressLocality">Зеленодольск</span>, <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
-					</address>
-				</div>
-				<div class="footer__side">
-					<nav aria-label="Меню в подвале" class="footer__menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<ul class="footer__menu-list">
-							<li class="footer__menu-item">
-								<a href="/" class="footer__menu-link" itemprop="url">
-									<span itemprop="name">Главная</span>
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="/about.html" class="footer__menu-link" itemprop="url">
-									<span itemprop="name">О технопарке</span>
-								</a>
-							</li>
-							<li class="footer__menu-item">
-								<a href="/university.html" class="footer__menu-link" itemprop="url">
-									<span itemprop="name">Обучение</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<a href="/policy.html" rel="nofollow" class="footer__policy">Политика конфиденциальности</a>
-				</div>
-			</div>
-		</footer>
-		<dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
-			<h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
-			<form action="/send.php" method="post" class="popup__form form" data-ya-captcha-form>
-				<div class="form__field">
-					<input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
-					<span class="form__error">Введите ваше имя</span>
-				</div>
-				<div class="form__field">
-					<input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
-					<span class="form__error">Введите корректный email</span>
-				</div>
-				<div class="form__field">
-					<textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
-				</div>
-				<input type="hidden" name="smart-token" value="">
-				<button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
-				<label class="form__checkbox checkbox">
-					<input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
-					<span class="checkbox__content">Нажимая на кнопку, Вы даете согласие на <a href="/policy.html">обработку персональных данных</a></span>
-					<span class="form__error">Необходимо согласие</span>
-				</label>
-			</form>
-		</dialog>
-		<dialog id="success" class="popup" aria-labelledby="success-modal-title">
-			<div class="popup__icon">
-				<img src="img/icons/success.svg" alt="Иконка">
-			</div>
-			<h2 id="success-modal-title" class="popup__title title-sm">Успешно!</h2>
-			<p class="popup__subtitle">Наш специалист свяжется с Вами</p>
-		</dialog>
-		<dialog id="error" class="popup" aria-labelledby="error-modal-title">
-			<div class="popup__icon">
-				<img src="img/icons/error.svg" alt="Иконка">
-			</div>
-			<h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
-			<p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
-		</dialog> <!-- plugins -->
-		<script defer src="js/libs/swiper-bundle.min.js?_v=20260611140032"></script>
-		<script defer src="js/libs/fancybox.umd.js?_v=20260611140032"></script>
-		<!-- plugins -->
-		<script src="js/app.min.js?_v=20260611140032"></script>
-		<div id="captcha-container" style="display:none" aria-hidden="true"></div>
-		<script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad&_v=20260611140032" defer></script>
-		<script>
-			function onSmartCaptchaLoad() {
-				if (typeof window.initSmartCaptcha === 'function') {
-					window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
-				}
-			}
+      <meta charset="UTF-8">
+      <meta name="format-detection" content="telephone=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
 
-		</script>
-	</div>
-</body>
 
+      <!-- favicon -->
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <meta name="apple-mobile-web-app-title" content="Искра Волга">
+      <link rel="manifest" href="/site.webmanifest">
+      <!-- favicon -->
+
+      <!-- Open Graph  -->
+      <meta property="og:type" content="business.business">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="">
+      <meta property="og:image" content="/OG.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:site_name" content="Искра-Волга">
+      <meta property="og:locale" content="ru_RU">
+      <meta name="twitter:card" content="summary_large_image">
+      <!-- Open Graph  -->
+
+      <!-- plugins -->
+      <link rel="preload" href="css/libs/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+      </noscript>
+      <link rel="preload" href="css/libs/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="css/libs/fancybox.css">
+      </noscript>
+      <!-- plugins -->
+
+      <link rel="stylesheet" href="css/reset.min.css">
+      <link rel="stylesheet" href="css/style.min.css">
+
+      <noscript>
+        <style>
+          [data-animate] {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            transition: none;
+          }
+        </style>
+      </noscript>
+
+
+
+
+
+    </head>
+    <body itemscope itemtype="https://schema.org/WebPage">
+        <div class="wrapper">
+            <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+                <div class="header__container container">
+                    <a href="/" class="header__logo" itemprop="url">
+                        <img src="img/logo.svg" alt="Логотип Искра-Волга" itemprop="image">
+                    </a>
+                    <div class="header__menu menu">
+                        <div class="menu__content">
+                            <nav aria-label="Меню в шапке" class="menu__navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a href="/" class="menu__link" itemprop="url">
+                                            <span itemprop="name">Главная</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="/about.html" class="menu__link" itemprop="url">
+                                            <span itemprop="name">О технопарке</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item menu__item--parent">
+                                        <a href="/university.html" class="menu__link active" itemprop="url">
+                                            <span itemprop="name">Корпоративный университет</span>
+                                        </a>
+                                        <button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
+                                        <ul class="submenu">
+                                            <li class="submenu__item">
+                                                <a href="/university.html" class="submenu__link" itemprop="url">
+                                                    <span itemprop="name">Обучение и подготовка кадров</span>
+                                                </a>
+                                            </li>
+                                            <li class="submenu__item">
+                                                <a href="/interaction.html" class="submenu__link active" itemprop="url">
+                                                    <span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="/contacts.html" class="menu__link" itemprop="url">
+                                            <span itemprop="name">Контакты</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a href="/contest.html" class="menu__contest">Конкурс</a>
+                            <a href="tel:88432150332" class="menu__phone icon-phone">8 (843) 215-03-32</a>
+                        </div>
+                    </div>
+                    <a href="tel:88432150332" class="header__phone icon-phone">8 (843) 215-03-32</a>
+                    <button type="button" aria-label="Открыть мобильное меню" class="header__menu-toggler icon-menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </header>
+            <main class="page" itemprop="mainContentOfPage">
+                <section class="interaction">
+                    <div class="interaction__container container">
+                        <div class="interaction__banner banner">
+                            <div class="banner__image">
+                                <picture><source srcset="img/interaction.webp" type="image/webp"><img src="img/interaction.jpg" fetchpriority="high" class="cover-image" alt="Фото компании"></picture>
+                            </div>
+                            <div class="banner__description description-block description-block--left">
+                                <h1 class="banner__title title">Взаимодействие с&nbsp;образовательной средой</h1>
+                                <div class="banner__text">
+                                    <p>Технопарк «Искра-Волга» активно сотрудничает с федеральными вузами в рамках образовательных и научных программ.</p>
+                                    <p>Взаимодействие направлено на подготовку специалистов, развитие практических навыков у студентов и реализацию совместных исследовательских проектов.</p>
+                                </div>
+                                <a href="#callback" data-fancybox data-form-title="Оставить заявку" class="banner__btn btn btn-primary">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="advantages">
+                    <div class="container">
+                        <h2 class="advantages__title title" data-animate="bottom">Основные направления сотрудничества</h2>
+                        <ul class="advantages__list">
+                            <li class="advantages__card" data-animate="bottom">
+                                <div class="advantages__card-header">
+                                    <div class="advantages__card-icon">
+                                        <img src="img/icons/users-group.svg" alt="Практическая подготовка студентов">
+                                    </div>
+                                    <h3 class="advantages__card-title">Практическая подготовка студентов</h3>
+                                </div>
+                                <p class="advantages__card-text">Стажировки и практика на базе компаний-резидентов</p>
+                            </li><li class="advantages__card" data-animate="bottom">
+                                <div class="advantages__card-header">
+                                    <div class="advantages__card-icon">
+                                        <img src="img/icons/book-open.svg" alt="Совместные образовательные программы">
+                                    </div>
+                                    <h3 class="advantages__card-title">Совместные образовательные программы</h3>
+                                </div>
+                                <p class="advantages__card-text">Разработка и реализация профильных направлений</p>
+                            </li><li class="advantages__card" data-animate="bottom">
+                                <div class="advantages__card-header">
+                                    <div class="advantages__card-icon">
+                                        <img src="img/icons/cup.svg" alt="Конкурсы и инженерные хакатоны">
+                                    </div>
+                                    <h3 class="advantages__card-title">Конкурсы и инженерные хакатоны</h3>
+                                </div>
+                                <p class="advantages__card-text">Организация с привлечением экспертов от компаний-резидентов</p>
+                            </li><li class="advantages__card" data-animate="bottom">
+                                <div class="advantages__card-header">
+                                    <div class="advantages__card-icon">
+                                        <img src="img/icons/backpack.svg" alt="Профориентационная работа">
+                                    </div>
+                                    <h3 class="advantages__card-title">Профориентационная работа</h3>
+                                </div>
+                                <p class="advantages__card-text">Экскурсии и мастер-классы для школьников</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="partners">
+                    <div class="container">
+                        <h2 class="partners__title title" data-animate="bottom">Ключевые образовательные партнеры</h2>
+                        <ul class="partners__list">
+                            <li class="partners__card" data-animate="bottom">
+                                <div class="partners__card-image">
+                                    <picture><source srcset="img/partners/kgeu.webp" type="image/webp"><img src="img/partners/kgeu.jpg" class="cover-image" alt="Казанский государственный энергетический университет"></picture>
+                                </div>
+                                <div class="partners__card-content">
+                                    <h3 class="partners__card-name">Казанский государственный энергетический университет</h3>
+                                    <p class="partners__card-text">Базовая кафедра, подготовка специалистов по направлениям электромобильного транспорта и инфраструктуры</p>
+                                </div>
+                            </li><li class="partners__card" data-animate="bottom">
+                                <div class="partners__card-image">
+                                    <picture><source srcset="img/partners/knitu-kai.webp" type="image/webp"><img src="img/partners/knitu-kai.jpg" class="cover-image" alt="КНИТУ-КАИ им. А.Н. Туполева"></picture>
+                                </div>
+                                <div class="partners__card-content">
+                                    <h3 class="partners__card-name">КНИТУ-КАИ им. А.Н. Туполева</h3>
+                                    <p class="partners__card-text">Участие в фестивалях, сотрудничество с&nbsp;институтами, образовательные инициативы и проекты</p>
+                                </div>
+                            </li><li class="partners__card" data-animate="bottom">
+                                <div class="partners__card-image">
+                                    <picture><source srcset="img/partners/mpei.webp" type="image/webp"><img src="img/partners/mpei.jpg" class="cover-image" alt="НИУ «МЭИ»"></picture>
+                                </div>
+                                <div class="partners__card-content">
+                                    <h3 class="partners__card-name">НИУ «МЭИ»</h3>
+                                    <p class="partners__card-text">Совместные проекты, практика студентов, повышение квалификации сотрудников</p>
+                                </div>
+                            </li><li class="partners__card" data-animate="bottom">
+                                <div class="partners__card-image">
+                                    <picture><source srcset="img/partners/gymnasium.webp" type="image/webp"><img src="img/partners/gymnasium.jpg" class="cover-image" alt="Гимназия №2 им. Ш. Марджани"></picture>
+                                </div>
+                                <div class="partners__card-content">
+                                    <h3 class="partners__card-name">Гимназия №2 им. Ш. Марджани</h3>
+                                    <p class="partners__card-text">Организация "Инженерного класса" при&nbsp;содействии Института радиоэлектроники, фотоники и цифровых технологий КНИТУ-КАИ</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="career-guidance">
+                    <div class="career-guidance__container container">
+                        <div class="career-guidance__header">
+                            <h2 class="career-guidance__title title" data-animate="bottom">Профориентационная работа со школьниками</h2>
+                            <div class="career-guidance__controls" data-animate="bottom">
+                                <button type="button" class="career-guidance__prev icon-prev swiper-button-prev"></button>
+                                <button type="button" class="career-guidance__next icon-next swiper-button-next"></button>
+                            </div>
+                        </div>
+                        <div class="career-guidance__body">
+                            <div class="career-guidance__info">
+                                <div class="career-guidance__stat" data-animate="bottom"><span data-counter>800</span>+</div>
+                                <div class="career-guidance__caption" data-animate="bottom">Участников за 2025 год</div>
+                                <p class="career-guidance__desc" data-animate="bottom">Экскурсионные маршруты по компаниям-резидентам, выездные мастер-классы, инженерные хакатоны с&nbsp;привлечением экспертов технопарка</p>
+                            </div>
+                            <div class="career-guidance__slider swiper" data-animate="bottom">
+                                <div class="swiper-wrapper">
+                                    <a href="img/career-guidance/01.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <picture><source srcset="img/career-guidance/01.webp" type="image/webp"><img src="img/career-guidance/01.jpg" class="cover-image" alt="Фото работы со школьниками"></picture>
+                                    </a>
+                                    <a href="img/career-guidance/02.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <picture><source srcset="img/career-guidance/02.webp" type="image/webp"><img src="img/career-guidance/02.jpg" class="cover-image" alt="Фото работы со школьниками"></picture>
+                                    </a>
+                                    <a href="img/career-guidance/03.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <picture><source srcset="img/career-guidance/03.webp" type="image/webp"><img src="img/career-guidance/03.jpg" class="cover-image" alt="Фото работы со школьниками"></picture>
+                                    </a>
+                                    <a href="img/career-guidance/04.jpg" data-fancybox="career-guidance" class="career-guidance__slide swiper-slide">
+                                        <picture><source srcset="img/career-guidance/04.webp" type="image/webp"><img src="img/career-guidance/04.jpg" class="cover-image" alt="Фото работы со школьниками"></picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="results">
+                    <div class="results__container container">
+                        <h2 class="results__title title" data-animate="bottom">Результаты взаимодействия</h2>
+                        <ul class="results__list">
+                            <li class="results__card" data-animate="bottom">
+                                <div class="results__card-image">
+                                    <img src="img/icons/test-pipe.svg" alt="Иконка">
+                                </div>
+                                <div class="results__card-name">Практический опыт <br> студентов</div>
+                                <div class="results__card-desc">Реальная работа на производстве</div>
+                            </li>
+                            <li class="results__card" data-animate="bottom">
+                                <div class="results__card-image">
+                                    <img src="img/icons/bulb.svg" alt="Иконка">
+                                </div>
+                                <div class="results__card-name">Популяризация инженерной среды</div>
+                                <div class="results__card-desc">Укрепление интереса к профильным специальностям</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="order order--grey">
+                    <div class="order__container container">
+                        <div class="order__banner" data-animate="bottom">
+                            <h2 class="order__title title">
+                                Открыты к&nbsp;сотрудничеству
+                                
+                            </h2>
+                            <div class="order__banner-subtitle">
+                                Готовы развивать партнерство с образовательными организациями
+                                
+                            </div>
+                            <a href="#callback" data-fancybox data-form-title="Связаться" class="order__banner-btn btn btn-secondary">
+                                Связаться
+                                
+                            </a>
+                            <div class="order__video">
+                                <video class="order__video-block" playsinline autoplay loop muted preload="none" poster="img/order-poster.jpg">
+                                    <source src="files/promo.webm" type='video/webm; codecs="vp9, vorbis"'>
+                                    <source src="files/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+                <div class="footer__container container" itemscope itemtype="http://schema.org/Organization" itemid="#main-org">
+                    <meta itemprop="name" content="Технопарк «Искра-Волга»">
+                    <div class="footer__main">
+                        <a href="/" class="footer__logo" itemprop="url">
+                            <img src="img/logo-white.svg" alt="Логотип" itemprop="logo">
+                        </a>
+                        <p class="footer__copyright">© 2026 Технопарк «Искра-Волга»</p>
+                        <a href="https://proudly.ru/" class="footer__prod" target="_blank" rel="noopener noreferrer nofollow">
+                            Разработка сайта <img src="img/prod-logo.svg" width="59" height="15" alt="Разработка сайта Proudly" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-links">
+                            <a href="tel:+78432150332" class="footer__contacts-link" itemprop="telephone">8 (843) 215-03-32</a>
+                            <a href="mailto:info@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">info@iskra-volga.ru</a>
+                        </div>
+                        <address class="footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="postalCode">422527</span>,
+                            <span itemprop="addressRegion">Республика Татарстан</span>,
+                            Зеленодольский район, город
+                            <span itemprop="addressLocality">Зеленодольск</span>,
+                            <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
+                        </address>
+                    </div>
+                    <div class="footer__side">
+                        <nav aria-label="Меню в подвале" class="footer__menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a href="/" class="footer__menu-link" itemprop="url">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="/about.html" class="footer__menu-link" itemprop="url">
+                                        <span itemprop="name">О технопарке</span>
+                                    </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="/university.html" class="footer__menu-link" itemprop="url">
+                                        <span itemprop="name">Обучение</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="/policy.html" rel="nofollow" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </footer>
+            <dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
+                <h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
+                <form action="/send.php" method="post" class="popup__form form" data-ya-captcha-form>
+                    <div class="form__field">
+                        <input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
+                        <span class="form__error">Введите ваше имя</span>
+                    </div>
+                    <div class="form__field">
+                        <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+                        <span class="form__error">Введите корректный email</span>
+                    </div>
+                    <div class="form__field">
+                        <textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
+                    </div>
+                    <input type="hidden" name="smart-token" value="">
+                    <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+                    <label class="form__checkbox checkbox">
+                        <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+                        <span class="checkbox__content">Нажимая на кнопку, Вы даете согласие на <a href="/policy.html">обработку персональных данных</a></span>
+                        <span class="form__error">Необходимо согласие</span>
+                    </label>
+                </form>
+            </dialog>
+
+            <dialog id="contest" class="popup popup--contest" aria-labelledby="contest-modal-title">
+                <h2 id="contest-modal-title" class="popup__title title-sm">Подать заявку на участие</h2>
+                <form action="/send.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
+                    <div class="form__field">
+                        <input type="text" name="name" autocomplete="name" class="form__control" placeholder="ФИО" data-required>
+                        <span class="form__error">Введите ФИО</span>
+                    </div>
+                    <div class="form__field">
+                        <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+                        <span class="form__error">Введите корректный email</span>
+                    </div>
+                    <div class="form__field">
+                        <input type="tel" name="phone" autocomplete="tel" class="form__control" placeholder="Телефон" data-required>
+                        <span class="form__error">Введите корректный телефон</span>
+                    </div>
+                    <div class="form__attach file-attach" data-file-attach data-max-size="10" data-accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png">
+                        <span class="file-attach__label">Прикрепить заявку</span>
+                        <input type="file" name="application" class="file-attach__input hidden" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png" data-required>
+                        <div class="file-attach__area" data-file-attach-area>
+                            <div class="file-attach__state file-attach__state--empty" data-state="empty">
+                                <img src="img/contest/paperclip-24.svg" class="file-attach__icon" alt="" width="24" height="24">
+                                <span class="file-attach__hint">PDF, DOC, JPG до 10 МБ</span>
+                                <button type="button" class="file-attach__choose" data-file-attach-choose>Выбрать</button>
+                            </div>
+                            <div class="file-attach__state file-attach__state--ready" data-state="ready" hidden>
+                                <img src="img/contest/file-doc.svg" class="file-attach__icon" alt="" width="24" height="24">
+                                <div class="file-attach__meta">
+                                    <span class="file-attach__name" data-file-attach-name></span>
+                                    <span class="file-attach__size" data-file-attach-size></span>
+                                </div>
+                                <button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
+                                    <img src="img/contest/trash.svg" alt="" width="16" height="16">
+                                </button>
+                            </div>
+                            <div class="file-attach__state file-attach__state--error" data-state="error" hidden>
+                                <img src="img/contest/warning.svg" class="file-attach__icon" alt="" width="24" height="24">
+                                <div class="file-attach__meta">
+                                    <span class="file-attach__name" data-file-attach-error-name></span>
+                                    <span class="file-attach__error-text" data-file-attach-error></span>
+                                </div>
+                                <button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
+                                    <img src="img/contest/trash.svg" alt="" width="16" height="16">
+                                </button>
+                            </div>
+                        </div>
+                        <span class="form__error">Прикрепите файл заявки</span>
+                    </div>
+                    <input type="hidden" name="smart-token" value="">
+                    <input type="hidden" name="form-title" value="Подать заявку на участие">
+                    <label class="form__checkbox checkbox">
+                        <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+                        <span class="checkbox__content">Я даю согласие на обработку <a href="/policy.html">персональных данных</a></span>
+                        <span class="form__error">Необходимо согласие</span>
+                    </label>
+                    <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+                </form>
+            </dialog>
+
+            <dialog id="success" class="popup" aria-labelledby="success-modal-title">
+                <div class="popup__icon">
+                    <img src="img/icons/success.svg" alt="Иконка">
+                </div>
+                <h2 id="success-modal-title" class="popup__title title-sm">Успешно!</h2>
+                <p class="popup__subtitle">Наш специалист свяжется с Вами</p>
+            </dialog>
+
+            <dialog id="error" class="popup" aria-labelledby="error-modal-title">
+                <div class="popup__icon">
+                    <img src="img/icons/error.svg" alt="Иконка">
+                </div>
+                <h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
+                <p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
+            </dialog>
+            <!-- plugins -->
+            <script defer src="js/libs/swiper-bundle.min.js"></script>
+            <script defer src="js/libs/fancybox.umd.js"></script>
+            <!-- plugins -->
+
+            <script src="js/app.min.js"></script>
+
+            <div id="captcha-container" style="display:none" aria-hidden="true"></div>
+            <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad" defer></script>
+            <script>
+            function onSmartCaptchaLoad() {
+                if (typeof window.initSmartCaptcha === 'function') {
+                    window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
+                }
+            }
+            </script>
+        </div>
+    </body>
 </html>

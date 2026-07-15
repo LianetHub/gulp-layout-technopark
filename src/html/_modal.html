@@ -22,6 +22,64 @@
     </form>
 </dialog>
 
+<dialog id="contest" class="popup popup--contest" aria-labelledby="contest-modal-title">
+    <h2 id="contest-modal-title" class="popup__title title-sm">Подать заявку на участие</h2>
+    <form action="/send.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
+        <div class="form__field">
+            <input type="text" name="name" autocomplete="name" class="form__control" placeholder="ФИО" data-required>
+            <span class="form__error">Введите ФИО</span>
+        </div>
+        <div class="form__field">
+            <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+            <span class="form__error">Введите корректный email</span>
+        </div>
+        <div class="form__field">
+            <input type="tel" name="phone" autocomplete="tel" class="form__control" placeholder="Телефон" data-required>
+            <span class="form__error">Введите корректный телефон</span>
+        </div>
+        <div class="form__attach file-attach" data-file-attach data-max-size="10" data-accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png">
+            <span class="file-attach__label">Прикрепить заявку</span>
+            <input type="file" name="application" class="file-attach__input hidden" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png" data-required>
+            <div class="file-attach__area" data-file-attach-area>
+                <div class="file-attach__state file-attach__state--empty" data-state="empty">
+                    <img src="@img/contest/paperclip-24.svg" class="file-attach__icon" alt="" width="24" height="24">
+                    <span class="file-attach__hint">PDF, DOC, JPG до 10 МБ</span>
+                    <button type="button" class="file-attach__choose" data-file-attach-choose>Выбрать</button>
+                </div>
+                <div class="file-attach__state file-attach__state--ready" data-state="ready" hidden>
+                    <img src="@img/contest/file-doc.svg" class="file-attach__icon" alt="" width="24" height="24">
+                    <div class="file-attach__meta">
+                        <span class="file-attach__name" data-file-attach-name></span>
+                        <span class="file-attach__size" data-file-attach-size></span>
+                    </div>
+                    <button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
+                        <img src="@img/contest/trash.svg" alt="" width="16" height="16">
+                    </button>
+                </div>
+                <div class="file-attach__state file-attach__state--error" data-state="error" hidden>
+                    <img src="@img/contest/warning.svg" class="file-attach__icon" alt="" width="24" height="24">
+                    <div class="file-attach__meta">
+                        <span class="file-attach__name" data-file-attach-error-name></span>
+                        <span class="file-attach__error-text" data-file-attach-error></span>
+                    </div>
+                    <button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
+                        <img src="@img/contest/trash.svg" alt="" width="16" height="16">
+                    </button>
+                </div>
+            </div>
+            <span class="form__error">Прикрепите файл заявки</span>
+        </div>
+        <input type="hidden" name="smart-token" value="">
+        <input type="hidden" name="form-title" value="Подать заявку на участие">
+        <label class="form__checkbox checkbox">
+            <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+            <span class="checkbox__content">Я даю согласие на обработку <a href="/policy.html">персональных данных</a></span>
+            <span class="form__error">Необходимо согласие</span>
+        </label>
+        <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+    </form>
+</dialog>
+
 <dialog id="success" class="popup" aria-labelledby="success-modal-title">
     <div class="popup__icon">
         <img src="@img/icons/success.svg" alt="Иконка">

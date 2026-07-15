@@ -83,6 +83,29 @@
 		}
 	}
 
+	&.popup--contest {
+		@media (min-width: $md4) {
+			max-width: rem(467);
+		}
+
+		.popup__form {
+			.form__checkbox {
+				margin-top: 1.5rem;
+				order: 0;
+			}
+
+			.form__submit {
+				margin-top: 1rem;
+
+				&:disabled {
+					background: #a7b3da;
+					border-color: #a7b3da;
+					color: rgba(255, 255, 255, 0.7);
+				}
+			}
+		}
+	}
+
 	&.popup--large {
 		@media (min-width:$md5) {
 			max-width: 49.875rem;

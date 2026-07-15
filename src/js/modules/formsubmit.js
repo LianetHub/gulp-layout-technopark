@@ -26,7 +26,7 @@ export const formSubmit = () => {
 				toggleButtonState(form);
 			});
 
-			if (input.type === 'checkbox') {
+			if (input.type === 'checkbox' || input.type === 'file') {
 				input.addEventListener('change', () => {
 					validateField(input);
 					toggleButtonState(form);
@@ -105,6 +105,8 @@ export const formSubmit = () => {
 			isFieldValid = input.checked;
 		} else if (input.matches("[type='tel']")) {
 			isFieldValid = phoneTest(input.value);
+		} else if (input.matches("[type='file']")) {
+			isFieldValid = input.files && input.files.length > 0;
 		} else {
 			isFieldValid = input.value.trim() !== "";
 		}
@@ -141,6 +143,10 @@ export const formSubmit = () => {
 				if (!emailTest(input.value)) isInvalid = true;
 			} else if (input.matches("[type='checkbox']")) {
 				if (!input.checked) isInvalid = true;
+			} else if (input.matches("[type='tel']")) {
+				if (!phoneTest(input.value)) isInvalid = true;
+			} else if (input.matches("[type='file']")) {
+				if (!input.files || input.files.length === 0) isInvalid = true;
 			} else if (input.value.trim() === "") {
 				isInvalid = true;
 			}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    "title": "Конкурс"
+    })
+    <body itemscope itemtype="https://schema.org/WebPage">
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            'active': 6
+            })
+            <main class="page page--contest" itemprop="mainContentOfPage">
+                <section class="contest-hero">
+                    <div class="contest-hero__container container">
+                        <div class="contest-hero__content">
+                            <h1 class="contest-hero__title" data-animate="bottom">«Искра-Волга» ищет&nbsp;новые идеи</h1>
+                            <div class="contest-hero__text" data-animate="bottom">
+                                <p>Технопарк «Искра-Волга» инвестирует <strong>до 10 млн. рублей</strong> в&nbsp;энергетические инновации. Три программы финансирования охватывают весь путь разработчика: от первой концепции до масштабирования стартапа.</p>
+                                <p class="contest-hero__lead">Мы создаём условия, в которых каждая перспективная технологическая идея получает шанс стать реальным продуктом.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="nominations">
+                    <div class="nominations__container container">
+                        <h2 class="nominations__title title" data-animate="bottom">К рассмотрению принимаются</h2>
+                        <ul class="nominations__list">
+                            @@loop('./html/templates/_nomination-card.html', './html/json/nominations.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="contest-docs">
+                    <div class="contest-docs__container container">
+                        <h2 class="contest-docs__title title" data-animate="bottom">Документы</h2>
+                        <ul class="contest-docs__list">
+                            @@loop('./html/templates/_document-item.html', './html/json/contest-documents.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="contest-apply">
+                    <div class="contest-apply__container container">
+                        <div class="contest-apply__banner" data-animate="bottom">
+                            <div class="contest-apply__image">
+                                <img src="@img/contest/plane.png" alt="Рисунок самолетика">
+                            </div>
+                            <div class="contest-apply__content">
+                                <h2 class="contest-apply__title title">Подать заявку на участие</h2>
+                                <p class="contest-apply__desc">Заполните форму и отправьте на рассмотрение экспертной комиссии. Наши специалисты уже ждут вашу заявку.</p>
+                                <a href="#contest" data-fancybox data-form-title="Подать заявку на участие" class="contest-apply__btn btn btn-primary">Участвовать</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

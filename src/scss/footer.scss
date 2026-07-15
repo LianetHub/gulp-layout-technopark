@@ -48,14 +48,22 @@
         order: -1;
         max-width: 10.375rem;
         display: block;
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
 
         @media (min-width:$md5) {
             max-width: 11.25rem;
-
         }
 
         @media (min-width:$md3) {
             max-width: 14.6875rem;
+        }
+
+        @media (min-width:$md1) {
+            max-width: rem(235);
         }
     }
 

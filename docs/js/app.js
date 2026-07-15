@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	devFunctions.isWebp();
 	devFunctions.OS();
+	devFunctions.initFileAttach();
 	devFunctions.formSubmit();
 	devFunctions.initYandexMap();
 	devFunctions.initMailtoLinks();
@@ -27,11 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		const header = document.querySelector(".header");
 
 		// form-title (hidden) for callback form
-		const callbackTrigger = target.closest('[data-fancybox][href="#callback"], [data-fancybox][data-src="#callback"]');
-		if (callbackTrigger) {
-			const modal = document.getElementById("callback");
+		const formModalTrigger = target.closest('[data-fancybox][href="#callback"], [data-fancybox][data-src="#callback"], [data-fancybox][href="#contest"], [data-fancybox][data-src="#contest"]');
+		if (formModalTrigger) {
+			const href = formModalTrigger.getAttribute("href") || formModalTrigger.getAttribute("data-src") || "";
+			const modalId = href.replace("#", "");
+			const modal = document.getElementById(modalId);
 			const form = modal?.querySelector("form");
-			const title = callbackTrigger.getAttribute("data-form-title") || callbackTrigger.dataset.formTitle || callbackTrigger.textContent?.trim();
+			const title = formModalTrigger.getAttribute("data-form-title") || formModalTrigger.dataset.formTitle || formModalTrigger.textContent?.trim();
 
 			if (form && title) {
 				let hidden = form.querySelector('input[type="hidden"][name="form-title"]');
@@ -56,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.body.classList.remove("open-mobile-menu");
 		}
 
-		if (target.closest(".menu__link")) {
+		if (target.closest(".menu__link, .menu__contest")) {
 			header.classList.remove("open-menu");
 			document.body.classList.remove("open-mobile-menu");
 		}
