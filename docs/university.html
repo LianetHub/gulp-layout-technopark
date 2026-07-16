@@ -1,842 +1,816 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
 
+<head>
+	<title>Технопарк "Искра-Волга" | Корпоративный университет</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Искра Волга">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="/OG.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:site_name" content="Искра-Волга">
+	<meta property="og:locale" content="ru_RU">
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- Open Graph  -->
+	<!-- plugins -->
+	<link rel="preload" href="css/libs/swiper-bundle.min.css?_v=20260716214820" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260716214820">
+	</noscript>
+	<link rel="preload" href="css/libs/fancybox.css?_v=20260716214820" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260716214820">
+	</noscript>
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260716214820">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260716214820">
+	<noscript>
+		<style>
+			[data-animate] {
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+				transition: none;
+			}
 
-      <title>Технопарк "Искра-Волга" | Корпоративный университет</title>
+		</style>
+	</noscript>
+</head>
 
-      <meta charset="UTF-8">
-      <meta name="format-detection" content="telephone=no">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
+<body itemscope itemtype="https://schema.org/WebPage">
+	<div class="wrapper">
+		<header class="header" itemscope itemtype="http://schema.org/WPHeader">
+			<div class="header__container container">
+				<a href="/" class="header__logo" itemprop="url">
+					<img src="img/logo.svg" alt="Логотип Искра-Волга" itemprop="image">
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__content">
+						<nav aria-label="Меню в шапке" class="menu__navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="/" class="menu__link" itemprop="url">
+										<span itemprop="name">Главная</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="/about.html" class="menu__link" itemprop="url">
+										<span itemprop="name">О технопарке</span>
+									</a>
+								</li>
+								<li class="menu__item menu__item--parent">
+									<a href="/university.html" class="menu__link active" itemprop="url">
+										<span itemprop="name">Корпоративный университет</span>
+									</a>
+									<button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
+									<ul class="submenu">
+										<li class="submenu__item">
+											<a href="/university.html" class="submenu__link active" itemprop="url">
+												<span itemprop="name">Обучение и подготовка кадров</span>
+											</a>
+										</li>
+										<li class="submenu__item">
+											<a href="/interaction.html" class="submenu__link" itemprop="url">
+												<span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="/contacts.html" class="menu__link" itemprop="url">
+										<span itemprop="name">Контакты</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<a href="tel:88432150332" class="menu__phone icon-phone">8 (843) 215-03-32</a>
+					</div>
+				</div>
+				<div class="header__actions">
+					<a href="/contest.html" class="header__contest">Конкурс</a>
+					<a href="tel:88432150332" class="header__phone icon-phone">8 (843) 215-03-32</a>
+				</div>
+				<button type="button" aria-label="Открыть мобильное меню" class="header__menu-toggler icon-menu">
+					<span></span><span></span><span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page" itemprop="mainContentOfPage">
+			<section class="university">
+				<div class="university__container container">
+					<div class="university__banner banner">
+						<div class="banner__image">
+							<picture>
+								<source srcset="img/university/promo.webp" type="image/webp"><img src="img/university/promo.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
+							</picture>
+						</div>
+						<div class="banner__description description-block description-block--left">
+							<h1 class="banner__title title">Обучение и&nbsp;подготовка персонала</h1>
+							<div class="banner__text">Система подготовки и развития специалистов в электроэнергетике на базе реальной производственной инфраструктуры</div>
+							<div class="banner__btns">
+								<a href="#callback" data-fancybox data-form-title="Оставить заявку" class="banner__btn btn btn-primary">Оставить заявку</a>
+								<a href="" class="banner__btn btn btn-secondary">Посмотреть программы</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="education">
+				<div class="education__container container">
+					<div class="education__banner banner">
+						<div class="banner__image">
+							<picture>
+								<source srcset="img/university/education.webp" type="image/webp"><img src="img/university/education.jpg" fetchpriority="high" class="cover-image" alt="Фото компании">
+							</picture>
+						</div>
+						<div class="banner__description description-block description-block--right">
+							<h2 class="banner__title title-sm" data-animate="bottom">Образование как часть промышленной экосистемы</h2>
+							<div class="banner__text">
+								<p data-animate="bottom">Обучение и подготовка персонала на базе корпоративного университета «Искра-Волга» — это система развития компетенций, объединяющая образовательные, производственные и отраслевые направления.</p>
+								<p data-animate="bottom">Обучение строится на практике компаний-резидентов и&nbsp;ориентировано на реальные задачи электроэнергетики.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="directions">
+				<div class="container">
+					<h2 class="directions__title title" data-animate="bottom">Ключевые направления</h2>
+					<ul class="directions__list">
+						<li class="direction-card direction-card--grey direction-card--medium-desktop  direction-card--connection-right-desktop direction-card--connection-bottom-desktop">
+							<div class="direction-card__icon" data-animate="bottom">
+								<img src="img/icons/qualification.svg" alt="Иконка">
+							</div>
+							<div class="direction-card__content">
+								<div class="direction-card__caption" data-animate="bottom">Повышение квалификации</div>
+								<div class="direction-card__desc" data-animate="bottom">Программы профессионального развития для специалистов отрасли</div>
+							</div>
+						</li>
+						<li class="direction-card direction-card--grey direction-card--extralarge-desktop ">
+							<div class="direction-card__icon" data-animate="bottom">
+								<img src="img/icons/building.svg" alt="Иконка">
+							</div>
+							<div class="direction-card__content">
+								<div class="direction-card__caption" data-animate="bottom">Корпоративное обучение</div>
+								<div class="direction-card__desc" data-animate="bottom">Обучение под конкретные задачи</div>
+							</div>
+						</li>
+						<li class="direction-card direction-card--grey direction-card--extralarge  direction-card--connection-right-desktop">
+							<div class="direction-card__icon" data-animate="bottom">
+								<img src="img/icons/briefcase.svg" alt="Иконка">
+							</div>
+							<div class="direction-card__content">
+								<div class="direction-card__caption" data-animate="bottom">Сотрудничество с отраслью</div>
+								<div class="direction-card__desc" data-animate="bottom">Интеграция с предприятиями электроэнергетической отрасли</div>
+							</div>
+						</li>
+						<li class="direction-card direction-card--grey direction-card--medium ">
+							<div class="direction-card__icon" data-animate="bottom">
+								<img src="img/icons/helmet.svg" alt="Иконка">
+							</div>
+							<div class="direction-card__content">
+								<div class="direction-card__caption" data-animate="bottom">Охрана труда</div>
+								<div class="direction-card__desc" data-animate="bottom">Безопасность и предотвращение рисков в электроэнергетике</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="container">
+					<h2 class="advantages__title title" data-animate="bottom">Форматы обучения</h2>
+					<ul class="advantages__list advantages__list--row-header-mobile">
+						<li class="advantages__card" data-animate="bottom">
+							<div class="advantages__card-header">
+								<div class="advantages__card-icon">
+									<img src="img/icons/user-ok.svg" alt="Очное обучение">
+								</div>
+								<h3 class="advantages__card-title">Очное обучение</h3>
+							</div>
+							<p class="advantages__card-text">Занятия в аудиториях с преподавателями на территории технопарка</p>
+						</li>
+						<li class="advantages__card" data-animate="bottom">
+							<div class="advantages__card-header">
+								<div class="advantages__card-icon">
+									<img src="img/icons/instruments.svg" alt="Практика на&nbsp;оборудовании">
+								</div>
+								<h3 class="advantages__card-title">Практика на&nbsp;оборудовании</h3>
+							</div>
+							<p class="advantages__card-text">Работа на реальных стендах и производственном оборудовании</p>
+						</li>
+						<li class="advantages__card" data-animate="bottom">
+							<div class="advantages__card-header">
+								<div class="advantages__card-icon">
+									<img src="img/icons/monitor.svg" alt="Дистанционное обучение">
+								</div>
+								<h3 class="advantages__card-title">Дистанционное обучение</h3>
+							</div>
+							<p class="advantages__card-text">Онлайн-курсы и вебинары через образовательную платформу</p>
+						</li>
+						<li class="advantages__card" data-animate="bottom">
+							<div class="advantages__card-header">
+								<div class="advantages__card-icon">
+									<img src="img/icons/doc.svg" alt="Индивидуальные программы">
+								</div>
+								<h3 class="advantages__card-title">Индивидуальные программы</h3>
+							</div>
+							<p class="advantages__card-text">Разработка программ под потребности компании</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="education-business">
+				<div class="education-business__container container">
+					<div class="education-business__banner banner">
+						<div class="banner__image">
+							<picture>
+								<source srcset="img/university/professional-engineer-workers.webp" type="image/webp"><img src="img/university/professional-engineer-workers.jpg" class="cover-image" alt="Фото компании">
+							</picture>
+						</div>
+						<div class="banner__description description-block description-block--right">
+							<h2 class="banner__title title-sm" data-animate="bottom">Обучение под задачи бизнеса</h2>
+							<div class="banner__text">
+								<p data-animate="bottom">Учебный центр «ЭНЕРГОИННОВАЦИИ» разрабатывает программы обучения под требования конкретных организаций.</p>
+								<p data-animate="bottom">В качестве преподавателей привлекаются ведущие специалисты и эксперты в области энергетики и радиоэлектроники</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tech-base">
+				<div class="tech-base__container container">
+					<h2 class="tech-base__title title" data-animate="bottom">Учебная и техническая база</h2>
+					<ul class="tech-base__grid">
+						<li class="tech-base__card" data-animate="bottom">
+							<div class="tech-base__card-header">
+								<div class="tech-base__card-icon">
+									<img src="img/icons/battery-charging.svg" alt="Учебные стенды и&nbsp;макеты">
+								</div>
+								<h3 class="tech-base__card-title">Учебные стенды и&nbsp;макеты</h3>
+							</div>
+							<div class="tech-base__card-content">
+								<ul class="tech-base__card-list">
+									<li class="tech-base__card-list-item">Интеллектуальный учет </li>
+									<li class="tech-base__card-list-item">Электрические зарядные станции для&nbsp;электромобилей </li>
+									<li class="tech-base__card-list-item">Релейная защита и автоматика </li>
+									<li class="tech-base__card-list-item">Промышленные контроллеры </li>
+									<li class="tech-base__card-list-item">СИП-арматура </li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-base__card" data-animate="bottom">
+							<div class="tech-base__card-header">
+								<div class="tech-base__card-icon">
+									<img src="img/icons/desk.svg" alt="Учебные классы">
+								</div>
+								<h3 class="tech-base__card-title">Учебные классы</h3>
+							</div>
+							<div class="tech-base__card-content">
+								<ul class="tech-base__card-list">
+									<li class="tech-base__card-list-item">Два учебных класса на 12 и 30 человек </li>
+									<li class="tech-base__card-list-item">Презентационное оборудование </li>
+									<li class="tech-base__card-list-item">Возможность проведения дистанционных занятий в режиме онлайн </li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-base__card" data-animate="bottom">
+							<div class="tech-base__card-header">
+								<div class="tech-base__card-icon">
+									<img src="img/icons/globe.svg" alt="Система дистанционного <br> обучения">
+								</div>
+								<h3 class="tech-base__card-title">Система дистанционного <br> обучения</h3>
+							</div>
+							<div class="tech-base__card-content">
+								<ul class="tech-base__card-list">
+								</ul>
+								<a href="#" class="tech-base__card-btn btn btn-primary icon-right"> Перейти на платформу </a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="study-conditions">
+				<div class="container">
+					<h2 class="study-conditions__title title" data-animate="bottom">Условия обучения</h2>
+					<ul class="study-conditions__list">
+						<li class="study-conditions__card" data-animate="bottom">
+							<div class="study-conditions__card-header">
+								<div class="study-conditions__card-icon">
+									<img src="img/icons/dining-room.svg" alt="Столовая">
+								</div>
+								<h3 class="study-conditions__card-title">Столовая</h3>
+							</div>
+							<p class="study-conditions__card-text">Питание для слушателей на&nbsp;территории технопарка</p>
+						</li>
+						<li class="study-conditions__card" data-animate="bottom">
+							<div class="study-conditions__card-header">
+								<div class="study-conditions__card-icon">
+									<img src="img/icons/parks.svg" alt="Парковая зона">
+								</div>
+								<h3 class="study-conditions__card-title">Парковая зона</h3>
+							</div>
+							<p class="study-conditions__card-text">Зелёная территория для&nbsp;отдыха между занятиями</p>
+						</li>
+						<li class="study-conditions__card" data-animate="bottom">
+							<div class="study-conditions__card-header">
+								<div class="study-conditions__card-icon">
+									<img src="img/icons/heart.svg" alt="Медицинский кабинет">
+								</div>
+								<h3 class="study-conditions__card-title">Медицинский кабинет</h3>
+							</div>
+							<p class="study-conditions__card-text">Медицинская помощь в течение учебного дня</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="org-info" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<link itemprop="parentOrganization" href="#main-org">
+				<div class="container">
+					<h2 class="org-info__title title" data-animate="bottom" itemprop="name">Сведения об образовательной организации</h2>
+					<ul class="org-info__grid">
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">Организация</div>
+							<div class="org-info__card-value" itemprop="legalName">ООО «ЭНЕРГОИННОВАЦИИ»</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">Дата создания</div>
+							<div class="org-info__card-value">
+								<time itemprop="foundingDate" datetime="2020-12-15">15.12.2020</time>
+							</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">График работы</div>
+							<div class="org-info__card-value">
+								<meta itemprop="openingHours" content="Mo-Fr 08:00-17:00"> Пн-Пт: 08:00–17:00
+							</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">Email</div>
+							<div class="org-info__card-value">
+								<a href="mailto:tiv@iskra-volga.ru" itemprop="email">tiv@iskra-volga.ru</a>
+							</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">Телефон</div>
+							<div class="org-info__card-value">
+								<a href="tel:+78435620757" itemprop="telephone">8 (843) 562-07-57 (доб. 564)</a>
+							</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">ИНН</div>
+							<div class="org-info__card-value" itemprop="taxID">1648053156</div>
+						</li>
+						<li class="org-info__card" data-animate="bottom">
+							<div class="org-info__card-label">Адрес</div>
+							<div class="org-info__card-value">
+								<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+									<span itemprop="postalCode">422527</span>, <span itemprop="addressRegion">Республика Татарстан</span>, Зеленодольский район, город <span itemprop="addressLocality">Зеленодольск</span>, <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск</span>
+								</address>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="accreditation">
+				<div class="container">
+					<h2 class="accreditation__title title" data-animate="bottom">Лицензия и аккредитация</h2>
+					<ul class="accreditation__grid">
+						<li class="accreditation__card" data-animate="bottom">
+							<div class="accreditation__card-header">
+								<div class="accreditation__card-icon">
+									<img src="img/icons/license.svg" alt="Лицензия">
+								</div>
+								<div class="accreditation__card-info">
+									<h3 class="accreditation__card-title">Лицензия</h3>
+									<p class="accreditation__card-number">Регистрационный номер: <span>Л035-01234-16/00123456</span></p>
+								</div>
+							</div>
+							<a href="#" class="accreditation__card-link icon-right">
+								<span>Проверить документ</span>
+							</a>
+						</li>
+						<li class="accreditation__card" data-animate="bottom">
+							<div class="accreditation__card-header">
+								<div class="accreditation__card-icon">
+									<img src="img/icons/award.svg" alt="Аккредитация">
+								</div>
+								<div class="accreditation__card-info">
+									<h3 class="accreditation__card-title">Аккредитация</h3>
+									<p class="accreditation__card-number">Номер: <span>А123-456-789</span></p>
+								</div>
+							</div>
+							<a href="#" class="accreditation__card-link icon-right">
+								<span>Проверить документ</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="management">
+				<div class="management__container container">
+					<h2 class="management__title title" data-animate="bottom">Руководство</h2>
+					<ul class="management__list">
+						<li class="management__person" data-animate="bottom">
+							<h3 class="management__person-name">Мубаракшин Ильнур Ильсурович</h3>
+							<p class="management__person-position">Директор ООО «ЭНЕРГОИННОВАЦИИ»</p>
+							<div class="management__person-contacts">
+								<a href="tel:+78435620757" class="management__person-link icon-phone">8 (843) 562-07-57 (доб. 500)</a>
+								<a href="mailto:office@einnovation.ru" class="management__person-link icon-envelope">office@einnovation.ru</a>
+							</div>
+						</li>
+						<li class="management__person" data-animate="bottom">
+							<h3 class="management__person-name">Симонова Марина Николаевна</h3>
+							<p class="management__person-position">Руководитель направления обучения и подготовки персонала</p>
+							<div class="management__person-contacts">
+								<a href="tel:+78435620757" class="management__person-link icon-phone">8 (843) 562-07-57 (доб. 525)</a>
+								<a href="mailto:m.simonova@einnovation.ru" class="management__person-link icon-envelope">m.simonova@einnovation.ru</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="documents">
+				<div class="documents__container container">
+					<h2 class="documents__title title" data-animate="bottom">Документы</h2>
+					<ul class="documents__list">
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">ПОЛОЖЕНИЕ О ЦК</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение об оказании платных образовательных услуг</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение об организации обучения слушателей с ограниченными возможностями</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение о порядке защиты и хранения персональных данных</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Изменение №1 в Устав</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Устав</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Правила внутреннего распорядка слушателей</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Режим обучающихся</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение о порядке оформления возникновения, приостановления и прекращения отношений</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Правила приема слушателей</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение о порядке и основаниях перевода, отчисления и восстановления слушателей</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Положение об итоговой аттестации слушателей</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">Договор_форма</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+						<li class="documents__item" data-animate="bottom">
+							<div class="documents__item-info">
+								<div class="documents__item-icon">
+									<img src="img/icons/pdf.svg" alt="PDF">
+								</div>
+								<span class="documents__item-name">ПРАЙС</span>
+							</div>
+							<a href="#" class="documents__item-btn">
+								<span class="btn btn-primary icon-download">Скачать</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="study-plan">
+				<div class="container">
+					<h2 class="study-plan__title title" data-animate="bottom">План обучения и&nbsp;стоимость</h2>
+					<ul class="study-plan__grid">
+						<li class="study-plan__card" data-animate="bottom">
+							<a href="#" class="study-plan__card-link">
+								<div class="study-plan__card-header">
+									<div class="study-plan__card-icon">
+										<img src="img/icons/calendar.svg" alt="План обучения 2026">
+									</div>
+									<div class="study-plan__card-content">
+										<h3 class="study-plan__card-title">План обучения 2026</h3>
+										<p class="study-plan__card-desc">Календарный план образовательных программ на&nbsp;2026 год</p>
+									</div>
+								</div>
+								<div class="study-plan__card-download icon-download">Скачать</div>
+							</a>
+						</li>
+						<li class="study-plan__card" data-animate="bottom">
+							<a href="#" class="study-plan__card-link">
+								<div class="study-plan__card-header">
+									<div class="study-plan__card-icon">
+										<img src="img/icons/receipt.svg" alt="Прейскурант 2026">
+									</div>
+									<div class="study-plan__card-content">
+										<h3 class="study-plan__card-title">Прейскурант 2026</h3>
+										<p class="study-plan__card-desc">Стоимость образовательных программ на&nbsp;2026 год</p>
+									</div>
+								</div>
+								<div class="study-plan__card-download icon-download">Скачать</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="apply">
+				<div class="container">
+					<h2 class="apply__title title" data-animate="bottom">Подать заявку на&nbsp;обучение</h2>
+					<ul class="apply__grid">
+						<li class="apply__card" data-animate="bottom">
+							<a href="#" class="apply__card-link" target="_blank">
+								<div class="apply__card-icon">
+									<img src="img/icons/doc-edit.svg" alt="Заявка на повышение квалификации">
+								</div>
+								<h3 class="apply__card-title">Заявка на повышение квалификации</h3>
+								<div class="apply__card-external-icon icon-share"></div>
+							</a>
+						</li>
+						<li class="apply__card" data-animate="bottom">
+							<a href="#" class="apply__card-link" target="_blank">
+								<div class="apply__card-icon">
+									<img src="img/icons/helmet.svg" alt="Заявка по охране труда">
+								</div>
+								<h3 class="apply__card-title">Заявка по охране труда</h3>
+								<div class="apply__card-external-icon icon-share"></div>
+							</a>
+						</li>
+					</ul>
+					<p class="apply__footer" data-animate="bottom"> Заявки принимаются по электронной почте: <a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a>
+					</p>
+				</div>
+			</section>
+			<section class="order order--grey">
+				<div class="order__container container">
+					<div class="order__banner" data-animate="bottom">
+						<h2 class="order__title title"> Получить консультацию по&nbsp;обучению </h2>
+						<div class="order__banner-subtitle"> Свяжитесь с нами для получения дополнительной информации или&nbsp;обсуждения сотрудничества </div>
+						<a href="#callback" data-fancybox data-form-title="Связаться" class="order__banner-btn btn btn-secondary"> Связаться </a>
+						<div class="order__video">
+							<video class="order__video-block" playsinline autoplay loop muted preload="none" poster="img/order-poster.jpg">
+								<source src="files/promo.webm" type='video/webm; codecs="vp9, vorbis"'>
+								<source src="files/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+							</video>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="footer__container container" itemscope itemtype="http://schema.org/Organization" itemid="#main-org">
+				<meta itemprop="name" content="Технопарк «Искра-Волга»">
+				<div class="footer__main">
+					<a href="/" class="footer__logo" itemprop="url">
+						<img src="img/logo-white.svg" alt="Логотип" itemprop="logo">
+					</a>
+					<p class="footer__copyright">© 2026 Технопарк «Искра-Волга»</p>
+					<a href="https://proudly.ru/" class="footer__prod" target="_blank" rel="noopener noreferrer nofollow"> Разработка сайта <img src="img/prod-logo.svg" width="59" height="15" alt="Разработка сайта Proudly" loading="lazy">
+					</a>
+				</div>
+				<div class="footer__contacts">
+					<div class="footer__contacts-links">
+						<a href="tel:+78432150332" class="footer__contacts-link" itemprop="telephone">8 (843) 215-03-32</a>
+						<a href="mailto:info@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">info@iskra-volga.ru</a>
+					</div>
+					<address class="footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<span itemprop="postalCode">422527</span>, <span itemprop="addressRegion">Республика Татарстан</span>, Зеленодольский район, город <span itemprop="addressLocality">Зеленодольск</span>, <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
+					</address>
+				</div>
+				<div class="footer__side">
+					<nav aria-label="Меню в подвале" class="footer__menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="/" class="footer__menu-link" itemprop="url">
+									<span itemprop="name">Главная</span>
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="/about.html" class="footer__menu-link" itemprop="url">
+									<span itemprop="name">О технопарке</span>
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="/university.html" class="footer__menu-link" itemprop="url">
+									<span itemprop="name">Обучение</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="/policy.html" rel="nofollow" class="footer__policy">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+		<dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
+			<h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
+			<form action="/ajax/sendData.php" method="post" class="popup__form form" data-ya-captcha-form>
+				<div class="form__field">
+					<input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
+					<span class="form__error">Введите ваше имя</span>
+				</div>
+				<div class="form__field">
+					<input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+					<span class="form__error">Введите корректный email</span>
+				</div>
+				<div class="form__field">
+					<textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
+				</div>
+				<input type="hidden" name="smart-token" value="">
+				<button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+				<label class="form__checkbox checkbox">
+					<input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+					<span class="checkbox__content">Нажимая на кнопку, Вы даете согласие на <a href="/policy.html">обработку персональных данных</a></span>
+					<span class="form__error">Необходимо согласие</span>
+				</label>
+			</form>
+		</dialog>
+		<dialog id="contest" class="popup popup--contest" aria-labelledby="contest-modal-title">
+			<h2 id="contest-modal-title" class="popup__title title-sm">Подать заявку на участие</h2>
+			<form action="/ajax/sendData.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
+				<div class="form__field">
+					<input type="text" name="name" autocomplete="name" class="form__control" placeholder="ФИО" data-required>
+					<span class="form__error">Введите ФИО</span>
+				</div>
+				<div class="form__field">
+					<input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
+					<span class="form__error">Введите корректный email</span>
+				</div>
+				<div class="form__field">
+					<input type="tel" name="phone" autocomplete="tel" class="form__control" placeholder="Телефон" data-required>
+					<span class="form__error">Введите корректный телефон</span>
+				</div>
+				<div class="form__attach file-attach" data-file-attach data-state="empty" data-max-size="10" data-hint="PDF, DOC, JPG до 10 МБ" data-accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png" data-upload-url="/ajax/sendData.php" data-file-id-name="application_file_id">
+					<span class="file-attach__label">Прикрепить заявку</span>
+					<input type="file" name="application" class="file-attach__input hidden" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png" data-required>
+					<input type="hidden" name="application_file_id" value="" data-file-attach-id>
+					<div class="file-attach__area" data-file-attach-area></div>
+				</div>
+				<input type="hidden" name="smart-token" value="">
+				<input type="hidden" name="form-title" value="Подать заявку на участие">
+				<label class="form__checkbox checkbox">
+					<input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
+					<span class="checkbox__content">Я даю согласие на обработку <a href="/policy.html">персональных данных</a></span>
+					<span class="form__error">Необходимо согласие</span>
+				</label>
+				<button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
+			</form>
+		</dialog>
+		<dialog id="success" class="popup" aria-labelledby="success-modal-title">
+			<div class="popup__icon">
+				<img src="img/icons/success.svg" alt="Иконка">
+			</div>
+			<h2 id="success-modal-title" class="popup__title title-sm">Успешно!</h2>
+			<p class="popup__subtitle">Наш специалист свяжется с Вами</p>
+		</dialog>
+		<dialog id="error" class="popup" aria-labelledby="error-modal-title">
+			<div class="popup__icon">
+				<img src="img/icons/error.svg" alt="Иконка">
+			</div>
+			<h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
+			<p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
+		</dialog> <!-- plugins -->
+		<script defer src="js/libs/swiper-bundle.min.js?_v=20260716214820"></script>
+		<script defer src="js/libs/fancybox.umd.js?_v=20260716214820"></script>
+		<!-- plugins -->
+		<script src="js/app.min.js?_v=20260716214820"></script>
+		<div id="captcha-container" style="display:none" aria-hidden="true"></div>
+		<script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad&_v=20260716214820" defer></script>
+		<script>
+			function onSmartCaptchaLoad() {
+				if (typeof window.initSmartCaptcha === 'function') {
+					window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
+				}
+			}
 
+		</script>
+	</div>
+</body>
 
-      <!-- favicon -->
-      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-      <link rel="shortcut icon" href="/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <meta name="apple-mobile-web-app-title" content="Искра Волга">
-      <link rel="manifest" href="/site.webmanifest">
-      <!-- favicon -->
-
-      <!-- Open Graph  -->
-      <meta property="og:type" content="business.business">
-      <meta property="og:title" content="">
-      <meta property="og:description" content="">
-      <meta property="og:url" content="">
-      <meta property="og:image" content="/OG.jpg">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-      <meta property="og:site_name" content="Искра-Волга">
-      <meta property="og:locale" content="ru_RU">
-      <meta name="twitter:card" content="summary_large_image">
-      <!-- Open Graph  -->
-
-      <!-- plugins -->
-      <link rel="preload" href="css/libs/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-        <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
-      </noscript>
-      <link rel="preload" href="css/libs/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-        <link rel="stylesheet" href="css/libs/fancybox.css">
-      </noscript>
-      <!-- plugins -->
-
-      <link rel="stylesheet" href="css/reset.min.css">
-      <link rel="stylesheet" href="css/style.min.css">
-
-      <noscript>
-        <style>
-          [data-animate] {
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-            transition: none;
-          }
-        </style>
-      </noscript>
-
-
-
-
-
-    </head>
-    <body itemscope itemtype="https://schema.org/WebPage">
-        <div class="wrapper">
-            <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-                <div class="header__container container">
-                    <a href="/" class="header__logo" itemprop="url">
-                        <img src="img/logo.svg" alt="Логотип Искра-Волга" itemprop="image">
-                    </a>
-                    <div class="header__menu menu">
-                        <div class="menu__content">
-                            <nav aria-label="Меню в шапке" class="menu__navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                                <ul class="menu__list">
-                                    <li class="menu__item">
-                                        <a href="/" class="menu__link" itemprop="url">
-                                            <span itemprop="name">Главная</span>
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="/about.html" class="menu__link" itemprop="url">
-                                            <span itemprop="name">О технопарке</span>
-                                        </a>
-                                    </li>
-                                    <li class="menu__item menu__item--parent">
-                                        <a href="/university.html" class="menu__link active" itemprop="url">
-                                            <span itemprop="name">Корпоративный университет</span>
-                                        </a>
-                                        <button type="button" class="menu__arrow icon-chevron-down" aria-label="Открыть подменю" aria-expanded="false" aria-haspopup="true"></button>
-                                        <ul class="submenu">
-                                            <li class="submenu__item">
-                                                <a href="/university.html" class="submenu__link active" itemprop="url">
-                                                    <span itemprop="name">Обучение и подготовка кадров</span>
-                                                </a>
-                                            </li>
-                                            <li class="submenu__item">
-                                                <a href="/interaction.html" class="submenu__link" itemprop="url">
-                                                    <span itemprop="name">Взаимодействие с&nbsp;образовательной средой</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="/contacts.html" class="menu__link" itemprop="url">
-                                            <span itemprop="name">Контакты</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <a href="tel:88432150332" class="menu__phone icon-phone">8 (843) 215-03-32</a>
-                        </div>
-                    </div>
-                    <div class="header__actions">
-                        <a href="/contest.html" class="header__contest">Конкурс</a>
-                        <a href="tel:88432150332" class="header__phone icon-phone">8 (843) 215-03-32</a>
-                    </div>
-                    <button type="button" aria-label="Открыть мобильное меню" class="header__menu-toggler icon-menu">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
-            </header>
-            <main class="page" itemprop="mainContentOfPage">
-                <section class="university">
-                    <div class="university__container container">
-                        <div class="university__banner banner">
-                            <div class="banner__image">
-                                <picture><source srcset="img/university/promo.webp" type="image/webp"><img src="img/university/promo.jpg" fetchpriority="high" class="cover-image" alt="Фото компании"></picture>
-                            </div>
-                            <div class="banner__description description-block description-block--left">
-                                <h1 class="banner__title title">Обучение и&nbsp;подготовка персонала</h1>
-                                <div class="banner__text">Система подготовки и развития специалистов в электроэнергетике на базе реальной производственной инфраструктуры</div>
-                                <div class="banner__btns">
-                                    <a href="#callback" data-fancybox data-form-title="Оставить заявку" class="banner__btn btn btn-primary">Оставить заявку</a>
-                                    <a href="" class="banner__btn btn btn-secondary">Посмотреть программы</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="education">
-                    <div class="education__container container">
-                        <div class="education__banner banner">
-                            <div class="banner__image">
-                                <picture><source srcset="img/university/education.webp" type="image/webp"><img src="img/university/education.jpg" fetchpriority="high" class="cover-image" alt="Фото компании"></picture>
-                            </div>
-                            <div class="banner__description description-block description-block--right">
-                                <h2 class="banner__title title-sm" data-animate="bottom">Образование как часть промышленной экосистемы</h2>
-                                <div class="banner__text">
-                                    <p data-animate="bottom">Обучение и подготовка персонала на базе корпоративного университета «Искра-Волга» — это система развития компетенций, объединяющая образовательные, производственные и отраслевые направления.</p>
-                                    <p data-animate="bottom">Обучение строится на практике компаний-резидентов и&nbsp;ориентировано на реальные задачи электроэнергетики.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="directions">
-                    <div class="container">
-                        <h2 class="directions__title title" data-animate="bottom">Ключевые направления</h2>
-                        <ul class="directions__list">
-                            <li class="direction-card direction-card--grey direction-card--medium-desktop  direction-card--connection-right-desktop direction-card--connection-bottom-desktop">
-                                <div class="direction-card__icon" data-animate="bottom">
-                                    <img src="img/icons/qualification.svg" alt="Иконка">
-                                </div>
-                                <div class="direction-card__content">
-                                    <div class="direction-card__caption" data-animate="bottom">Повышение квалификации</div>
-                                    <div class="direction-card__desc" data-animate="bottom">Программы профессионального развития для специалистов отрасли</div>
-                                </div>
-                            </li><li class="direction-card direction-card--grey direction-card--extralarge-desktop ">
-                                <div class="direction-card__icon" data-animate="bottom">
-                                    <img src="img/icons/building.svg" alt="Иконка">
-                                </div>
-                                <div class="direction-card__content">
-                                    <div class="direction-card__caption" data-animate="bottom">Корпоративное обучение</div>
-                                    <div class="direction-card__desc" data-animate="bottom">Обучение под конкретные задачи</div>
-                                </div>
-                            </li><li class="direction-card direction-card--grey direction-card--extralarge  direction-card--connection-right-desktop">
-                                <div class="direction-card__icon" data-animate="bottom">
-                                    <img src="img/icons/briefcase.svg" alt="Иконка">
-                                </div>
-                                <div class="direction-card__content">
-                                    <div class="direction-card__caption" data-animate="bottom">Сотрудничество с отраслью</div>
-                                    <div class="direction-card__desc" data-animate="bottom">Интеграция с предприятиями электроэнергетической отрасли</div>
-                                </div>
-                            </li><li class="direction-card direction-card--grey direction-card--medium ">
-                                <div class="direction-card__icon" data-animate="bottom">
-                                    <img src="img/icons/helmet.svg" alt="Иконка">
-                                </div>
-                                <div class="direction-card__content">
-                                    <div class="direction-card__caption" data-animate="bottom">Охрана труда</div>
-                                    <div class="direction-card__desc" data-animate="bottom">Безопасность и предотвращение рисков в электроэнергетике</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="advantages">
-                    <div class="container">
-                        <h2 class="advantages__title title" data-animate="bottom">Форматы обучения</h2>
-                        <ul class="advantages__list advantages__list--row-header-mobile">
-                            <li class="advantages__card" data-animate="bottom">
-                                <div class="advantages__card-header">
-                                    <div class="advantages__card-icon">
-                                        <img src="img/icons/user-ok.svg" alt="Очное обучение">
-                                    </div>
-                                    <h3 class="advantages__card-title">Очное обучение</h3>
-                                </div>
-                                <p class="advantages__card-text">Занятия в аудиториях с преподавателями на территории технопарка</p>
-                            </li><li class="advantages__card" data-animate="bottom">
-                                <div class="advantages__card-header">
-                                    <div class="advantages__card-icon">
-                                        <img src="img/icons/instruments.svg" alt="Практика на&nbsp;оборудовании">
-                                    </div>
-                                    <h3 class="advantages__card-title">Практика на&nbsp;оборудовании</h3>
-                                </div>
-                                <p class="advantages__card-text">Работа на реальных стендах и производственном оборудовании</p>
-                            </li><li class="advantages__card" data-animate="bottom">
-                                <div class="advantages__card-header">
-                                    <div class="advantages__card-icon">
-                                        <img src="img/icons/monitor.svg" alt="Дистанционное обучение">
-                                    </div>
-                                    <h3 class="advantages__card-title">Дистанционное обучение</h3>
-                                </div>
-                                <p class="advantages__card-text">Онлайн-курсы и вебинары через образовательную платформу</p>
-                            </li><li class="advantages__card" data-animate="bottom">
-                                <div class="advantages__card-header">
-                                    <div class="advantages__card-icon">
-                                        <img src="img/icons/doc.svg" alt="Индивидуальные программы">
-                                    </div>
-                                    <h3 class="advantages__card-title">Индивидуальные программы</h3>
-                                </div>
-                                <p class="advantages__card-text">Разработка программ под потребности компании</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="education-business">
-                    <div class="education-business__container container">
-                        <div class="education-business__banner banner">
-                            <div class="banner__image">
-                                <picture><source srcset="img/university/professional-engineer-workers.webp" type="image/webp"><img src="img/university/professional-engineer-workers.jpg" class="cover-image" alt="Фото компании"></picture>
-                            </div>
-                            <div class="banner__description description-block description-block--right">
-                                <h2 class="banner__title title-sm" data-animate="bottom">Обучение под задачи бизнеса</h2>
-                                <div class="banner__text">
-                                    <p data-animate="bottom">Учебный центр «ЭНЕРГОИННОВАЦИИ» разрабатывает программы обучения под требования конкретных организаций.</p>
-                                    <p data-animate="bottom">В качестве преподавателей привлекаются ведущие специалисты и эксперты в области энергетики и радиоэлектроники</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="tech-base">
-                    <div class="tech-base__container container">
-                        <h2 class="tech-base__title title" data-animate="bottom">Учебная и техническая база</h2>
-                        <ul class="tech-base__grid">
-                            <li class="tech-base__card" data-animate="bottom">
-                                <div class="tech-base__card-header">
-                                    <div class="tech-base__card-icon">
-                                        <img src="img/icons/battery-charging.svg" alt="Учебные стенды и&nbsp;макеты">
-                                    </div>
-                                    <h3 class="tech-base__card-title">Учебные стенды и&nbsp;макеты</h3>
-                                </div>
-                                <div class="tech-base__card-content">
-                                    <ul class="tech-base__card-list">
-                                         <li class="tech-base__card-list-item">Интеллектуальный учет
-                            </li>
-                             <li class="tech-base__card-list-item">Электрические зарядные станции для&nbsp;электромобилей
-                            </li>
-                             <li class="tech-base__card-list-item">Релейная защита и автоматика
-                            </li>
-                             <li class="tech-base__card-list-item">Промышленные контроллеры
-                            </li>
-                             <li class="tech-base__card-list-item">СИП-арматура
-                            </li>
-                            
-                            </ul>
-                            
-                            </div>
-                            </li><li class="tech-base__card" data-animate="bottom">
-                                <div class="tech-base__card-header">
-                                    <div class="tech-base__card-icon">
-                                        <img src="img/icons/desk.svg" alt="Учебные классы">
-                                    </div>
-                                    <h3 class="tech-base__card-title">Учебные классы</h3>
-                                </div>
-                                <div class="tech-base__card-content">
-                                    <ul class="tech-base__card-list">
-                                         <li class="tech-base__card-list-item">Два учебных класса на 12 и 30 человек
-                            </li>
-                             <li class="tech-base__card-list-item">Презентационное оборудование
-                            </li>
-                             <li class="tech-base__card-list-item">Возможность проведения дистанционных занятий в режиме онлайн
-                            </li>
-                            
-                            </ul>
-                            
-                            </div>
-                            </li><li class="tech-base__card" data-animate="bottom">
-                                <div class="tech-base__card-header">
-                                    <div class="tech-base__card-icon">
-                                        <img src="img/icons/globe.svg" alt="Система дистанционного <br> обучения">
-                                    </div>
-                                    <h3 class="tech-base__card-title">Система дистанционного <br> обучения</h3>
-                                </div>
-                                <div class="tech-base__card-content">
-                                    <ul class="tech-base__card-list">
-                                        
-                            </ul>
-                            
-                            <a href="#" class="tech-base__card-btn btn btn-primary icon-right">
-                                Перейти на платформу
-                            </a>
-                            
-                            </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="study-conditions">
-                    <div class="container">
-                        <h2 class="study-conditions__title title" data-animate="bottom">Условия обучения</h2>
-                        <ul class="study-conditions__list">
-                            <li class="study-conditions__card" data-animate="bottom">
-                                <div class="study-conditions__card-header">
-                                    <div class="study-conditions__card-icon">
-                                        <img src="img/icons/dining-room.svg" alt="Столовая">
-                                    </div>
-                                    <h3 class="study-conditions__card-title">Столовая</h3>
-                                </div>
-                                <p class="study-conditions__card-text">Питание для слушателей на&nbsp;территории технопарка</p>
-                            </li><li class="study-conditions__card" data-animate="bottom">
-                                <div class="study-conditions__card-header">
-                                    <div class="study-conditions__card-icon">
-                                        <img src="img/icons/parks.svg" alt="Парковая зона">
-                                    </div>
-                                    <h3 class="study-conditions__card-title">Парковая зона</h3>
-                                </div>
-                                <p class="study-conditions__card-text">Зелёная территория для&nbsp;отдыха между занятиями</p>
-                            </li><li class="study-conditions__card" data-animate="bottom">
-                                <div class="study-conditions__card-header">
-                                    <div class="study-conditions__card-icon">
-                                        <img src="img/icons/heart.svg" alt="Медицинский кабинет">
-                                    </div>
-                                    <h3 class="study-conditions__card-title">Медицинский кабинет</h3>
-                                </div>
-                                <p class="study-conditions__card-text">Медицинская помощь в течение учебного дня</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="org-info" itemscope itemtype="http://schema.org/EducationalOrganization">
-                    <link itemprop="parentOrganization" href="#main-org">
-                    <div class="container">
-                        <h2 class="org-info__title title" data-animate="bottom" itemprop="name">Сведения об образовательной организации</h2>
-                        <ul class="org-info__grid">
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">Организация</div>
-                                <div class="org-info__card-value" itemprop="legalName">ООО «ЭНЕРГОИННОВАЦИИ»</div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">Дата создания</div>
-                                <div class="org-info__card-value">
-                                    <time itemprop="foundingDate" datetime="2020-12-15">15.12.2020</time>
-                                </div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">График работы</div>
-                                <div class="org-info__card-value">
-                                    <meta itemprop="openingHours" content="Mo-Fr 08:00-17:00">
-                                    Пн-Пт: 08:00–17:00
-                                </div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">Email</div>
-                                <div class="org-info__card-value">
-                                    <a href="mailto:tiv@iskra-volga.ru" itemprop="email">tiv@iskra-volga.ru</a>
-                                </div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">Телефон</div>
-                                <div class="org-info__card-value">
-                                    <a href="tel:+78435620757" itemprop="telephone">8 (843) 562-07-57 (доб. 564)</a>
-                                </div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">ИНН</div>
-                                <div class="org-info__card-value" itemprop="taxID">1648053156</div>
-                            </li>
-                            <li class="org-info__card" data-animate="bottom">
-                                <div class="org-info__card-label">Адрес</div>
-                                <div class="org-info__card-value">
-                                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                                        <span itemprop="postalCode">422527</span>,
-                                        <span itemprop="addressRegion">Республика Татарстан</span>,
-                                        Зеленодольский район, город
-                                        <span itemprop="addressLocality">Зеленодольск</span>,
-                                        <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск</span>
-                                    </address>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="accreditation">
-                    <div class="container">
-                        <h2 class="accreditation__title title" data-animate="bottom">Лицензия и аккредитация</h2>
-                        <ul class="accreditation__grid">
-                            <li class="accreditation__card" data-animate="bottom">
-                                <div class="accreditation__card-header">
-                                    <div class="accreditation__card-icon">
-                                        <img src="img/icons/license.svg" alt="Лицензия">
-                                    </div>
-                                    <div class="accreditation__card-info">
-                                        <h3 class="accreditation__card-title">Лицензия</h3>
-                                        <p class="accreditation__card-number">Регистрационный номер: <span>Л035-01234-16/00123456</span></p>
-                                    </div>
-                                </div>
-                                <a href="#" class="accreditation__card-link icon-right">
-                                    <span>Проверить документ</span>
-                                </a>
-                            </li><li class="accreditation__card" data-animate="bottom">
-                                <div class="accreditation__card-header">
-                                    <div class="accreditation__card-icon">
-                                        <img src="img/icons/award.svg" alt="Аккредитация">
-                                    </div>
-                                    <div class="accreditation__card-info">
-                                        <h3 class="accreditation__card-title">Аккредитация</h3>
-                                        <p class="accreditation__card-number">Номер: <span>А123-456-789</span></p>
-                                    </div>
-                                </div>
-                                <a href="#" class="accreditation__card-link icon-right">
-                                    <span>Проверить документ</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="management">
-                    <div class="management__container container">
-                        <h2 class="management__title title" data-animate="bottom">Руководство</h2>
-                        <ul class="management__list">
-                            <li class="management__person" data-animate="bottom">
-                                <h3 class="management__person-name">Мубаракшин Ильнур Ильсурович</h3>
-                                <p class="management__person-position">Директор ООО «ЭНЕРГОИННОВАЦИИ»</p>
-                                <div class="management__person-contacts">
-                                    <a href="tel:+78435620757" class="management__person-link icon-phone">8 (843) 562-07-57 (доб. 500)</a>
-                                    <a href="mailto:office@einnovation.ru" class="management__person-link icon-envelope">office@einnovation.ru</a>
-                                </div>
-                            </li><li class="management__person" data-animate="bottom">
-                                <h3 class="management__person-name">Симонова Марина Николаевна</h3>
-                                <p class="management__person-position">Руководитель направления обучения и подготовки персонала</p>
-                                <div class="management__person-contacts">
-                                    <a href="tel:+78435620757" class="management__person-link icon-phone">8 (843) 562-07-57 (доб. 525)</a>
-                                    <a href="mailto:m.simonova@einnovation.ru" class="management__person-link icon-envelope">m.simonova@einnovation.ru</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="documents">
-                    <div class="documents__container container">
-                        <h2 class="documents__title title" data-animate="bottom">Документы</h2>
-                        <ul class="documents__list">
-                            <li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">ПОЛОЖЕНИЕ О ЦК</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение об оказании платных образовательных услуг</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение об организации обучения слушателей с ограниченными возможностями</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение о порядке защиты и хранения персональных данных</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Изменение №1 в Устав</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Устав</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Правила внутреннего распорядка слушателей</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Режим обучающихся</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение о порядке оформления возникновения, приостановления и прекращения отношений</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Правила приема слушателей</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение о порядке и основаниях перевода, отчисления и восстановления слушателей</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Положение об итоговой аттестации слушателей</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">Договор_форма</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li><li class="documents__item" data-animate="bottom">
-                                <div class="documents__item-info">
-                                    <div class="documents__item-icon">
-                                        <img src="img/icons/pdf.svg" alt="PDF">
-                                    </div>
-                                    <span class="documents__item-name">ПРАЙС</span>
-                                </div>
-                                <a href="#" class="documents__item-btn">
-                                    <span class="btn btn-primary icon-download">Скачать</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="study-plan">
-                    <div class="container">
-                        <h2 class="study-plan__title title" data-animate="bottom">План обучения и&nbsp;стоимость</h2>
-                        <ul class="study-plan__grid">
-                            <li class="study-plan__card" data-animate="bottom">
-                                <a href="#" class="study-plan__card-link">
-                                    <div class="study-plan__card-header">
-                                        <div class="study-plan__card-icon">
-                                            <img src="img/icons/calendar.svg" alt="План обучения 2026">
-                                        </div>
-                                        <div class="study-plan__card-content">
-                                            <h3 class="study-plan__card-title">План обучения 2026</h3>
-                                            <p class="study-plan__card-desc">Календарный план образовательных программ на&nbsp;2026 год</p>
-                                        </div>
-                                    </div>
-                                    <div class="study-plan__card-download icon-download">Скачать</div>
-                                </a>
-                            </li><li class="study-plan__card" data-animate="bottom">
-                                <a href="#" class="study-plan__card-link">
-                                    <div class="study-plan__card-header">
-                                        <div class="study-plan__card-icon">
-                                            <img src="img/icons/receipt.svg" alt="Прейскурант 2026">
-                                        </div>
-                                        <div class="study-plan__card-content">
-                                            <h3 class="study-plan__card-title">Прейскурант 2026</h3>
-                                            <p class="study-plan__card-desc">Стоимость образовательных программ на&nbsp;2026 год</p>
-                                        </div>
-                                    </div>
-                                    <div class="study-plan__card-download icon-download">Скачать</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="apply">
-                    <div class="container">
-                        <h2 class="apply__title title" data-animate="bottom">Подать заявку на&nbsp;обучение</h2>
-                        <ul class="apply__grid">
-                            <li class="apply__card" data-animate="bottom">
-                                <a href="#" class="apply__card-link" target="_blank">
-                                    <div class="apply__card-icon">
-                                        <img src="img/icons/doc-edit.svg" alt="Заявка на повышение квалификации">
-                                    </div>
-                                    <h3 class="apply__card-title">Заявка на повышение квалификации</h3>
-                                    <div class="apply__card-external-icon icon-share"></div>
-                                </a>
-                            </li><li class="apply__card" data-animate="bottom">
-                                <a href="#" class="apply__card-link" target="_blank">
-                                    <div class="apply__card-icon">
-                                        <img src="img/icons/helmet.svg" alt="Заявка по охране труда">
-                                    </div>
-                                    <h3 class="apply__card-title">Заявка по охране труда</h3>
-                                    <div class="apply__card-external-icon icon-share"></div>
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="apply__footer" data-animate="bottom">
-                            Заявки принимаются по электронной почте: <a href="mailto:tiv@iskra-volga.ru">tiv@iskra-volga.ru</a>
-                        </p>
-                    </div>
-                </section>
-                <section class="order order--grey">
-                    <div class="order__container container">
-                        <div class="order__banner" data-animate="bottom">
-                            <h2 class="order__title title">
-                                Получить консультацию по&nbsp;обучению
-                                
-                            </h2>
-                            <div class="order__banner-subtitle">
-                                Свяжитесь с нами для получения дополнительной информации или&nbsp;обсуждения сотрудничества
-                                
-                            </div>
-                            <a href="#callback" data-fancybox data-form-title="Связаться" class="order__banner-btn btn btn-secondary">
-                                Связаться
-                                
-                            </a>
-                            <div class="order__video">
-                                <video class="order__video-block" playsinline autoplay loop muted preload="none" poster="img/order-poster.jpg">
-                                    <source src="files/promo.webm" type='video/webm; codecs="vp9, vorbis"'>
-                                    <source src="files/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-                <div class="footer__container container" itemscope itemtype="http://schema.org/Organization" itemid="#main-org">
-                    <meta itemprop="name" content="Технопарк «Искра-Волга»">
-                    <div class="footer__main">
-                        <a href="/" class="footer__logo" itemprop="url">
-                            <img src="img/logo-white.svg" alt="Логотип" itemprop="logo">
-                        </a>
-                        <p class="footer__copyright">© 2026 Технопарк «Искра-Волга»</p>
-                        <a href="https://proudly.ru/" class="footer__prod" target="_blank" rel="noopener noreferrer nofollow">
-                            Разработка сайта <img src="img/prod-logo.svg" width="59" height="15" alt="Разработка сайта Proudly" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="footer__contacts">
-                        <div class="footer__contacts-links">
-                            <a href="tel:+78432150332" class="footer__contacts-link" itemprop="telephone">8 (843) 215-03-32</a>
-                            <a href="mailto:info@iskra-volga.ru" class="footer__contacts-link" itemprop="email" target="_blank">info@iskra-volga.ru</a>
-                        </div>
-                        <address class="footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="postalCode">422527</span>,
-                            <span itemprop="addressRegion">Республика Татарстан</span>,
-                            Зеленодольский район, город
-                            <span itemprop="addressLocality">Зеленодольск</span>,
-                            <span itemprop="streetAddress">п/р Промышленная Площадка Зеленодольск, зд. 16, помещ. 1</span>
-                        </address>
-                    </div>
-                    <div class="footer__side">
-                        <nav aria-label="Меню в подвале" class="footer__menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item">
-                                    <a href="/" class="footer__menu-link" itemprop="url">
-                                        <span itemprop="name">Главная</span>
-                                    </a>
-                                </li>
-                                <li class="footer__menu-item">
-                                    <a href="/about.html" class="footer__menu-link" itemprop="url">
-                                        <span itemprop="name">О технопарке</span>
-                                    </a>
-                                </li>
-                                <li class="footer__menu-item">
-                                    <a href="/university.html" class="footer__menu-link" itemprop="url">
-                                        <span itemprop="name">Обучение</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <a href="/policy.html" rel="nofollow" class="footer__policy">Политика конфиденциальности</a>
-                    </div>
-                </div>
-            </footer>
-            <dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
-                <h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
-                <form action="/ajax/sendData.php" method="post" class="popup__form form" data-ya-captcha-form>
-                    <div class="form__field">
-                        <input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
-                        <span class="form__error">Введите ваше имя</span>
-                    </div>
-                    <div class="form__field">
-                        <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
-                        <span class="form__error">Введите корректный email</span>
-                    </div>
-                    <div class="form__field">
-                        <textarea name="comment" class="form__control" placeholder="Комментарий"></textarea>
-                    </div>
-                    <input type="hidden" name="smart-token" value="">
-                    <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
-                    <label class="form__checkbox checkbox">
-                        <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
-                        <span class="checkbox__content">Нажимая на кнопку, Вы даете согласие на <a href="/policy.html">обработку персональных данных</a></span>
-                        <span class="form__error">Необходимо согласие</span>
-                    </label>
-                </form>
-            </dialog>
-
-            <dialog id="contest" class="popup popup--contest" aria-labelledby="contest-modal-title">
-                <h2 id="contest-modal-title" class="popup__title title-sm">Подать заявку на участие</h2>
-                <form action="/ajax/sendData.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
-                    <div class="form__field">
-                        <input type="text" name="name" autocomplete="name" class="form__control" placeholder="ФИО" data-required>
-                        <span class="form__error">Введите ФИО</span>
-                    </div>
-                    <div class="form__field">
-                        <input type="email" name="email" autocomplete="email" class="form__control" placeholder="Email" data-required>
-                        <span class="form__error">Введите корректный email</span>
-                    </div>
-                    <div class="form__field">
-                        <input type="tel" name="phone" autocomplete="tel" class="form__control" placeholder="Телефон" data-required>
-                        <span class="form__error">Введите корректный телефон</span>
-                    </div>
-                    <div class="form__attach file-attach"
-                        data-file-attach
-                        data-state="empty"
-                        data-max-size="10"
-                        data-hint="PDF, DOC, JPG до 10 МБ"
-                        data-accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png"
-                        data-upload-url="/ajax/sendData.php"
-                        data-file-id-name="application_file_id">
-                        <span class="file-attach__label">Прикрепить заявку</span>
-                        <input type="file" name="application" class="file-attach__input hidden" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png" data-required>
-                        <input type="hidden" name="application_file_id" value="" data-file-attach-id>
-                        <div class="file-attach__area" data-file-attach-area></div>
-                    </div>
-                    <input type="hidden" name="smart-token" value="">
-                    <input type="hidden" name="form-title" value="Подать заявку на участие">
-                    <label class="form__checkbox checkbox">
-                        <input type="checkbox" name="policy" class="checkbox__input hidden" hidden data-required>
-                        <span class="checkbox__content">Я даю согласие на обработку <a href="/policy.html">персональных данных</a></span>
-                        <span class="form__error">Необходимо согласие</span>
-                    </label>
-                    <button type="submit" class="form__submit btn btn-primary" disabled>Отправить</button>
-                </form>
-            </dialog>
-
-            <dialog id="success" class="popup" aria-labelledby="success-modal-title">
-                <div class="popup__icon">
-                    <img src="img/icons/success.svg" alt="Иконка">
-                </div>
-                <h2 id="success-modal-title" class="popup__title title-sm">Успешно!</h2>
-                <p class="popup__subtitle">Наш специалист свяжется с Вами</p>
-            </dialog>
-
-            <dialog id="error" class="popup" aria-labelledby="error-modal-title">
-                <div class="popup__icon">
-                    <img src="img/icons/error.svg" alt="Иконка">
-                </div>
-                <h2 id="error-modal-title" class="popup__title title-sm">Ошибка</h2>
-                <p class="popup__subtitle">Что-то пошло не так. Попробуйте позже.</p>
-            </dialog>
-            <!-- plugins -->
-            <script defer src="js/libs/swiper-bundle.min.js"></script>
-            <script defer src="js/libs/fancybox.umd.js"></script>
-            <!-- plugins -->
-
-            <script src="js/app.min.js"></script>
-
-            <div id="captcha-container" style="display:none" aria-hidden="true"></div>
-            <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onSmartCaptchaLoad" defer></script>
-            <script>
-            function onSmartCaptchaLoad() {
-                if (typeof window.initSmartCaptcha === 'function') {
-                    window.initSmartCaptcha('YOUR_SMART_CAPTCHA_SITE_KEY');
-                }
-            }
-            </script>
-        </div>
-    </body>
 </html>
