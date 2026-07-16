@@ -23,7 +23,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: rem(10);
+
+		@media (min-width:$md5) {
+			gap: 1rem;
+
+		}
 
 		@media (min-width:$md4) {
 			gap: 2rem;
@@ -67,36 +72,6 @@
 	// .header__menu
 	&__menu {}
 
-	// .header__contest
-	&__contest {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-
-		background: #2342a7;
-		color: #fff;
-		font-size: rem(14);
-		line-height: 150%;
-		transition: background-color 0.3s ease;
-		clip-path: polygon(82.95% 100%, 100% 0%, 0% 17.24%, 7.39% 89.66%);
-		margin-left: auto;
-		padding: rem(5.85) rem(20) rem(5.85) rem(16);
-
-
-		@media (min-width: 1079.98px) {
-			padding: rem(4.25) rem(17) rem(4.25) rem(14);
-			font-size: 1rem;
-		}
-
-		&:not(.active) {
-
-			@media (any-hover: hover) {
-				&:hover {
-					background: #313542;
-				}
-			}
-		}
-	}
 
 
 	// .header__menu-toggler
@@ -109,7 +84,11 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		gap: rem(30);
+		gap: rem(7);
+
+		@media (min-width:$md4) {
+			gap: rem(30);
+		}
 
 		@media (min-width:$md1) {
 			gap: rem(32);
@@ -120,8 +99,9 @@
 	&__phone {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		font-size: rem(12);
+		gap: 0.2rem;
+		font-size: rem(10);
+		letter-spacing: em(-0.2, 10);
 		font-weight: 500;
 		line-height: 120%;
 		transition: color 0.3s ease;
@@ -148,7 +128,9 @@
 		@media (min-width:$md5) {
 			gap: 0.75rem;
 			line-height: 150%;
+			letter-spacing: normal;
 			font-size: rem(14);
+			gap: 0.5rem;
 		}
 
 		@media (min-width:1079.98px) {
@@ -163,6 +145,42 @@
 		}
 
 
+	}
+
+	// .header__contest
+	&__contest {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		background: #2342a7;
+		color: #fff;
+		line-height: 150%;
+		transition: background-color 0.3s ease;
+		clip-path: polygon(82.95% 100%, 100% 0%, 0% 17.24%, 7.39% 89.66%);
+		margin-left: auto;
+		font-size: rem(10);
+		padding: rem(3) rem(11.5) rem(3) rem(8.75);
+
+		@media (min-width:$md5) {
+			font-size: rem(14);
+			padding: rem(5.85) rem(20) rem(5.85) rem(16);
+
+		}
+
+		@media (min-width: 1079.98px) {
+			padding: rem(4.25) rem(17) rem(4.25) rem(14);
+			font-size: 1rem;
+		}
+
+		&:not(.active) {
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: #313542;
+				}
+			}
+		}
 	}
 
 
