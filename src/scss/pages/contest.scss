@@ -173,15 +173,18 @@
 
 	// .nominations__card
 	&__card {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		gap: rem(16);
 		padding: rem(16) rem(16);
 		border-radius: rem(16);
-		background: rgba(255, 255, 255, 0.13);
 		min-height: 100%;
+		background: url("@img/decor/glass-substrat-contest-card-mobile.png") 0 0 / 100% 100% no-repeat;
 
 		@media (min-width:$md5) {
+			background: rgba(255, 255, 255, 0.13);
 			padding: rem(20) rem(16);
 			padding: rem(14.5);
 			border-radius: rem(18);
@@ -198,6 +201,8 @@
 			padding: rem(21) rem(20) rem(24);
 			border-radius: rem(34);
 			gap: rem(35);
+			background: url("@img/decor/glass-substrat-contest-card.png") 0 0 / 100% 100% no-repeat;
+
 		}
 	}
 

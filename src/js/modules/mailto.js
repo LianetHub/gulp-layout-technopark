@@ -3,7 +3,6 @@
  */
 export function initMailtoLinks() {
 	document.addEventListener("click", function (e) {
-		console.log("click");
 
 		if (e.defaultPrevented || e.button !== 0) return;
 		if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
