@@ -1,5 +1,47 @@
 import { isSmartCaptchaReady, requestSmartCaptchaToken, resetSmartCaptcha } from './smartcaptcha.js';
 
+const parseFormResponse = async (response) => {
+	const contentType = response.headers.get("content-type") || "";
+	if (!contentType.includes("application/json")) {
+		return { success: response.ok, error: response.ok ? "" : "Ошибка сервера" };
+	}
+
+	try {
+		const data = await response.json();
+		const success =
+			data?.result === "ok" ||
+			data?.success === true ||
+			data?.STATUS === "success" ||
+			data?.status === "success";
+		const error =
+			data?.error ??
+			data?.ERROR ??
+			data?.message ??
+			data?.MESSAGE ??
+			(!success ? "Ошибка сервера" : "");
+
+		return { success: Boolean(success), error: String(error || "") };
+	} catch (e) {
+		return { success: false, error: "Некорректный ответ сервера" };
+	}
+};
+
+const isFileAttachValid = (input) => {
+	const attach = input.closest("[data-file-attach]");
+	const state = attach?.dataset.state;
+	const fileId = attach?.querySelector("[data-file-attach-id]")?.value;
+	const hasUploadUrl = Boolean(attach?.dataset.uploadUrl);
+	const hasFile = Boolean(input.files && input.files.length > 0);
+
+	if (state === "loading" || state === "error") return false;
+
+	if (hasUploadUrl) {
+		return state === "ready" && (Boolean(fileId) || hasFile || Boolean(attach?.fileAttach?.getFile?.()));
+	}
+
+	return hasFile || (state === "ready" && (Boolean(fileId) || Boolean(attach?.fileAttach?.getFile?.())));
+};
+
 export const formSubmit = () => {
 	const forms = document.querySelectorAll("form");
 
@@ -66,17 +108,22 @@ export const formSubmit = () => {
 				const response = await fetch(currentUrl, {
 					method: "POST",
 					body: formData,
+					headers: {
+						"X-Requested-With": "XMLHttpRequest",
+					},
 				});
 
-				if (response.ok) {
+				const result = await parseFormResponse(response);
+
+				if (result.success) {
 					form.reset();
 					toggleButtonState(form);
 					showModal("#success");
 				} else {
-					throw new Error("Ошибка сервера");
+					throw new Error(result.error || "Ошибка сервера");
 				}
 			} catch (error) {
-				if (form.hasAttribute('data-ya-captcha-form') && error?.message) {
+				if (form.hasAttribute('data-ya-captcha-form') && error?.message && /капч|защит|captcha/i.test(error.message)) {
 					alert(error.message);
 				} else {
 					showModal("#error");
@@ -106,20 +153,14 @@ export const formSubmit = () => {
 		} else if (input.matches("[type='tel']")) {
 			isFieldValid = phoneTest(input.value);
 		} else if (input.matches("[type='file']")) {
-			const attach = input.closest("[data-file-attach]");
-			const state = attach?.dataset.state;
-			const fileId = attach?.querySelector("[data-file-attach-id]")?.value;
-			const hasUploadUrl = Boolean(attach?.dataset.uploadUrl);
-
-			if (state === "loading" || state === "error") {
-				isFieldValid = false;
-			} else if (hasUploadUrl) {
-				isFieldValid = state === "ready" && Boolean(fileId);
-			} else {
-				isFieldValid = Boolean(input.files && input.files.length > 0) || (state === "ready" && Boolean(fileId));
-			}
+			isFieldValid = isFileAttachValid(input);
 		} else {
 			isFieldValid = input.value.trim() !== "";
+		}
+
+		if (input.matches("[type='file']") && input.closest("[data-file-attach]")) {
+			formRemoveError(input);
+			return isFieldValid;
 		}
 
 		if (!isFieldValid) {
@@ -157,17 +198,7 @@ export const formSubmit = () => {
 			} else if (input.matches("[type='tel']")) {
 				if (!phoneTest(input.value)) isInvalid = true;
 			} else if (input.matches("[type='file']")) {
-				const attach = input.closest("[data-file-attach]");
-				const state = attach?.dataset.state;
-				const fileId = attach?.querySelector("[data-file-attach-id]")?.value;
-				const hasUploadUrl = Boolean(attach?.dataset.uploadUrl);
-				const ok = hasUploadUrl
-					? state === "ready" && Boolean(fileId)
-					: Boolean(input.files && input.files.length > 0) || (state === "ready" && Boolean(fileId));
-
-				if (!ok || state === "loading" || state === "error") {
-					isInvalid = true;
-				}
+				if (!isFileAttachValid(input)) isInvalid = true;
 			} else if (input.value.trim() === "") {
 				isInvalid = true;
 			}

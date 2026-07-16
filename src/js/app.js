@@ -7,7 +7,7 @@ window.initSmartCaptcha = initSmartCaptcha;
 
 document.addEventListener("DOMContentLoaded", function () {
 	//  Fancybox
-	if (typeof Fancybox !== "undefined" && Fancybox !== null) {
+    if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 		Fancybox.bind("[data-fancybox]", {
 			dragToClose: false,
 			closeExisting: true,

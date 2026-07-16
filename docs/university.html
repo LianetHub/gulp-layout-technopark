@@ -745,7 +745,7 @@
             </footer>
             <dialog id="callback" class="popup" aria-labelledby="callback-modal-title">
                 <h2 id="callback-modal-title" class="popup__title title-sm">Напишите нам, и мы свяжемся с вами</h2>
-                <form action="/send.php" method="post" class="popup__form form" data-ya-captcha-form>
+                <form action="/ajax/sendData.php" method="post" class="popup__form form" data-ya-captcha-form>
                     <div class="form__field">
                         <input type="text" name="name" autocomplete="name" class="form__control" placeholder="Контактное лицо" data-required>
                         <span class="form__error">Введите ваше имя</span>
@@ -769,7 +769,7 @@
 
             <dialog id="contest" class="popup popup--contest" aria-labelledby="contest-modal-title">
                 <h2 id="contest-modal-title" class="popup__title title-sm">Подать заявку на участие</h2>
-                <form action="/send.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
+                <form action="/ajax/sendData.php" method="post" enctype="multipart/form-data" class="popup__form form" data-ya-captcha-form>
                     <div class="form__field">
                         <input type="text" name="name" autocomplete="name" class="form__control" placeholder="ФИО" data-required>
                         <span class="form__error">Введите ФИО</span>
@@ -788,17 +788,12 @@
                         data-max-size="10"
                         data-hint="PDF, DOC, JPG до 10 МБ"
                         data-accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png"
-                        data-upload-url="/local/ajax/contest_file_upload.php"
-                        data-file-id-name="application_file_id"
-                        data-icon-empty="img/contest/paperclip-24.svg"
-                        data-icon-ready="img/contest/file-doc.svg"
-                        data-icon-error="img/contest/warning.svg"
-                        data-icon-remove="img/contest/trash.svg">
+                        data-upload-url="/ajax/sendData.php"
+                        data-file-id-name="application_file_id">
                         <span class="file-attach__label">Прикрепить заявку</span>
                         <input type="file" name="application" class="file-attach__input hidden" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png" data-required>
                         <input type="hidden" name="application_file_id" value="" data-file-attach-id>
                         <div class="file-attach__area" data-file-attach-area></div>
-                        <span class="form__error">Прикрепите файл заявки</span>
                     </div>
                     <input type="hidden" name="smart-token" value="">
                     <input type="hidden" name="form-title" value="Подать заявку на участие">

@@ -1,8 +1,8 @@
-const ICONS = {
-	empty: "img/contest/paperclip-24.svg",
-	ready: "img/contest/file-doc.svg",
-	error: "img/contest/warning.svg",
-	remove: "img/contest/trash.svg",
+const ICON_CLASS = {
+	empty: "icon-paperclip",
+	ready: "icon-file",
+	error: "icon-warning",
+	remove: "icon-trash",
 };
 
 const escapeHtml = (value) =>
@@ -56,7 +56,12 @@ const parseUploadResponse = (raw) => {
 		return { success: false, error: "Некорректный ответ сервера" };
 	}
 
-	const success = data.success === true || data.STATUS === "success" || data.status === "success";
+	const success =
+		data.result === "ok" ||
+		data.success === true ||
+		data.STATUS === "success" ||
+		data.status === "success";
+
 	const fileId = data.fileId ?? data.FILE_ID ?? data.id ?? data.file_id ?? "";
 	const fileName = data.fileName ?? data.FILE_NAME ?? data.name ?? "";
 	const error =
@@ -67,7 +72,7 @@ const parseUploadResponse = (raw) => {
 		(!success ? "Не удалось загрузить файл" : "");
 
 	return {
-		success: Boolean(success && fileId),
+		success: Boolean(success),
 		fileId: String(fileId || ""),
 		fileName: String(fileName || ""),
 		error: String(error || ""),
@@ -81,46 +86,29 @@ const getBitrixSessid = () => {
 	return "";
 };
 
-const createProgressIcon = (percent = 0) => {
-	const value = Math.max(0, Math.min(100, Number(percent) || 0));
-	const radius = 10;
-	const circumference = 2 * Math.PI * radius;
-	const offset = circumference - (value / 100) * circumference;
-
-	return `
-		<span class="file-attach__progress" data-file-attach-progress aria-hidden="true" style="--progress:${value}">
-			<svg class="file-attach__progress-svg" viewBox="0 0 24 24" width="24" height="24">
-				<circle class="file-attach__progress-track" cx="12" cy="12" r="${radius}" fill="none" stroke-width="2.5"></circle>
-				<circle class="file-attach__progress-value" cx="12" cy="12" r="${radius}" fill="none" stroke-width="2.5"
-					stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"></circle>
-			</svg>
-		</span>
-	`;
+const resolveErrorText = (file, message) => {
+	if (file && /слишком большой/i.test(String(message || ""))) {
+		return `Файл слишком большой (${formatSize(file.size)})`;
+	}
+	return message;
 };
 
 const renderState = (block, state, payload = {}) => {
 	const area = block.querySelector("[data-file-attach-area]");
 	if (!area) return;
 
-	const { name = "", sizeText = "", errorText = "", percent = 0 } = payload;
-	const iconsPath = block.dataset.iconsPath || "";
+	const { name = "", sizeText = "", errorText = "" } = payload;
 	const safeName = escapeHtml(name);
 	const safeSize = escapeHtml(sizeText);
 	const safeError = escapeHtml(errorText);
 	const safeHint = escapeHtml(block.dataset.hint || "PDF, DOC, JPG до 10 МБ");
-	const safePercent = Math.max(0, Math.min(100, Number(percent) || 0));
-
-	const icon = (key) => {
-		const custom = block.dataset[`icon${key[0].toUpperCase()}${key.slice(1)}`];
-		return escapeHtml(custom || `${iconsPath}${ICONS[key]}`);
-	};
 
 	let html = "";
 
 	if (state === "empty") {
 		html = `
 			<div class="file-attach__state file-attach__state--empty">
-				<img src="${icon("empty")}" class="file-attach__icon" alt="" width="24" height="24">
+				<span class="file-attach__icon ${ICON_CLASS.empty}" aria-hidden="true"></span>
 				<span class="file-attach__hint">${safeHint}</span>
 				<button type="button" class="file-attach__choose" data-file-attach-choose>Выбрать</button>
 			</div>
@@ -128,36 +116,36 @@ const renderState = (block, state, payload = {}) => {
 	} else if (state === "loading") {
 		html = `
 			<div class="file-attach__state file-attach__state--loading">
-				${createProgressIcon(safePercent)}
+				<span class="file-attach__loader" aria-hidden="true"></span>
 				<div class="file-attach__meta">
 					<span class="file-attach__name">${safeName}</span>
-					<span class="file-attach__size">${safeSize} • ${safePercent}%</span>
+					<span class="file-attach__size">${safeSize}</span>
 				</div>
 			</div>
 		`;
 	} else if (state === "ready") {
 		html = `
 			<div class="file-attach__state file-attach__state--ready">
-				<img src="${icon("ready")}" class="file-attach__icon" alt="" width="24" height="24">
+				<span class="file-attach__icon ${ICON_CLASS.ready}" aria-hidden="true"></span>
 				<div class="file-attach__meta">
 					<span class="file-attach__name">${safeName}</span>
 					<span class="file-attach__size">${safeSize}</span>
 				</div>
 				<button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
-					<img src="${icon("remove")}" alt="" width="16" height="16">
+					<span class="${ICON_CLASS.remove}" aria-hidden="true"></span>
 				</button>
 			</div>
 		`;
 	} else if (state === "error") {
 		html = `
 			<div class="file-attach__state file-attach__state--error">
-				<img src="${icon("error")}" class="file-attach__icon" alt="" width="24" height="24">
+				<span class="file-attach__icon ${ICON_CLASS.error}" aria-hidden="true"></span>
 				<div class="file-attach__meta">
 					<span class="file-attach__name">${safeName}</span>
 					<span class="file-attach__error-text">${safeError}</span>
 				</div>
 				<button type="button" class="file-attach__remove" data-file-attach-remove aria-label="Удалить файл">
-					<img src="${icon("remove")}" alt="" width="16" height="16">
+					<span class="${ICON_CLASS.remove}" aria-hidden="true"></span>
 				</button>
 			</div>
 		`;
@@ -166,16 +154,9 @@ const renderState = (block, state, payload = {}) => {
 	area.innerHTML = html;
 	block.dataset.state = state;
 
-	// Служебное сообщение «Прикрепите файл» — только от валидации формы,
-	// не путаем его с ошибкой размера/формата (data-state="error").
 	if (state !== "empty") {
 		block.classList.remove("_error");
 		block.querySelector('input[type="file"]')?.classList.remove("_error");
-	}
-
-	const form = block.closest("form");
-	if (form) {
-		form.dispatchEvent(new Event("input", { bubbles: true }));
 	}
 };
 
@@ -192,6 +173,12 @@ const ensureFileIdInput = (block, input) => {
 	return fileIdInput;
 };
 
+const isAttachReady = (block, fileIdInput, currentFile, uploadUrl) => {
+	if (block.dataset.state !== "ready") return false;
+	if (!uploadUrl) return Boolean(currentFile) || Boolean(fileIdInput.value);
+	return Boolean(fileIdInput.value) || Boolean(currentFile);
+};
+
 const bindFileAttach = (block) => {
 	if (block.dataset.fileAttachInited === "1") return;
 	block.dataset.fileAttachInited = "1";
@@ -203,11 +190,14 @@ const bindFileAttach = (block) => {
 	const acceptList = getAcceptList(block, input);
 	const uploadUrl = block.dataset.uploadUrl || "";
 
-	let xhr = null;
+	let abortController = null;
 	let currentFile = null;
+	let suppressChange = false;
 
 	const notifyForm = () => {
+		suppressChange = true;
 		input?.dispatchEvent(new Event("change", { bubbles: true }));
+		suppressChange = false;
 		block.closest("form")?.dispatchEvent(new Event("input", { bubbles: true }));
 	};
 
@@ -225,7 +215,7 @@ const bindFileAttach = (block) => {
 		if (input) input.value = "";
 		renderState(block, "error", {
 			name: file?.name || "Файл",
-			errorText: message,
+			errorText: resolveErrorText(file, message),
 		});
 		notifyForm();
 	};
@@ -240,30 +230,29 @@ const bindFileAttach = (block) => {
 		notifyForm();
 	};
 
-	const setLoading = (file, percent) => {
+	const setLoading = (file) => {
+		if (block.dataset.state === "loading") return;
 		renderState(block, "loading", {
 			name: file.name,
 			sizeText: formatSize(file.size),
-			percent,
 		});
 	};
 
 	const abortUpload = () => {
-		if (xhr) {
-			xhr.abort();
-			xhr = null;
+		if (abortController) {
+			abortController.abort();
+			abortController = null;
 		}
 	};
 
-	const uploadFile = (file) => {
+	const uploadFile = async (file) => {
 		if (!uploadUrl) {
-			// Без endpoint — локальный preview (вёрстка / разработка без Bitrix)
 			setReady(file, "");
 			return;
 		}
 
 		abortUpload();
-		setLoading(file, 0);
+		setLoading(file);
 
 		const formData = new FormData();
 		formData.append(input?.name || "file", file);
@@ -277,35 +266,37 @@ const bindFileAttach = (block) => {
 			if (title) formData.append("form-title", title);
 		}
 
-		xhr = new XMLHttpRequest();
-		xhr.open("POST", uploadUrl, true);
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		const controller = new AbortController();
+		abortController = controller;
 
-		xhr.upload.addEventListener("progress", (event) => {
-			if (!event.lengthComputable) return;
-			const percent = Math.round((event.loaded / event.total) * 100);
-			setLoading(file, percent);
-		});
+		try {
+			const response = await fetch(uploadUrl, {
+				method: "POST",
+				body: formData,
+				headers: {
+					"X-Requested-With": "XMLHttpRequest",
+				},
+				signal: controller.signal,
+			});
 
-		xhr.addEventListener("load", () => {
-			const currentXhr = xhr;
-			xhr = null;
+			if (abortController !== controller) return;
+			abortController = null;
 
-			if (!currentXhr) return;
-
-			if (currentXhr.status < 200 || currentXhr.status >= 300) {
-				setError(file, "Ошибка загрузки файла");
+			if (!response.ok) {
+				setError(file, "Ошибка сервера");
 				return;
 			}
 
-			const result = parseUploadResponse(currentXhr.responseText);
+			const result = parseUploadResponse(await response.text());
 			if (!result.success) {
 				setError(file, result.error || "Не удалось загрузить файл");
 				return;
 			}
 
-			// Файл уже на сервере — в форме отправляем fileId, а не повторно файл
-			if (input) input.value = "";
+			if (result.fileId && input) {
+				input.value = "";
+			}
+
 			setReady(file, result.fileId);
 			block.dispatchEvent(
 				new CustomEvent("file-attach:uploaded", {
@@ -317,24 +308,20 @@ const bindFileAttach = (block) => {
 					},
 				})
 			);
-		});
+		} catch (error) {
+			if (abortController !== controller) return;
+			abortController = null;
 
-		xhr.addEventListener("error", () => {
-			xhr = null;
-			setError(file, "Ошибка сети при загрузке");
+			if (error?.name === "AbortError") return;
+
+			setError(file, "Ошибка сервера");
 			block.dispatchEvent(
 				new CustomEvent("file-attach:error", {
 					bubbles: true,
-					detail: { file, error: "Ошибка сети при загрузке" },
+					detail: { file, error: "Ошибка сервера" },
 				})
 			);
-		});
-
-		xhr.addEventListener("abort", () => {
-			xhr = null;
-		});
-
-		xhr.send(formData);
+		}
 	};
 
 	const handleSelectedFile = (file) => {
@@ -377,6 +364,7 @@ const bindFileAttach = (block) => {
 	});
 
 	input?.addEventListener("change", () => {
+		if (suppressChange) return;
 		const file = input.files?.[0];
 		handleSelectedFile(file);
 	});
@@ -386,7 +374,6 @@ const bindFileAttach = (block) => {
 		setEmpty();
 	});
 
-	// Публичный API на DOM-узле для Bitrix
 	block.fileAttach = {
 		reset: () => {
 			abortUpload();
@@ -395,7 +382,7 @@ const bindFileAttach = (block) => {
 		getState: () => block.dataset.state || "empty",
 		getFileId: () => fileIdInput.value,
 		getFile: () => currentFile,
-		isReady: () => block.dataset.state === "ready" && (!uploadUrl || Boolean(fileIdInput.value)),
+		isReady: () => isAttachReady(block, fileIdInput, currentFile, uploadUrl),
 	};
 
 	setEmpty();

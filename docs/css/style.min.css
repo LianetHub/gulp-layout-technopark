@@ -1,18 +1,18 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 .checkbox__input:checked + .checkbox__content::before, [class^=icon-]:before,
 [class*=" icon-"]:before {
@@ -30,6 +30,22 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-file:before {
+  content: "\e90f";
+}
+
+.icon-paperclip:before {
+  content: "\e90c";
+}
+
+.icon-trash:before {
+  content: "\e90d";
+}
+
+.icon-warning:before {
+  content: "\e90e";
 }
 
 .icon-right:before {
@@ -324,9 +340,6 @@
 .form__attach {
   margin-top: 1.5rem;
 }
-.form__attach._error .form__error {
-  display: block;
-}
 .form__checkbox {
   margin-top: 1rem;
 }
@@ -546,28 +559,45 @@
 }
 .file-attach__icon {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-  object-fit: contain;
+  font-size: 1.5rem;
+  color: #313542;
+  line-height: 1;
 }
-.file-attach__progress {
+.file-attach__icon.icon-warning {
+  color: #ef4444;
+}
+.file-attach__loader {
   flex-shrink: 0;
+  position: relative;
   width: 1.5rem;
   height: 1.5rem;
 }
-.file-attach__progress-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
+.file-attach__loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.1875rem solid #05f;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: file-attach-rotation 1s linear infinite;
 }
-.file-attach__progress-track {
-  stroke: rgba(35, 66, 167, 0.2);
-}
-.file-attach__progress-value {
-  stroke: #2342A7;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.15s linear;
+@keyframes file-attach-rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 .file-attach__hint {
   flex: 1 1 auto;
@@ -627,15 +657,15 @@
   border-radius: 0.5rem;
   border: 0.0625rem solid #ced0d1;
   background: #fff;
-  transition: border-color 0.3s ease;
-}
-.file-attach__remove img {
-  width: 1rem;
-  height: 1rem;
+  color: #313542;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 @media (any-hover: hover) {
   .file-attach__remove:hover {
     border-color: #ef4444;
+    color: #ef4444;
   }
 }
 
@@ -783,6 +813,10 @@ body {
 @media (min-width: 743.98px) {
   .popup.popup--contest {
     max-width: 29.1875rem;
+  }
+  .popup.popup--contest .f-button.is-close-button {
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 .popup.popup--contest .popup__form .form__checkbox {

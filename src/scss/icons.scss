@@ -19,6 +19,22 @@
 }
 
 
+.icon-file:before {
+	content: "\e90f";
+}
+
+.icon-paperclip:before {
+	content: "\e90c";
+}
+
+.icon-trash:before {
+	content: "\e90d";
+}
+
+.icon-warning:before {
+	content: "\e90e";
+}
+
 .icon-right:before {
 	content: "\e90b";
 }

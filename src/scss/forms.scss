@@ -73,12 +73,6 @@
 	// .form__attach
 	&__attach {
 		margin-top: 1.5rem;
-
-		&._error {
-			.form__error {
-				display: block;
-			}
-		}
 	}
 
 	// .form__checkbox
@@ -372,33 +366,50 @@
 	// .file-attach__icon
 	&__icon {
 		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(24);
 		height: rem(24);
-		object-fit: contain;
+		font-size: rem(24);
+		color: #313542;
+		line-height: 1;
+
+		&.icon-warning {
+			color: #ef4444;
+		}
 	}
 
-	// .file-attach__progress — кольцо прогресса (состояние «Загрузка»)
-	&__progress {
+	&__loader {
 		flex-shrink: 0;
+		position: relative;
 		width: rem(24);
 		height: rem(24);
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: rem(20);
+			height: rem(20);
+			border: rem(3) solid #05f;
+			border-bottom-color: transparent;
+			border-radius: 50%;
+			transform-origin: center;
+			animation: file-attach-rotation 1s linear infinite;
+		}
 	}
 
-	&__progress-svg {
-		display: block;
-		width: 100%;
-		height: 100%;
-		transform: rotate(-90deg);
-	}
+	@keyframes file-attach-rotation {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
 
-	&__progress-track {
-		stroke: rgba($accent, 0.2);
-	}
-
-	&__progress-value {
-		stroke: $accent;
-		stroke-linecap: round;
-		transition: stroke-dashoffset 0.15s linear;
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	// .file-attach__hint
@@ -473,16 +484,15 @@
 		border-radius: 0.5rem;
 		border: rem(1) solid #ced0d1;
 		background: #fff;
-		transition: border-color 0.3s ease;
-
-		img {
-			width: rem(16);
-			height: rem(16);
-		}
+		color: #313542;
+		font-size: rem(16);
+		line-height: 1;
+		transition: border-color 0.3s ease, color 0.3s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
 				border-color: #ef4444;
+				color: #ef4444;
 			}
 		}
 	}
