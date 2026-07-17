@@ -101,7 +101,7 @@ const renderState = (block, state, payload = {}) => {
 	const safeName = escapeHtml(name);
 	const safeSize = escapeHtml(sizeText);
 	const safeError = escapeHtml(errorText);
-	const safeHint = escapeHtml(block.dataset.hint || "PDF, DOC, JPG до 10 МБ");
+	const safeHint = escapeHtml(block.dataset.hint || "PPTX, PDF до 10 МБ");
 
 	let html = "";
 

@@ -36,7 +36,7 @@
 		margin-bottom: rem(-80);
 		aspect-ratio: math.div(1359, 584);
 		padding: rem(100) 0 rem(72);
-		align-content: end;
+		align-content: center;
 	}
 
 	@media (min-width:$md2) {
@@ -386,6 +386,15 @@
 		gap: rem(10);
 		margin-top: rem(24);
 
+		@media (max-width:$md5) {
+
+			.documents__item-btn {
+				.btn {
+					min-height: rem(36);
+				}
+			}
+		}
+
 		@media (min-width:$md5) {
 			gap: rem(14);
 			margin-top: rem(24);
@@ -394,6 +403,10 @@
 		@media (min-width:$md3) {
 			grid-template-columns: repeat(2, 1fr);
 			margin-top: rem(40);
+
+			.documents__item-name {
+				font-size: rem(18);
+			}
 		}
 	}
 
@@ -481,11 +494,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: rem(14);
+		gap: rem(18);
 
 		@media (min-width:$md5) {
 			padding: rem(28) rem(24);
-			gap: rem(18);
+
 		}
 
 		@media (min-width:$md4) {
