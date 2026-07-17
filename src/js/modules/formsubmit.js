@@ -35,8 +35,9 @@ const isFileAttachValid = (input) => {
 
 	if (state === "loading" || state === "error") return false;
 
+	// AJAX-режим: к отправке нужен только токен (file id)
 	if (hasUploadUrl) {
-		return state === "ready" && (Boolean(fileId) || hasFile || Boolean(attach?.fileAttach?.getFile?.()));
+		return state === "ready" && Boolean(fileId);
 	}
 
 	return hasFile || (state === "ready" && (Boolean(fileId) || Boolean(attach?.fileAttach?.getFile?.())));

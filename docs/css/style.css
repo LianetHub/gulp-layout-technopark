@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 .checkbox__input:checked + .checkbox__content::before,
@@ -4484,11 +4484,15 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
   background: #EFF1F7;
 }
 
-.no-webp .contest-hero{
+.contest-hero {
+  background: #11297A;
+}
+
+.no-webp .contest-hero__wrapper{
   background: url("../img/contest/contest-hero-mobile.jpg") 0 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a));
   background: url("../img/contest/contest-hero-mobile.jpg") 0 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
 
-.contest-hero {
+.contest-hero__wrapper {
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -4497,6 +4501,9 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
   margin-bottom: -1.875rem;
   padding: 3.75rem 0 13.75rem;
   aspect-ratio: 0.6302521008;
+  max-width: 100rem;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .contest-hero__container {
@@ -5926,11 +5933,11 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     font-size: 1.125rem;
   }
 
-  .no-webp .contest-hero{
+  .no-webp .contest-hero__wrapper{
     background: url("../img/contest/contest-hero.jpg") center 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a));
     background: url("../img/contest/contest-hero.jpg") center 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
 
-  .contest-hero {
+  .contest-hero__wrapper {
     aspect-ratio: auto;
     border-radius: 0 0 2.5rem 2.5rem;
     margin-bottom: -2.5rem;
@@ -6750,7 +6757,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
             transition-delay: 0.5s;
   }
 
-  .contest-hero {
+  .contest-hero__wrapper {
     aspect-ratio: 2.1379310345;
   }
 
@@ -8087,7 +8094,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     grid-column: auto;
   }
 
-  .contest-hero {
+  .contest-hero__wrapper {
     border-radius: 0 0 5rem 5rem;
     margin-bottom: -5rem;
     aspect-ratio: 2.3270547945;
@@ -8785,7 +8792,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
     padding-top: 6.875rem;
   }
 
-  .contest-hero {
+  .contest-hero__wrapper {
     min-height: 36.5rem;
     padding: 7.5rem 0 5.5rem;
   }
@@ -9642,7 +9649,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
 
 .webp .results__card-image::before{ background: url(../img/decor/glass-substrat-training-tablet.webp) 0 0/cover no-repeat; }
 
-.webp .contest-hero{ background: url(../img/contest/contest-hero-mobile.webp) 0 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a)); background: url(../img/contest/contest-hero-mobile.webp) 0 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
+.webp .contest-hero__wrapper{ background: url(../img/contest/contest-hero-mobile.webp) 0 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a)); background: url(../img/contest/contest-hero-mobile.webp) 0 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
 
 .webp .nominations__card{ background: url(../img/decor/glass-substrat-contest-card-mobile.webp) 0 0/100% 100% no-repeat; }
 
@@ -9657,7 +9664,7 @@ body._touch .menu__item.menu__item--parent.open-submenu .menu__link {
 
 @media (min-width: 575.98px){
 
-  .webp .contest-hero{ background: url(../img/contest/contest-hero.webp) center 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a)); background: url(../img/contest/contest-hero.webp) center 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
+  .webp .contest-hero__wrapper{ background: url(../img/contest/contest-hero.webp) center 0/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(30, 59, 154, 0)), to(#1e3b9a)); background: url(../img/contest/contest-hero.webp) center 0/cover no-repeat, linear-gradient(180deg, rgba(30, 59, 154, 0) 40%, #1e3b9a 100%); }
 }
 
 @media (min-width: 575.98px){

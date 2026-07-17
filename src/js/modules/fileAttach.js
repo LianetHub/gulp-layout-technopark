@@ -62,7 +62,14 @@ const parseUploadResponse = (raw) => {
 		data.STATUS === "success" ||
 		data.status === "success";
 
-	const fileId = data.fileId ?? data.FILE_ID ?? data.id ?? data.file_id ?? "";
+	const fileId =
+		data.fileId ??
+		data.FILE_ID ??
+		data.token ??
+		data.TOKEN ??
+		data.id ??
+		data.file_id ??
+		"";
 	const fileName = data.fileName ?? data.FILE_NAME ?? data.name ?? "";
 	const error =
 		data.error ??
@@ -175,8 +182,9 @@ const ensureFileIdInput = (block, input) => {
 
 const isAttachReady = (block, fileIdInput, currentFile, uploadUrl) => {
 	if (block.dataset.state !== "ready") return false;
-	if (!uploadUrl) return Boolean(currentFile) || Boolean(fileIdInput.value);
-	return Boolean(fileIdInput.value) || Boolean(currentFile);
+	// С AJAX-загрузкой готовность = есть токен; без URL — достаточно локального файла
+	if (uploadUrl) return Boolean(fileIdInput.value);
+	return Boolean(currentFile) || Boolean(fileIdInput.value);
 };
 
 const bindFileAttach = (block) => {
@@ -293,9 +301,13 @@ const bindFileAttach = (block) => {
 				return;
 			}
 
-			if (result.fileId && input) {
-				input.value = "";
+			if (!result.fileId) {
+				setError(file, "Сервер не вернул токен файла");
+				return;
 			}
+
+			// Файл уже на сервере — в форме остаётся только токен
+			if (input) input.value = "";
 
 			setReady(file, result.fileId);
 			block.dispatchEvent(
