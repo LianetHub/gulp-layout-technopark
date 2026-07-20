@@ -120,6 +120,14 @@ export const formSubmit = () => {
 					form.reset();
 					toggleButtonState(form);
 					showModal("#success");
+
+					if (
+						form.closest("#contest") &&
+						document.querySelector(".page--contest") &&
+						typeof ym === "function"
+					) {
+						ym(109724318, "reachGoal", "contest-form-send");
+					}
 				} else {
 					throw new Error(result.error || "Ошибка сервера");
 				}
