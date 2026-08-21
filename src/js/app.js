@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	devFunctions.mask();
 	devFunctions.initYandexMap();
 	devFunctions.initMailtoLinks();
+	devFunctions.initLazyVideos();
 
 	// clickHandler
 

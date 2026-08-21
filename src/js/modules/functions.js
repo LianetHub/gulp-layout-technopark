@@ -5,6 +5,7 @@ export { initYandexMap } from "./map.js";
 export { initMailtoLinks } from "./mailto.js";
 export { initFileAttach } from "./fileAttach.js";
 export { mask } from "./maskRussia.js";
+export { initLazyVideos } from "./lazyVideo.js";
 
 
 
